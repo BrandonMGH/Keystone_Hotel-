@@ -4,10 +4,12 @@ import {Link} from 'react-router-dom'
 //** COMPONENTS **//
 import Hero from "../components/Hero"
 import Banner from '../components/Banner'
+import RoomContainer from '../components/RoomContainter'
 
 class Rooms extends Component {
     render() {
         return (
+            <>
            <Hero hero="roomsHero">
                <Banner title="Rooms">
                    <Link to="/" className="btn-primary">
@@ -15,6 +17,8 @@ class Rooms extends Component {
                    </Link>
                </Banner>
            </Hero>
+           <RoomContainer />
+           </>
         )
     }
 }
