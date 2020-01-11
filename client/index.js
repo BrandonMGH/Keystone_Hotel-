@@ -1,10 +1,12 @@
 import React from "React"
-import ReactDOM from 'react-dom'
+import ReactDOM from "react-dom"
 
-export default function Index () {
+import App from "./src/app.js"
+
+const Index = () => {
     return (
         <div>
-            Keystone Hotel
+           <App />
         </div>
     )
 }

@@ -34002,26 +34002,41 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"index.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"src/app.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = Index;
+exports.default = void 0;
+
+var _React = _interopRequireDefault(require("React"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var App = function App() {
+  return _React.default.createElement("div", null, "This is the App Component");
+};
+
+var _default = App;
+exports.default = _default;
+},{"React":"../node_modules/React/index.js"}],"index.js":[function(require,module,exports) {
+"use strict";
 
 var _React = _interopRequireDefault(require("React"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
+var _app = _interopRequireDefault(require("./src/app.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Index() {
-  return _React.default.createElement("div", null, "Keystone Hotel");
-}
+var Index = function Index() {
+  return _React.default.createElement("div", null, _React.default.createElement(_app.default, null));
+};
 
 _reactDom.default.render(_React.default.createElement(Index, null), document.getElementById("root"));
-},{"React":"../node_modules/React/index.js","react-dom":"../node_modules/react-dom/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"React":"../node_modules/React/index.js","react-dom":"../node_modules/react-dom/index.js","./src/app.js":"src/app.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -34049,7 +34064,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65034" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51770" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
