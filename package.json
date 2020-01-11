@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel build client/Index.html",
-    "start": "parcel client/Index.html"
+    "start": "concurrently \"node server.js\" \"parcel client/Index.html\""
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/BrandonMGH/Keystone_Hotel-#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "parcel-bundler": "^1.12.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
