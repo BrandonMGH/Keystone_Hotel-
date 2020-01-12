@@ -35779,7 +35779,27 @@ module.exports.default = axios;
 
 },{"./utils":"../node_modules/axios/lib/utils.js","./helpers/bind":"../node_modules/axios/lib/helpers/bind.js","./core/Axios":"../node_modules/axios/lib/core/Axios.js","./core/mergeConfig":"../node_modules/axios/lib/core/mergeConfig.js","./defaults":"../node_modules/axios/lib/defaults.js","./cancel/Cancel":"../node_modules/axios/lib/cancel/Cancel.js","./cancel/CancelToken":"../node_modules/axios/lib/cancel/CancelToken.js","./cancel/isCancel":"../node_modules/axios/lib/cancel/isCancel.js","./helpers/spread":"../node_modules/axios/lib/helpers/spread.js"}],"../node_modules/axios/index.js":[function(require,module,exports) {
 module.exports = require('./lib/axios');
-},{"./lib/axios":"../node_modules/axios/lib/axios.js"}],"src/app.js":[function(require,module,exports) {
+},{"./lib/axios":"../node_modules/axios/lib/axios.js"}],"src/API/API.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _axios = _interopRequireDefault(require("axios"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _default = {
+  postTest: function postTest(inputValue) {
+    return _axios.default.post("http://localhost:3000/api", {
+      testValue: inputValue
+    });
+  }
+};
+exports.default = _default;
+},{"axios":"../node_modules/axios/index.js"}],"src/app.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35788,6 +35808,10 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
+
+var _API = _interopRequireDefault(require("./API/API.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
@@ -35801,8 +35825,6 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var axios = require('axios');
-
 var App = function App() {
   var _useState = (0, _react.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
@@ -35810,9 +35832,7 @@ var App = function App() {
       setInputValue = _useState2[1];
 
   var axiosCall = function axiosCall() {
-    axios.post("http://localhost:3000/api", {
-      testValue: inputValue
-    }).then(function (response) {
+    _API.default.postTest(inputValue).then(function (response) {
       console.log(response);
     }).catch(function (error) {
       console.log(error);
@@ -35831,7 +35851,7 @@ var App = function App() {
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","axios":"../node_modules/axios/index.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./API/API.js":"src/API/API.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _React = _interopRequireDefault(require("React"));
@@ -35875,7 +35895,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56422" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59375" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
