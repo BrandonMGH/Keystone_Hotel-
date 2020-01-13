@@ -21,7 +21,7 @@ const reservationState = () => {
     return (
         <div>
             <StyleTest showState={reservationTab === true ? "Block" : "None"}>
-                <p>NavBar</p>
+                <p>Reservation Box</p>
             </StyleTest>
             <button onClick={reservationState}> Reserve a Room</button>
         </div>
