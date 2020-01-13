@@ -37975,7 +37975,7 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"../node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","history":"../node_modules/history/esm/history.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"src/Main/Main.js":[function(require,module,exports) {
+},{"react-router":"../node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","history":"../node_modules/history/esm/history.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"src/Pages/Main.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37988,10 +37988,118 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Main = function Main() {
-  return _react.default.createElement("div", null, "This is the main page vertical landing page.");
+  return _react.default.createElement("div", null, "This is the main vertical landing page.");
 };
 
 var _default = Main;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"src/Pages/Rooms.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Rooms = function Rooms() {
+  return _react.default.createElement("div", null, "Rooms");
+};
+
+var _default = Rooms;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"src/Pages/Dining.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Dining = function Dining() {
+  return _react.default.createElement("div", null, "Dining");
+};
+
+var _default = Dining;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"src/Pages/Spa.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Spa = function Spa() {
+  return _react.default.createElement("div", null, "Spa");
+};
+
+var _default = Spa;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"src/Pages/AreaAttractions.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var AreaAttractions = function AreaAttractions() {
+  return _react.default.createElement("div", null, "AreaAttractions");
+};
+
+var _default = AreaAttractions;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"src/Components/Navbar.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Navbar = function Navbar() {
+  return _react.default.createElement("div", null, "NavBar");
+};
+
+var _default = Navbar;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"src/Components/Footer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Footer = function Footer() {
+  return _react.default.createElement("div", null, "Footer");
+};
+
+var _default = Footer;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js"}],"src/app.js":[function(require,module,exports) {
 "use strict";
@@ -38005,21 +38113,50 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _Main = _interopRequireDefault(require("./Main/Main.js"));
+var _Main = _interopRequireDefault(require("./Pages/Main.js"));
+
+var _Rooms = _interopRequireDefault(require("./Pages/Rooms.js"));
+
+var _Dining = _interopRequireDefault(require("./Pages/Dining.js"));
+
+var _Spa = _interopRequireDefault(require("./Pages/Spa.js"));
+
+var _AreaAttractions = _interopRequireDefault(require("./Pages/AreaAttractions.js"));
+
+var _Navbar = _interopRequireDefault(require("./Components/Navbar.js"));
+
+var _Footer = _interopRequireDefault(require("./Components/Footer.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//* COMPONENETS *//
 var App = function App() {
-  return _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_reactRouterDom.Route, {
+  return _react.default.createElement("div", null, _react.default.createElement(_Navbar.default, null), _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_reactRouterDom.Route, {
     path: "/",
     exact: true,
     component: _Main.default
-  }));
+  }), _react.default.createElement(_reactRouterDom.Route, {
+    path: "/Rooms",
+    exact: true,
+    component: _Rooms.default
+  }), _react.default.createElement(_reactRouterDom.Route, {
+    path: "/Dining",
+    exact: true,
+    component: _Dining.default
+  }), _react.default.createElement(_reactRouterDom.Route, {
+    path: "/Spa",
+    exact: true,
+    component: _Spa.default
+  }), _react.default.createElement(_reactRouterDom.Route, {
+    path: "/AreaAttractions",
+    exact: true,
+    component: _AreaAttractions.default
+  })), _react.default.createElement(_Footer.default, null));
 };
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./Main/Main.js":"src/Main/Main.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./Pages/Main.js":"src/Pages/Main.js","./Pages/Rooms.js":"src/Pages/Rooms.js","./Pages/Dining.js":"src/Pages/Dining.js","./Pages/Spa.js":"src/Pages/Spa.js","./Pages/AreaAttractions.js":"src/Pages/AreaAttractions.js","./Components/Navbar.js":"src/Components/Navbar.js","./Components/Footer.js":"src/Components/Footer.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _React = _interopRequireDefault(require("React"));
@@ -38063,7 +38200,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55856" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51320" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
