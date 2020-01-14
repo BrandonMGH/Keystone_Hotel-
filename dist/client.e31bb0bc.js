@@ -41350,7 +41350,7 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\ndisplay: ", "\n\n"]);
+  var data = _taggedTemplateLiteral(["\ndisplay: ", ";\njustify-content: center; \nbackground: papayawhip;\nwidth: 50%\nz-index: 1000 \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -41379,9 +41379,13 @@ var Navbar = function Navbar() {
     }
   };
 
-  return _react.default.createElement("div", null, _react.default.createElement(StyleTest, {
-    showState: reservationTab === true ? "Block" : "None"
-  }, _react.default.createElement("p", null, "NavBar")), _react.default.createElement("button", {
+  return _react.default.createElement("div", null, _react.default.createElement("div", {
+    style: {
+      margin: "auto"
+    }
+  }, _react.default.createElement(StyleTest, {
+    showState: reservationTab === true ? "grid" : "None"
+  }, "Reservation Box")), _react.default.createElement("button", {
     onClick: reservationState
   }, " Reserve a Room"));
 };
@@ -41505,7 +41509,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53862" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49796" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
