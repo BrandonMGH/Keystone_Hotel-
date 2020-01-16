@@ -23,7 +23,7 @@ app.get('/api', (req,res)=>{
 // ** PUT ROUTES ** // 
 
 app.put('/api', (req,res) =>{
-    let apiObject = { boolean: req.body.boolean}
+    apiObject = { boolean: req.body.boolean}
     res.send(apiObject)
 })
 
