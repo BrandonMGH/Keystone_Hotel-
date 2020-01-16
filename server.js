@@ -7,16 +7,24 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-let testObjects = []
+let testObjects = {boolean: false}
+
+// **  GET ROUTES ** // 
 
 app.get('/api', (req,res)=>{
     res.send(testObjects)
 })
 
-app.post('/api', (req,res) =>{
-    let newTestObject = req.body
-    testObjects.push(newTestObject)
-    res.json(newTestObject)
+// app.get('/rooms/api', (req, res) =>{
+    
+// })
+
+
+// ** POST ROUTES ** // 
+
+app.put('/api', (req,res) =>{
+    let newTestObject = { boolean: req.body}
+    res.send(newTestObject)
 })
 
 app.listen(PORT, () => {

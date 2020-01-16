@@ -13,6 +13,19 @@ z-index: 1000
 
 const Reservations = (props) => {
     const [inputValue, setInputValue] = useState("")
+    const [booleanValue, setBooleanValue] = useState(false)
+
+    let test =  () =>  {
+        if(booleanValue===false){
+            setBooleanValue(true)
+        } else {
+            setBooleanValue(false)
+        }
+           
+    }
+    let newTest = () => {
+        console.log(booleanValue)
+    }
     let axiosCall = () => {
         API.reservationInfo(inputValue)
             .then((response) => {
@@ -22,12 +35,14 @@ const Reservations = (props) => {
                 console.log(error)
             })
     }
+
+
     return (
         <div>
             <StyleTest showState={props.showState === true ? "grid" : "None"}>
             <label>Test Input</label>
-            <input id="title" onChange={event => setInputValue(event.target.value)}></input>
-            <button onClick={axiosCall} >Submit Button</button>
+            <input type="checkbox" checked={booleanValue} onChange={test}></input>
+            <button onClick={newTest} >Submit Button</button>
             <a onClick={axiosCall} href='/rooms'>CLICK ME</a>
             </StyleTest>
 
