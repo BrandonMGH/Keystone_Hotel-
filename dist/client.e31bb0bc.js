@@ -43023,7 +43023,7 @@ var Reservations = function Reservations(props) {
   };
 
   var axiosCall = function axiosCall() {
-    _API.default.reservationInfo(inputValue).then(function (response) {
+    _API.default.reservationInfo(booleanValue).then(function (response) {
       console.log(response);
     }).catch(function (error) {
       console.log(error);
@@ -43037,7 +43037,7 @@ var Reservations = function Reservations(props) {
     checked: booleanValue,
     onChange: test
   }), _react.default.createElement("button", {
-    onClick: newTest
+    onClick: axiosCall
   }, "Submit Button"), _react.default.createElement("a", {
     onClick: axiosCall,
     href: "/rooms"
@@ -43214,7 +43214,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58572" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51425" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
