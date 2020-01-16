@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components'
 
-const StyleTest = styled.div`
-display: ${props => props.showState};
-justify-content: center; 
-background: papayawhip;
-width: 50%
-z-index: 1000 
-`
+import Reservations from './Reservations.js'
 
 let Navbar = () => {
 
@@ -23,9 +17,7 @@ let Navbar = () => {
 
     return (
         <div>
-            <div style={{margin: "auto"}}>
-            <StyleTest showState={reservationTab === true ? "grid" : "None"}>Reservation Box</StyleTest>
-            </div>
+            <Reservations showState={reservationTab} />
             <button onClick={reservationState}> Reserve a Room</button>
         </div>
     )
