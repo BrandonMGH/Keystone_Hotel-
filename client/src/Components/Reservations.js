@@ -27,7 +27,7 @@ const Reservations = (props) => {
         console.log(booleanValue)
     }
     let axiosCall = () => {
-        API.reservationInfo(inputValue)
+        API.reservationInfo(booleanValue)
             .then((response) => {
                 console.log(response)
             })
@@ -42,7 +42,7 @@ const Reservations = (props) => {
             <StyleTest showState={props.showState === true ? "grid" : "None"}>
             <label>Test Input</label>
             <input type="checkbox" checked={booleanValue} onChange={test}></input>
-            <button onClick={newTest} >Submit Button</button>
+            <button onClick={axiosCall} >Submit Button</button>
             <a onClick={axiosCall} href='/rooms'>CLICK ME</a>
             </StyleTest>
 
