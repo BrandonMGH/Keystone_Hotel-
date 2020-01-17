@@ -43018,10 +43018,6 @@ var Reservations = function Reservations(props) {
     }
   };
 
-  var newTest = function newTest() {
-    console.log(booleanValue);
-  };
-
   var axiosCall = function axiosCall() {
     _API.default.reservationInfo(booleanValue).then(function (response) {
       console.log(response);
@@ -43214,7 +43210,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53252" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51698" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -23,9 +23,7 @@ const Reservations = (props) => {
         }
            
     }
-    let newTest = () => {
-        console.log(booleanValue)
-    }
+ 
     let axiosCall = () => {
         API.reservationInfo(booleanValue)
             .then((response) => {
