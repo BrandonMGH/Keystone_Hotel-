@@ -43037,22 +43037,51 @@ var StyleTest = _styledComponents.default.div(_templateObject(), function (props
 });
 
 var Reservations = function Reservations(props) {
-  var _useState = (0, _react.useState)(""),
+  var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
-      inputValue = _useState2[0],
-      setInputValue = _useState2[1];
+      booleanValue = _useState2[0],
+      setBooleanValue = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(false),
+  var _useState3 = (0, _react.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
-      booleanValue = _useState4[0],
-      setBooleanValue = _useState4[1];
+      checkIn = _useState4[0],
+      setCheckIn = _useState4[1];
 
-  var test = function test() {
-    if (booleanValue === false) {
-      setBooleanValue(true);
-    } else {
-      setBooleanValue(false);
-    }
+  var _useState5 = (0, _react.useState)(""),
+      _useState6 = _slicedToArray(_useState5, 2),
+      checkOut = _useState6[0],
+      setCheckOut = _useState6[1];
+
+  var _useState7 = (0, _react.useState)(""),
+      _useState8 = _slicedToArray(_useState7, 2),
+      priceRange = _useState8[0],
+      setPriceRange = _useState8[1];
+
+  var _useState9 = (0, _react.useState)(""),
+      _useState10 = _slicedToArray(_useState9, 2),
+      guestCount = _useState10[0],
+      setGuestCount = _useState10[1];
+
+  var _useState11 = (0, _react.useState)("4"),
+      _useState12 = _slicedToArray(_useState11, 2),
+      viewSelection = _useState12[0],
+      setViewSelection = _useState12[1];
+
+  var _useState13 = (0, _react.useState)("1"),
+      _useState14 = _slicedToArray(_useState13, 2),
+      petConfirmation = _useState14[0],
+      setPetConfirmation = _useState14[1];
+
+  var newtest = function newtest() {
+    var resObject = {
+      checkIn: checkIn,
+      checkOut: checkOut,
+      priceRange: priceRange,
+      guestCount: guestCount,
+      viewSelection: viewSelection,
+      petConfirmation: petConfirmation
+    };
+    console.log(resObject);
   };
 
   var axiosCall = function axiosCall() {
@@ -43065,13 +43094,66 @@ var Reservations = function Reservations(props) {
 
   return _react.default.createElement("div", null, _react.default.createElement(StyleTest, {
     showState: props.showState === true ? "grid" : "None"
-  }, _react.default.createElement("label", null, "Test Input"), _react.default.createElement("input", {
-    type: "checkbox",
-    checked: booleanValue,
-    onChange: test
-  }), _react.default.createElement("button", {
-    onClick: axiosCall
-  }, "Submit Button"), _react.default.createElement("a", {
+  }, _react.default.createElement("h1", null, "Make a Reservation"), "Check In: ", _react.default.createElement("input", {
+    type: "date",
+    name: "checkIn",
+    onChange: function onChange(event) {
+      return setCheckIn(event.target.value);
+    }
+  }), "Check Out: ", _react.default.createElement("input", {
+    type: "date",
+    name: "checkOut",
+    onChange: function onChange(event) {
+      return setCheckOut(event.target.value);
+    }
+  }), "Price Range", _react.default.createElement("input", {
+    type: "range",
+    name: "points",
+    min: "0",
+    max: "10",
+    onChange: function onChange(event) {
+      return setPriceRange(event.target.value);
+    }
+  }), _react.default.createElement("div", null, _react.default.createElement("p", null, "Number of Guests"), _react.default.createElement("select", {
+    name: "guestCount",
+    onChange: function onChange(event) {
+      return setGuestCount(event.target.value);
+    }
+  }, _react.default.createElement("option", {
+    value: "1"
+  }, "1"), _react.default.createElement("option", {
+    value: "2"
+  }, "2"), _react.default.createElement("option", {
+    value: "3"
+  }, "3"), _react.default.createElement("option", {
+    value: "4"
+  }, "4 +")), _react.default.createElement("p", null, "Select a View"), _react.default.createElement("select", {
+    name: "roomView",
+    value: viewSelection,
+    onChange: function onChange(event) {
+      return setViewSelection(event.target.value);
+    }
+  }, _react.default.createElement("option", {
+    value: "1"
+  }, "Ocean Cliffside"), _react.default.createElement("option", {
+    value: "2"
+  }, "Forest"), _react.default.createElement("option", {
+    value: "3"
+  }, "Mountain"), _react.default.createElement("option", {
+    value: "4"
+  }, "No Preference")), _react.default.createElement("p", null, "Bringing a Pet?"), _react.default.createElement("select", {
+    name: "petSelection",
+    value: petConfirmation,
+    onChange: function onChange(event) {
+      return setPetConfirmation(event.target.value);
+    }
+  }, _react.default.createElement("option", {
+    value: "1"
+  }, "Yes"), _react.default.createElement("option", {
+    value: "2"
+  }, "No"))), _react.default.createElement("button", {
+    onClick: newtest
+  }, "Test Button"), _react.default.createElement("a", {
     onClick: axiosCall,
     href: "/rooms"
   }, "CLICK ME")));
@@ -43247,7 +43329,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52848" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54625" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
