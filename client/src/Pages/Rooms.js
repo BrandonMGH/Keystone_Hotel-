@@ -16,21 +16,31 @@ let roomObject = {
 let roomObjectTwo = {
     id: 2, 
     roomName: "Placeholder Name 2",
-    guestCount: 2,
+    guestCount: 3,
     bedCount: 1,
     view: "Bay View",
     squareFootage: "1000 sq. ft.",
     specialAmmenities: [""]
 }
 
+const RoomStyles = styled.div`
+display: ${props => props.showState};
+justify-content: center; 
+background: papayawhip;
+width: 50%
+z-index: 1000 
+`
+
 const Rooms = () => {
     const [ammenity, setAmmenity] = useState(true);
+    const [reservationInfo, setReservationInfo] =useState([])
     const [roomInfo, setRoomInfo] = useState([roomObject, roomObjectTwo])
 
     useEffect (() =>{
         API.getRoomInfo()
         .then((response)=>{
             setAmmenity(response.data.boolean)
+            setReservationInfo(response.data)
         })
     })
 
@@ -40,9 +50,9 @@ const Rooms = () => {
             <h1>Rooms</h1>
             <p>Rooms:{ammenity === true ? "Yay" : "Nay"} </p>
             {roomInfo.map(objectKey => (
-                    <div key={objectKey.id}>
+                    <RoomStyles key={objectKey.id} showState={objectKey.guestCount < 3 ? "None" : "Grid"}>
                        <p>{objectKey.roomName}</p>  
-                    </div>
+                    </RoomStyles>
                     
                     ))}
             <p>All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The </p>
