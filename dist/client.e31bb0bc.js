@@ -42871,32 +42871,41 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\ndisplay\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var ammenity = _styledComponents.default.div(_templateObject());
-
 var Rooms = function Rooms() {
   var _useState = (0, _react.useState)(true),
       _useState2 = _slicedToArray(_useState, 2),
       ammenity = _useState2[0],
       setAmmenity = _useState2[1];
 
+  var _useState3 = (0, _react.useState)(roomObject.roomOne.roomName),
+      _useState4 = _slicedToArray(_useState3, 2),
+      roomInfo = _useState4[0],
+      setRoomInfo = _useState4[1];
+
   (0, _react.useEffect)(function () {
     _API.default.getRoomInfo().then(function (response) {
       setAmmenity(response.data.boolean);
     });
   });
-  return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Rooms"), _react.default.createElement("p", null, "Rooms:", ammenity === true ? "Yay" : "Nay", " "));
+  var roomObject = {
+    roomOne: {
+      roomName: "Placeholder Name 1",
+      guestCount: 2,
+      bedCount: 1,
+      view: "Bay View",
+      squareFootage: "1000 sq. ft.",
+      specialAmmenities: [""]
+    },
+    roomTwo: {
+      roomName: "Placeholder Name 2",
+      guestCount: 3,
+      bedCount: 2,
+      view: "Bay View",
+      squareFootage: "1000 sq. ft.",
+      specialAmmenities: ["complimentary mini bar access"]
+    }
+  };
+  return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Rooms"), _react.default.createElement("p", null, "Rooms:", ammenity === true ? "Yay" : "Nay", " "), roomInfo, _react.default.createElement("p", null, "All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The "));
 };
 
 var _default = Rooms;
@@ -43210,7 +43219,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51698" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49174" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
