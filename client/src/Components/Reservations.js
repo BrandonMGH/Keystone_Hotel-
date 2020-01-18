@@ -15,26 +15,31 @@ const Reservations = (props) => {
     const [booleanValue, setBooleanValue] = useState(false)
     const [checkIn, setCheckIn] = useState("")
     const [checkOut, setCheckOut] = useState("")
-    const [priceRange, setPriceRange] = useState("")
-    const [guestCount, setGuestCount] = useState("")
+    const [priceRange, setPriceRange] = useState("400")
+    const [guestCount, setGuestCount] = useState("1")
     const [viewSelection, setViewSelection] = useState("4")
     const [petConfirmation, setPetConfirmation] = useState("1")
  
 
     let newtest = () =>{
-        let resObject = {
-            checkIn: checkIn,
-            checkOut: checkOut,
-            priceRange: priceRange,
-            guestCount: guestCount,
-            viewSelection: viewSelection,
-            petConfirmation: petConfirmation, 
+        if(checkIn === "" || checkOut === ""){
+            alert("Please select a Check-In and a Check-Out Date")
+        } else {
+            let resObject = {
+                checkIn: checkIn,
+                checkOut: checkOut,
+                priceRange: priceRange,
+                guestCount: guestCount,
+                viewSelection: viewSelection,
+                petConfirmation: petConfirmation, 
+            }
+            return axiosCall(resObject)
         }
-        console.log(resObject)
+    
     }
 
-    let axiosCall = () => {
-        API.reservationInfo(booleanValue)
+    let axiosCall = (resObject) => {
+        API.reservationInfo(resObject)
             .then((response) => {
                 console.log(response)
             })
@@ -50,10 +55,10 @@ const Reservations = (props) => {
                 <h1>Make a Reservation</h1>
                 Check In: <input type="date" name="checkIn" onChange={ event => setCheckIn(event.target.value)} />
                 Check Out: <input type="date" name="checkOut" onChange={ event => setCheckOut(event.target.value)}/>
-                Price Range<input type="range" name="points" min="0" max="10" onChange={ event => setPriceRange(event.target.value)} />
+                Price Range<input type="range" name="priceRange" min="400" max="1000" value={priceRange} onChange={ event => setPriceRange(event.target.value)} />
                 <div>
                     <p>Number of Guests</p>
-                    <select name="guestCount" onChange={event => setGuestCount(event.target.value)}>
+                    <select name="guestCount" value={guestCount}  onChange={event => setGuestCount(event.target.value)}>
                         <option value="1" >1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>

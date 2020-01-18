@@ -42838,7 +42838,7 @@ var _default = {
   reservationInfo: function reservationInfo(inputValue) {
     return _axios.default.put("http://localhost:3000/api", {
       //** Change this route back to a relative path when pushing project to heroku.  Only using absolute path during Dev process**//
-      boolean: inputValue
+      resObject: inputValue
     });
   }
 };
@@ -43052,12 +43052,12 @@ var Reservations = function Reservations(props) {
       checkOut = _useState6[0],
       setCheckOut = _useState6[1];
 
-  var _useState7 = (0, _react.useState)(""),
+  var _useState7 = (0, _react.useState)("400"),
       _useState8 = _slicedToArray(_useState7, 2),
       priceRange = _useState8[0],
       setPriceRange = _useState8[1];
 
-  var _useState9 = (0, _react.useState)(""),
+  var _useState9 = (0, _react.useState)("1"),
       _useState10 = _slicedToArray(_useState9, 2),
       guestCount = _useState10[0],
       setGuestCount = _useState10[1];
@@ -43073,19 +43073,23 @@ var Reservations = function Reservations(props) {
       setPetConfirmation = _useState14[1];
 
   var newtest = function newtest() {
-    var resObject = {
-      checkIn: checkIn,
-      checkOut: checkOut,
-      priceRange: priceRange,
-      guestCount: guestCount,
-      viewSelection: viewSelection,
-      petConfirmation: petConfirmation
-    };
-    console.log(resObject);
+    if (checkIn === "" || checkOut === "") {
+      alert("Please select a Check-In and a Check-Out Date");
+    } else {
+      var resObject = {
+        checkIn: checkIn,
+        checkOut: checkOut,
+        priceRange: priceRange,
+        guestCount: guestCount,
+        viewSelection: viewSelection,
+        petConfirmation: petConfirmation
+      };
+      return axiosCall(resObject);
+    }
   };
 
-  var axiosCall = function axiosCall() {
-    _API.default.reservationInfo(booleanValue).then(function (response) {
+  var axiosCall = function axiosCall(resObject) {
+    _API.default.reservationInfo(resObject).then(function (response) {
       console.log(response);
     }).catch(function (error) {
       console.log(error);
@@ -43108,14 +43112,16 @@ var Reservations = function Reservations(props) {
     }
   }), "Price Range", _react.default.createElement("input", {
     type: "range",
-    name: "points",
-    min: "0",
-    max: "10",
+    name: "priceRange",
+    min: "400",
+    max: "1000",
+    value: priceRange,
     onChange: function onChange(event) {
       return setPriceRange(event.target.value);
     }
   }), _react.default.createElement("div", null, _react.default.createElement("p", null, "Number of Guests"), _react.default.createElement("select", {
     name: "guestCount",
+    value: guestCount,
     onChange: function onChange(event) {
       return setGuestCount(event.target.value);
     }
@@ -43329,7 +43335,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54625" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52285" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
