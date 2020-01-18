@@ -42871,13 +42871,22 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+var roomObject = {
+  roomName: "Placeholder Name 1",
+  guestCount: 2,
+  bedCount: 1,
+  view: "Bay View",
+  squareFootage: "1000 sq. ft.",
+  specialAmmenities: [""]
+};
+
 var Rooms = function Rooms() {
   var _useState = (0, _react.useState)(true),
       _useState2 = _slicedToArray(_useState, 2),
       ammenity = _useState2[0],
       setAmmenity = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(roomObject.roomOne.roomName),
+  var _useState3 = (0, _react.useState)([roomObject]),
       _useState4 = _slicedToArray(_useState3, 2),
       roomInfo = _useState4[0],
       setRoomInfo = _useState4[1];
@@ -42887,25 +42896,9 @@ var Rooms = function Rooms() {
       setAmmenity(response.data.boolean);
     });
   });
-  var roomObject = {
-    roomOne: {
-      roomName: "Placeholder Name 1",
-      guestCount: 2,
-      bedCount: 1,
-      view: "Bay View",
-      squareFootage: "1000 sq. ft.",
-      specialAmmenities: [""]
-    },
-    roomTwo: {
-      roomName: "Placeholder Name 2",
-      guestCount: 3,
-      bedCount: 2,
-      view: "Bay View",
-      squareFootage: "1000 sq. ft.",
-      specialAmmenities: ["complimentary mini bar access"]
-    }
-  };
-  return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Rooms"), _react.default.createElement("p", null, "Rooms:", ammenity === true ? "Yay" : "Nay", " "), roomInfo, _react.default.createElement("p", null, "All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The "));
+  return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Rooms"), _react.default.createElement("p", null, "Rooms:", ammenity === true ? "Yay" : "Nay", " "), roomInfo.map(function (key) {
+    return _react.default.createElement("p", null, key.roomName);
+  }), _react.default.createElement("p", null, "All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The "));
 };
 
 var _default = Rooms;
@@ -43219,7 +43212,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49174" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58024" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
