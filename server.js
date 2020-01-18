@@ -7,7 +7,7 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-let apiObject = { boolean: false }
+let apiObject = {}
 
 // **  GET ROUTES ** // 
 
@@ -23,7 +23,8 @@ app.get('/api', (req,res)=>{
 // ** PUT ROUTES ** // 
 
 app.put('/api', (req,res) =>{
-    apiObject = { boolean: req.body.boolean}
+    apiObject = req.body.resObject
+    console.log(apiObject)
     res.send(apiObject)
 })
 
