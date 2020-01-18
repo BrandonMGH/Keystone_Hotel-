@@ -42871,6 +42871,18 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\ndisplay: ", ";\njustify-content: center; \nbackground: papayawhip;\nwidth: 50%\nz-index: 1000 \n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 var roomObject = {
   id: 1,
   roomName: "Placeholder Name 1",
@@ -42883,12 +42895,16 @@ var roomObject = {
 var roomObjectTwo = {
   id: 2,
   roomName: "Placeholder Name 2",
-  guestCount: 2,
+  guestCount: 3,
   bedCount: 1,
   view: "Bay View",
   squareFootage: "1000 sq. ft.",
   specialAmmenities: [""]
 };
+
+var RoomStyles = _styledComponents.default.div(_templateObject(), function (props) {
+  return props.showState;
+});
 
 var Rooms = function Rooms() {
   var _useState = (0, _react.useState)(true),
@@ -42896,19 +42912,26 @@ var Rooms = function Rooms() {
       ammenity = _useState2[0],
       setAmmenity = _useState2[1];
 
-  var _useState3 = (0, _react.useState)([roomObject, roomObjectTwo]),
+  var _useState3 = (0, _react.useState)([]),
       _useState4 = _slicedToArray(_useState3, 2),
-      roomInfo = _useState4[0],
-      setRoomInfo = _useState4[1];
+      reservationInfo = _useState4[0],
+      setReservationInfo = _useState4[1];
+
+  var _useState5 = (0, _react.useState)([roomObject, roomObjectTwo]),
+      _useState6 = _slicedToArray(_useState5, 2),
+      roomInfo = _useState6[0],
+      setRoomInfo = _useState6[1];
 
   (0, _react.useEffect)(function () {
     _API.default.getRoomInfo().then(function (response) {
       setAmmenity(response.data.boolean);
+      setReservationInfo(response.data);
     });
   });
   return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Rooms"), _react.default.createElement("p", null, "Rooms:", ammenity === true ? "Yay" : "Nay", " "), roomInfo.map(function (objectKey) {
-    return _react.default.createElement("div", {
-      key: objectKey.id
+    return _react.default.createElement(RoomStyles, {
+      key: objectKey.id,
+      showState: objectKey.guestCount < 3 ? "None" : "Grid"
     }, _react.default.createElement("p", null, objectKey.roomName));
   }), _react.default.createElement("p", null, "All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The "));
 };
@@ -43224,7 +43247,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50502" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52848" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
