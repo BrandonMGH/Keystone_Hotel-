@@ -12,18 +12,27 @@ z-index: 1000
 
 
 const Reservations = (props) => {
-    const [inputValue, setInputValue] = useState("")
     const [booleanValue, setBooleanValue] = useState(false)
-
-    let test =  () =>  {
-        if(booleanValue===false){
-            setBooleanValue(true)
-        } else {
-            setBooleanValue(false)
-        }
-           
-    }
+    const [checkIn, setCheckIn] = useState("")
+    const [checkOut, setCheckOut] = useState("")
+    const [priceRange, setPriceRange] = useState("")
+    const [guestCount, setGuestCount] = useState("")
+    const [viewSelection, setViewSelection] = useState("4")
+    const [petConfirmation, setPetConfirmation] = useState("1")
  
+
+    let newtest = () =>{
+        let resObject = {
+            checkIn: checkIn,
+            checkOut: checkOut,
+            priceRange: priceRange,
+            guestCount: guestCount,
+            viewSelection: viewSelection,
+            petConfirmation: petConfirmation, 
+        }
+        console.log(resObject)
+    }
+
     let axiosCall = () => {
         API.reservationInfo(booleanValue)
             .then((response) => {
@@ -38,10 +47,33 @@ const Reservations = (props) => {
     return (
         <div>
             <StyleTest showState={props.showState === true ? "grid" : "None"}>
-            <label>Test Input</label>
-            <input type="checkbox" checked={booleanValue} onChange={test}></input>
-            <button onClick={axiosCall} >Submit Button</button>
-            <a onClick={axiosCall} href='/rooms'>CLICK ME</a>
+                <h1>Make a Reservation</h1>
+                Check In: <input type="date" name="checkIn" onChange={ event => setCheckIn(event.target.value)} />
+                Check Out: <input type="date" name="checkOut" onChange={ event => setCheckOut(event.target.value)}/>
+                Price Range<input type="range" name="points" min="0" max="10" onChange={ event => setPriceRange(event.target.value)} />
+                <div>
+                    <p>Number of Guests</p>
+                    <select name="guestCount" onChange={event => setGuestCount(event.target.value)}>
+                        <option value="1" >1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4 +</option>
+                    </select>
+                    <p>Select a View</p>
+                    <select name="roomView" value={viewSelection} onChange={event => setViewSelection(event.target.value)}>
+                        <option value="1">Ocean Cliffside</option>
+                        <option value="2">Forest</option>
+                        <option value="3">Mountain</option>
+                        <option value="4">No Preference</option>
+                    </select>
+                    <p>Bringing a Pet?</p>
+                    <select name="petSelection" value={petConfirmation} onChange={event => setPetConfirmation(event.target.value)}>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </div>
+               <button onClick={newtest}>Test Button</button>
+                <a onClick={axiosCall} href='/rooms'>CLICK ME</a>
             </StyleTest>
 
         </div>
