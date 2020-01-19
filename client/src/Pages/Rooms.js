@@ -8,9 +8,13 @@ let roomObject = {
     roomName: "Placeholder Name 1",
     guestCount: 2,
     bedCount: 1,
-    view: "Bay View",
+    viewChoice: 1,
+    view: "Ocean Cliffside",
     squareFootage: "1000 sq. ft.",
-    specialAmmenities: [""]
+    petNumber: 1,
+    pet: "Yes",
+    additionalAmmenities: [""],
+    price: 400
 
 }
 let roomObjectTwo = {
@@ -18,9 +22,27 @@ let roomObjectTwo = {
     roomName: "Placeholder Name 2",
     guestCount: 3,
     bedCount: 1,
-    view: "Bay View",
+    viewChoice: 2, 
+    view: "Forest View",
     squareFootage: "1000 sq. ft.",
-    specialAmmenities: [""]
+    petNumber: 1,
+    pet: "Yes",
+    additionalAmmenities: [""],
+    price: 800
+}
+
+let roomObjectThree = {
+    id: 3, 
+    roomName: "Placeholder Name 3",
+    guestCount: 4,
+    bedCount: 2,
+    viewChoice: 3, 
+    view: "Mountain View",
+    squareFootage: "1000 sq. ft.",
+    petNumber: 2,
+    pet: "No",
+    additionalAmmenities: [""],
+    price: 1250
 }
 
 const RoomStyles = styled.div`
@@ -32,15 +54,25 @@ z-index: 1000
 `
 
 const Rooms = () => {
-    const [ammenity, setAmmenity] = useState(true);
-    const [reservationInfo, setReservationInfo] =useState([])
-    const [roomInfo, setRoomInfo] = useState([roomObject, roomObjectTwo])
+    const [guestNumber, setGuestNumber] = useState("")
+    const [viewNumber, setViewNumber] = useState("")
+    const [petNumber, setPetNumber] = useState("")
+    const [priceNumber, setPriceNumber] = useState("")
+    const [roomInfo, setRoomInfo] = useState([roomObject, roomObjectTwo, roomObjectThree])
 
     useEffect (() =>{
         API.getRoomInfo()
         .then((response)=>{
-            setAmmenity(response.data.boolean)
-            setReservationInfo(response.data)
+            // setAmmenity(response.data)
+            // setReservationInfo(response.data)
+            console.log(response)
+            setGuestNumber(parseInt(response.data.guestCount))
+            setViewNumber(parseInt(response.data.viewSelection))
+            setPetNumber(parseInt(response.data.petConfirmation))
+            setPriceNumber(parseInt(response.data.priceRange))
+
+            console.log(guestNumber, viewNumber, petNumber, priceNumber)
+            
         })
     })
 
@@ -48,9 +80,8 @@ const Rooms = () => {
     return(
         <div>
             <h1>Rooms</h1>
-            <p>Rooms:{ammenity === true ? "Yay" : "Nay"} </p>
             {roomInfo.map(objectKey => (
-                    <RoomStyles key={objectKey.id} showState={objectKey.guestCount < 3 ? "None" : "Grid"}>
+                    <RoomStyles key={objectKey.id} showState={objectKey.guestCount < guestNumber ? "None" : "Grid"}>
                        <p>{objectKey.roomName}</p>  
                     </RoomStyles>
                     

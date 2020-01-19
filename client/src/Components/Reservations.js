@@ -78,7 +78,7 @@ const Reservations = (props) => {
                     </select>
                 </div>
                <button onClick={newtest}>Test Button</button>
-                <a onClick={axiosCall} href='/rooms'>CLICK ME</a>
+                <a onClick={newtest} href='/rooms'>CLICK ME</a>
             </StyleTest>
 
         </div>
