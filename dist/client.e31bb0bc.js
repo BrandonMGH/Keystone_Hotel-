@@ -43073,40 +43073,35 @@ var StyleTest = _styledComponents.default.div(_templateObject(), function (props
 });
 
 var Reservations = function Reservations(props) {
-  var _useState = (0, _react.useState)(false),
+  var _useState = (0, _react.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
-      booleanValue = _useState2[0],
-      setBooleanValue = _useState2[1];
+      checkIn = _useState2[0],
+      setCheckIn = _useState2[1];
 
   var _useState3 = (0, _react.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
-      checkIn = _useState4[0],
-      setCheckIn = _useState4[1];
+      checkOut = _useState4[0],
+      setCheckOut = _useState4[1];
 
-  var _useState5 = (0, _react.useState)(""),
+  var _useState5 = (0, _react.useState)("400"),
       _useState6 = _slicedToArray(_useState5, 2),
-      checkOut = _useState6[0],
-      setCheckOut = _useState6[1];
+      priceRange = _useState6[0],
+      setPriceRange = _useState6[1];
 
-  var _useState7 = (0, _react.useState)("400"),
+  var _useState7 = (0, _react.useState)("1"),
       _useState8 = _slicedToArray(_useState7, 2),
-      priceRange = _useState8[0],
-      setPriceRange = _useState8[1];
+      guestCount = _useState8[0],
+      setGuestCount = _useState8[1];
 
-  var _useState9 = (0, _react.useState)("1"),
+  var _useState9 = (0, _react.useState)("4"),
       _useState10 = _slicedToArray(_useState9, 2),
-      guestCount = _useState10[0],
-      setGuestCount = _useState10[1];
+      viewSelection = _useState10[0],
+      setViewSelection = _useState10[1];
 
-  var _useState11 = (0, _react.useState)("4"),
+  var _useState11 = (0, _react.useState)("1"),
       _useState12 = _slicedToArray(_useState11, 2),
-      viewSelection = _useState12[0],
-      setViewSelection = _useState12[1];
-
-  var _useState13 = (0, _react.useState)("1"),
-      _useState14 = _slicedToArray(_useState13, 2),
-      petConfirmation = _useState14[0],
-      setPetConfirmation = _useState14[1];
+      petConfirmation = _useState12[0],
+      setPetConfirmation = _useState12[1];
 
   var newtest = function newtest() {
     if (checkIn === "" || checkOut === "") {
@@ -43127,6 +43122,7 @@ var Reservations = function Reservations(props) {
   var axiosCall = function axiosCall(resObject) {
     _API.default.reservationInfo(resObject).then(function (response) {
       console.log(response);
+      window.open('/rooms');
     }).catch(function (error) {
       console.log(error);
     });
@@ -43146,7 +43142,7 @@ var Reservations = function Reservations(props) {
     onChange: function onChange(event) {
       return setCheckOut(event.target.value);
     }
-  }), "Price Range", _react.default.createElement("input", {
+  }), "Price Range: $", priceRange, _react.default.createElement("input", {
     type: "range",
     name: "priceRange",
     min: "250",
@@ -43182,7 +43178,7 @@ var Reservations = function Reservations(props) {
   }, "Forest"), _react.default.createElement("option", {
     value: "3"
   }, "Mountain"), _react.default.createElement("option", {
-    value: "4"
+    value: "3"
   }, "No Preference")), _react.default.createElement("p", null, "Bringing a Pet?"), _react.default.createElement("select", {
     name: "petSelection",
     value: petConfirmation,
@@ -43195,10 +43191,7 @@ var Reservations = function Reservations(props) {
     value: "2"
   }, "No"))), _react.default.createElement("button", {
     onClick: newtest
-  }, "Test Button"), _react.default.createElement("a", {
-    onClick: newtest,
-    href: "/rooms"
-  }, "CLICK ME")));
+  }, " SELECT ROOM ")));
 };
 
 var _default = Reservations;
@@ -43371,7 +43364,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56770" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60203" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
