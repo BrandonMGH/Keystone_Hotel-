@@ -28,10 +28,10 @@ const Reservations = (props) => {
             let resObject = {
                 checkIn: checkIn,
                 checkOut: checkOut,
-                priceRange: priceRange,
                 guestCount: guestCount,
                 viewSelection: viewSelection,
                 petConfirmation: petConfirmation, 
+                priceRange: priceRange,
             }
             return axiosCall(resObject)
         }
@@ -55,7 +55,7 @@ const Reservations = (props) => {
                 <h1>Make a Reservation</h1>
                 Check In: <input type="date" name="checkIn" onChange={ event => setCheckIn(event.target.value)} />
                 Check Out: <input type="date" name="checkOut" onChange={ event => setCheckOut(event.target.value)}/>
-                Price Range<input type="range" name="priceRange" min="400" max="1000" value={priceRange} onChange={ event => setPriceRange(event.target.value)} />
+                Price Range<input type="range" name="priceRange" min="250" max="1500" value={priceRange} onChange={ event => setPriceRange(event.target.value)} />
                 <div>
                     <p>Number of Guests</p>
                     <select name="guestCount" value={guestCount}  onChange={event => setGuestCount(event.target.value)}>

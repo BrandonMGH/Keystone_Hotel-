@@ -69,10 +69,7 @@ const Rooms = () => {
             setGuestNumber(parseInt(response.data.guestCount))
             setViewNumber(parseInt(response.data.viewSelection))
             setPetNumber(parseInt(response.data.petConfirmation))
-            setPriceNumber(parseInt(response.data.priceRange))
-
-            console.log(guestNumber, viewNumber, petNumber, priceNumber)
-            
+            setPriceNumber(parseInt(response.data.priceRange))            
         })
     })
 
@@ -81,7 +78,7 @@ const Rooms = () => {
         <div>
             <h1>Rooms</h1>
             {roomInfo.map(objectKey => (
-                    <RoomStyles key={objectKey.id} showState={objectKey.guestCount < guestNumber ? "None" : "Grid"}>
+                    <RoomStyles key={objectKey.id} showState={objectKey.guestCount < guestNumber || objectKey.viewChoice !== viewNumber || objectKey.petNumber !== petNumber  || objectKey.price > priceNumber? "None" : "Grid"}>
                        <p>{objectKey.roomName}</p>  
                     </RoomStyles>
                     
