@@ -42962,13 +42962,12 @@ var Rooms = function Rooms() {
       setViewNumber(parseInt(response.data.viewSelection));
       setPetNumber(parseInt(response.data.petConfirmation));
       setPriceNumber(parseInt(response.data.priceRange));
-      console.log(guestNumber, viewNumber, petNumber, priceNumber);
     });
   });
   return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Rooms"), roomInfo.map(function (objectKey) {
     return _react.default.createElement(RoomStyles, {
       key: objectKey.id,
-      showState: objectKey.guestCount < guestNumber ? "None" : "Grid"
+      showState: objectKey.guestCount < guestNumber || objectKey.viewChoice !== viewNumber || objectKey.petNumber !== petNumber || objectKey.price > priceNumber ? "None" : "Grid"
     }, _react.default.createElement("p", null, objectKey.roomName));
   }), _react.default.createElement("p", null, "All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The "));
 };
@@ -43116,10 +43115,10 @@ var Reservations = function Reservations(props) {
       var resObject = {
         checkIn: checkIn,
         checkOut: checkOut,
-        priceRange: priceRange,
         guestCount: guestCount,
         viewSelection: viewSelection,
-        petConfirmation: petConfirmation
+        petConfirmation: petConfirmation,
+        priceRange: priceRange
       };
       return axiosCall(resObject);
     }
@@ -43150,8 +43149,8 @@ var Reservations = function Reservations(props) {
   }), "Price Range", _react.default.createElement("input", {
     type: "range",
     name: "priceRange",
-    min: "400",
-    max: "1000",
+    min: "250",
+    max: "1500",
     value: priceRange,
     onChange: function onChange(event) {
       return setPriceRange(event.target.value);
@@ -43372,7 +43371,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53003" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56770" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
