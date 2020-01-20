@@ -16,11 +16,11 @@ const Reservations = (props) => {
     const [checkOut, setCheckOut] = useState("")
     const [priceRange, setPriceRange] = useState("400")
     const [guestCount, setGuestCount] = useState("1")
-    const [viewSelection, setViewSelection] = useState("4")
-    const [petConfirmation, setPetConfirmation] = useState("1")
+    const [viewSelection, setViewSelection] = useState("3")
+    const [petConfirmation, setPetConfirmation] = useState("2")
  
 
-    let newtest = () =>{
+    let reservationInfoSubmit = () =>{
         if(checkIn === "" || checkOut === ""){
             alert("Please select a Check-In and a Check-Out Date")
         } else {
@@ -41,7 +41,7 @@ const Reservations = (props) => {
         API.reservationInfo(resObject)
             .then((response) => {
                 console.log(response)
-                window.open('/rooms')
+                location.href = "/rooms";
             })
             .catch((error) => {
                 console.log(error)
@@ -77,7 +77,7 @@ const Reservations = (props) => {
                         <option value="2">No</option>
                     </select>
                 </div>
-                <button onClick={newtest} > SELECT ROOM </button>
+                <button onClick={reservationInfoSubmit} > SELECT ROOM </button>
             </StyleTest>
 
         </div>

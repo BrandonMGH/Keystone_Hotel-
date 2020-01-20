@@ -42955,8 +42955,6 @@ var Rooms = function Rooms() {
 
   (0, _react.useEffect)(function () {
     _API.default.getRoomInfo().then(function (response) {
-      // setAmmenity(response.data)
-      // setReservationInfo(response.data)
       console.log(response);
       setGuestNumber(parseInt(response.data.guestCount));
       setViewNumber(parseInt(response.data.viewSelection));
@@ -43093,17 +43091,17 @@ var Reservations = function Reservations(props) {
       guestCount = _useState8[0],
       setGuestCount = _useState8[1];
 
-  var _useState9 = (0, _react.useState)("4"),
+  var _useState9 = (0, _react.useState)("3"),
       _useState10 = _slicedToArray(_useState9, 2),
       viewSelection = _useState10[0],
       setViewSelection = _useState10[1];
 
-  var _useState11 = (0, _react.useState)("1"),
+  var _useState11 = (0, _react.useState)("2"),
       _useState12 = _slicedToArray(_useState11, 2),
       petConfirmation = _useState12[0],
       setPetConfirmation = _useState12[1];
 
-  var newtest = function newtest() {
+  var reservationInfoSubmit = function reservationInfoSubmit() {
     if (checkIn === "" || checkOut === "") {
       alert("Please select a Check-In and a Check-Out Date");
     } else {
@@ -43122,7 +43120,7 @@ var Reservations = function Reservations(props) {
   var axiosCall = function axiosCall(resObject) {
     _API.default.reservationInfo(resObject).then(function (response) {
       console.log(response);
-      window.open('/rooms');
+      location.href = "/rooms";
     }).catch(function (error) {
       console.log(error);
     });
@@ -43190,7 +43188,7 @@ var Reservations = function Reservations(props) {
   }, "Yes"), _react.default.createElement("option", {
     value: "2"
   }, "No"))), _react.default.createElement("button", {
-    onClick: newtest
+    onClick: reservationInfoSubmit
   }, " SELECT ROOM ")));
 };
 
@@ -43224,6 +43222,32 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\ndisplay: grid;\ngrid-template-rows: 75% 25%;\njustify-content: center; \n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\ndisplay: grid; \ngrid-template-columns: 25% 50% 25%\njustify-content: center; \n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var MainNav = _styledComponents.default.div(_templateObject());
+
+var NavTitle = _styledComponents.default.div(_templateObject2());
+
 var Navbar = function Navbar() {
   var _useState = (0, _react.useState)(true),
       _useState2 = _slicedToArray(_useState, 2),
@@ -43238,11 +43262,11 @@ var Navbar = function Navbar() {
     }
   };
 
-  return _react.default.createElement("div", null, _react.default.createElement(_Reservations.default, {
+  return _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement(_Reservations.default, {
     showState: reservationTab
-  }), _react.default.createElement("button", {
+  })), _react.default.createElement(MainNav, null, _react.default.createElement("p", null, "Logo area"), _react.default.createElement(NavTitle, null, _react.default.createElement("h1", null, "-Keystone Hotel-"), _react.default.createElement("p", null, "Link area")), _react.default.createElement("div", null, _react.default.createElement("button", {
     onClick: reservationState
-  }, " Reserve a Room"));
+  }, " Reserve a Room"))));
 };
 
 var _default = Navbar;
@@ -43364,7 +43388,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60203" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61418" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
