@@ -43026,7 +43026,7 @@ var AreaAttractions = function AreaAttractions() {
 
 var _default = AreaAttractions;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"src/Components/Reservations.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"src/Components/Navbar.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43054,8 +43054,38 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\ndisplay: grid;\ngrid-template-rows: 75% 25%;\njustify-content: center; \n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\ndisplay: grid; \ngrid-template-columns: 25% 50% 25%\njustify-content: center; \n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\nposition: relative; \nbackground-color: red; \nheight: 50%; \ntop: 25%; \nanimation: 1s ", "\n"]);
+  var data = _taggedTemplateLiteral(["\nposition: relative; \nbackground-color: red; \nheight: 50%; \ntop: 25%\nanimation: 1s ", "\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -43065,7 +43095,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\nfrom {top:-300px; opacity:0} \nto {top:25%; opacity:1}\n"]);
+  var data = _taggedTemplateLiteral(["\nfrom {top: -300px; opacity:0} \nto {top:25%; opacity:1}\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -43094,36 +43124,47 @@ var panDown = (0, _styledComponents.keyframes)(_templateObject2());
 
 var ModalContent = _styledComponents.default.div(_templateObject3(), panDown);
 
-var Reservations = function Reservations(props) {
-  var _useState = (0, _react.useState)(""),
+var ModalClose = _styledComponents.default.span(_templateObject4());
+
+var MainNav = _styledComponents.default.div(_templateObject5());
+
+var NavTitle = _styledComponents.default.div(_templateObject6());
+
+var Navbar = function Navbar() {
+  var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
-      checkIn = _useState2[0],
-      setCheckIn = _useState2[1];
+      modalState = _useState2[0],
+      setModalState = _useState2[1];
 
   var _useState3 = (0, _react.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
-      checkOut = _useState4[0],
-      setCheckOut = _useState4[1];
+      checkIn = _useState4[0],
+      setCheckIn = _useState4[1];
 
-  var _useState5 = (0, _react.useState)("400"),
+  var _useState5 = (0, _react.useState)(""),
       _useState6 = _slicedToArray(_useState5, 2),
-      priceRange = _useState6[0],
-      setPriceRange = _useState6[1];
+      checkOut = _useState6[0],
+      setCheckOut = _useState6[1];
 
-  var _useState7 = (0, _react.useState)("1"),
+  var _useState7 = (0, _react.useState)("400"),
       _useState8 = _slicedToArray(_useState7, 2),
-      guestCount = _useState8[0],
-      setGuestCount = _useState8[1];
+      priceRange = _useState8[0],
+      setPriceRange = _useState8[1];
 
-  var _useState9 = (0, _react.useState)("3"),
+  var _useState9 = (0, _react.useState)("1"),
       _useState10 = _slicedToArray(_useState9, 2),
-      viewSelection = _useState10[0],
-      setViewSelection = _useState10[1];
+      guestCount = _useState10[0],
+      setGuestCount = _useState10[1];
 
-  var _useState11 = (0, _react.useState)("2"),
+  var _useState11 = (0, _react.useState)("3"),
       _useState12 = _slicedToArray(_useState11, 2),
-      petConfirmation = _useState12[0],
-      setPetConfirmation = _useState12[1];
+      viewSelection = _useState12[0],
+      setViewSelection = _useState12[1];
+
+  var _useState13 = (0, _react.useState)("2"),
+      _useState14 = _slicedToArray(_useState13, 2),
+      petConfirmation = _useState14[0],
+      setPetConfirmation = _useState14[1];
 
   var reservationInfoSubmit = function reservationInfoSubmit() {
     if (checkIn === "" || checkOut === "") {
@@ -43141,6 +43182,14 @@ var Reservations = function Reservations(props) {
     }
   };
 
+  var modalStateChange = function modalStateChange() {
+    if (modalState === true) {
+      setModalState(false);
+    } else {
+      setModalState(true);
+    }
+  };
+
   var axiosCall = function axiosCall(resObject) {
     _API.default.reservationInfo(resObject).then(function (response) {
       console.log(response);
@@ -43150,9 +43199,11 @@ var Reservations = function Reservations(props) {
     });
   };
 
-  return _react.default.createElement(ModalContainer, {
-    showState: props.showState === true ? "grid" : "None"
-  }, _react.default.createElement(ModalContent, null, _react.default.createElement("span", null, "\xD7"), _react.default.createElement("h1", null, "Make a Reservation"), "Check In: ", _react.default.createElement("input", {
+  return _react.default.createElement("div", null, _react.default.createElement(ModalContainer, {
+    showState: modalState === true ? "grid" : "None"
+  }, _react.default.createElement(ModalContent, null, _react.default.createElement("span", {
+    onClick: modalStateChange
+  }, "\xD7"), _react.default.createElement("h1", null, "Make a Reservation"), "Check In: ", _react.default.createElement("input", {
     type: "date",
     name: "checkIn",
     onChange: function onChange(event) {
@@ -43213,89 +43264,14 @@ var Reservations = function Reservations(props) {
     value: "2"
   }, "No"))), _react.default.createElement("button", {
     onClick: reservationInfoSubmit
-  }, " SELECT ROOM ")));
-};
-
-var _default = Reservations;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","../../API/API.js":"API/API.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/Components/Navbar.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireWildcard(require("react"));
-
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-var _Reservations = _interopRequireDefault(require("./Reservations.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\ndisplay: grid;\ngrid-template-rows: 75% 25%;\njustify-content: center; \n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\ndisplay: grid; \ngrid-template-columns: 25% 50% 25%\njustify-content: center; \n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var MainNav = _styledComponents.default.div(_templateObject());
-
-var NavTitle = _styledComponents.default.div(_templateObject2());
-
-var Navbar = function Navbar() {
-  var _useState = (0, _react.useState)(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      reservationTab = _useState2[0],
-      setReservationTab = _useState2[1];
-
-  var reservationState = function reservationState() {
-    if (reservationTab === true) {
-      setReservationTab(false);
-    } else {
-      setReservationTab(true);
-    }
-  };
-
-  return _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement(_Reservations.default, {
-    showState: reservationTab
-  })), _react.default.createElement(MainNav, null, _react.default.createElement("p", null, "Logo area"), _react.default.createElement(NavTitle, null, _react.default.createElement("h1", null, "-Keystone Hotel-"), _react.default.createElement("p", null, "Link area")), _react.default.createElement("div", null, _react.default.createElement("button", {
-    onClick: reservationState
+  }, " SELECT ROOM "))), _react.default.createElement(MainNav, null, _react.default.createElement("p", null, "Logo area"), _react.default.createElement(NavTitle, null, _react.default.createElement("h1", null, "-Keystone Hotel-"), _react.default.createElement("p", null, "Link area")), _react.default.createElement("div", null, _react.default.createElement("button", {
+    onClick: modalStateChange
   }, " Reserve a Room"))));
 };
 
 var _default = Navbar;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","./Reservations.js":"src/Components/Reservations.js"}],"src/Components/Footer.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../../API/API.js":"API/API.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/Components/Footer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43412,7 +43388,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54774" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65307" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
