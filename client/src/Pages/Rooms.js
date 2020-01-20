@@ -63,8 +63,6 @@ const Rooms = () => {
     useEffect (() =>{
         API.getRoomInfo()
         .then((response)=>{
-            // setAmmenity(response.data)
-            // setReservationInfo(response.data)
             console.log(response)
             setGuestNumber(parseInt(response.data.guestCount))
             setViewNumber(parseInt(response.data.viewSelection))
