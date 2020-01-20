@@ -43038,7 +43038,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _API = _interopRequireDefault(require("../../API/API.js"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -43054,8 +43054,28 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\nposition: relative; \nbackground-color: red; \nheight: 50%; \ntop: 25%; \nanimation: 1s ", "\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\nfrom {top:-300px; opacity:0} \nto {top:25%; opacity:1}\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\ndisplay: ", ";\njustify-content: center; \nbackground: papayawhip;\nwidth: 50%\nz-index: 1000 \n"]);
+  var data = _taggedTemplateLiteral(["\ndisplay: ", ";\nposition: fixed; \nz-index: 1;\njustify-content: center; \nbackground-color: rgba(0,0,0,0.4);\nwidth: 100%;\nheight: 100%; \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -43066,9 +43086,13 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var StyleTest = _styledComponents.default.div(_templateObject(), function (props) {
+var ModalContainer = _styledComponents.default.div(_templateObject(), function (props) {
   return props.showState;
 });
+
+var panDown = (0, _styledComponents.keyframes)(_templateObject2());
+
+var ModalContent = _styledComponents.default.div(_templateObject3(), panDown);
 
 var Reservations = function Reservations(props) {
   var _useState = (0, _react.useState)(""),
@@ -43126,9 +43150,9 @@ var Reservations = function Reservations(props) {
     });
   };
 
-  return _react.default.createElement("div", null, _react.default.createElement(StyleTest, {
+  return _react.default.createElement(ModalContainer, {
     showState: props.showState === true ? "grid" : "None"
-  }, _react.default.createElement("h1", null, "Make a Reservation"), "Check In: ", _react.default.createElement("input", {
+  }, _react.default.createElement(ModalContent, null, _react.default.createElement("span", null, "\xD7"), _react.default.createElement("h1", null, "Make a Reservation"), "Check In: ", _react.default.createElement("input", {
     type: "date",
     name: "checkIn",
     onChange: function onChange(event) {
@@ -43249,7 +43273,7 @@ var MainNav = _styledComponents.default.div(_templateObject());
 var NavTitle = _styledComponents.default.div(_templateObject2());
 
 var Navbar = function Navbar() {
-  var _useState = (0, _react.useState)(true),
+  var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       reservationTab = _useState2[0],
       setReservationTab = _useState2[1];
@@ -43388,7 +43412,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61418" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54774" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

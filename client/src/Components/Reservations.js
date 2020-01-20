@@ -1,13 +1,31 @@
 import React, { useState } from 'react';
 import API from '../../API/API.js';
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
-const StyleTest = styled.div`
+
+
+
+const ModalContainer = styled.div`
 display: ${props => props.showState};
+position: fixed; 
+z-index: 1;
 justify-content: center; 
-background: papayawhip;
-width: 50%
-z-index: 1000 
+background-color: rgba(0,0,0,0.4);
+width: 100%;
+height: 100%; 
+`
+
+const panDown = keyframes`
+from {top:-300px; opacity:0} 
+to {top:25%; opacity:1}
+`
+
+const ModalContent = styled.div`
+position: relative; 
+background-color: red; 
+height: 50%; 
+top: 25%; 
+animation: 1s ${panDown}
 `
 
 
@@ -50,8 +68,10 @@ const Reservations = (props) => {
 
 
     return (
-        <div>
-            <StyleTest showState={props.showState === true ? "grid" : "None"}>
+
+            <ModalContainer showState={props.showState === true ? "grid" : "None"}>
+                <ModalContent>
+                <span>&times;</span>
                 <h1>Make a Reservation</h1>
                 Check In: <input type="date" name="checkIn" onChange={ event => setCheckIn(event.target.value)} />
                 Check Out: <input type="date" name="checkOut" onChange={ event => setCheckOut(event.target.value)}/>
@@ -78,9 +98,8 @@ const Reservations = (props) => {
                     </select>
                 </div>
                 <button onClick={reservationInfoSubmit} > SELECT ROOM </button>
-            </StyleTest>
-
-        </div>
+                </ModalContent>
+            </ModalContainer>
     )
 }
 
