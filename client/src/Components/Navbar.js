@@ -17,7 +17,7 @@ justify-content: center;
 
 let Navbar = () => {
 
-    const [reservationTab, setReservationTab] = useState(true)
+    const [reservationTab, setReservationTab] = useState(false)
 
     const reservationState = () => {
         if (reservationTab === true) {
