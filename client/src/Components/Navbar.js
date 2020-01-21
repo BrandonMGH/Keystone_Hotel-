@@ -26,21 +26,28 @@ top: 25%
 animation: 1s ${panDown}
 `
 
-const ModalClose = styled.span`
 
-`
-
-const MainNav = styled.div`
+const MainNav = styled.section`
 display: grid; 
-grid-template-columns: 25% 50% 25%
-justify-content: center; 
+grid-template-columns: 1fr 2fr 1fr;
+grid-template-rows: 4fr 1fr;
 `
 
-const NavTitle = styled.div`
-display: grid;
-grid-template-rows: 75% 25%;
-justify-content: center; 
+const NavLogo = styled.section`
+grid-area: 1/3/1/2;
+
 `
+
+const NavTitle = styled.section`
+`
+const NavLinks = styled.section`
+grid-area: 2/3/2/3;
+text-align: center; 
+`
+
+const NavReservations = styled.section`
+`
+
 
 
 const Navbar = () => {
@@ -52,11 +59,11 @@ const Navbar = () => {
     const [viewSelection, setViewSelection] = useState("3")
     const [petConfirmation, setPetConfirmation] = useState("2")
 
-   
 
 
-    const reservationInfoSubmit = () =>{
-        if(checkIn === "" || checkOut === ""){
+
+    const reservationInfoSubmit = () => {
+        if (checkIn === "" || checkOut === "") {
             alert("Please select a Check-In and a Check-Out Date")
         } else {
             let resObject = {
@@ -64,12 +71,12 @@ const Navbar = () => {
                 checkOut: checkOut,
                 guestCount: guestCount,
                 viewSelection: viewSelection,
-                petConfirmation: petConfirmation, 
+                petConfirmation: petConfirmation,
                 priceRange: priceRange,
             }
             return axiosCall(resObject)
         }
-    
+
     }
 
     const modalStateChange = () => {
@@ -96,46 +103,50 @@ const Navbar = () => {
         <div>
             <ModalContainer showState={modalState === true ? "grid" : "None"}>
                 <ModalContent>
-                <span onClick={modalStateChange}>&times;</span>
-                <h1>Make a Reservation</h1>
-                Check In: <input type="date" name="checkIn" onChange={ event => setCheckIn(event.target.value)} />
-                Check Out: <input type="date" name="checkOut" onChange={ event => setCheckOut(event.target.value)}/>
-                Price Range: ${priceRange}<input type="range" name="priceRange" min="250" max="1500" value={priceRange} onChange={ event => setPriceRange(event.target.value)} />
-                <div>
-                    <p>Number of Guests</p>
-                    <select name="guestCount" value={guestCount}  onChange={event => setGuestCount(event.target.value)}>
-                        <option value="1" >1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4 +</option>
-                    </select>
-                    <p>Select a View</p>
-                    <select name="roomView" value={viewSelection} onChange={event => setViewSelection(event.target.value)}>
-                        <option value="1">Ocean Cliffside</option>
-                        <option value="2">Forest</option>
-                        <option value="3">Mountain</option>
-                        <option value="3">No Preference</option>
-                    </select>
-                    <p>Bringing a Pet?</p>
-                    <select name="petSelection" value={petConfirmation} onChange={event => setPetConfirmation(event.target.value)}>
-                        <option value="1">Yes</option>
-                        <option value="2">No</option>
-                    </select>
-                </div>
-                <button onClick={reservationInfoSubmit} > SELECT ROOM </button>
+                    <span onClick={modalStateChange}>&times;</span>
+                    <h1>Make a Reservation</h1>
+                    Check In: <input type="date" name="checkIn" onChange={event => setCheckIn(event.target.value)} />
+                    Check Out: <input type="date" name="checkOut" onChange={event => setCheckOut(event.target.value)} />
+                    Price Range: ${priceRange}<input type="range" name="priceRange" min="250" max="1500" value={priceRange} onChange={event => setPriceRange(event.target.value)} />
+                    <div>
+                        <p>Number of Guests</p>
+                        <select name="guestCount" value={guestCount} onChange={event => setGuestCount(event.target.value)}>
+                            <option value="1" >1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4 +</option>
+                        </select>
+                        <p>Select a View</p>
+                        <select name="roomView" value={viewSelection} onChange={event => setViewSelection(event.target.value)}>
+                            <option value="1">Ocean Cliffside</option>
+                            <option value="2">Forest</option>
+                            <option value="3">Mountain</option>
+                            <option value="3">No Preference</option>
+                        </select>
+                        <p>Bringing a Pet?</p>
+                        <select name="petSelection" value={petConfirmation} onChange={event => setPetConfirmation(event.target.value)}>
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                        </select>
+                    </div>
+                    <button onClick={reservationInfoSubmit} > SELECT ROOM </button>
                 </ModalContent>
             </ModalContainer>
-             <MainNav>
-                 <p>Logo area</p>
-                 <NavTitle >
-                     <h1>-Keystone Hotel-</h1>
-                     <p>Link area</p>
-                 </NavTitle>
-                 <div>
-                 <button onClick={modalStateChange}> Reserve a Room</button>
-                 </div>
-             </MainNav>
-         </div>
+            <MainNav>
+                <NavLogo>
+                    <p>Logo area</p>
+                </NavLogo>
+                <NavTitle >
+                    <h1>-Keystone Hotel-</h1>
+                </NavTitle>
+                <NavLinks>
+                    <p>Link area</p>
+                </NavLinks>
+                <NavReservations>
+                    <button onClick={modalStateChange}> Reserve a Room</button>
+                </NavReservations>
+            </MainNav>
+        </div>
 
 
     )
