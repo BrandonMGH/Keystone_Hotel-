@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 //* PAGES  *//
 import Main from './Pages/Main.js'
-import Rooms from './Pages/Rooms.js'
+import Rooms from './Pages/Rooms/Rooms.js'
 import Dining from './Pages/Dining.js'
 import Spa from './Pages/Spa.js'
 import AreaAttractions from './Pages/AreaAttractions.js'
