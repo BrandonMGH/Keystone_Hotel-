@@ -43054,8 +43054,28 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\ngrid-area: 2/3/2/3;\ntext-align: center; \n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\ndisplay: grid;\ngrid-template-rows: 75% 25%;\njustify-content: center; \n"]);
+  var data = _taggedTemplateLiteral(["\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -43065,7 +43085,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\ndisplay: grid; \ngrid-template-columns: 25% 50% 25%\njustify-content: center; \n"]);
+  var data = _taggedTemplateLiteral(["\ngrid-area: 1/3/1/2;\n\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -43075,7 +43095,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n\n"]);
+  var data = _taggedTemplateLiteral(["\ndisplay: grid; \ngrid-template-columns: 1fr 2fr 1fr;\ngrid-template-rows: 4fr 1fr;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -43124,11 +43144,15 @@ var panDown = (0, _styledComponents.keyframes)(_templateObject2());
 
 var ModalContent = _styledComponents.default.div(_templateObject3(), panDown);
 
-var ModalClose = _styledComponents.default.span(_templateObject4());
+var MainNav = _styledComponents.default.section(_templateObject4());
 
-var MainNav = _styledComponents.default.div(_templateObject5());
+var NavLogo = _styledComponents.default.section(_templateObject5());
 
-var NavTitle = _styledComponents.default.div(_templateObject6());
+var NavTitle = _styledComponents.default.section(_templateObject6());
+
+var NavLinks = _styledComponents.default.section(_templateObject7());
+
+var NavReservations = _styledComponents.default.section(_templateObject8());
 
 var Navbar = function Navbar() {
   var _useState = (0, _react.useState)(false),
@@ -43264,7 +43288,7 @@ var Navbar = function Navbar() {
     value: "2"
   }, "No"))), _react.default.createElement("button", {
     onClick: reservationInfoSubmit
-  }, " SELECT ROOM "))), _react.default.createElement(MainNav, null, _react.default.createElement("p", null, "Logo area"), _react.default.createElement(NavTitle, null, _react.default.createElement("h1", null, "-Keystone Hotel-"), _react.default.createElement("p", null, "Link area")), _react.default.createElement("div", null, _react.default.createElement("button", {
+  }, " SELECT ROOM "))), _react.default.createElement(MainNav, null, _react.default.createElement(NavLogo, null, _react.default.createElement("p", null, "Logo area")), _react.default.createElement(NavTitle, null, _react.default.createElement("h1", null, "-Keystone Hotel-")), _react.default.createElement(NavLinks, null, _react.default.createElement("p", null, "Link area")), _react.default.createElement(NavReservations, null, _react.default.createElement("button", {
     onClick: modalStateChange
   }, " Reserve a Room"))));
 };
@@ -43388,7 +43412,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65307" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51315" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
