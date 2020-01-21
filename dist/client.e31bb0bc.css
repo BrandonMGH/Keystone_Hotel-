@@ -1,0 +1,37 @@
+#roomContainer {
+    display: grid; 
+    grid-template-columns: 1fr .75fr .75fr;
+    grid-template-rows: 1fr 1fr 2fr 3fr;
+    grid-template-areas: 
+    "blank blank blank"
+    "roomImage roomTitle roomTitle"
+    "roomImage roomSummary roomSummary"
+    "roomImage roomAmenities roomDescription";
+}
+
+#roomImage {
+    grid-area: roomImage;
+    background-color: red; 
+}
+
+#roomTitle {
+    grid-area: roomTitle;
+    background-color: purple; 
+}
+
+#roomSummary {
+    grid-area: roomSummary; 
+    background-color: green; 
+}
+
+#roomAmenities {
+    grid-area: roomAmenities;
+    background-color: yellow; 
+}
+
+#roomDescription {
+    grid-area: roomDescription;
+    background-color: blue;
+}
+
+/*# sourceMappingURL=/client.e31bb0bc.css.map */

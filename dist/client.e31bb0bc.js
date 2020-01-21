@@ -42843,7 +42843,79 @@ var _default = {
   }
 };
 exports.default = _default;
-},{"axios":"../node_modules/axios/index.js"}],"src/Pages/Rooms.js":[function(require,module,exports) {
+},{"axios":"../node_modules/axios/index.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/Pages/Rooms/Rooms.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Pages/Rooms/Rooms.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -42855,7 +42927,9 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _API = _interopRequireDefault(require("../../API/API.js"));
+var _API = _interopRequireDefault(require("../../../API/API.js"));
+
+require("./Rooms.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42872,7 +42946,7 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\ndisplay: ", ";\njustify-content: center; \nbackground: papayawhip;\nwidth: 50%\nz-index: 1000 \n"]);
+  var data = _taggedTemplateLiteral(["\ndisplay: ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -42923,7 +42997,7 @@ var roomObjectThree = {
   price: 1250
 };
 
-var RoomStyles = _styledComponents.default.div(_templateObject(), function (props) {
+var RoomShowState = _styledComponents.default.section(_templateObject(), function (props) {
   return props.showState;
 });
 
@@ -42963,16 +43037,28 @@ var Rooms = function Rooms() {
     });
   });
   return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Rooms"), roomInfo.map(function (objectKey) {
-    return _react.default.createElement(RoomStyles, {
+    return _react.default.createElement(RoomShowState, {
       key: objectKey.id,
       showState: objectKey.guestCount < guestNumber || objectKey.viewChoice !== viewNumber || objectKey.petNumber !== petNumber || objectKey.price > priceNumber ? "None" : "Grid"
-    }, _react.default.createElement("p", null, objectKey.roomName));
+    }, _react.default.createElement("section", {
+      id: "roomContainer"
+    }, _react.default.createElement("section", {
+      id: "roomImage"
+    }, _react.default.createElement("p", null, "Room Image")), _react.default.createElement("section", {
+      id: "roomTitle"
+    }, _react.default.createElement("h1", null, "Room Title")), _react.default.createElement("section", {
+      id: "roomSummary"
+    }, _react.default.createElement("p", null, "Room Summary")), _react.default.createElement("section", {
+      id: "roomAmenities"
+    }, _react.default.createElement("p", null, "Room Amenities")), _react.default.createElement("section", {
+      id: "roomDescription"
+    }, _react.default.createElement("p", null, "Room Description"))));
   }), _react.default.createElement("p", null, "All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The "));
 };
 
 var _default = Rooms;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../API/API.js":"API/API.js"}],"src/Pages/Dining.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../API/API.js":"API/API.js","./Rooms.css":"src/Pages/Rooms/Rooms.css"}],"src/Pages/Dining.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43327,7 +43413,7 @@ var _reactRouterDom = require("react-router-dom");
 
 var _Main = _interopRequireDefault(require("./Pages/Main.js"));
 
-var _Rooms = _interopRequireDefault(require("./Pages/Rooms.js"));
+var _Rooms = _interopRequireDefault(require("./Pages/Rooms/Rooms.js"));
 
 var _Dining = _interopRequireDefault(require("./Pages/Dining.js"));
 
@@ -43368,7 +43454,7 @@ var App = function App() {
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./Pages/Main.js":"src/Pages/Main.js","./Pages/Rooms.js":"src/Pages/Rooms.js","./Pages/Dining.js":"src/Pages/Dining.js","./Pages/Spa.js":"src/Pages/Spa.js","./Pages/AreaAttractions.js":"src/Pages/AreaAttractions.js","./Components/Navbar.js":"src/Components/Navbar.js","./Components/Footer.js":"src/Components/Footer.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./Pages/Main.js":"src/Pages/Main.js","./Pages/Rooms/Rooms.js":"src/Pages/Rooms/Rooms.js","./Pages/Dining.js":"src/Pages/Dining.js","./Pages/Spa.js":"src/Pages/Spa.js","./Pages/AreaAttractions.js":"src/Pages/AreaAttractions.js","./Components/Navbar.js":"src/Components/Navbar.js","./Components/Footer.js":"src/Components/Footer.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _React = _interopRequireDefault(require("React"));
@@ -43412,7 +43498,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51315" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65058" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

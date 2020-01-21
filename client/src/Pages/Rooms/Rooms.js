@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
 
-import API from '../../API/API.js';
+import API from '../../../API/API.js';
+import './Rooms.css'
 
 let roomObject = {
     id: 1, 
@@ -45,12 +46,8 @@ let roomObjectThree = {
     price: 1250
 }
 
-const RoomStyles = styled.div`
+const RoomShowState = styled.section`
 display: ${props => props.showState};
-justify-content: center; 
-background: papayawhip;
-width: 50%
-z-index: 1000 
 `
 
 const Rooms = () => {
@@ -76,10 +73,25 @@ const Rooms = () => {
         <div>
             <h1>Rooms</h1>
             {roomInfo.map(objectKey => (
-                    <RoomStyles key={objectKey.id} showState={objectKey.guestCount < guestNumber || objectKey.viewChoice !== viewNumber || objectKey.petNumber !== petNumber  || objectKey.price > priceNumber? "None" : "Grid"}>
-                       <p>{objectKey.roomName}</p>  
-                    </RoomStyles>
-                    
+                    <RoomShowState key={objectKey.id} showState={objectKey.guestCount < guestNumber || objectKey.viewChoice !== viewNumber || objectKey.petNumber !== petNumber  || objectKey.price > priceNumber? "None" : "Grid"}>
+                      <section id="roomContainer">
+                          <section id="roomImage">
+                             <p>Room Image</p>
+                          </section>
+                          <section id="roomTitle">
+                            <h1>Room Title</h1>
+                          </section>
+                          <section id="roomSummary">
+                            <p>Room Summary</p>
+                          </section>
+                          <section id="roomAmenities">
+                            <p>Room Amenities</p>
+                          </section>
+                          <section id="roomDescription">
+                            <p>Room Description</p>
+                          </section>
+                      </section>
+                    </RoomShowState>
                     ))}
             <p>All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The </p>
 
