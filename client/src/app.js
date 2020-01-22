@@ -2,15 +2,15 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 //* PAGES  *//
-import Main from './Pages/Main.js'
+import Main from './Pages/Main/Main.js'
 import Rooms from './Pages/Rooms/Rooms.js'
-import Dining from './Pages/Dining.js'
-import Spa from './Pages/Spa.js'
-import AreaAttractions from './Pages/AreaAttractions.js'
+import Dining from './Pages/Dining/Dining.js'
+import Spa from './Pages/Spa/Spa.js'
+import AreaAttractions from './Pages/AreaAttractions/AreaAttractions.js'
 
 //* COMPONENETS *//
-import Navbar from './Components/Navbar.js'
-import Footer from './Components/Footer.js'
+import Navbar from './Components/Navbar/Navbar.js'
+import Footer from './Components/Footer/Footer.js'
 
 const App = () => {
     return (

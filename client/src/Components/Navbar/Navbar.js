@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import API from '../../API/API.js';
+import API from '../../../API/API.js';
 import styled, { keyframes } from 'styled-components'
+import './Navbar.css'
 
 
 const ModalContainer = styled.div`
@@ -24,28 +25,6 @@ background-color: red;
 height: 50%; 
 top: 25%
 animation: 1s ${panDown}
-`
-
-
-const MainNav = styled.section`
-display: grid; 
-grid-template-columns: 1fr 2fr 1fr;
-grid-template-rows: 4fr 1fr;
-`
-
-const NavLogo = styled.section`
-grid-area: 1/3/1/2;
-
-`
-
-const NavTitle = styled.section`
-`
-const NavLinks = styled.section`
-grid-area: 2/3/2/3;
-text-align: center; 
-`
-
-const NavReservations = styled.section`
 `
 
 
@@ -132,20 +111,20 @@ const Navbar = () => {
                     <button onClick={reservationInfoSubmit} > SELECT ROOM </button>
                 </ModalContent>
             </ModalContainer>
-            <MainNav>
-                <NavLogo>
+            <section id="mainNav">
+                <section id="navLogo">
                     <p>Logo area</p>
-                </NavLogo>
-                <NavTitle >
+                </section>
+                <section id="navTitle">
                     <h1>-Keystone Hotel-</h1>
-                </NavTitle>
-                <NavLinks>
+                </section>
+                <section id="navLinks">
                     <p>Link area</p>
-                </NavLinks>
-                <NavReservations>
+                </section>
+                <section id="navReservations">
                     <button onClick={modalStateChange}> Reserve a Room</button>
-                </NavReservations>
-            </MainNav>
+                </section>
+            </section>
         </div>
 
 

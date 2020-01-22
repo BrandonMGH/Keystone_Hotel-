@@ -37975,7 +37975,7 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"../node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","history":"../node_modules/history/esm/history.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"src/Pages/Main.js":[function(require,module,exports) {
+},{"react-router":"../node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","history":"../node_modules/history/esm/history.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"src/Pages/Main/Main.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43058,7 +43058,7 @@ var Rooms = function Rooms() {
 
 var _default = Rooms;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../API/API.js":"API/API.js","./Rooms.css":"src/Pages/Rooms/Rooms.css"}],"src/Pages/Dining.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../API/API.js":"API/API.js","./Rooms.css":"src/Pages/Rooms/Rooms.css"}],"src/Pages/Dining/Dining.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43076,7 +43076,7 @@ var Dining = function Dining() {
 
 var _default = Dining;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"src/Pages/Spa.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"src/Pages/Spa/Spa.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43094,7 +43094,7 @@ var Spa = function Spa() {
 
 var _default = Spa;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"src/Pages/AreaAttractions.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"src/Pages/AreaAttractions/AreaAttractions.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43112,7 +43112,12 @@ var AreaAttractions = function AreaAttractions() {
 
 var _default = AreaAttractions;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"src/Components/Navbar.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"src/Components/Navbar/Navbar.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Components/Navbar/Navbar.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43122,9 +43127,11 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _API = _interopRequireDefault(require("../../API/API.js"));
+var _API = _interopRequireDefault(require("../../../API/API.js"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
+
+require("./Navbar.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -43139,56 +43146,6 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n"]);
-
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\ngrid-area: 2/3/2/3;\ntext-align: center; \n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\ngrid-area: 1/3/1/2;\n\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\ndisplay: grid; \ngrid-template-columns: 1fr 2fr 1fr;\ngrid-template-rows: 4fr 1fr;\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
 
 function _templateObject3() {
   var data = _taggedTemplateLiteral(["\nposition: relative; \nbackground-color: red; \nheight: 50%; \ntop: 25%\nanimation: 1s ", "\n"]);
@@ -43229,16 +43186,6 @@ var ModalContainer = _styledComponents.default.div(_templateObject(), function (
 var panDown = (0, _styledComponents.keyframes)(_templateObject2());
 
 var ModalContent = _styledComponents.default.div(_templateObject3(), panDown);
-
-var MainNav = _styledComponents.default.section(_templateObject4());
-
-var NavLogo = _styledComponents.default.section(_templateObject5());
-
-var NavTitle = _styledComponents.default.section(_templateObject6());
-
-var NavLinks = _styledComponents.default.section(_templateObject7());
-
-var NavReservations = _styledComponents.default.section(_templateObject8());
 
 var Navbar = function Navbar() {
   var _useState = (0, _react.useState)(false),
@@ -43374,14 +43321,24 @@ var Navbar = function Navbar() {
     value: "2"
   }, "No"))), _react.default.createElement("button", {
     onClick: reservationInfoSubmit
-  }, " SELECT ROOM "))), _react.default.createElement(MainNav, null, _react.default.createElement(NavLogo, null, _react.default.createElement("p", null, "Logo area")), _react.default.createElement(NavTitle, null, _react.default.createElement("h1", null, "-Keystone Hotel-")), _react.default.createElement(NavLinks, null, _react.default.createElement("p", null, "Link area")), _react.default.createElement(NavReservations, null, _react.default.createElement("button", {
+  }, " SELECT ROOM "))), _react.default.createElement("section", {
+    id: "mainNav"
+  }, _react.default.createElement("section", {
+    id: "navLogo"
+  }, _react.default.createElement("p", null, "Logo area")), _react.default.createElement("section", {
+    id: "navTitle"
+  }, _react.default.createElement("h1", null, "-Keystone Hotel-")), _react.default.createElement("section", {
+    id: "navLinks"
+  }, _react.default.createElement("p", null, "Link area")), _react.default.createElement("section", {
+    id: "navReservations"
+  }, _react.default.createElement("button", {
     onClick: modalStateChange
   }, " Reserve a Room"))));
 };
 
 var _default = Navbar;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../../API/API.js":"API/API.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/Components/Footer.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../../../API/API.js":"API/API.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","./Navbar.css":"src/Components/Navbar/Navbar.css"}],"src/Components/Footer/Footer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43411,19 +43368,19 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _Main = _interopRequireDefault(require("./Pages/Main.js"));
+var _Main = _interopRequireDefault(require("./Pages/Main/Main.js"));
 
 var _Rooms = _interopRequireDefault(require("./Pages/Rooms/Rooms.js"));
 
-var _Dining = _interopRequireDefault(require("./Pages/Dining.js"));
+var _Dining = _interopRequireDefault(require("./Pages/Dining/Dining.js"));
 
-var _Spa = _interopRequireDefault(require("./Pages/Spa.js"));
+var _Spa = _interopRequireDefault(require("./Pages/Spa/Spa.js"));
 
-var _AreaAttractions = _interopRequireDefault(require("./Pages/AreaAttractions.js"));
+var _AreaAttractions = _interopRequireDefault(require("./Pages/AreaAttractions/AreaAttractions.js"));
 
-var _Navbar = _interopRequireDefault(require("./Components/Navbar.js"));
+var _Navbar = _interopRequireDefault(require("./Components/Navbar/Navbar.js"));
 
-var _Footer = _interopRequireDefault(require("./Components/Footer.js"));
+var _Footer = _interopRequireDefault(require("./Components/Footer/Footer.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -43454,7 +43411,7 @@ var App = function App() {
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./Pages/Main.js":"src/Pages/Main.js","./Pages/Rooms/Rooms.js":"src/Pages/Rooms/Rooms.js","./Pages/Dining.js":"src/Pages/Dining.js","./Pages/Spa.js":"src/Pages/Spa.js","./Pages/AreaAttractions.js":"src/Pages/AreaAttractions.js","./Components/Navbar.js":"src/Components/Navbar.js","./Components/Footer.js":"src/Components/Footer.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./Pages/Main/Main.js":"src/Pages/Main/Main.js","./Pages/Rooms/Rooms.js":"src/Pages/Rooms/Rooms.js","./Pages/Dining/Dining.js":"src/Pages/Dining/Dining.js","./Pages/Spa/Spa.js":"src/Pages/Spa/Spa.js","./Pages/AreaAttractions/AreaAttractions.js":"src/Pages/AreaAttractions/AreaAttractions.js","./Components/Navbar/Navbar.js":"src/Components/Navbar/Navbar.js","./Components/Footer/Footer.js":"src/Components/Footer/Footer.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _React = _interopRequireDefault(require("React"));
@@ -43498,7 +43455,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65058" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52345" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
