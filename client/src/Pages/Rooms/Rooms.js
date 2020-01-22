@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
 
-import API from '../../../API/API.js';
+import API from '../../../API/API.js'
 import './Rooms.css'
 
 let roomObject = {
@@ -46,7 +46,7 @@ let roomObjectThree = {
     price: 1250
 }
 
-const RoomShowState = styled.section`
+const RoomShowState = styled.section.attrs`
 display: ${props => props.showState};
 `
 
@@ -56,6 +56,8 @@ const Rooms = () => {
     const [petNumber, setPetNumber] = useState("")
     const [priceNumber, setPriceNumber] = useState("")
     const [roomInfo, setRoomInfo] = useState([roomObject, roomObjectTwo, roomObjectThree])
+    const [displayState, setDisplayState] = useState("None")
+
 
     useEffect (() =>{
         API.getRoomInfo()
@@ -93,6 +95,7 @@ const Rooms = () => {
                       </section>
                     </RoomShowState>
                     ))}
+                    
             <p>All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The </p>
 
         </div>

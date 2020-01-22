@@ -42997,7 +42997,7 @@ var roomObjectThree = {
   price: 1250
 };
 
-var RoomShowState = _styledComponents.default.section(_templateObject(), function (props) {
+var RoomShowState = _styledComponents.default.section.attrs(_templateObject(), function (props) {
   return props.showState;
 });
 
@@ -43026,6 +43026,11 @@ var Rooms = function Rooms() {
       _useState10 = _slicedToArray(_useState9, 2),
       roomInfo = _useState10[0],
       setRoomInfo = _useState10[1];
+
+  var _useState11 = (0, _react.useState)("None"),
+      _useState12 = _slicedToArray(_useState11, 2),
+      displayState = _useState12[0],
+      setDisplayState = _useState12[1];
 
   (0, _react.useEffect)(function () {
     _API.default.getRoomInfo().then(function (response) {
@@ -43455,7 +43460,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53707" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51557" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
