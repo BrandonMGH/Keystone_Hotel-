@@ -119,7 +119,11 @@ const Navbar = () => {
                     <h1>-Keystone Hotel-</h1>
                 </section>
                 <section id="navLinks">
-                    <p>Link area</p>
+                    <p>The Hotel</p>
+                    <p>Rooms</p>
+                    <p>Dining</p>
+                    <p>Spa</p>
+                    <p>Area Attractions</p>
                 </section>
                 <section id="navReservations">
                     <button onClick={modalStateChange}> Reserve a Room</button>

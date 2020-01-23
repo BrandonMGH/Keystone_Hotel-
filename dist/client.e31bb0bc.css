@@ -59,6 +59,7 @@
     grid-area: navLinks;
     background-color: coral;
     justify-content: center;
+    display: flex; 
 }
 
 #navReservations {
