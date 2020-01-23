@@ -43346,7 +43346,7 @@ var Navbar = function Navbar() {
     id: "navTitle"
   }, _react.default.createElement("h1", null, "-Keystone Hotel-")), _react.default.createElement("section", {
     id: "navLinks"
-  }, _react.default.createElement("p", null, "Link area")), _react.default.createElement("section", {
+  }, _react.default.createElement("p", null, "The Hotel"), _react.default.createElement("p", null, "Rooms"), _react.default.createElement("p", null, "Dining"), _react.default.createElement("p", null, "Spa"), _react.default.createElement("p", null, "Area Attractions")), _react.default.createElement("section", {
     id: "navReservations"
   }, _react.default.createElement("button", {
     onClick: modalStateChange
@@ -43472,7 +43472,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52224" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56548" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
