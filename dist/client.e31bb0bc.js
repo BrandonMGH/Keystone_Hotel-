@@ -42945,8 +42945,18 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\ndisplay: ", "\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\ndisplay: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\ndisplay: ", ";\nz-index: 1;\nposition: relative; \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -42997,8 +43007,12 @@ var roomObjectThree = {
   price: 1250
 };
 
-var RoomShowState = _styledComponents.default.section.attrs(_templateObject(), function (props) {
-  return props.showState;
+var RoomShowState = _styledComponents.default.section(_templateObject(), function (props) {
+  return props.showState === true ? "Grid" : "None";
+});
+
+var DefaultShowState = (0, _styledComponents.default)(RoomShowState)(_templateObject2(), function (props) {
+  return props.showState === true ? "Grid" : "None";
 });
 
 var Rooms = function Rooms() {
@@ -43027,7 +43041,7 @@ var Rooms = function Rooms() {
       roomInfo = _useState10[0],
       setRoomInfo = _useState10[1];
 
-  var _useState11 = (0, _react.useState)("None"),
+  var _useState11 = (0, _react.useState)(false),
       _useState12 = _slicedToArray(_useState11, 2),
       displayState = _useState12[0],
       setDisplayState = _useState12[1];
@@ -43041,10 +43055,10 @@ var Rooms = function Rooms() {
       setPriceNumber(parseInt(response.data.priceRange));
     });
   });
-  return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Rooms"), roomInfo.map(function (objectKey) {
+  return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Rooms"), _react.default.createElement("div", null, roomInfo.map(function (objectKey) {
     return _react.default.createElement(RoomShowState, {
       key: objectKey.id,
-      showState: objectKey.guestCount < guestNumber || objectKey.viewChoice !== viewNumber || objectKey.petNumber !== petNumber || objectKey.price > priceNumber ? "None" : "Grid"
+      showState: objectKey.guestCount < guestNumber || objectKey.viewChoice !== viewNumber || objectKey.petNumber !== petNumber || objectKey.price > priceNumber ? false : true
     }, _react.default.createElement("section", {
       id: "roomContainer"
     }, _react.default.createElement("section", {
@@ -43058,7 +43072,7 @@ var Rooms = function Rooms() {
     }, _react.default.createElement("p", null, "Room Amenities")), _react.default.createElement("section", {
       id: "roomDescription"
     }, _react.default.createElement("p", null, "Room Description"))));
-  }), _react.default.createElement("p", null, "All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The "));
+  }), _react.default.createElement("p", null, "Test")), _react.default.createElement("p", null, "All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The "));
 };
 
 var _default = Rooms;
@@ -43460,7 +43474,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51796" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52279" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

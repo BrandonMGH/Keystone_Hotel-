@@ -46,9 +46,15 @@ let roomObjectThree = {
     price: 1250
 }
 
-const RoomShowState = styled.section.attrs`
-display: ${props => props.showState};
+const RoomShowState = styled.section`
+display: ${props => props.showState === true ? "Grid" : "None"};
+z-index: 1;
+position: relative; 
 `
+const DefaultShowState = styled(RoomShowState)`
+display: ${props => props.showState === true ? "Grid" : "None"}
+`
+
 
 const Rooms = () => {
     const [guestNumber, setGuestNumber] = useState("")
@@ -56,7 +62,7 @@ const Rooms = () => {
     const [petNumber, setPetNumber] = useState("")
     const [priceNumber, setPriceNumber] = useState("")
     const [roomInfo, setRoomInfo] = useState([roomObject, roomObjectTwo, roomObjectThree])
-    const [displayState, setDisplayState] = useState("None")
+    const [displayState, setDisplayState] = useState(false)
 
 
     useEffect (() =>{
@@ -74,8 +80,9 @@ const Rooms = () => {
     return(
         <div>
             <h1>Rooms</h1>
+            <div>
             {roomInfo.map(objectKey => (
-                    <RoomShowState key={objectKey.id} showState={objectKey.guestCount < guestNumber || objectKey.viewChoice !== viewNumber || objectKey.petNumber !== petNumber  || objectKey.price > priceNumber? "None" : "Grid"}>
+                    <RoomShowState key={objectKey.id} showState={objectKey.guestCount < guestNumber || objectKey.viewChoice !== viewNumber || objectKey.petNumber !== petNumber  || objectKey.price > priceNumber? false : true}>
                       <section id="roomContainer">
                           <section id="roomImage">
                              <p>Room Image</p>
@@ -95,7 +102,8 @@ const Rooms = () => {
                       </section>
                     </RoomShowState>
                     ))}
-                    
+                    <p>Test</p>
+                  </div>
             <p>All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The </p>
 
         </div>
