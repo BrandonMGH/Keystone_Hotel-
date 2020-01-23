@@ -46,13 +46,16 @@ let roomObjectThree = {
     price: 1250
 }
 
+
 const RoomShowState = styled.section`
 display: ${props => props.showState === true ? "Grid" : "None"};
-z-index: 1;
 position: relative; 
 `
-const DefaultShowState = styled(RoomShowState)`
-display: ${props => props.showState === true ? "Grid" : "None"}
+const DefaultShowState = styled.section`
+z-index: -1;
+position: relative; 
+top: -25px; 
+text-align: center; 
 `
 
 
@@ -102,7 +105,7 @@ const Rooms = () => {
                       </section>
                     </RoomShowState>
                     ))}
-                    <p>Test</p>
+                    <DefaultShowState>No Rooms our currently available that match your search criteria</DefaultShowState>
                   </div>
             <p>All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The </p>
 
