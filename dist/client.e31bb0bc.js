@@ -42946,7 +42946,7 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\ndisplay: ", "\n"]);
+  var data = _taggedTemplateLiteral(["\nz-index: -1;\nposition: relative; \ntop: -25px; \ntext-align: center; \n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -42956,7 +42956,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\ndisplay: ", ";\nz-index: 1;\nposition: relative; \n"]);
+  var data = _taggedTemplateLiteral(["\ndisplay: ", ";\nposition: relative; \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -43011,9 +43011,7 @@ var RoomShowState = _styledComponents.default.section(_templateObject(), functio
   return props.showState === true ? "Grid" : "None";
 });
 
-var DefaultShowState = (0, _styledComponents.default)(RoomShowState)(_templateObject2(), function (props) {
-  return props.showState === true ? "Grid" : "None";
-});
+var DefaultShowState = _styledComponents.default.section(_templateObject2());
 
 var Rooms = function Rooms() {
   var _useState = (0, _react.useState)(""),
@@ -43072,7 +43070,7 @@ var Rooms = function Rooms() {
     }, _react.default.createElement("p", null, "Room Amenities")), _react.default.createElement("section", {
       id: "roomDescription"
     }, _react.default.createElement("p", null, "Room Description"))));
-  }), _react.default.createElement("p", null, "Test")), _react.default.createElement("p", null, "All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The "));
+  }), _react.default.createElement(DefaultShowState, null, "No Rooms our currently available that match your search criteria")), _react.default.createElement("p", null, "All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The "));
 };
 
 var _default = Rooms;
@@ -43474,7 +43472,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52279" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52224" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
