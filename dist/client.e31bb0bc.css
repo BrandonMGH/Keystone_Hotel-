@@ -36,7 +36,7 @@
 #mainNav {
     display: grid; 
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows: 2fr 1fr;
     text-align: center;
     grid-template-areas: 
     "navLogo navTitle navReservations"
@@ -45,27 +45,51 @@
 
 #navLogo {
     grid-area: navLogo;
-    background-color: cyan; 
     justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 50%;
+    height: auto;
+
 }
 
 #navTitle {
     grid-area: navTitle;
-    background-color: blueviolet;
     justify-content: center;
+
 }
 
 #navLinks {
     grid-area: navLinks;
-    background-color: coral;
-    justify-content: center;
+    justify-content: space-evenly;
     display: flex; 
 }
 
+
 #navReservations {
     grid-area: navReservations;
-    background-color: darkcyan;
+    display: flex; 
     justify-content: center;
+    align-items: center;
+
+}
+
+#navResButton{
+background-color: white;
+color: black; 
+padding: 3%; 
+border: 2px solid black;
+}
+
+#navResButton:hover {
+    background-color: black;
+    color: white; 
+    border: 2px solid white; 
+    cursor: pointer;
 }
 
 /*# sourceMappingURL=/client.e31bb0bc.css.map */

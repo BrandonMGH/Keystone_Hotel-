@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import API from '../../../API/API.js';
 import styled, { keyframes } from 'styled-components'
 import './Navbar.css'
+import AstroBearLogoInverse from './Images/AstroBearLogoInverse.png'
 
 
 const ModalContainer = styled.div`
@@ -113,20 +114,26 @@ const Navbar = () => {
             </ModalContainer>
             <section id="mainNav">
                 <section id="navLogo">
-                    <p>Logo area</p>
+                    <img src={AstroBearLogoInverse} />
                 </section>
                 <section id="navTitle">
                     <h1>-Keystone Hotel-</h1>
                 </section>
                 <section id="navLinks">
-                    <p>The Hotel</p>
-                    <p>Rooms</p>
-                    <p>Dining</p>
-                    <p>Spa</p>
-                    <p>Area Attractions</p>
+                    <p>|</p>    
+                    <p className="navLink">The Hotel</p>
+                    <p>|</p>
+                    <p className="navLink">Rooms</p>
+                    <p>|</p>
+                    <p className="navLink">Dining</p>
+                    <p>|</p>
+                    <p className="navLink">Spa</p>
+                    <p>|</p>
+                    <p className="navLink">Area Attractions</p>
+                    <p>|</p>
                 </section>
                 <section id="navReservations">
-                    <button onClick={modalStateChange}> Reserve a Room</button>
+                    <button id="navResButton" onClick={modalStateChange}> Reserve a Room</button>
                 </section>
             </section>
         </div>
