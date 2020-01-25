@@ -1,19 +1,13 @@
-/* #sectionOne {
-    grid-area:one;
+#mainTitleSection{
+   display: flex; 
+   justify-content: center;
+   align-content: center;
+   background-image: url('./Images/ForestImageOne.jpg');
+   height: 650px; 
 }
 
-#sectionTwo {
-    grid-area:two;
+#mainTitleSectionText {
+    position: relative;
+    top: 50%; 
+    color: white; 
 }
-
-#sectionThree {
-    grid-area:three;
-}
-
-#sectionFour {
-    grid-area:four;
-}
-
-#sectionFive {
-    grid-area:five;
-} */

@@ -1,17 +1,19 @@
 import React from 'react'
-import styled from 'styled-components'
+import './Main.css'
+
+
 
 
 
  const Main = () => {
     return (
-       <div>
-           <section id="sectionOne">1</section>
-           <section id="sectionTwo">2</section>
-           <section id="sectionThree">3</section>
-           <section id="sectionFour">4</section>
-           <section id="sectionFive">5</section>
-       </div>
+        <>
+       <section id="mainTitleSection">
+           <section id="mainTitleSectionText">
+               <h1>-KEYSTONE HOTEL-</h1>
+           </section>
+       </section>
+       </>
     )
 }
 
