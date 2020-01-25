@@ -11,3 +11,29 @@
     top: 50%; 
     color: white; 
 }
+
+#mainSectionDivideOne {
+    display: grid;
+    grid-template-columns: 2fr 2fr 4fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    justify-content: center;
+    grid-template-areas:
+    "sectionOne sectionThree sectionThree"
+    "sectionTwo sectionThree sectionThree"
+    "sectionTwo sectionThree sectionThree"
+}
+
+#mainSubSectionDivideOne {
+    grid-area: sectionOne;
+    background-color: white; 
+}
+
+#mainSubSectionDivideTwo {
+    grid-area: sectionTwo;
+    background-color: red; 
+}
+
+#mainSubSectionDivideThree {
+    grid-area: sectionThree;
+    background-color: blue; 
+}
