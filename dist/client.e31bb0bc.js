@@ -38066,7 +38066,15 @@ var Main = function Main() {
     id: "mainTitleSection"
   }, _react.default.createElement("section", {
     id: "mainTitleSectionText"
-  }, _react.default.createElement("h1", null, "-KEYSTONE HOTEL-"))));
+  }, _react.default.createElement("h1", null, "-KEYSTONE HOTEL-"))), _react.default.createElement("section", {
+    id: "mainSectionDivideOne"
+  }, _react.default.createElement("section", {
+    id: "mainSubSectionDivideOne"
+  }, "test"), _react.default.createElement("section", {
+    id: "mainSubSectionDivideTwo"
+  }, "test"), _react.default.createElement("section", {
+    id: "mainSubSectionDivideThree"
+  }, "test")));
 };
 
 var _default = Main;
@@ -43500,7 +43508,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56299" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58919" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

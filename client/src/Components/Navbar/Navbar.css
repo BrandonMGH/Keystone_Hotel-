@@ -30,8 +30,8 @@ img {
 
 #navLinks {
     grid-area: navLinks;
-    justify-content: space-evenly;
     display: flex; 
+    justify-content: space-evenly;
 }
 
 
