@@ -1,3 +1,16 @@
+#mainTitleSection{
+   display: flex; 
+   justify-content: center;
+   align-content: center;
+   background-image: url('/ForestImageOne.c903e34f.jpg');
+   height: 650px; 
+}
+
+#mainTitleSectionText {
+    position: relative;
+    top: 50%; 
+    color: white; 
+}
 #roomContainer {
     display: grid; 
     grid-template-columns: 1fr .75fr .75fr;
