@@ -1,16 +1,15 @@
 
 #mainTitleSection{
-   display: flex; 
-   justify-content: center;
-   align-content: center;
    background-image: url('/ForestImageOne.c903e34f.jpg');
    height: 650px; 
+   background-size: cover;
 }
 
-#mainTitleSectionText {
+.sectionTextFormatting {
     position: relative;
     top: 50%; 
     color: white; 
+    text-align: center;
 }
 
 #mainSectionDivideOne {
@@ -37,6 +36,13 @@ height: 650px
 #imgSubSectionDivideTwo {
     height: 50%; 
 }
+#mainSectionDivideTwo{
+    height: 650px; 
+    color: white; 
+    background-image: url('/rockyMountainOne.2932ca01.jpeg');
+    background-size: cover;
+}
+
 
 @media (max-width: 900px){
     #mainSectionDivideOne {
