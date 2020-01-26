@@ -1,3 +1,4 @@
+
 #mainTitleSection{
    display: flex; 
    justify-content: center;
@@ -13,27 +14,47 @@
 }
 
 #mainSectionDivideOne {
-    height: 650px; 
+height: 650px
 }
+
 
 #mainSubSectionDivideOne {
     position: relative; 
-    top: 32%; 
-    left: 15%;
-    width: 35%; 
     background-color: white; 
-    z-index: 50; 
+    width: 35%; 
+    top: 20%; 
+    left: 10%; 
+    z-index: 26
 }
 
 #mainSubSectionDivideTwo {
-    background-image: url('./Images/ThailandBoatHoping.jpg');
-    background-size: cover; 
-    position: relative;
-    width: 50%;  
-    height: 75%; 
-    float: right; 
-    top: -35%;  
-    right: 15%; 
-    background-color: red;
-    z-index: 25; 
+   position:relative;
+   top: -20%; 
+   display:flex;
+   justify-content: center;
+}
+
+#imgSubSectionDivideTwo {
+    height: 50%; 
+}
+
+@media (max-width: 900px){
+    #mainSectionDivideOne {
+        height: 100%
+        }
+    #mainSectionDivideOne {
+        display: grid; 
+        justify-content: center;
+    }
+    #mainSubSectionDivideOne, #mainSubSectionDivideTwo{
+        position: static; 
+    }
+    #mainSubSectionDivideOne{
+        width: 100%; 
+    }
+   
+    #imgSubSectionDivideTwo{
+        height: 100%;
+        width: 100%; 
+    }
 }
