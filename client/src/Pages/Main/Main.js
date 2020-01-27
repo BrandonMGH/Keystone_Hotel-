@@ -2,10 +2,9 @@ import React, {useState} from 'react'
 import './Main.css'
 
 
-import girlMountain from './Images/girlMountain.jpeg'
-import HotelInteriorOne from './Images/HotelInteriorOne.jpg'
-import HotelInteriorTwo from './Images/HotelInteriorTwo.jpeg'
-import HotelLobbyTwo from './Images/HotelLobbyTwo.jpg'
+import girlMountain from '../../Images/girlMountain.jpeg'
+import HotelInteriorTwo from '../../Images/HotelInteriorTwo.jpeg'
+import HotelLobbyTwo from '../../Images/HotelLobbyTwo.jpg'
 
 //** COMPONENTS **//
 import ReactCarousel from '../../Components/ReactCarousel/ReactCarousel.js'

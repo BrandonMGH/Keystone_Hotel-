@@ -3,9 +3,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import './ReactCarousel.css'
 
-import HotelBarOne from '../../Images/HotelBarOne.jpeg'
-import HotelBarTwo from '../../Images/HotelBarTwo.jpg'
-import HotelBarThree from '../../Images/HotelBarThree.jpg'
+import HotelInteriorFour from '../../Images/HotelInteriorFour.jpg'
+import HotelRestaurantOne from '../../Images/HotelRestaurantOne.jpeg'
+import HotelSpaOne from '../../Images/HotelSpaOne.jpeg'
+import AreaAttractionOne from '../../Images/AreaAttractionOne.jpg'
 
 const ReactCarousel = () => {
     return (
@@ -16,7 +17,7 @@ const ReactCarousel = () => {
                     <p>If you would like to find out more information about the rooms, please click the link below</p>
                     <a>Read More</a>
                 </section>
-                <img id="carouselImgOne" src={HotelBarOne} />
+                <img id="carouselImgOne" src={HotelInteriorFour} />
             </div>
             <div>
                 <section id="carouselTextTwo">
@@ -24,7 +25,7 @@ const ReactCarousel = () => {
                     <p>If you would like to find out more information about the rooms, please click the link below</p>
                     <a>Read More</a>
                 </section>
-                <img id="carouselImgTwo" src={HotelBarTwo} />
+                <img id="carouselImgTwo" src={HotelRestaurantOne} />
             </div>
             <div>
                 <section id="carouselTextThree">
@@ -32,7 +33,7 @@ const ReactCarousel = () => {
                     <p>If you would like to find out more information about the rooms, please click the link below</p>
                     <a>Read More</a>
                 </section>
-                <img id="carouselImgThree" src={HotelBarThree} />
+                <img id="carouselImgThree" src={HotelSpaOne} />
             </div>
             <div>
                 <section id="carouselTextFour">
@@ -40,7 +41,7 @@ const ReactCarousel = () => {
                     <p>If you would like to find out more information about the rooms, please click the link below</p>
                     <a>Read More</a>
                 </section>
-                <img id="carouselImgFour" src={HotelBarThree} />
+                <img id="carouselImgFour" src={AreaAttractionOne} />
             </div>
         </Carousel>
     )

@@ -1,6 +1,6 @@
 
 #mainTitleSection{
-   background-image: url('./Images/ForestImageOne.jpg');
+   background-image: url('../../Images/ForestImageOne.jpg');
    height: 650px; 
    background-size: cover;
 }
@@ -39,7 +39,7 @@ height: 650px
 #mainSectionDivideTwo{
     height: 650px; 
     color: white; 
-    background-image: url('./Images/rockyMountainOne.jpeg');
+    background-image: url('../../Images/rockyMountainOne.jpeg');
     background-size: cover;
 }
 
