@@ -39974,7 +39974,12 @@ function _interopRequireDefault(obj) {
 
 exports.Carousel = _Carousel2.default;
 exports.Thumbs = _Thumbs2.default;
-},{"./components/Carousel":"../node_modules/react-responsive-carousel/lib/components/Carousel.js","./components/Thumbs":"../node_modules/react-responsive-carousel/lib/components/Thumbs.js"}],"src/Images/HotelBarOne.jpeg":[function(require,module,exports) {
+},{"./components/Carousel":"../node_modules/react-responsive-carousel/lib/components/Carousel.js","./components/Thumbs":"../node_modules/react-responsive-carousel/lib/components/Thumbs.js"}],"src/Components/ReactCarousel/ReactCarousel.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Images/HotelBarOne.jpeg":[function(require,module,exports) {
 module.exports = "/HotelBarOne.085dd1f2.jpeg";
 },{}],"src/Images/HotelBarTwo.jpg":[function(require,module,exports) {
 module.exports = "/HotelBarTwo.8cc03298.jpg";
@@ -39994,6 +39999,8 @@ require("react-responsive-carousel/lib/styles/carousel.min.css");
 
 var _reactResponsiveCarousel = require("react-responsive-carousel");
 
+require("./ReactCarousel.css");
+
 var _HotelBarOne = _interopRequireDefault(require("../../Images/HotelBarOne.jpeg"));
 
 var _HotelBarTwo = _interopRequireDefault(require("../../Images/HotelBarTwo.jpg"));
@@ -40006,33 +40013,40 @@ var ReactCarousel = function ReactCarousel() {
   return _react.default.createElement(_reactResponsiveCarousel.Carousel, {
     autoPlay: true,
     showThumbs: false
-  }, _react.default.createElement("div", null, _react.default.createElement("h1", {
-    className: "legend",
-    style: {
-      fontSize: "50px",
-      position: "relative",
-      top: "300px"
-    }
-  }, "Test"), _react.default.createElement("img", {
+  }, _react.default.createElement("div", null, _react.default.createElement("section", {
+    id: "carouselTextOne"
+  }, _react.default.createElement("h1", {
+    id: "carouselTitleTextOne"
+  }, "ROOMS"), _react.default.createElement("p", null, "If you would like to find out more information about the rooms, please click the link below"), _react.default.createElement("a", null, "Read More")), _react.default.createElement("img", {
+    id: "carouselImgOne",
     src: _HotelBarOne.default
-  })), _react.default.createElement("div", null, _react.default.createElement("h1", {
-    className: "legend"
-  }, "Test"), _react.default.createElement("img", {
+  })), _react.default.createElement("div", null, _react.default.createElement("section", {
+    id: "carouselTextTwo"
+  }, _react.default.createElement("h1", {
+    id: "carouselTitleTextTwo"
+  }, "DINING"), _react.default.createElement("p", null, "If you would like to find out more information about the rooms, please click the link below"), _react.default.createElement("a", null, "Read More")), _react.default.createElement("img", {
+    id: "carouselImgTwo",
     src: _HotelBarTwo.default
-  })), _react.default.createElement("div", null, _react.default.createElement("h1", {
-    className: "legend"
-  }, "Test"), _react.default.createElement("img", {
+  })), _react.default.createElement("div", null, _react.default.createElement("section", {
+    id: "carouselTextThree"
+  }, _react.default.createElement("h1", {
+    id: "carouselTitleTextThree"
+  }, "SPA"), _react.default.createElement("p", null, "If you would like to find out more information about the rooms, please click the link below"), _react.default.createElement("a", null, "Read More")), _react.default.createElement("img", {
+    id: "carouselImgThree",
     src: _HotelBarThree.default
-  })), _react.default.createElement("div", null, _react.default.createElement("h1", {
-    className: "legend"
-  }, "Test"), _react.default.createElement("img", {
+  })), _react.default.createElement("div", null, _react.default.createElement("section", {
+    id: "carouselTextFour"
+  }, _react.default.createElement("h1", {
+    id: "carouselTitleTextFour"
+  }, "AREA ATTRACTION"), _react.default.createElement("p", null, "If you would like to find out more information about the rooms, please click the link below"), _react.default.createElement("a", null, "Read More")), _react.default.createElement("img", {
+    id: "carouselImgFour",
     src: _HotelBarThree.default
   })));
 };
 
 var _default = ReactCarousel;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-responsive-carousel/lib/styles/carousel.min.css":"../node_modules/react-responsive-carousel/lib/styles/carousel.min.css","react-responsive-carousel":"../node_modules/react-responsive-carousel/lib/index.js","../../Images/HotelBarOne.jpeg":"src/Images/HotelBarOne.jpeg","../../Images/HotelBarTwo.jpg":"src/Images/HotelBarTwo.jpg","../../Images/HotelBarThree.jpg":"src/Images/HotelBarThree.jpg"}],"src/Pages/Main/Main.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-responsive-carousel/lib/styles/carousel.min.css":"../node_modules/react-responsive-carousel/lib/styles/carousel.min.css","react-responsive-carousel":"../node_modules/react-responsive-carousel/lib/index.js","./ReactCarousel.css":"src/Components/ReactCarousel/ReactCarousel.css","../../Images/HotelBarOne.jpeg":"src/Images/HotelBarOne.jpeg","../../Images/HotelBarTwo.jpg":"src/Images/HotelBarTwo.jpg","../../Images/HotelBarThree.jpg":"src/Images/HotelBarThree.jpg"}],"src/Pages/Main/Main.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45535,7 +45549,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54409" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57684" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
