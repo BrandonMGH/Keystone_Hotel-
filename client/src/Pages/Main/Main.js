@@ -1,14 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Main.css'
+
 
 import girlMountain from './Images/girlMountain.jpeg'
 import HotelInteriorOne from './Images/HotelInteriorOne.jpg'
 import HotelInteriorTwo from './Images/HotelInteriorTwo.jpeg'
+import HotelLobbyTwo from './Images/HotelLobbyTwo.jpg'
 
+//** COMPONENTS **//
+import ReactCarousel from '../../Components/ReactCarousel/ReactCarousel.js'
 
 
 
 const Main = () => {
+
     return (
         <>
             <section id="mainTitleSection">
@@ -33,7 +38,7 @@ const Main = () => {
             <section id="mainSectionRoomDescription">
                 <section style={{order: 1}}>
                     <div id="mainSectionRoomPicOne">
-                    <img className="mainSectionImgClass" src={HotelInteriorOne} />
+                    <img className="mainSectionImgClass" src={HotelLobbyTwo} />
                     </div>
                   
                 </section>
@@ -50,6 +55,9 @@ const Main = () => {
                     <img className="mainSectionImgClass"  src={HotelInteriorTwo} />
                     </div>
                 </section>
+            </section>
+            <section>
+                <ReactCarousel />
             </section>
 
         </>
