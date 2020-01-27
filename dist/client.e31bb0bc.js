@@ -40006,19 +40006,28 @@ var ReactCarousel = function ReactCarousel() {
   return _react.default.createElement(_reactResponsiveCarousel.Carousel, {
     autoPlay: true,
     showThumbs: false
-  }, _react.default.createElement("div", null, _react.default.createElement("img", {
+  }, _react.default.createElement("div", null, _react.default.createElement("h1", {
+    className: "legend",
+    style: {
+      fontSize: "50px",
+      position: "relative",
+      top: "300px"
+    }
+  }, "Test"), _react.default.createElement("img", {
     src: _HotelBarOne.default
-  }), _react.default.createElement("p", {
+  })), _react.default.createElement("div", null, _react.default.createElement("h1", {
     className: "legend"
-  }, "Legend 1")), _react.default.createElement("div", null, _react.default.createElement("img", {
+  }, "Test"), _react.default.createElement("img", {
     src: _HotelBarTwo.default
-  }), _react.default.createElement("p", {
+  })), _react.default.createElement("div", null, _react.default.createElement("h1", {
     className: "legend"
-  }, "Legend 2")), _react.default.createElement("div", null, _react.default.createElement("img", {
+  }, "Test"), _react.default.createElement("img", {
     src: _HotelBarThree.default
-  }), _react.default.createElement("p", {
+  })), _react.default.createElement("div", null, _react.default.createElement("h1", {
     className: "legend"
-  }, "Legend 3")));
+  }, "Test"), _react.default.createElement("img", {
+    src: _HotelBarThree.default
+  })));
 };
 
 var _default = ReactCarousel;
@@ -40073,36 +40082,26 @@ var Main = function Main() {
   }, _react.default.createElement("h1", null, "\u201CA mind that is stretched by a new experience can never go back to its old dimensions.\u201D - Oliver Wendell Holmes"))), _react.default.createElement("section", {
     id: "mainSectionRoomDescription"
   }, _react.default.createElement("section", {
-    style: {
-      order: 1
-    }
-  }, _react.default.createElement("div", {
     id: "mainSectionRoomPicOne"
-  }, _react.default.createElement("img", {
+  }, _react.default.createElement("div", null, _react.default.createElement("img", {
     className: "mainSectionImgClass",
     src: _HotelLobbyTwo.default
   }))), _react.default.createElement("section", {
-    id: "testTwo",
-    style: {
-      order: 2
-    }
-  }, _react.default.createElement("div", {
     id: "mainSectionRoomQuote"
-  }, _react.default.createElement("h1", null, "\"Rediscover your sense of self\""))), _react.default.createElement("section", {
-    id: "mainSectionSummary",
-    style: {
-      order: 3
-    }
-  }, "Good. Use your aggressive feelings, boy! Let the hate flow through you. Obi-Wan has taught you well. I will not fight you, father. You are unwise to lower your defenses. Your thoughts betray you, father. I feel the good in you...the conflict. There is no conflict. You couldn't bring yourself to kill me before, and I don't believe you'll destroy me now. You underestimate the power of the dark side. If you will not fight, then you will meet your destiny. Good. Good"), _react.default.createElement("section", {
-    style: {
-      order: 4
-    }
   }, _react.default.createElement("div", {
+    id: "mainSectionRoomQuoteText"
+  }, _react.default.createElement("h1", null, "\"Rediscover your sense of self\""))), _react.default.createElement("section", {
+    id: "mainSectionSummary"
+  }, "Good. Use your aggressive feelings, boy! Let the hate flow through you. Obi-Wan has taught you well. I will not fight you, father. You are unwise to lower your defenses. Your thoughts betray you, father. I feel the good in you...the conflict. There is no conflict. You couldn't bring yourself to kill me before, and I don't believe you'll destroy me now. You underestimate the power of the dark side. If you will not fight, then you will meet your destiny. Good. Good"), _react.default.createElement("section", {
     id: "mainSectionRoomPicTwo"
+  }, _react.default.createElement("div", {
+    id: "mainSectionRoomPicTwoImage"
   }, _react.default.createElement("img", {
     className: "mainSectionImgClass",
     src: _HotelInteriorTwo.default
-  })))), _react.default.createElement("section", null, _react.default.createElement(_ReactCarousel.default, null)));
+  })))), _react.default.createElement("section", {
+    id: "mainSectionCarousel"
+  }, _react.default.createElement(_ReactCarousel.default, null)));
 };
 
 var _default = Main;
@@ -45536,7 +45535,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63065" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54409" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

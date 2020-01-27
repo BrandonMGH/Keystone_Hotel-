@@ -36,27 +36,27 @@ const Main = () => {
                 </section>
             </section>
             <section id="mainSectionRoomDescription">
-                <section style={{order: 1}}>
-                    <div id="mainSectionRoomPicOne">
+                <section id="mainSectionRoomPicOne">
+                    <div >
                     <img className="mainSectionImgClass" src={HotelLobbyTwo} />
                     </div>
                   
                 </section>
-                <section id="testTwo" style={{order: 2}}>
-                    <div id="mainSectionRoomQuote">
+                <section id="mainSectionRoomQuote">
+                    <div id="mainSectionRoomQuoteText">
                     <h1>"Rediscover your sense of self"</h1>
                     </div>
                 </section>
-                <section id="mainSectionSummary" style={{order: 3}}>
+                <section id="mainSectionSummary">
                 Good. Use your aggressive feelings, boy! Let the hate flow through you. Obi-Wan has taught you well. I will not fight you, father. You are unwise to lower your defenses. Your thoughts betray you, father. I feel the good in you...the conflict. There is no conflict. You couldn't bring yourself to kill me before, and I don't believe you'll destroy me now. You underestimate the power of the dark side. If you will not fight, then you will meet your destiny. Good. Good
                 </section>
-                <section style={{order: 4}}>
-                    <div id="mainSectionRoomPicTwo">
+                <section id="mainSectionRoomPicTwo" >
+                    <div id="mainSectionRoomPicTwoImage">
                     <img className="mainSectionImgClass"  src={HotelInteriorTwo} />
                     </div>
                 </section>
             </section>
-            <section>
+            <section id="mainSectionCarousel">
                 <ReactCarousel />
             </section>
 

@@ -7,21 +7,25 @@ import HotelBarTwo from '../../Images/HotelBarTwo.jpg'
 import HotelBarThree from '../../Images/HotelBarThree.jpg'
 
 const ReactCarousel = () => {
-    return(
+    return (
         <Carousel autoPlay showThumbs={false}>
-                <div>
-                    <img src={HotelBarOne} />
-                    <p className="legend">Legend 1</p>
-                </div>
-                <div>
-                    <img src={HotelBarTwo} />
-                    <p className="legend">Legend 2</p>
-                </div>
-                <div>
-                    <img src={HotelBarThree} />
-                    <p className="legend">Legend 3</p>
-                </div>
-            </Carousel>
+            <div>
+                <h1 className="legend" style={{fontSize: "50px", position: "relative", top: "300px"}}>Test</h1>
+                <img src={HotelBarOne} />
+            </div>
+            <div>
+                <h1 className="legend">Test</h1>
+                <img src={HotelBarTwo} />
+            </div>
+            <div>
+                <h1 className="legend">Test</h1>
+                <img src={HotelBarThree} />
+            </div>
+            <div>
+                <h1 className="legend">Test</h1>
+                <img src={HotelBarThree} />
+            </div>
+        </Carousel>
     )
 }
 
