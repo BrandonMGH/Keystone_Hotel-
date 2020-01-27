@@ -38053,7 +38053,1934 @@ module.exports = "/girlMountain.1ac9c197.jpeg";
 module.exports = "/HotelInteriorOne.e9b8f39e.jpg";
 },{}],"src/Pages/Main/Images/HotelInteriorTwo.jpeg":[function(require,module,exports) {
 module.exports = "/HotelInteriorTwo.d2d57c3a.jpeg";
-},{}],"src/Pages/Main/Main.js":[function(require,module,exports) {
+},{}],"src/Pages/Main/Images/HotelLobbyTwo.jpg":[function(require,module,exports) {
+module.exports = "/HotelLobbyTwo.a9021224.jpg";
+},{}],"../node_modules/react-responsive-carousel/lib/styles/carousel.min.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/classnames/index.js":[function(require,module,exports) {
+var define;
+/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg) && arg.length) {
+				var inner = classNames.apply(null, arg);
+				if (inner) {
+					classes.push(inner);
+				}
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if (typeof module !== 'undefined' && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
+		// register as 'classnames', consistent with npm package name
+		define('classnames', [], function () {
+			return classNames;
+		});
+	} else {
+		window.classNames = classNames;
+	}
+}());
+
+},{}],"../node_modules/react-responsive-carousel/lib/cssClasses.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classnames = require("classnames");
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
+
+exports.default = {
+  CAROUSEL: function CAROUSEL(isSlider) {
+    return (0, _classnames2.default)({
+      "carousel": true,
+      "carousel-slider": isSlider
+    });
+  },
+  WRAPPER: function WRAPPER(isSlider, axis) {
+    return (0, _classnames2.default)({
+      "thumbs-wrapper": !isSlider,
+      "slider-wrapper": isSlider,
+      "axis-horizontal": axis === "horizontal",
+      "axis-vertical": axis !== "horizontal"
+    });
+  },
+  SLIDER: function SLIDER(isSlider, isSwiping) {
+    return (0, _classnames2.default)({
+      "thumbs": !isSlider,
+      "slider": isSlider,
+      "animated": !isSwiping
+    });
+  },
+  ITEM: function ITEM(isSlider, selected) {
+    return (0, _classnames2.default)({
+      "thumb": !isSlider,
+      "slide": isSlider,
+      "selected": selected
+    });
+  },
+  ARROW_PREV: function ARROW_PREV(disabled) {
+    return (0, _classnames2.default)({
+      "control-arrow control-prev": true,
+      "control-disabled": disabled
+    });
+  },
+  ARROW_NEXT: function ARROW_NEXT(disabled) {
+    return (0, _classnames2.default)({
+      "control-arrow control-next": true,
+      "control-disabled": disabled
+    });
+  },
+  DOT: function DOT(selected) {
+    return (0, _classnames2.default)({
+      "dot": true,
+      'selected': selected
+    });
+  }
+};
+},{"classnames":"../node_modules/classnames/index.js"}],"../node_modules/react-responsive-carousel/lib/CSSTranslate.js":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (position, axis) {
+  var positionCss = axis === 'horizontal' ? [position, 0, 0] : [0, position, 0];
+  var transitionProp = 'translate3d';
+  var translatedPosition = '(' + positionCss.join(',') + ')';
+  return transitionProp + translatedPosition;
+};
+},{}],"../node_modules/react-easy-swipe/lib/react-swipe.js":[function(require,module,exports) {
+var define;
+var global = arguments[3];
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function (obj) { return typeof obj; }; } else { _typeof = function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(['exports', 'react', 'prop-types'], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('react'), require('prop-types'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.react, global.propTypes);
+    global.reactSwipe = mod.exports;
+  }
+})(this, function (exports, _react, _propTypes) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.setHasSupportToCaptureOption = setHasSupportToCaptureOption;
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (_typeof(call) === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + _typeof(superClass));
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var supportsCaptureOption = false;
+
+  function setHasSupportToCaptureOption(hasSupport) {
+    supportsCaptureOption = hasSupport;
+  }
+
+  try {
+    addEventListener("test", null, Object.defineProperty({}, 'capture', {
+      get: function get() {
+        setHasSupportToCaptureOption(true);
+      }
+    }));
+  } catch (e) {}
+
+  function getSafeEventHandlerOpts() {
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
+      capture: true
+    };
+    return supportsCaptureOption ? options : options.capture;
+  }
+  /**
+   * [getPosition returns a position element that works for mouse or touch events]
+   * @param  {[Event]} event [the received event]
+   * @return {[Object]}      [x and y coords]
+   */
+
+
+  function getPosition(event) {
+    if ('touches' in event) {
+      var _event$touches$ = event.touches[0],
+          pageX = _event$touches$.pageX,
+          pageY = _event$touches$.pageY;
+      return {
+        x: pageX,
+        y: pageY
+      };
+    }
+
+    var screenX = event.screenX,
+        screenY = event.screenY;
+    return {
+      x: screenX,
+      y: screenY
+    };
+  }
+
+  var ReactSwipe = function (_Component) {
+    _inherits(ReactSwipe, _Component);
+
+    function ReactSwipe() {
+      var _ref;
+
+      _classCallCheck(this, ReactSwipe);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      var _this = _possibleConstructorReturn(this, (_ref = ReactSwipe.__proto__ || Object.getPrototypeOf(ReactSwipe)).call.apply(_ref, [this].concat(args)));
+
+      _this._handleSwipeStart = _this._handleSwipeStart.bind(_this);
+      _this._handleSwipeMove = _this._handleSwipeMove.bind(_this);
+      _this._handleSwipeEnd = _this._handleSwipeEnd.bind(_this);
+      _this._onMouseDown = _this._onMouseDown.bind(_this);
+      _this._onMouseMove = _this._onMouseMove.bind(_this);
+      _this._onMouseUp = _this._onMouseUp.bind(_this);
+      return _this;
+    }
+
+    _createClass(ReactSwipe, [{
+      key: 'componentDidMount',
+      value: function componentDidMount() {
+        if (this.swiper) {
+          this.swiper.addEventListener('touchmove', this._handleSwipeMove, getSafeEventHandlerOpts({
+            capture: true,
+            passive: false
+          }));
+        }
+      }
+    }, {
+      key: 'componentWillUnmount',
+      value: function componentWillUnmount() {
+        if (this.swiper) {
+          this.swiper.removeEventListener('touchmove', this._handleSwipeMove, getSafeEventHandlerOpts({
+            capture: true,
+            passive: false
+          }));
+        }
+      }
+    }, {
+      key: '_onMouseDown',
+      value: function _onMouseDown(event) {
+        if (!this.props.allowMouseEvents) {
+          return;
+        }
+
+        this.mouseDown = true;
+        document.addEventListener('mouseup', this._onMouseUp);
+        document.addEventListener('mousemove', this._onMouseMove);
+
+        this._handleSwipeStart(event);
+      }
+    }, {
+      key: '_onMouseMove',
+      value: function _onMouseMove(event) {
+        if (!this.mouseDown) {
+          return;
+        }
+
+        this._handleSwipeMove(event);
+      }
+    }, {
+      key: '_onMouseUp',
+      value: function _onMouseUp(event) {
+        this.mouseDown = false;
+        document.removeEventListener('mouseup', this._onMouseUp);
+        document.removeEventListener('mousemove', this._onMouseMove);
+
+        this._handleSwipeEnd(event);
+      }
+    }, {
+      key: '_handleSwipeStart',
+      value: function _handleSwipeStart(event) {
+        var _getPosition = getPosition(event),
+            x = _getPosition.x,
+            y = _getPosition.y;
+
+        this.moveStart = {
+          x: x,
+          y: y
+        };
+        this.props.onSwipeStart(event);
+      }
+    }, {
+      key: '_handleSwipeMove',
+      value: function _handleSwipeMove(event) {
+        if (!this.moveStart) {
+          return;
+        }
+
+        var _getPosition2 = getPosition(event),
+            x = _getPosition2.x,
+            y = _getPosition2.y;
+
+        var deltaX = x - this.moveStart.x;
+        var deltaY = y - this.moveStart.y;
+        this.moving = true; // handling the responsability of cancelling the scroll to
+        // the component handling the event
+
+        var shouldPreventDefault = this.props.onSwipeMove({
+          x: deltaX,
+          y: deltaY
+        }, event);
+
+        if (shouldPreventDefault) {
+          event.preventDefault();
+        }
+
+        this.movePosition = {
+          deltaX: deltaX,
+          deltaY: deltaY
+        };
+      }
+    }, {
+      key: '_handleSwipeEnd',
+      value: function _handleSwipeEnd(event) {
+        this.props.onSwipeEnd(event);
+        var tolerance = this.props.tolerance;
+
+        if (this.moving && this.movePosition) {
+          if (this.movePosition.deltaX < -tolerance) {
+            this.props.onSwipeLeft(1, event);
+          } else if (this.movePosition.deltaX > tolerance) {
+            this.props.onSwipeRight(1, event);
+          }
+
+          if (this.movePosition.deltaY < -tolerance) {
+            this.props.onSwipeUp(1, event);
+          } else if (this.movePosition.deltaY > tolerance) {
+            this.props.onSwipeDown(1, event);
+          }
+        }
+
+        this.moveStart = null;
+        this.moving = false;
+        this.movePosition = null;
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        var _this2 = this;
+
+        return _react2.default.createElement(this.props.tagName, {
+          ref: function ref(node) {
+            return _this2.swiper = node;
+          },
+          onMouseDown: this._onMouseDown,
+          onTouchStart: this._handleSwipeStart,
+          onTouchEnd: this._handleSwipeEnd,
+          className: this.props.className,
+          style: this.props.style
+        }, this.props.children);
+      }
+    }]);
+
+    return ReactSwipe;
+  }(_react.Component);
+
+  ReactSwipe.displayName = 'ReactSwipe';
+  ReactSwipe.propTypes = {
+    tagName: _propTypes2.default.string,
+    className: _propTypes2.default.string,
+    style: _propTypes2.default.object,
+    children: _propTypes2.default.node,
+    allowMouseEvents: _propTypes2.default.bool,
+    onSwipeUp: _propTypes2.default.func,
+    onSwipeDown: _propTypes2.default.func,
+    onSwipeLeft: _propTypes2.default.func,
+    onSwipeRight: _propTypes2.default.func,
+    onSwipeStart: _propTypes2.default.func,
+    onSwipeMove: _propTypes2.default.func,
+    onSwipeEnd: _propTypes2.default.func,
+    tolerance: _propTypes2.default.number.isRequired
+  };
+  ReactSwipe.defaultProps = {
+    tagName: 'div',
+    allowMouseEvents: false,
+    onSwipeUp: function onSwipeUp() {},
+    onSwipeDown: function onSwipeDown() {},
+    onSwipeLeft: function onSwipeLeft() {},
+    onSwipeRight: function onSwipeRight() {},
+    onSwipeStart: function onSwipeStart() {},
+    onSwipeMove: function onSwipeMove() {},
+    onSwipeEnd: function onSwipeEnd() {},
+    tolerance: 0
+  };
+  exports.default = ReactSwipe;
+});
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js"}],"../node_modules/react-easy-swipe/lib/index.js":[function(require,module,exports) {
+var define;
+var global = arguments[3];
+(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(['exports', './react-swipe'], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('./react-swipe'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.reactSwipe);
+    global.index = mod.exports;
+  }
+})(this, function (exports, _reactSwipe) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _reactSwipe2 = _interopRequireDefault(_reactSwipe);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  exports.default = _reactSwipe2.default;
+});
+},{"./react-swipe":"../node_modules/react-easy-swipe/lib/react-swipe.js"}],"../node_modules/react-responsive-carousel/lib/dimensions.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var outerWidth = exports.outerWidth = function outerWidth(el) {
+  var width = el.offsetWidth;
+  var style = getComputedStyle(el);
+  width += parseInt(style.marginLeft) + parseInt(style.marginRight);
+  return width;
+};
+},{}],"../node_modules/react-responsive-carousel/lib/components/Thumbs.js":[function(require,module,exports) {
+'use strict';
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function (obj) { return typeof obj; }; } else { _typeof = function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+var _createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+}();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _cssClasses = require('../cssClasses');
+
+var _cssClasses2 = _interopRequireDefault(_cssClasses);
+
+var _dimensions = require('../dimensions');
+
+var _CSSTranslate = require('../CSSTranslate');
+
+var _CSSTranslate2 = _interopRequireDefault(_CSSTranslate);
+
+var _reactEasySwipe = require('react-easy-swipe');
+
+var _reactEasySwipe2 = _interopRequireDefault(_reactEasySwipe);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return call && (_typeof(call) === "object" || typeof call === "function") ? call : self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + _typeof(superClass));
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+
+var Thumbs = function (_Component) {
+  _inherits(Thumbs, _Component);
+
+  function Thumbs(props) {
+    _classCallCheck(this, Thumbs);
+
+    var _this = _possibleConstructorReturn(this, (Thumbs.__proto__ || Object.getPrototypeOf(Thumbs)).call(this, props));
+
+    _initialiseProps.call(_this);
+
+    _this.state = {
+      selectedItem: props.selectedItem,
+      hasMount: false,
+      firstItem: 0,
+      itemSize: null,
+      visibleItems: 0,
+      lastPosition: 0,
+      showArrows: false,
+      images: _this.getImages()
+    };
+    return _this;
+  }
+
+  _createClass(Thumbs, [{
+    key: 'componentDidMount',
+    value: function componentDidMount(nextProps) {
+      this.setupThumbs();
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(props, state) {
+      if (props.selectedItem !== this.state.selectedItem) {
+        this.setState({
+          selectedItem: props.selectedItem,
+          firstItem: this.getFirstItem(props.selectedItem)
+        });
+      }
+
+      if (props.children !== this.props.children) {
+        this.setState({
+          images: this.getImages()
+        });
+      }
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(prevProps) {
+      if (this.props.children === prevProps.children) {
+        return;
+      } // This will capture any size changes for arrow adjustments etc.
+      // usually in the same render cycle so we don't see any flickers
+
+
+      this.updateSizes();
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      this.destroyThumbs();
+    }
+  }, {
+    key: 'setupThumbs',
+    value: function setupThumbs() {
+      // as the widths are calculated, we need to resize
+      // the carousel when the window is resized
+      window.addEventListener("resize", this.updateSizes); // issue #2 - image loading smaller
+
+      window.addEventListener("DOMContentLoaded", this.updateSizes); // when the component is rendered we need to calculate
+      // the container size to adjust the responsive behaviour
+
+      this.updateSizes();
+    }
+  }, {
+    key: 'destroyThumbs',
+    value: function destroyThumbs() {
+      // removing listeners
+      window.removeEventListener("resize", this.updateSizes);
+      window.removeEventListener("DOMContentLoaded", this.updateSizes);
+    }
+  }, {
+    key: 'getImages',
+    value: function getImages() {
+      var images = _react.Children.map(this.props.children, function (item, index) {
+        var img = item; // if the item is not an image, try to find the first image in the item's children.
+
+        if (item.type !== "img") {
+          img = _react.Children.toArray(item.props.children).filter(function (children) {
+            return children.type === "img";
+          })[0];
+        }
+
+        if (!img || img.length === 0) {
+          return null;
+        }
+
+        return img;
+      });
+
+      if (images.filter(function (image) {
+        return image !== null;
+      }).length === 0) {
+        console.warn('No images found! Can\'t build the thumb list without images. If you don\'t need thumbs, set showThumbs={false} in the Carousel. Note that it\'s not possible to get images rendered inside custom components. More info at https://github.com/leandrowd/react-responsive-carousel/blob/master/TROUBLESHOOTING.md');
+        return null;
+      }
+
+      return images;
+    }
+  }, {
+    key: 'getFirstItem',
+    value: function getFirstItem(selectedItem) {
+      var firstItem = selectedItem;
+
+      if (selectedItem >= this.state.lastPosition) {
+        firstItem = this.state.lastPosition;
+      }
+
+      if (selectedItem < this.state.firstItem + this.state.visibleItems) {
+        firstItem = this.state.firstItem;
+      }
+
+      if (selectedItem < this.state.firstItem) {
+        firstItem = selectedItem;
+      }
+
+      return firstItem;
+    }
+  }, {
+    key: 'renderItems',
+    value: function renderItems() {
+      var _this2 = this;
+
+      return this.state.images.map(function (img, index) {
+        var itemClass = _cssClasses2.default.ITEM(false, index === _this2.state.selectedItem && _this2.state.hasMount);
+
+        var thumbProps = {
+          key: index,
+          ref: function ref(e) {
+            return _this2.setThumbsRef(e, index);
+          },
+          className: itemClass,
+          onClick: _this2.handleClickItem.bind(_this2, index, _this2.props.children[index]),
+          onKeyDown: _this2.handleClickItem.bind(_this2, index, _this2.props.children[index]),
+          'aria-label': _this2.props.labels.item + ' ' + (index + 1)
+        };
+
+        if (index === 0) {
+          img = _react2.default.cloneElement(img, {
+            onLoad: _this2.setMountState
+          });
+        }
+
+        return _react2.default.createElement('li', _extends({}, thumbProps, {
+          role: 'button',
+          tabIndex: 0
+        }), img);
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      if (!this.props.children) {
+        return null;
+      } // show left arrow?
+
+
+      var hasPrev = this.state.showArrows && this.state.firstItem > 0; // show right arrow
+
+      var hasNext = this.state.showArrows && this.state.firstItem < this.state.lastPosition; // obj to hold the transformations and styles
+
+      var itemListStyles = {};
+      var currentPosition = -this.state.firstItem * this.state.itemSize + 'px';
+      var transformProp = (0, _CSSTranslate2.default)(currentPosition, this.props.axis);
+      var transitionTime = this.props.transitionTime + 'ms';
+      itemListStyles = {
+        'WebkitTransform': transformProp,
+        'MozTransform': transformProp,
+        'MsTransform': transformProp,
+        'OTransform': transformProp,
+        'transform': transformProp,
+        'msTransform': transformProp,
+        'WebkitTransitionDuration': transitionTime,
+        'MozTransitionDuration': transitionTime,
+        'MsTransitionDuration': transitionTime,
+        'OTransitionDuration': transitionTime,
+        'transitionDuration': transitionTime,
+        'msTransitionDuration': transitionTime
+      };
+      return _react2.default.createElement('div', {
+        className: _cssClasses2.default.CAROUSEL(false)
+      }, _react2.default.createElement('div', {
+        className: _cssClasses2.default.WRAPPER(false),
+        ref: this.setItemsWrapperRef
+      }, _react2.default.createElement('button', {
+        type: 'button',
+        className: _cssClasses2.default.ARROW_PREV(!hasPrev),
+        onClick: this.slideRight,
+        'aria-label': this.props.labels.leftArrow
+      }), _react2.default.createElement(_reactEasySwipe2.default, {
+        tagName: 'ul',
+        selectedItem: this.state.selectedItem,
+        className: _cssClasses2.default.SLIDER(false, this.state.swiping),
+        onSwipeLeft: this.slideLeft,
+        onSwipeRight: this.slideRight,
+        onSwipeMove: this.onSwipeMove,
+        onSwipeStart: this.onSwipeStart,
+        onSwipeEnd: this.onSwipeEnd,
+        style: itemListStyles,
+        ref: this.setItemsListRef
+      }, this.renderItems()), _react2.default.createElement('button', {
+        type: 'button',
+        className: _cssClasses2.default.ARROW_NEXT(!hasNext),
+        onClick: this.slideLeft,
+        'aria-label': this.props.labels.rightArrow
+      })));
+    }
+  }]);
+
+  return Thumbs;
+}(_react.Component);
+
+Thumbs.displayName = 'Thumbs';
+Thumbs.propsTypes = {
+  children: _propTypes2.default.element.isRequired,
+  transitionTime: _propTypes2.default.number,
+  selectedItem: _propTypes2.default.number,
+  thumbWidth: _propTypes2.default.number,
+  labels: _propTypes2.default.shape({
+    leftArrow: _propTypes2.default.string,
+    rightArrow: _propTypes2.default.string,
+    item: _propTypes2.default.string
+  })
+};
+Thumbs.defaultProps = {
+  selectedItem: 0,
+  transitionTime: 350,
+  axis: 'horizontal'
+};
+
+var _initialiseProps = function _initialiseProps() {
+  var _this3 = this;
+
+  this.setItemsWrapperRef = function (node) {
+    _this3.itemsWrapperRef = node;
+  };
+
+  this.setItemsListRef = function (node) {
+    _this3.itemsListRef = node;
+  };
+
+  this.setThumbsRef = function (node, index) {
+    if (!_this3.thumbsRef) {
+      _this3.thumbsRef = [];
+    }
+
+    _this3.thumbsRef[index] = node;
+  };
+
+  this.updateSizes = function () {
+    if (!_this3.props.children || !_this3.itemsWrapperRef) {
+      return;
+    }
+
+    var total = _this3.props.children.length;
+    var wrapperSize = _this3.itemsWrapperRef.clientWidth;
+    var itemSize = _this3.props.thumbWidth ? _this3.props.thumbWidth : (0, _dimensions.outerWidth)(_this3.thumbsRef[0]);
+    var visibleItems = Math.floor(wrapperSize / itemSize);
+    var lastPosition = total - visibleItems;
+    var showArrows = visibleItems < total;
+
+    _this3.setState(function (_state, props) {
+      return {
+        itemSize: itemSize,
+        visibleItems: visibleItems,
+        firstItem: showArrows ? _this3.getFirstItem(props.selectedItem) : 0,
+        lastPosition: lastPosition,
+        showArrows: showArrows
+      };
+    });
+  };
+
+  this.setMountState = function () {
+    _this3.setState({
+      hasMount: true
+    });
+
+    _this3.updateSizes();
+  };
+
+  this.handleClickItem = function (index, item, e) {
+    if (!e.keyCode || e.key === 'Enter') {
+      var handler = _this3.props.onSelectItem;
+
+      if (typeof handler === 'function') {
+        handler(index, item);
+      }
+    }
+  };
+
+  this.onSwipeStart = function () {
+    _this3.setState({
+      swiping: true
+    });
+  };
+
+  this.onSwipeEnd = function () {
+    _this3.setState({
+      swiping: false
+    });
+  };
+
+  this.onSwipeMove = function (deltaX) {
+    var leftBoundary = 0;
+    var currentPosition = -_this3.state.firstItem * _this3.state.itemSize;
+    var lastLeftBoundary = -_this3.state.visibleItems * _this3.state.itemSize; // prevent user from swiping left out of boundaries
+
+    if (currentPosition === leftBoundary && deltaX > 0) {
+      deltaX = 0;
+    } // prevent user from swiping right out of boundaries
+
+
+    if (currentPosition === lastLeftBoundary && deltaX < 0) {
+      deltaX = 0;
+    }
+
+    var wrapperSize = _this3.itemsWrapperRef.clientWidth;
+    var position = currentPosition + 100 / (wrapperSize / deltaX) + '%'; // if 3d isn't available we will use left to move
+
+    if (_this3.itemsListRef) {
+      ['WebkitTransform', 'MozTransform', 'MsTransform', 'OTransform', 'transform', 'msTransform'].forEach(function (prop) {
+        _this3.itemsListRef.style[prop] = (0, _CSSTranslate2.default)(position, _this3.props.axis);
+      });
+    }
+  };
+
+  this.slideRight = function (positions) {
+    _this3.moveTo(_this3.state.firstItem - (typeof positions === 'number' ? positions : 1));
+  };
+
+  this.slideLeft = function (positions) {
+    _this3.moveTo(_this3.state.firstItem + (typeof positions === 'number' ? positions : 1));
+  };
+
+  this.moveTo = function (position) {
+    // position can't be lower than 0
+    position = position < 0 ? 0 : position; // position can't be higher than last postion
+
+    position = position >= _this3.lastPosition ? _this3.lastPosition : position;
+
+    _this3.setState({
+      firstItem: position
+    });
+  };
+};
+
+exports.default = Thumbs;
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","../cssClasses":"../node_modules/react-responsive-carousel/lib/cssClasses.js","../dimensions":"../node_modules/react-responsive-carousel/lib/dimensions.js","../CSSTranslate":"../node_modules/react-responsive-carousel/lib/CSSTranslate.js","react-easy-swipe":"../node_modules/react-easy-swipe/lib/index.js"}],"../node_modules/react-responsive-carousel/lib/customPropTypes.js":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var unit = exports.unit = function unit(props, propName, componentName) {
+  if (!/(pt|px|em|rem|vw|vh|%)$/.test(props[propName])) {
+    return new Error('Invalid prop `' + propName + '` supplied to' + ' `' + componentName + '`. Validation failed. It needs to be a size unit like pt, px, em, rem, vw, %');
+  }
+};
+},{}],"../node_modules/react-responsive-carousel/lib/components/Carousel.js":[function(require,module,exports) {
+'use strict';
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function (obj) { return typeof obj; }; } else { _typeof = function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+var _createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+}();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _cssClasses = require('../cssClasses');
+
+var _cssClasses2 = _interopRequireDefault(_cssClasses);
+
+var _CSSTranslate = require('../CSSTranslate');
+
+var _CSSTranslate2 = _interopRequireDefault(_CSSTranslate);
+
+var _reactEasySwipe = require('react-easy-swipe');
+
+var _reactEasySwipe2 = _interopRequireDefault(_reactEasySwipe);
+
+var _Thumbs = require('./Thumbs');
+
+var _Thumbs2 = _interopRequireDefault(_Thumbs);
+
+var _customPropTypes = require('../customPropTypes');
+
+var customPropTypes = _interopRequireWildcard(_customPropTypes);
+
+function _interopRequireWildcard(obj) {
+  if (obj && obj.__esModule) {
+    return obj;
+  } else {
+    var newObj = {};
+
+    if (obj != null) {
+      for (var key in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
+      }
+    }
+
+    newObj.default = obj;
+    return newObj;
+  }
+}
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return call && (_typeof(call) === "object" || typeof call === "function") ? call : self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + _typeof(superClass));
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+
+var noop = function noop() {};
+
+var defaultStatusFormatter = function defaultStatusFormatter(current, total) {
+  return current + ' of ' + total;
+};
+
+var Carousel = function (_Component) {
+  _inherits(Carousel, _Component);
+
+  function Carousel(props) {
+    _classCallCheck(this, Carousel);
+
+    var _this = _possibleConstructorReturn(this, (Carousel.__proto__ || Object.getPrototypeOf(Carousel)).call(this, props));
+
+    _this.setThumbsRef = function (node) {
+      _this.thumbsRef = node;
+    };
+
+    _this.setCarouselWrapperRef = function (node) {
+      _this.carouselWrapperRef = node;
+    };
+
+    _this.setListRef = function (node) {
+      _this.listRef = node;
+    };
+
+    _this.setItemsWrapperRef = function (node) {
+      _this.itemsWrapperRef = node;
+    };
+
+    _this.setItemsRef = function (node, index) {
+      if (!_this.itemsRef) {
+        _this.itemsRef = [];
+      }
+
+      _this.itemsRef[index] = node;
+    };
+
+    _this.autoPlay = function () {
+      if (!_this.state.autoPlay || _react.Children.count(_this.props.children) <= 1) {
+        return;
+      }
+
+      clearTimeout(_this.timer);
+      _this.timer = setTimeout(function () {
+        _this.increment();
+      }, _this.props.interval);
+    };
+
+    _this.clearAutoPlay = function () {
+      if (!_this.state.autoPlay) {
+        return;
+      }
+
+      clearTimeout(_this.timer);
+    };
+
+    _this.resetAutoPlay = function () {
+      _this.clearAutoPlay();
+
+      _this.autoPlay();
+    };
+
+    _this.stopOnHover = function () {
+      _this.setState({
+        isMouseEntered: true
+      });
+
+      _this.clearAutoPlay();
+    };
+
+    _this.startOnLeave = function () {
+      _this.setState({
+        isMouseEntered: false
+      });
+
+      _this.autoPlay();
+    };
+
+    _this.navigateWithKeyboard = function (e) {
+      var axis = _this.props.axis;
+      var isHorizontal = axis === 'horizontal';
+      var keyNames = {
+        ArrowUp: 38,
+        ArrowRight: 39,
+        ArrowDown: 40,
+        ArrowLeft: 37
+      };
+      var nextKey = isHorizontal ? keyNames.ArrowRight : keyNames.ArrowDown;
+      var prevKey = isHorizontal ? keyNames.ArrowLeft : keyNames.ArrowUp;
+
+      if (nextKey === e.keyCode) {
+        _this.increment();
+      } else if (prevKey === e.keyCode) {
+        _this.decrement();
+      }
+    };
+
+    _this.updateSizes = function () {
+      if (!_this.state.initialized) {
+        return;
+      }
+
+      var isHorizontal = _this.props.axis === 'horizontal';
+      var firstItem = _this.itemsRef[0];
+      var itemSize = isHorizontal ? firstItem.clientWidth : firstItem.clientHeight;
+
+      _this.setState(function (_state, props) {
+        return {
+          itemSize: itemSize
+        };
+      });
+
+      if (_this.thumbsRef) {
+        _this.thumbsRef.updateSizes();
+      }
+    };
+
+    _this.setMountState = function () {
+      _this.setState({
+        hasMount: true
+      });
+
+      _this.updateSizes();
+    };
+
+    _this.handleClickItem = function (index, item) {
+      if (_react.Children.count(_this.props.children) === 0) {
+        return;
+      }
+
+      if (_this.state.cancelClick) {
+        _this.setState({
+          cancelClick: false
+        });
+
+        return;
+      }
+
+      _this.props.onClickItem(index, item);
+
+      if (index !== _this.state.selectedItem) {
+        _this.setState({
+          selectedItem: index
+        });
+      }
+    };
+
+    _this.handleOnChange = function (index, item) {
+      if (_react.Children.count(_this.props.children) <= 1) {
+        return;
+      }
+
+      _this.props.onChange(index, item);
+    };
+
+    _this.handleClickThumb = function (index, item) {
+      _this.props.onClickThumb(index, item);
+
+      _this.selectItem({
+        selectedItem: index
+      });
+    };
+
+    _this.onSwipeStart = function (event) {
+      _this.setState({
+        swiping: true
+      });
+
+      _this.props.onSwipeStart(event);
+
+      _this.clearAutoPlay();
+    };
+
+    _this.onSwipeEnd = function (event) {
+      _this.setState({
+        swiping: false,
+        cancelClick: false
+      });
+
+      _this.props.onSwipeEnd(event);
+
+      _this.autoPlay();
+    };
+
+    _this.onSwipeMove = function (delta, event) {
+      _this.props.onSwipeMove(event);
+
+      var isHorizontal = _this.props.axis === 'horizontal';
+
+      var childrenLength = _react.Children.count(_this.props.children);
+
+      var initialBoundry = 0;
+
+      var currentPosition = _this.getPosition(_this.state.selectedItem);
+
+      var finalBoundry = _this.props.infiniteLoop ? _this.getPosition(childrenLength - 1) - 100 : _this.getPosition(childrenLength - 1);
+      var axisDelta = isHorizontal ? delta.x : delta.y;
+      var handledDelta = axisDelta; // prevent user from swiping left out of boundaries
+
+      if (currentPosition === initialBoundry && axisDelta > 0) {
+        handledDelta = 0;
+      } // prevent user from swiping right out of boundaries
+
+
+      if (currentPosition === finalBoundry && axisDelta < 0) {
+        handledDelta = 0;
+      }
+
+      var position = currentPosition + 100 / (_this.state.itemSize / handledDelta);
+
+      if (_this.props.infiniteLoop) {
+        // When allowing infinite loop, if we slide left from position 0 we reveal the cloned last slide that appears before it
+        // if we slide even further we need to jump to other side so it can continue - and vice versa for the last slide
+        if (_this.state.selectedItem === 0 && position > -100) {
+          position -= childrenLength * 100;
+        } else if (_this.state.selectedItem === childrenLength - 1 && position < -childrenLength * 100) {
+          position += childrenLength * 100;
+        }
+      }
+
+      position += '%';
+
+      _this.setPosition(position); // allows scroll if the swipe was within the tolerance
+
+
+      var hasMoved = Math.abs(axisDelta) > _this.props.swipeScrollTolerance;
+
+      if (hasMoved && !_this.state.cancelClick) {
+        _this.setState({
+          cancelClick: true
+        });
+      }
+
+      return hasMoved;
+    };
+
+    _this.setPosition = function (position, forceReflow) {
+      var list = _reactDom2.default.findDOMNode(_this.listRef);
+
+      ['WebkitTransform', 'MozTransform', 'MsTransform', 'OTransform', 'transform', 'msTransform'].forEach(function (prop) {
+        list.style[prop] = (0, _CSSTranslate2.default)(position, _this.props.axis);
+      });
+
+      if (forceReflow) {
+        list.offsetLeft;
+      }
+    };
+
+    _this.resetPosition = function () {
+      var currentPosition = _this.getPosition(_this.state.selectedItem) + '%';
+
+      _this.setPosition(currentPosition);
+    };
+
+    _this.decrement = function () {
+      var positions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      var fromSwipe = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+      _this.moveTo(_this.state.selectedItem - (typeof positions === 'number' ? positions : 1), fromSwipe);
+    };
+
+    _this.increment = function () {
+      var positions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      var fromSwipe = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+      _this.moveTo(_this.state.selectedItem + (typeof positions === 'number' ? positions : 1), fromSwipe);
+    };
+
+    _this.moveTo = function (position, fromSwipe) {
+      var lastPosition = _react.Children.count(_this.props.children) - 1;
+      var needClonedSlide = _this.props.infiniteLoop && !fromSwipe && (position < 0 || position > lastPosition);
+      var oldPosition = position;
+
+      if (position < 0) {
+        position = _this.props.infiniteLoop ? lastPosition : 0;
+      }
+
+      if (position > lastPosition) {
+        position = _this.props.infiniteLoop ? 0 : lastPosition;
+      }
+
+      if (needClonedSlide) {
+        // set swiping true would disable transition time, then we set slider to cloned position and force a reflow
+        // this is only needed for non-swiping situation
+        _this.setState({
+          swiping: true
+        }, function () {
+          if (oldPosition < 0) {
+            if (_this.props.centerMode && _this.props.axis === 'horizontal') {
+              _this.setPosition('-' + ((lastPosition + 2) * _this.props.centerSlidePercentage - (100 - _this.props.centerSlidePercentage) / 2) + '%', true);
+            } else {
+              _this.setPosition('-' + (lastPosition + 2) * 100 + '%', true);
+            }
+          } else if (oldPosition > lastPosition) {
+            _this.setPosition(0, true);
+          }
+
+          _this.selectItem({
+            selectedItem: position,
+            swiping: false
+          });
+        });
+      } else {
+        _this.selectItem({
+          // if it's not a slider, we don't need to set position here
+          selectedItem: position
+        });
+      } // don't reset auto play when stop on hover is enabled, doing so will trigger a call to auto play more than once
+      // and will result in the interval function not being cleared correctly.
+
+
+      if (_this.state.autoPlay && _this.state.isMouseEntered === false) {
+        _this.resetAutoPlay();
+      }
+    };
+
+    _this.onClickNext = function () {
+      _this.increment(1, false);
+    };
+
+    _this.onClickPrev = function () {
+      _this.decrement(1, false);
+    };
+
+    _this.onSwipeForward = function () {
+      _this.increment(1, true);
+    };
+
+    _this.onSwipeBackwards = function () {
+      _this.decrement(1, true);
+    };
+
+    _this.changeItem = function (e) {
+      if (!e.key || e.key === 'Enter') {
+        var newIndex = e.target.value;
+
+        _this.selectItem({
+          selectedItem: newIndex
+        });
+      }
+    };
+
+    _this.selectItem = function (state, cb) {
+      _this.setState(state, cb);
+
+      _this.handleOnChange(state.selectedItem, _react.Children.toArray(_this.props.children)[state.selectedItem]);
+    };
+
+    _this.getInitialImage = function () {
+      var selectedItem = _this.props.selectedItem;
+      var item = _this.itemsRef && _this.itemsRef[selectedItem];
+      var images = item && item.getElementsByTagName('img');
+      return images && images[selectedItem];
+    };
+
+    _this.getVariableImageHeight = function (position) {
+      var item = _this.itemsRef && _this.itemsRef[position];
+      var images = item && item.getElementsByTagName('img');
+
+      if (_this.state.hasMount && images.length > 0) {
+        var image = images[0];
+
+        if (!image.complete) {
+          // if the image is still loading, the size won't be available so we trigger a new render after it's done
+          var onImageLoad = function onImageLoad() {
+            _this.forceUpdate();
+
+            image.removeEventListener('load', onImageLoad);
+          };
+
+          image.addEventListener('load', onImageLoad);
+        }
+
+        var height = image.clientHeight;
+        return height > 0 ? height : null;
+      }
+
+      return null;
+    };
+
+    _this.state = {
+      initialized: false,
+      selectedItem: props.selectedItem,
+      hasMount: false,
+      isMouseEntered: false,
+      autoPlay: props.autoPlay
+    };
+    return _this;
+  }
+
+  _createClass(Carousel, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      if (!this.props.children) {
+        return;
+      }
+
+      this.setupCarousel();
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      var _this2 = this;
+
+      if (nextProps.selectedItem !== this.state.selectedItem) {
+        this.updateSizes();
+        this.moveTo(nextProps.selectedItem);
+      }
+
+      if (nextProps.autoPlay !== this.state.autoPlay) {
+        this.setState({
+          autoPlay: nextProps.autoPlay
+        }, function () {
+          if (_this2.state.autoPlay) {
+            _this2.setupAutoPlay();
+          } else {
+            _this2.destroyAutoPlay();
+          }
+        });
+      }
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(prevProps, prevState) {
+      if (!prevProps.children && this.props.children && !this.state.initialized) {
+        this.setupCarousel();
+      }
+
+      if (prevState.swiping && !this.state.swiping) {
+        // We stopped swiping, ensure we are heading to the new/current slide and not stuck
+        this.resetPosition();
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      this.destroyCarousel();
+    }
+  }, {
+    key: 'setupCarousel',
+    value: function setupCarousel() {
+      this.bindEvents();
+
+      if (this.state.autoPlay && _react.Children.count(this.props.children) > 1) {
+        this.setupAutoPlay();
+      }
+
+      this.setState({
+        initialized: true
+      });
+      var initialImage = this.getInitialImage();
+
+      if (initialImage) {
+        // if it's a carousel of images, we set the mount state after the first image is loaded
+        initialImage.addEventListener('load', this.setMountState);
+      } else {
+        this.setMountState();
+      }
+    }
+  }, {
+    key: 'destroyCarousel',
+    value: function destroyCarousel() {
+      if (this.state.initialized) {
+        this.unbindEvents();
+        this.destroyAutoPlay();
+      }
+    }
+  }, {
+    key: 'setupAutoPlay',
+    value: function setupAutoPlay() {
+      this.autoPlay();
+      var carouselWrapper = this.carouselWrapperRef;
+
+      if (this.props.stopOnHover && carouselWrapper) {
+        carouselWrapper.addEventListener('mouseenter', this.stopOnHover);
+        carouselWrapper.addEventListener('mouseleave', this.startOnLeave);
+      }
+    }
+  }, {
+    key: 'destroyAutoPlay',
+    value: function destroyAutoPlay() {
+      this.clearAutoPlay();
+      var carouselWrapper = this.carouselWrapperRef;
+
+      if (this.props.stopOnHover && carouselWrapper) {
+        carouselWrapper.removeEventListener('mouseenter', this.stopOnHover);
+        carouselWrapper.removeEventListener('mouseleave', this.startOnLeave);
+      }
+    }
+  }, {
+    key: 'bindEvents',
+    value: function bindEvents() {
+      // as the widths are calculated, we need to resize
+      // the carousel when the window is resized
+      window.addEventListener("resize", this.updateSizes); // issue #2 - image loading smaller
+
+      window.addEventListener("DOMContentLoaded", this.updateSizes);
+
+      if (this.props.useKeyboardArrows) {
+        document.addEventListener("keydown", this.navigateWithKeyboard);
+      }
+    }
+  }, {
+    key: 'unbindEvents',
+    value: function unbindEvents() {
+      // removing listeners
+      window.removeEventListener("resize", this.updateSizes);
+      window.removeEventListener("DOMContentLoaded", this.updateSizes);
+      var initialImage = this.getInitialImage();
+
+      if (initialImage) {
+        initialImage.removeEventListener("load", this.setMountState);
+      }
+
+      if (this.props.useKeyboardArrows) {
+        document.removeEventListener("keydown", this.navigateWithKeyboard);
+      }
+    }
+  }, {
+    key: 'getPosition',
+    value: function getPosition(index) {
+      if (this.props.infiniteLoop) {
+        // index has to be added by 1 because of the first cloned slide
+        ++index;
+      }
+
+      var childrenLength = _react.Children.count(this.props.children);
+
+      if (this.props.centerMode && this.props.axis === 'horizontal') {
+        var currentPosition = -index * this.props.centerSlidePercentage;
+        var lastPosition = childrenLength - 1;
+
+        if (index && (index !== lastPosition || this.props.infiniteLoop)) {
+          currentPosition += (100 - this.props.centerSlidePercentage) / 2;
+        } else if (index === lastPosition) {
+          currentPosition += 100 - this.props.centerSlidePercentage;
+        }
+
+        return currentPosition;
+      }
+
+      return -index * 100;
+    }
+  }, {
+    key: 'renderItems',
+    value: function renderItems(isClone) {
+      var _this3 = this;
+
+      return _react.Children.map(this.props.children, function (item, index) {
+        var slideProps = {
+          ref: function ref(e) {
+            return _this3.setItemsRef(e, index);
+          },
+          key: 'itemKey' + index + (isClone ? 'clone' : ''),
+          className: _cssClasses2.default.ITEM(true, index === _this3.state.selectedItem),
+          onClick: _this3.handleClickItem.bind(_this3, index, item)
+        };
+
+        if (_this3.props.centerMode && _this3.props.axis === 'horizontal') {
+          slideProps.style = {
+            minWidth: _this3.props.centerSlidePercentage + '%'
+          };
+        }
+
+        return _react2.default.createElement('li', slideProps, item);
+      });
+    }
+  }, {
+    key: 'renderControls',
+    value: function renderControls() {
+      var _this4 = this;
+
+      if (!this.props.showIndicators) {
+        return null;
+      }
+
+      return _react2.default.createElement('ul', {
+        className: 'control-dots'
+      }, _react.Children.map(this.props.children, function (item, index) {
+        return _react2.default.createElement('li', {
+          className: _cssClasses2.default.DOT(index === _this4.state.selectedItem),
+          onClick: _this4.changeItem,
+          onKeyDown: _this4.changeItem,
+          value: index,
+          key: index,
+          role: 'button',
+          tabIndex: 0,
+          'aria-label': _this4.props.labels.item + ' ' + (index + 1)
+        });
+      }));
+    }
+  }, {
+    key: 'renderStatus',
+    value: function renderStatus() {
+      if (!this.props.showStatus) {
+        return null;
+      }
+
+      return _react2.default.createElement('p', {
+        className: 'carousel-status'
+      }, this.props.statusFormatter(this.state.selectedItem + 1, _react.Children.count(this.props.children)));
+    }
+  }, {
+    key: 'renderThumbs',
+    value: function renderThumbs() {
+      if (!this.props.showThumbs || _react.Children.count(this.props.children) === 0) {
+        return null;
+      }
+
+      return _react2.default.createElement(_Thumbs2.default, {
+        ref: this.setThumbsRef,
+        onSelectItem: this.handleClickThumb,
+        selectedItem: this.state.selectedItem,
+        transitionTime: this.props.transitionTime,
+        thumbWidth: this.props.thumbWidth,
+        labels: this.props.labels
+      }, this.props.children);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      if (!this.props.children || _react.Children.count(this.props.children) === 0) {
+        return null;
+      }
+
+      var isHorizontal = this.props.axis === 'horizontal';
+      var canShowArrows = this.props.showArrows && _react.Children.count(this.props.children) > 1; // show left arrow?
+
+      var hasPrev = canShowArrows && (this.state.selectedItem > 0 || this.props.infiniteLoop); // show right arrow
+
+      var hasNext = canShowArrows && (this.state.selectedItem < _react.Children.count(this.props.children) - 1 || this.props.infiniteLoop); // obj to hold the transformations and styles
+
+      var itemListStyles = {};
+      var currentPosition = this.getPosition(this.state.selectedItem); // if 3d is available, let's take advantage of the performance of transform
+
+      var transformProp = (0, _CSSTranslate2.default)(currentPosition + '%', this.props.axis);
+      var transitionTime = this.props.transitionTime + 'ms';
+      itemListStyles = {
+        'WebkitTransform': transformProp,
+        'MozTransform': transformProp,
+        'MsTransform': transformProp,
+        'OTransform': transformProp,
+        'transform': transformProp,
+        'msTransform': transformProp
+      };
+
+      if (!this.state.swiping) {
+        itemListStyles = _extends({}, itemListStyles, {
+          'WebkitTransitionDuration': transitionTime,
+          'MozTransitionDuration': transitionTime,
+          'MsTransitionDuration': transitionTime,
+          'OTransitionDuration': transitionTime,
+          'transitionDuration': transitionTime,
+          'msTransitionDuration': transitionTime
+        });
+      }
+
+      var itemsClone = this.renderItems(true);
+      var firstClone = itemsClone.shift();
+      var lastClone = itemsClone.pop();
+      var swiperProps = {
+        selectedItem: this.state.selectedItem,
+        className: _cssClasses2.default.SLIDER(true, this.state.swiping),
+        onSwipeMove: this.onSwipeMove,
+        onSwipeStart: this.onSwipeStart,
+        onSwipeEnd: this.onSwipeEnd,
+        style: itemListStyles,
+        tolerance: this.props.swipeScrollTolerance
+      };
+      var containerStyles = {};
+
+      if (isHorizontal) {
+        swiperProps.onSwipeLeft = this.onSwipeForward;
+        swiperProps.onSwipeRight = this.onSwipeBackwards;
+
+        if (this.props.dynamicHeight) {
+          var itemHeight = this.getVariableImageHeight(this.state.selectedItem);
+          swiperProps.style.height = itemHeight || 'auto';
+          containerStyles.height = itemHeight || 'auto';
+        }
+      } else {
+        swiperProps.onSwipeUp = this.props.verticalSwipe === 'natural' ? this.onSwipeBackwards : this.onSwipeForward;
+        swiperProps.onSwipeDown = this.props.verticalSwipe === 'natural' ? this.onSwipeForward : this.onSwipeBackwards;
+        swiperProps.style.height = this.state.itemSize;
+        containerStyles.height = this.state.itemSize;
+      }
+
+      return _react2.default.createElement('div', {
+        className: this.props.className,
+        ref: this.setCarouselWrapperRef
+      }, _react2.default.createElement('div', {
+        className: _cssClasses2.default.CAROUSEL(true),
+        style: {
+          width: this.props.width
+        }
+      }, _react2.default.createElement('button', {
+        type: 'button',
+        'aria-label': this.props.labels.leftArrow,
+        className: _cssClasses2.default.ARROW_PREV(!hasPrev),
+        onClick: this.onClickPrev
+      }), _react2.default.createElement('div', {
+        className: _cssClasses2.default.WRAPPER(true, this.props.axis),
+        style: containerStyles,
+        ref: this.setItemsWrapperRef
+      }, this.props.swipeable ? _react2.default.createElement(_reactEasySwipe2.default, _extends({
+        tagName: 'ul',
+        ref: this.setListRef
+      }, swiperProps, {
+        allowMouseEvents: this.props.emulateTouch
+      }), this.props.infiniteLoop && lastClone, this.renderItems(), this.props.infiniteLoop && firstClone) : _react2.default.createElement('ul', {
+        className: _cssClasses2.default.SLIDER(true, this.state.swiping),
+        ref: this.setListRef,
+        style: itemListStyles
+      }, this.props.infiniteLoop && lastClone, this.renderItems(), this.props.infiniteLoop && firstClone)), _react2.default.createElement('button', {
+        type: 'button',
+        'aria-label': this.props.labels.rightArrow,
+        className: _cssClasses2.default.ARROW_NEXT(!hasNext),
+        onClick: this.onClickNext
+      }), this.renderControls(), this.renderStatus()), this.renderThumbs());
+    }
+  }]);
+
+  return Carousel;
+}(_react.Component);
+
+Carousel.displayName = 'Carousel';
+Carousel.propTypes = {
+  className: _propTypes2.default.string,
+  children: _propTypes2.default.node,
+  showArrows: _propTypes2.default.bool,
+  showStatus: _propTypes2.default.bool,
+  showIndicators: _propTypes2.default.bool,
+  infiniteLoop: _propTypes2.default.bool,
+  showThumbs: _propTypes2.default.bool,
+  thumbWidth: _propTypes2.default.number,
+  selectedItem: _propTypes2.default.number,
+  onClickItem: _propTypes2.default.func.isRequired,
+  onClickThumb: _propTypes2.default.func.isRequired,
+  onChange: _propTypes2.default.func.isRequired,
+  axis: _propTypes2.default.oneOf(['horizontal', 'vertical']),
+  verticalSwipe: _propTypes2.default.oneOf(['natural', 'standard']),
+  width: customPropTypes.unit,
+  useKeyboardArrows: _propTypes2.default.bool,
+  autoPlay: _propTypes2.default.bool,
+  stopOnHover: _propTypes2.default.bool,
+  interval: _propTypes2.default.number,
+  transitionTime: _propTypes2.default.number,
+  swipeScrollTolerance: _propTypes2.default.number,
+  swipeable: _propTypes2.default.bool,
+  dynamicHeight: _propTypes2.default.bool,
+  emulateTouch: _propTypes2.default.bool,
+  statusFormatter: _propTypes2.default.func.isRequired,
+  centerMode: _propTypes2.default.bool,
+  centerSlidePercentage: _propTypes2.default.number,
+  labels: _propTypes2.default.shape({
+    leftArrow: _propTypes2.default.string,
+    rightArrow: _propTypes2.default.string,
+    item: _propTypes2.default.string
+  }),
+  onSwipeStart: _propTypes2.default.func,
+  onSwipeEnd: _propTypes2.default.func,
+  onSwipeMove: _propTypes2.default.func
+};
+Carousel.defaultProps = {
+  showIndicators: true,
+  showArrows: true,
+  showStatus: true,
+  showThumbs: true,
+  infiniteLoop: false,
+  selectedItem: 0,
+  axis: 'horizontal',
+  verticalSwipe: 'standard',
+  width: '100%',
+  useKeyboardArrows: false,
+  autoPlay: false,
+  stopOnHover: true,
+  interval: 3000,
+  transitionTime: 350,
+  swipeScrollTolerance: 5,
+  swipeable: true,
+  dynamicHeight: false,
+  emulateTouch: false,
+  onClickItem: noop,
+  onClickThumb: noop,
+  onChange: noop,
+  statusFormatter: defaultStatusFormatter,
+  centerMode: false,
+  centerSlidePercentage: 80,
+  labels: {
+    leftArrow: 'previous slide / item',
+    rightArrow: 'next slide / item',
+    item: 'slide item'
+  },
+  onSwipeStart: function onSwipeStart() {},
+  onSwipeEnd: function onSwipeEnd() {},
+  onSwipeMove: function onSwipeMove() {}
+};
+exports.default = Carousel;
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","prop-types":"../node_modules/prop-types/index.js","../cssClasses":"../node_modules/react-responsive-carousel/lib/cssClasses.js","../CSSTranslate":"../node_modules/react-responsive-carousel/lib/CSSTranslate.js","react-easy-swipe":"../node_modules/react-easy-swipe/lib/index.js","./Thumbs":"../node_modules/react-responsive-carousel/lib/components/Thumbs.js","../customPropTypes":"../node_modules/react-responsive-carousel/lib/customPropTypes.js"}],"../node_modules/react-responsive-carousel/lib/index.js":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Thumbs = exports.Carousel = undefined;
+
+var _Carousel = require('./components/Carousel');
+
+var _Carousel2 = _interopRequireDefault(_Carousel);
+
+var _Thumbs = require('./components/Thumbs');
+
+var _Thumbs2 = _interopRequireDefault(_Thumbs);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
+
+exports.Carousel = _Carousel2.default;
+exports.Thumbs = _Thumbs2.default;
+},{"./components/Carousel":"../node_modules/react-responsive-carousel/lib/components/Carousel.js","./components/Thumbs":"../node_modules/react-responsive-carousel/lib/components/Thumbs.js"}],"src/Images/HotelBarOne.jpeg":[function(require,module,exports) {
+module.exports = "/HotelBarOne.085dd1f2.jpeg";
+},{}],"src/Images/HotelBarTwo.jpg":[function(require,module,exports) {
+module.exports = "/HotelBarTwo.8cc03298.jpg";
+},{}],"src/Images/HotelBarThree.jpg":[function(require,module,exports) {
+module.exports = "/HotelBarThree.23fd24ca.jpg";
+},{}],"src/Components/ReactCarousel/ReactCarousel.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38063,6 +39990,49 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+require("react-responsive-carousel/lib/styles/carousel.min.css");
+
+var _reactResponsiveCarousel = require("react-responsive-carousel");
+
+var _HotelBarOne = _interopRequireDefault(require("../../Images/HotelBarOne.jpeg"));
+
+var _HotelBarTwo = _interopRequireDefault(require("../../Images/HotelBarTwo.jpg"));
+
+var _HotelBarThree = _interopRequireDefault(require("../../Images/HotelBarThree.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ReactCarousel = function ReactCarousel() {
+  return _react.default.createElement(_reactResponsiveCarousel.Carousel, {
+    autoPlay: true,
+    showThumbs: false
+  }, _react.default.createElement("div", null, _react.default.createElement("img", {
+    src: _HotelBarOne.default
+  }), _react.default.createElement("p", {
+    className: "legend"
+  }, "Legend 1")), _react.default.createElement("div", null, _react.default.createElement("img", {
+    src: _HotelBarTwo.default
+  }), _react.default.createElement("p", {
+    className: "legend"
+  }, "Legend 2")), _react.default.createElement("div", null, _react.default.createElement("img", {
+    src: _HotelBarThree.default
+  }), _react.default.createElement("p", {
+    className: "legend"
+  }, "Legend 3")));
+};
+
+var _default = ReactCarousel;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","react-responsive-carousel/lib/styles/carousel.min.css":"../node_modules/react-responsive-carousel/lib/styles/carousel.min.css","react-responsive-carousel":"../node_modules/react-responsive-carousel/lib/index.js","../../Images/HotelBarOne.jpeg":"src/Images/HotelBarOne.jpeg","../../Images/HotelBarTwo.jpg":"src/Images/HotelBarTwo.jpg","../../Images/HotelBarThree.jpg":"src/Images/HotelBarThree.jpg"}],"src/Pages/Main/Main.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
 require("./Main.css");
 
 var _girlMountain = _interopRequireDefault(require("./Images/girlMountain.jpeg"));
@@ -38071,8 +40041,17 @@ var _HotelInteriorOne = _interopRequireDefault(require("./Images/HotelInteriorOn
 
 var _HotelInteriorTwo = _interopRequireDefault(require("./Images/HotelInteriorTwo.jpeg"));
 
+var _HotelLobbyTwo = _interopRequireDefault(require("./Images/HotelLobbyTwo.jpg"));
+
+var _ReactCarousel = _interopRequireDefault(require("../../Components/ReactCarousel/ReactCarousel.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+//** COMPONENTS **//
 var Main = function Main() {
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("section", {
     id: "mainTitleSection"
@@ -38101,7 +40080,7 @@ var Main = function Main() {
     id: "mainSectionRoomPicOne"
   }, _react.default.createElement("img", {
     className: "mainSectionImgClass",
-    src: _HotelInteriorOne.default
+    src: _HotelLobbyTwo.default
   }))), _react.default.createElement("section", {
     id: "testTwo",
     style: {
@@ -38123,12 +40102,12 @@ var Main = function Main() {
   }, _react.default.createElement("img", {
     className: "mainSectionImgClass",
     src: _HotelInteriorTwo.default
-  })))));
+  })))), _react.default.createElement("section", null, _react.default.createElement(_ReactCarousel.default, null)));
 };
 
 var _default = Main;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Main.css":"src/Pages/Main/Main.css","./Images/girlMountain.jpeg":"src/Pages/Main/Images/girlMountain.jpeg","./Images/HotelInteriorOne.jpg":"src/Pages/Main/Images/HotelInteriorOne.jpg","./Images/HotelInteriorTwo.jpeg":"src/Pages/Main/Images/HotelInteriorTwo.jpeg"}],"../node_modules/stylis/stylis.min.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Main.css":"src/Pages/Main/Main.css","./Images/girlMountain.jpeg":"src/Pages/Main/Images/girlMountain.jpeg","./Images/HotelInteriorOne.jpg":"src/Pages/Main/Images/HotelInteriorOne.jpg","./Images/HotelInteriorTwo.jpeg":"src/Pages/Main/Images/HotelInteriorTwo.jpeg","./Images/HotelLobbyTwo.jpg":"src/Pages/Main/Images/HotelLobbyTwo.jpg","../../Components/ReactCarousel/ReactCarousel.js":"src/Components/ReactCarousel/ReactCarousel.js"}],"../node_modules/stylis/stylis.min.js":[function(require,module,exports) {
 var define;
 !function(e){"object"==typeof exports&&"undefined"!=typeof module?module.exports=e(null):"function"==typeof define&&define.amd?define(e(null)):window.stylis=e(null)}(function e(a){"use strict";var r=/^\0+/g,c=/[\0\r\f]/g,s=/: */g,t=/zoo|gra/,i=/([,: ])(transform)/g,f=/,+\s*(?![^(]*[)])/g,n=/ +\s*(?![^(]*[)])/g,l=/ *[\0] */g,o=/,\r+?/g,h=/([\t\r\n ])*\f?&/g,u=/:global\(((?:[^\(\)\[\]]*|\[.*\]|\([^\(\)]*\))*)\)/g,d=/\W+/g,b=/@(k\w+)\s*(\S*)\s*/,p=/::(place)/g,k=/:(read-only)/g,g=/\s+(?=[{\];=:>])/g,A=/([[}=:>])\s+/g,C=/(\{[^{]+?);(?=\})/g,w=/\s{2,}/g,v=/([^\(])(:+) */g,m=/[svh]\w+-[tblr]{2}/,x=/\(\s*(.*)\s*\)/g,$=/([\s\S]*?);/g,y=/-self|flex-/g,O=/[^]*?(:[rp][el]a[\w-]+)[^]*/,j=/stretch|:\s*\w+\-(?:conte|avail)/,z=/([^-])(image-set\()/,N="-webkit-",S="-moz-",F="-ms-",W=59,q=125,B=123,D=40,E=41,G=91,H=93,I=10,J=13,K=9,L=64,M=32,P=38,Q=45,R=95,T=42,U=44,V=58,X=39,Y=34,Z=47,_=62,ee=43,ae=126,re=0,ce=12,se=11,te=107,ie=109,fe=115,ne=112,le=111,oe=105,he=99,ue=100,de=112,be=1,pe=1,ke=0,ge=1,Ae=1,Ce=1,we=0,ve=0,me=0,xe=[],$e=[],ye=0,Oe=null,je=-2,ze=-1,Ne=0,Se=1,Fe=2,We=3,qe=0,Be=1,De="",Ee="",Ge="";function He(e,a,s,t,i){for(var f,n,o=0,h=0,u=0,d=0,g=0,A=0,C=0,w=0,m=0,$=0,y=0,O=0,j=0,z=0,R=0,we=0,$e=0,Oe=0,je=0,ze=s.length,Je=ze-1,Re="",Te="",Ue="",Ve="",Xe="",Ye="";R<ze;){if(C=s.charCodeAt(R),R===Je)if(h+d+u+o!==0){if(0!==h)C=h===Z?I:Z;d=u=o=0,ze++,Je++}if(h+d+u+o===0){if(R===Je){if(we>0)Te=Te.replace(c,"");if(Te.trim().length>0){switch(C){case M:case K:case W:case J:case I:break;default:Te+=s.charAt(R)}C=W}}if(1===$e)switch(C){case B:case q:case W:case Y:case X:case D:case E:case U:$e=0;case K:case J:case I:case M:break;default:for($e=0,je=R,g=C,R--,C=W;je<ze;)switch(s.charCodeAt(je++)){case I:case J:case W:++R,C=g,je=ze;break;case V:if(we>0)++R,C=g;case B:je=ze}}switch(C){case B:for(g=(Te=Te.trim()).charCodeAt(0),y=1,je=++R;R<ze;){switch(C=s.charCodeAt(R)){case B:y++;break;case q:y--;break;case Z:switch(A=s.charCodeAt(R+1)){case T:case Z:R=Qe(A,R,Je,s)}break;case G:C++;case D:C++;case Y:case X:for(;R++<Je&&s.charCodeAt(R)!==C;);}if(0===y)break;R++}if(Ue=s.substring(je,R),g===re)g=(Te=Te.replace(r,"").trim()).charCodeAt(0);switch(g){case L:if(we>0)Te=Te.replace(c,"");switch(A=Te.charCodeAt(1)){case ue:case ie:case fe:case Q:f=a;break;default:f=xe}if(je=(Ue=He(a,f,Ue,A,i+1)).length,me>0&&0===je)je=Te.length;if(ye>0)if(f=Ie(xe,Te,Oe),n=Pe(We,Ue,f,a,pe,be,je,A,i,t),Te=f.join(""),void 0!==n)if(0===(je=(Ue=n.trim()).length))A=0,Ue="";if(je>0)switch(A){case fe:Te=Te.replace(x,Me);case ue:case ie:case Q:Ue=Te+"{"+Ue+"}";break;case te:if(Ue=(Te=Te.replace(b,"$1 $2"+(Be>0?De:"")))+"{"+Ue+"}",1===Ae||2===Ae&&Le("@"+Ue,3))Ue="@"+N+Ue+"@"+Ue;else Ue="@"+Ue;break;default:if(Ue=Te+Ue,t===de)Ve+=Ue,Ue=""}else Ue="";break;default:Ue=He(a,Ie(a,Te,Oe),Ue,t,i+1)}Xe+=Ue,O=0,$e=0,z=0,we=0,Oe=0,j=0,Te="",Ue="",C=s.charCodeAt(++R);break;case q:case W:if((je=(Te=(we>0?Te.replace(c,""):Te).trim()).length)>1){if(0===z)if((g=Te.charCodeAt(0))===Q||g>96&&g<123)je=(Te=Te.replace(" ",":")).length;if(ye>0)if(void 0!==(n=Pe(Se,Te,a,e,pe,be,Ve.length,t,i,t)))if(0===(je=(Te=n.trim()).length))Te="\0\0";switch(g=Te.charCodeAt(0),A=Te.charCodeAt(1),g){case re:break;case L:if(A===oe||A===he){Ye+=Te+s.charAt(R);break}default:if(Te.charCodeAt(je-1)===V)break;Ve+=Ke(Te,g,A,Te.charCodeAt(2))}}O=0,$e=0,z=0,we=0,Oe=0,Te="",C=s.charCodeAt(++R)}}switch(C){case J:case I:if(h+d+u+o+ve===0)switch($){case E:case X:case Y:case L:case ae:case _:case T:case ee:case Z:case Q:case V:case U:case W:case B:case q:break;default:if(z>0)$e=1}if(h===Z)h=0;else if(ge+O===0&&t!==te&&Te.length>0)we=1,Te+="\0";if(ye*qe>0)Pe(Ne,Te,a,e,pe,be,Ve.length,t,i,t);be=1,pe++;break;case W:case q:if(h+d+u+o===0){be++;break}default:switch(be++,Re=s.charAt(R),C){case K:case M:if(d+o+h===0)switch(w){case U:case V:case K:case M:Re="";break;default:if(C!==M)Re=" "}break;case re:Re="\\0";break;case ce:Re="\\f";break;case se:Re="\\v";break;case P:if(d+h+o===0&&ge>0)Oe=1,we=1,Re="\f"+Re;break;case 108:if(d+h+o+ke===0&&z>0)switch(R-z){case 2:if(w===ne&&s.charCodeAt(R-3)===V)ke=w;case 8:if(m===le)ke=m}break;case V:if(d+h+o===0)z=R;break;case U:if(h+u+d+o===0)we=1,Re+="\r";break;case Y:case X:if(0===h)d=d===C?0:0===d?C:d;break;case G:if(d+h+u===0)o++;break;case H:if(d+h+u===0)o--;break;case E:if(d+h+o===0)u--;break;case D:if(d+h+o===0){if(0===O)switch(2*w+3*m){case 533:break;default:y=0,O=1}u++}break;case L:if(h+u+d+o+z+j===0)j=1;break;case T:case Z:if(d+o+u>0)break;switch(h){case 0:switch(2*C+3*s.charCodeAt(R+1)){case 235:h=Z;break;case 220:je=R,h=T}break;case T:if(C===Z&&w===T&&je+2!==R){if(33===s.charCodeAt(je+2))Ve+=s.substring(je,R+1);Re="",h=0}}}if(0===h){if(ge+d+o+j===0&&t!==te&&C!==W)switch(C){case U:case ae:case _:case ee:case E:case D:if(0===O){switch(w){case K:case M:case I:case J:Re+="\0";break;default:Re="\0"+Re+(C===U?"":"\0")}we=1}else switch(C){case D:if(z+7===R&&108===w)z=0;O=++y;break;case E:if(0==(O=--y))we=1,Re+="\0"}break;case K:case M:switch(w){case re:case B:case q:case W:case U:case ce:case K:case M:case I:case J:break;default:if(0===O)we=1,Re+="\0"}}if(Te+=Re,C!==M&&C!==K)$=C}}m=w,w=C,R++}if(je=Ve.length,me>0)if(0===je&&0===Xe.length&&0===a[0].length==false)if(t!==ie||1===a.length&&(ge>0?Ee:Ge)===a[0])je=a.join(",").length+2;if(je>0){if(f=0===ge&&t!==te?function(e){for(var a,r,s=0,t=e.length,i=Array(t);s<t;++s){for(var f=e[s].split(l),n="",o=0,h=0,u=0,d=0,b=f.length;o<b;++o){if(0===(h=(r=f[o]).length)&&b>1)continue;if(u=n.charCodeAt(n.length-1),d=r.charCodeAt(0),a="",0!==o)switch(u){case T:case ae:case _:case ee:case M:case D:break;default:a=" "}switch(d){case P:r=a+Ee;case ae:case _:case ee:case M:case E:case D:break;case G:r=a+r+Ee;break;case V:switch(2*r.charCodeAt(1)+3*r.charCodeAt(2)){case 530:if(Ce>0){r=a+r.substring(8,h-1);break}default:if(o<1||f[o-1].length<1)r=a+Ee+r}break;case U:a="";default:if(h>1&&r.indexOf(":")>0)r=a+r.replace(v,"$1"+Ee+"$2");else r=a+r+Ee}n+=r}i[s]=n.replace(c,"").trim()}return i}(a):a,ye>0)if(void 0!==(n=Pe(Fe,Ve,f,e,pe,be,je,t,i,t))&&0===(Ve=n).length)return Ye+Ve+Xe;if(Ve=f.join(",")+"{"+Ve+"}",Ae*ke!=0){if(2===Ae&&!Le(Ve,2))ke=0;switch(ke){case le:Ve=Ve.replace(k,":"+S+"$1")+Ve;break;case ne:Ve=Ve.replace(p,"::"+N+"input-$1")+Ve.replace(p,"::"+S+"$1")+Ve.replace(p,":"+F+"input-$1")+Ve}ke=0}}return Ye+Ve+Xe}function Ie(e,a,r){var c=a.trim().split(o),s=c,t=c.length,i=e.length;switch(i){case 0:case 1:for(var f=0,n=0===i?"":e[0]+" ";f<t;++f)s[f]=Je(n,s[f],r,i).trim();break;default:f=0;var l=0;for(s=[];f<t;++f)for(var h=0;h<i;++h)s[l++]=Je(e[h]+" ",c[f],r,i).trim()}return s}function Je(e,a,r,c){var s=a,t=s.charCodeAt(0);if(t<33)t=(s=s.trim()).charCodeAt(0);switch(t){case P:switch(ge+c){case 0:case 1:if(0===e.trim().length)break;default:return s.replace(h,"$1"+e.trim())}break;case V:switch(s.charCodeAt(1)){case 103:if(Ce>0&&ge>0)return s.replace(u,"$1").replace(h,"$1"+Ge);break;default:return e.trim()+s.replace(h,"$1"+e.trim())}default:if(r*ge>0&&s.indexOf("\f")>0)return s.replace(h,(e.charCodeAt(0)===V?"":"$1")+e.trim())}return e+s}function Ke(e,a,r,c){var l,o=0,h=e+";",u=2*a+3*r+4*c;if(944===u)return function(e){var a=e.length,r=e.indexOf(":",9)+1,c=e.substring(0,r).trim(),s=e.substring(r,a-1).trim();switch(e.charCodeAt(9)*Be){case 0:break;case Q:if(110!==e.charCodeAt(10))break;default:for(var t=s.split((s="",f)),i=0,r=0,a=t.length;i<a;r=0,++i){for(var l=t[i],o=l.split(n);l=o[r];){var h=l.charCodeAt(0);if(1===Be&&(h>L&&h<90||h>96&&h<123||h===R||h===Q&&l.charCodeAt(1)!==Q))switch(isNaN(parseFloat(l))+(-1!==l.indexOf("("))){case 1:switch(l){case"infinite":case"alternate":case"backwards":case"running":case"normal":case"forwards":case"both":case"none":case"linear":case"ease":case"ease-in":case"ease-out":case"ease-in-out":case"paused":case"reverse":case"alternate-reverse":case"inherit":case"initial":case"unset":case"step-start":case"step-end":break;default:l+=De}}o[r++]=l}s+=(0===i?"":",")+o.join(" ")}}if(s=c+s+";",1===Ae||2===Ae&&Le(s,1))return N+s+s;return s}(h);else if(0===Ae||2===Ae&&!Le(h,1))return h;switch(u){case 1015:return 97===h.charCodeAt(10)?N+h+h:h;case 951:return 116===h.charCodeAt(3)?N+h+h:h;case 963:return 110===h.charCodeAt(5)?N+h+h:h;case 1009:if(100!==h.charCodeAt(4))break;case 969:case 942:return N+h+h;case 978:return N+h+S+h+h;case 1019:case 983:return N+h+S+h+F+h+h;case 883:if(h.charCodeAt(8)===Q)return N+h+h;if(h.indexOf("image-set(",11)>0)return h.replace(z,"$1"+N+"$2")+h;return h;case 932:if(h.charCodeAt(4)===Q)switch(h.charCodeAt(5)){case 103:return N+"box-"+h.replace("-grow","")+N+h+F+h.replace("grow","positive")+h;case 115:return N+h+F+h.replace("shrink","negative")+h;case 98:return N+h+F+h.replace("basis","preferred-size")+h}return N+h+F+h+h;case 964:return N+h+F+"flex-"+h+h;case 1023:if(99!==h.charCodeAt(8))break;return l=h.substring(h.indexOf(":",15)).replace("flex-","").replace("space-between","justify"),N+"box-pack"+l+N+h+F+"flex-pack"+l+h;case 1005:return t.test(h)?h.replace(s,":"+N)+h.replace(s,":"+S)+h:h;case 1e3:switch(o=(l=h.substring(13).trim()).indexOf("-")+1,l.charCodeAt(0)+l.charCodeAt(o)){case 226:l=h.replace(m,"tb");break;case 232:l=h.replace(m,"tb-rl");break;case 220:l=h.replace(m,"lr");break;default:return h}return N+h+F+l+h;case 1017:if(-1===h.indexOf("sticky",9))return h;case 975:switch(o=(h=e).length-10,u=(l=(33===h.charCodeAt(o)?h.substring(0,o):h).substring(e.indexOf(":",7)+1).trim()).charCodeAt(0)+(0|l.charCodeAt(7))){case 203:if(l.charCodeAt(8)<111)break;case 115:h=h.replace(l,N+l)+";"+h;break;case 207:case 102:h=h.replace(l,N+(u>102?"inline-":"")+"box")+";"+h.replace(l,N+l)+";"+h.replace(l,F+l+"box")+";"+h}return h+";";case 938:if(h.charCodeAt(5)===Q)switch(h.charCodeAt(6)){case 105:return l=h.replace("-items",""),N+h+N+"box-"+l+F+"flex-"+l+h;case 115:return N+h+F+"flex-item-"+h.replace(y,"")+h;default:return N+h+F+"flex-line-pack"+h.replace("align-content","").replace(y,"")+h}break;case 973:case 989:if(h.charCodeAt(3)!==Q||122===h.charCodeAt(4))break;case 931:case 953:if(true===j.test(e))if(115===(l=e.substring(e.indexOf(":")+1)).charCodeAt(0))return Ke(e.replace("stretch","fill-available"),a,r,c).replace(":fill-available",":stretch");else return h.replace(l,N+l)+h.replace(l,S+l.replace("fill-",""))+h;break;case 962:if(h=N+h+(102===h.charCodeAt(5)?F+h:"")+h,r+c===211&&105===h.charCodeAt(13)&&h.indexOf("transform",10)>0)return h.substring(0,h.indexOf(";",27)+1).replace(i,"$1"+N+"$2")+h}return h}function Le(e,a){var r=e.indexOf(1===a?":":"{"),c=e.substring(0,3!==a?r:10),s=e.substring(r+1,e.length-1);return Oe(2!==a?c:c.replace(O,"$1"),s,a)}function Me(e,a){var r=Ke(a,a.charCodeAt(0),a.charCodeAt(1),a.charCodeAt(2));return r!==a+";"?r.replace($," or ($1)").substring(4):"("+a+")"}function Pe(e,a,r,c,s,t,i,f,n,l){for(var o,h=0,u=a;h<ye;++h)switch(o=$e[h].call(Te,e,u,r,c,s,t,i,f,n,l)){case void 0:case false:case true:case null:break;default:u=o}if(u!==a)return u}function Qe(e,a,r,c){for(var s=a+1;s<r;++s)switch(c.charCodeAt(s)){case Z:if(e===T)if(c.charCodeAt(s-1)===T&&a+2!==s)return s+1;break;case I:if(e===Z)return s+1}return s}function Re(e){for(var a in e){var r=e[a];switch(a){case"keyframe":Be=0|r;break;case"global":Ce=0|r;break;case"cascade":ge=0|r;break;case"compress":we=0|r;break;case"semicolon":ve=0|r;break;case"preserve":me=0|r;break;case"prefix":if(Oe=null,!r)Ae=0;else if("function"!=typeof r)Ae=1;else Ae=2,Oe=r}}return Re}function Te(a,r){if(void 0!==this&&this.constructor===Te)return e(a);var s=a,t=s.charCodeAt(0);if(t<33)t=(s=s.trim()).charCodeAt(0);if(Be>0)De=s.replace(d,t===G?"":"-");if(t=1,1===ge)Ge=s;else Ee=s;var i,f=[Ge];if(ye>0)if(void 0!==(i=Pe(ze,r,f,f,pe,be,0,0,0,0))&&"string"==typeof i)r=i;var n=He(xe,f,r,0,0);if(ye>0)if(void 0!==(i=Pe(je,n,f,f,pe,be,n.length,0,0,0))&&"string"!=typeof(n=i))t=0;return De="",Ge="",Ee="",ke=0,pe=1,be=1,we*t==0?n:n.replace(c,"").replace(g,"").replace(A,"$1").replace(C,"$1").replace(w," ")}if(Te.use=function e(a){switch(a){case void 0:case null:ye=$e.length=0;break;default:if("function"==typeof a)$e[ye++]=a;else if("object"==typeof a)for(var r=0,c=a.length;r<c;++r)e(a[r]);else qe=0|!!a}return e},Te.set=Re,void 0!==a)Re(a);return Te});
 
@@ -43557,7 +45536,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53121" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63065" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
