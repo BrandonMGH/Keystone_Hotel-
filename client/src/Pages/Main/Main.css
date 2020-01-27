@@ -43,21 +43,29 @@ height: 650px
     background-size: cover;
 }
 
+/* MAIN SECTION ROOM DESCRIPTION */ 
+
 #mainSectionRoomDescription {
     display: grid; 
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr; 
     justify-content: center;
     grid-gap: 5%;
+  
 }
 
 #mainSectionRoomPicOne{
     position: relative;  
     top: 10%;
     left: 15%; 
+    order: 1; 
 }
 
 #mainSectionRoomQuote{
+    order: 2
+}
+
+#mainSectionRoomQuoteText{
   width:95%; 
   padding-top: 15%;  
   font-size: 30px;
@@ -69,10 +77,14 @@ height: 650px
     text-align: center; 
     padding-left: 12%;
     padding-top: 12%; 
+    order: 3
 }
 
-
 #mainSectionRoomPicTwo{
+    order: 4
+}
+
+#mainSectionRoomPicTwoImage{
  position: relative;
  bottom: 15%;
  right: 15%;
@@ -83,7 +95,10 @@ height: 650px
     width: 100%;
     height: 100%;
 }
+
+
 @media (max-width: 900px){
+    /**Main Section Divide One **/
     #mainSectionDivideOne {
         height: 100%
         }
@@ -102,4 +117,42 @@ height: 650px
         height: 100%;
         width: 100%; 
     }
+    /** Main Section Room Description **/
+    #mainSectionRoomDescription{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+
+    #mainSectionRoomPicOne{
+        position: static;  
+    }
+    #mainSectionRoomPicTwo{
+        order: 3;
+    }
+
+    #mainSectionSummary {
+        order: 4
+    }
+    
+    #mainSectionRoomPicTwoImage {
+       position: static; 
+    }
+
+    #mainSectionRoomQuote{
+        order: 2;
+    }
+
+    #mainSectionRoomQuoteText{
+        width: 100%; 
+        padding-top: 0px;  
+        font-size: 30px;
+        text-align:center; 
+      }
+
+      #mainSectionSummary {
+        padding-top: 0%; 
+      
+    }
+
 }
