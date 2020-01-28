@@ -40016,6 +40016,7 @@ var ReactCarousel = function ReactCarousel() {
     autoPlay: true,
     showThumbs: false
   }, _react.default.createElement("div", null, _react.default.createElement("section", {
+    className: "legend",
     id: "carouselTextOne"
   }, _react.default.createElement("h1", {
     id: "carouselTitleTextOne"
@@ -40023,6 +40024,7 @@ var ReactCarousel = function ReactCarousel() {
     id: "carouselImgOne",
     src: _HotelInteriorFour.default
   })), _react.default.createElement("div", null, _react.default.createElement("section", {
+    className: "legend",
     id: "carouselTextTwo"
   }, _react.default.createElement("h1", {
     id: "carouselTitleTextTwo"
@@ -40030,6 +40032,7 @@ var ReactCarousel = function ReactCarousel() {
     id: "carouselImgTwo",
     src: _HotelRestaurantOne.default
   })), _react.default.createElement("div", null, _react.default.createElement("section", {
+    className: "legend",
     id: "carouselTextThree"
   }, _react.default.createElement("h1", {
     id: "carouselTitleTextThree"
@@ -40037,6 +40040,7 @@ var ReactCarousel = function ReactCarousel() {
     id: "carouselImgThree",
     src: _HotelSpaOne.default
   })), _react.default.createElement("div", null, _react.default.createElement("section", {
+    className: "legend",
     id: "carouselTextFour"
   }, _react.default.createElement("h1", {
     id: "carouselTitleTextFour"
@@ -45549,7 +45553,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59663" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50349" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

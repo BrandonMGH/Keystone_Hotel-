@@ -12,7 +12,7 @@ const ReactCarousel = () => {
     return (
         <Carousel autoPlay showThumbs={false}>
             <div>
-                <section id="carouselTextOne">
+                <section className="legend" id="carouselTextOne">
                     <h1 id="carouselTitleTextOne">ROOMS</h1>
                     <p>If you would like to find out more information about the rooms, please click the link below</p>
                     <a>Read More</a>
@@ -20,7 +20,7 @@ const ReactCarousel = () => {
                 <img id="carouselImgOne" src={HotelInteriorFour} />
             </div>
             <div>
-                <section id="carouselTextTwo">
+                <section className="legend" id="carouselTextTwo">
                     <h1 id="carouselTitleTextTwo">DINING</h1>
                     <p>If you would like to find out more information about the rooms, please click the link below</p>
                     <a>Read More</a>
@@ -28,7 +28,7 @@ const ReactCarousel = () => {
                 <img id="carouselImgTwo" src={HotelRestaurantOne} />
             </div>
             <div>
-                <section id="carouselTextThree">
+                <section className="legend" id="carouselTextThree">
                     <h1 id="carouselTitleTextThree">SPA</h1>
                     <p>If you would like to find out more information about the rooms, please click the link below</p>
                     <a>Read More</a>
@@ -36,7 +36,7 @@ const ReactCarousel = () => {
                 <img id="carouselImgThree" src={HotelSpaOne} />
             </div>
             <div>
-                <section id="carouselTextFour">
+                <section className="legend" id="carouselTextFour">
                     <h1 id="carouselTitleTextFour">AREA ATTRACTION</h1>
                     <p>If you would like to find out more information about the rooms, please click the link below</p>
                     <a>Read More</a>
