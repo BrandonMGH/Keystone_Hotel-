@@ -40131,13 +40131,15 @@ var Main = function Main() {
     src: _HotelExteriorOne.default
   }), _react.default.createElement("section", {
     id: "mainSectionGeneralInfoText"
-  }, _react.default.createElement("section", null), _react.default.createElement("section", null, _react.default.createElement("h1", null, "GENERAL INFO"), _react.default.createElement("h3", null, "Keystone Hotel"), _react.default.createElement("p", {
+  }, _react.default.createElement("section", null), _react.default.createElement("section", null, _react.default.createElement("h1", {
+    id: "mainSectionGeneralInfoTitleText"
+  }, "GENERAL INFO"), _react.default.createElement("h3", null, "Keystone Hotel"), _react.default.createElement("p", {
     className: "mainSectionGeneralInfoSubText"
-  }, "Address:"), _react.default.createElement("p", {
+  }, "ADDRESS:  8343 Wintervale Lane, Boulder, CO 80302"), _react.default.createElement("p", {
     className: "mainSectionGeneralInfoSubText"
-  }, "Phone Number:"), _react.default.createElement("p", {
+  }, "PHONE NUMBER:  555-123-4567"), _react.default.createElement("p", {
     className: "mainSectionGeneralInfoSubText"
-  }, "Email:")), _react.default.createElement("section", null))));
+  }, "EMAIL: Reservations@KeystoneHotel.com")), _react.default.createElement("section", null))));
 };
 
 var _default = Main;
@@ -45571,7 +45573,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54859" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58931" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

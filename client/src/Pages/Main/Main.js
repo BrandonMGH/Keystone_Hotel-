@@ -63,11 +63,11 @@ const Main = () => {
                 <section id="mainSectionGeneralInfoText">
                     <section></section>
                     <section>
-                        <h1>GENERAL INFO</h1>
+                        <h1 id="mainSectionGeneralInfoTitleText">GENERAL INFO</h1>
                         <h3>Keystone Hotel</h3>
-                        <p className="mainSectionGeneralInfoSubText">Address:</p>
-                        <p className="mainSectionGeneralInfoSubText">Phone Number:</p>
-                        <p className="mainSectionGeneralInfoSubText">Email:</p>
+                        <p className="mainSectionGeneralInfoSubText">ADDRESS:  8343 Wintervale Lane, Boulder, CO 80302</p>
+                        <p className="mainSectionGeneralInfoSubText">PHONE NUMBER:  555-123-4567</p>
+                        <p className="mainSectionGeneralInfoSubText">EMAIL: Reservations@KeystoneHotel.com</p>
                     </section>
                     <section></section>
                 </section>
