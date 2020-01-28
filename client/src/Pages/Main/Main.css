@@ -13,7 +13,7 @@
     text-align: center;
 }
 
-/* Main Section Divide One */ 
+/* MAIN SECTION DIVIDE ONE */ 
 
 #mainSectionDivideOne {
 height: 750px
@@ -38,6 +38,7 @@ height: 750px
 
 #imgSubSectionDivideTwo {
     height: 50%; 
+    width: 50%; 
 }
 
 /* MAIN SECTION DIVIDE TWO */ 
@@ -111,6 +112,7 @@ height: 750px
 
 #mainSectionGeneralInfoImg{
     padding: 5%; 
+    width: 60%; 
 }
 
 #mainSectionGeneralInfoText {
@@ -119,9 +121,16 @@ height: 750px
    
 }
 
+#mainSectionGeneralInfoTitleText{
+    font-size: 50px; 
+}
+
 .mainSectionGeneralInfoSubText{
-    border-top: solid black 1px;
-    border-bottom: solid black 1px; 
+    border-top: solid grey 1px;
+    border-bottom: solid grey 1px; 
+    padding-right: 50px; 
+    
+    font-size: 15px;  
 }
 
 @media (max-width: 900px){
@@ -183,6 +192,28 @@ height: 750px
     #mainSectionCarousel {
      margin-top: 15%
     }
+    #mainSectionGeneralInfo {
+        display:flex;
+        height: 100%; 
 
+    }
+    #mainSectionGeneralInfoImg{ 
+    }
+    #mainSectionGeneralInfoText {
+        display:grid;     
+        grid-template-rows: 1fr 10fr 1.5fr; 
+        text-align: center; 
+    }
+
+    #mainSectionGeneralInfoTitleText{
+        font-size: 20px; 
+    }
+    .mainSectionGeneralInfoSubText{
+        border-top: solid white 1px;
+        border-bottom: solid white 1px; 
+        padding-right: 0%; 
+        
+        font-size: 12px;  
+    }
 
 }
