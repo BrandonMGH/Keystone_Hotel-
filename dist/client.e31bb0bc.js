@@ -45218,8 +45218,8 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Components/Navbar/Images/AstroBearLogoInverse.png":[function(require,module,exports) {
-module.exports = "/AstroBearLogoInverse.215d8bdb.png";
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Images/KeystoneLogo.jpg":[function(require,module,exports) {
+module.exports = "/KeystoneLogo.476532c5.jpg";
 },{}],"src/Components/Navbar/Navbar.js":[function(require,module,exports) {
 "use strict";
 
@@ -45236,7 +45236,7 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 require("./Navbar.css");
 
-var _AstroBearLogoInverse = _interopRequireDefault(require("./Images/AstroBearLogoInverse.png"));
+var _KeystoneLogo = _interopRequireDefault(require("../../Images/KeystoneLogo.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45431,7 +45431,8 @@ var Navbar = function Navbar() {
   }, _react.default.createElement("section", {
     id: "navLogo"
   }, _react.default.createElement("img", {
-    src: _AstroBearLogoInverse.default
+    id: "KeystoneLogo",
+    src: _KeystoneLogo.default
   })), _react.default.createElement("section", {
     id: "navTitle"
   }, _react.default.createElement("h1", null, "-Keystone Hotel-")), _react.default.createElement("section", {
@@ -45456,7 +45457,7 @@ var Navbar = function Navbar() {
 
 var _default = Navbar;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../../../API/API.js":"API/API.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","./Navbar.css":"src/Components/Navbar/Navbar.css","./Images/AstroBearLogoInverse.png":"src/Components/Navbar/Images/AstroBearLogoInverse.png"}],"src/Components/Footer/Footer.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../../../API/API.js":"API/API.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","./Navbar.css":"src/Components/Navbar/Navbar.css","../../Images/KeystoneLogo.jpg":"src/Images/KeystoneLogo.jpg"}],"src/Components/Footer/Footer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45573,7 +45574,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58931" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60092" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

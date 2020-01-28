@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import API from '../../../API/API.js';
 import styled, { keyframes } from 'styled-components'
 import './Navbar.css'
-import AstroBearLogoInverse from './Images/AstroBearLogoInverse.png'
+import KeystoneLogo from '../../Images/KeystoneLogo.jpg'
 
 
 const ModalContainer = styled.div`
@@ -114,7 +114,7 @@ const Navbar = () => {
             </ModalContainer>
             <section id="mainNav">
                 <section id="navLogo">
-                    <img src={AstroBearLogoInverse} />
+                    <img id="KeystoneLogo" src={KeystoneLogo} />
                 </section>
                 <section id="navTitle">
                     <h1>-Keystone Hotel-</h1>
