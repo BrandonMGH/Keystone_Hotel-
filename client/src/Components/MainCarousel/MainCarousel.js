@@ -8,7 +8,7 @@ import HotelRestaurantOne from '../../Images/HotelRestaurantOne.jpeg'
 import HotelSpaOne from '../../Images/HotelSpaOne.jpeg'
 import AreaAttractionOne from '../../Images/AreaAttractionOne.jpg'
 
-const ReactCarousel = () => {
+const MainCarousel = () => {
     return (
         <Carousel autoPlay showThumbs={false}>
             <div>
@@ -47,4 +47,4 @@ const ReactCarousel = () => {
     )
 }
 
-export default ReactCarousel 
+export default MainCarousel 

@@ -7,7 +7,7 @@ import HotelInteriorTwo from '../../Images/HotelInteriorTwo.jpeg'
 import HotelLobbyTwo from '../../Images/HotelLobbyTwo.jpg'
 
 //** COMPONENTS **//
-import ReactCarousel from '../../Components/ReactCarousel/ReactCarousel.js'
+import MainCarousel from '../../Components/MainCarousel/MainCarousel.js'
 
 
 
@@ -56,7 +56,7 @@ const Main = () => {
                 </section>
             </section>
             <section id="mainSectionCarousel">
-                <ReactCarousel />
+                <MainCarousel />
             </section>
 
         </>
