@@ -1,7 +1,8 @@
+/* MAIN TITLE SECTION */
 
 #mainTitleSection{
-   background-image: url('../../Images/ForestImageOne.jpg');
-   height: 650px; 
+   background-image: url('../../Images/HotelExteriorTwo.jpg');
+   height: 750px; 
    background-size: cover;
 }
 
@@ -12,23 +13,25 @@
     text-align: center;
 }
 
+/* Main Section Divide One */ 
+
 #mainSectionDivideOne {
-height: 650px
+height: 750px
 }
 
 
 #mainSubSectionDivideOne {
     position: relative; 
     background-color: white; 
-    width: 35%; 
-    top: 20%; 
+    width: 30%; 
+    top: 40%; 
     left: 10%; 
     z-index: 26
 }
 
 #mainSubSectionDivideTwo {
    position:relative;
-   top: -20%; 
+   top:-10%;
    display:flex;
    justify-content: center;
 }
@@ -36,8 +39,11 @@ height: 650px
 #imgSubSectionDivideTwo {
     height: 50%; 
 }
+
+/* MAIN SECTION DIVIDE TWO */ 
+
 #mainSectionDivideTwo{
-    height: 650px; 
+    height: 750px; 
     color: white; 
     background-image: url('../../Images/rockyMountainOne.jpeg');
     background-size: cover;
@@ -96,6 +102,27 @@ height: 650px
     height: 100%;
 }
 
+/* MAIN SECTION GENERAL INFORMATION */
+
+#mainSectionGeneralInfo {
+    display: flex;
+    height: 750px; 
+}
+
+#mainSectionGeneralInfoImg{
+    padding: 5%; 
+}
+
+#mainSectionGeneralInfoText {
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+   
+}
+
+.mainSectionGeneralInfoSubText{
+    border-top: solid black 1px;
+    border-bottom: solid black 1px; 
+}
 
 @media (max-width: 900px){
     /**Main Section Divide One **/
