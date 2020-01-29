@@ -59,17 +59,11 @@ const Main = () => {
                 <MainCarousel />
             </section>
             <section id="mainSectionGeneralInfo">
-                <img id="mainSectionGeneralInfoImg" src={HotelExteriorOne} />
-                <section id="mainSectionGeneralInfoText">
-                    <section></section>
-                    <section>
-                        <h1 id="mainSectionGeneralInfoTitleText">GENERAL INFO</h1>
-                        <h3>Keystone Hotel</h3>
-                        <p className="mainSectionGeneralInfoSubText">ADDRESS:  8343 Wintervale Lane, Boulder, CO 80302</p>
-                        <p className="mainSectionGeneralInfoSubText">PHONE NUMBER:  555-123-4567</p>
-                        <p className="mainSectionGeneralInfoSubText">EMAIL: Reservations@KeystoneHotel.com</p>
-                    </section>
-                    <section></section>
+                <h1>CONTACT US</h1>
+                <section id="mainSectionGenralInfoContainer">
+                    <section>Call Us</section>
+                    <section>Email Us</section>
+                    <section>Visit Us</section>
                 </section>
             </section>
 

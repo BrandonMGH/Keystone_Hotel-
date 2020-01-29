@@ -105,13 +105,16 @@ height: 750px
 
 /* MAIN SECTION GENERAL INFORMATION */
 
-#mainSectionGeneralInfo {
-    display: flex;
-    height: 750px; 
+#mainSectionGeneralInfo { 
+    text-align: center;
+}
+
+#mainSectionGenralInfoContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 #mainSectionGeneralInfoImg{
-    padding: 5%; 
     width: 60%; 
 }
 
@@ -189,9 +192,14 @@ height: 750px
         font-size: 30px;
         text-align:center; 
       }
+    /* MAIN CAROUSEL */ 
+
     #mainSectionCarousel {
      margin-top: 15%
     }
+
+    /* MAIN SECTION GENERAL INFO */
+
     #mainSectionGeneralInfo {
         display:flex;
         height: 100%; 
