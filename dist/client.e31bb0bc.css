@@ -136,6 +136,20 @@ height: 750px
     font-size: 15px;  
 }
 
+#mainSectionGenralInfoPhone, #mainSectionGenralInfoEmail, #mainSectionGenralInfoHotel{
+display: grid; 
+justify-items: center;
+text-align: center; 
+padding-top: 10%; 
+}
+
+#generalPhoneIcon, #generalEmailIcon {
+    color: red; 
+    height: 75%;
+    width: 75%
+
+}
+
 @media (max-width: 900px){
     /**Main Section Divide One **/
     #mainSectionDivideOne {
