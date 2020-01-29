@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import './Main.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone, faEnvelope, faHotel } from '@fortawesome/free-solid-svg-icons'
+
 
 
 //** COMPONENTS **//
@@ -61,9 +64,18 @@ const Main = () => {
             <section id="mainSectionGeneralInfo">
                 <h1>CONTACT US</h1>
                 <section id="mainSectionGenralInfoContainer">
-                    <section>Call Us</section>
-                    <section>Email Us</section>
-                    <section>Visit Us</section>
+                    <section id="mainSectionGenralInfoPhone">
+                        <FontAwesomeIcon id="generalPhoneIcon" icon={faPhone} />
+                        <p>Call Us</p>
+                    </section>
+                    <section id="mainSectionGenralInfoEmail">
+                        <FontAwesomeIcon id="generalEmailIcon" icon={faEnvelope} />
+                        <p>Email Us</p>
+                        </section>
+                    <section id="mainSectionGenralInfoHotel">
+                        <FontAwesomeIcon id="generalHotelIcon" icon={faHotel} />
+                         <p>Visit Us</p>
+                        </section>
                 </section>
             </section>
 
