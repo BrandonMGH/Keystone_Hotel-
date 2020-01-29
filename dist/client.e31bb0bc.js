@@ -40126,20 +40126,9 @@ var Main = function Main() {
     id: "mainSectionCarousel"
   }, _react.default.createElement(_MainCarousel.default, null)), _react.default.createElement("section", {
     id: "mainSectionGeneralInfo"
-  }, _react.default.createElement("img", {
-    id: "mainSectionGeneralInfoImg",
-    src: _HotelExteriorOne.default
-  }), _react.default.createElement("section", {
-    id: "mainSectionGeneralInfoText"
-  }, _react.default.createElement("section", null), _react.default.createElement("section", null, _react.default.createElement("h1", {
-    id: "mainSectionGeneralInfoTitleText"
-  }, "GENERAL INFO"), _react.default.createElement("h3", null, "Keystone Hotel"), _react.default.createElement("p", {
-    className: "mainSectionGeneralInfoSubText"
-  }, "ADDRESS:  8343 Wintervale Lane, Boulder, CO 80302"), _react.default.createElement("p", {
-    className: "mainSectionGeneralInfoSubText"
-  }, "PHONE NUMBER:  555-123-4567"), _react.default.createElement("p", {
-    className: "mainSectionGeneralInfoSubText"
-  }, "EMAIL: Reservations@KeystoneHotel.com")), _react.default.createElement("section", null))));
+  }, _react.default.createElement("h1", null, "CONTACT US"), _react.default.createElement("section", {
+    id: "mainSectionGenralInfoContainer"
+  }, _react.default.createElement("section", null, "Call Us"), _react.default.createElement("section", null, "Email Us"), _react.default.createElement("section", null, "Visit Us"))));
 };
 
 var _default = Main;
@@ -45574,7 +45563,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60092" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60275" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
