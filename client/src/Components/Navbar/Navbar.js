@@ -98,9 +98,9 @@ const Navbar = () => {
                         </select>
                         <p>Select a View</p>
                         <select name="roomView" value={viewSelection} onChange={event => setViewSelection(event.target.value)}>
-                            <option value="1">Ocean Cliffside</option>
-                            <option value="2">Forest</option>
-                            <option value="3">Mountain</option>
+                            <option value="1">Lake View</option>
+                            <option value="2">Forest View</option>
+                            <option value="3">Mountain View</option>
                             <option value="3">No Preference</option>
                         </select>
                         <p>Bringing a Pet?</p>
