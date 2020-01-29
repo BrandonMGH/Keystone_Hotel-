@@ -114,7 +114,7 @@ const Navbar = () => {
             </ModalContainer>
             <section id="mainNav">
                 <section id="navLogo">
-                    <img id="KeystoneLogo" src={KeystoneLogo} />
+                   <a href="/"><img id="KeystoneLogo" src={KeystoneLogo} /></a> 
                 </section>
                 <section id="navTitle">
                     <h1>-Keystone Hotel-</h1>
