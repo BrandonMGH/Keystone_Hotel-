@@ -49735,21 +49735,21 @@ var Main = function Main() {
   }, _react.default.createElement("h1", null, "CONTACT US"), _react.default.createElement("section", {
     id: "mainSectionGenralInfoContainer"
   }, _react.default.createElement("section", {
-    id: "mainSectionGenralInfoPhone"
+    className: "mainSectionGeneralInfoSubContainer"
   }, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
     id: "generalPhoneIcon",
     icon: _freeSolidSvgIcons.faPhone
-  }), _react.default.createElement("p", null, "Call Us")), _react.default.createElement("section", {
-    id: "mainSectionGenralInfoEmail"
+  }), _react.default.createElement("p", null, "Call Us"), _react.default.createElement("p", null, "760-429-4146")), _react.default.createElement("section", {
+    className: "mainSectionGeneralInfoSubContainer"
   }, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
     id: "generalEmailIcon",
     icon: _freeSolidSvgIcons.faEnvelope
-  }), _react.default.createElement("p", null, "Email Us")), _react.default.createElement("section", {
-    id: "mainSectionGenralInfoHotel"
+  }), _react.default.createElement("p", null, "Email Us"), _react.default.createElement("p", null, "BrandonMGH@Yahoo.com")), _react.default.createElement("section", {
+    className: "mainSectionGeneralInfoSubContainer"
   }, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
     id: "generalHotelIcon",
     icon: _freeSolidSvgIcons.faHotel
-  }), _react.default.createElement("p", null, "Visit Us")))));
+  }), _react.default.createElement("p", null, "Visit Us"), _react.default.createElement("p", null, "5341 Huron Court, Oceanside, CA 92056")))));
 };
 
 var _default = Main;
@@ -55040,10 +55040,12 @@ var Navbar = function Navbar() {
     id: "mainNav"
   }, _react.default.createElement("section", {
     id: "navLogo"
+  }, _react.default.createElement("a", {
+    href: "/"
   }, _react.default.createElement("img", {
     id: "KeystoneLogo",
     src: _KeystoneLogo.default
-  })), _react.default.createElement("section", {
+  }))), _react.default.createElement("section", {
     id: "navTitle"
   }, _react.default.createElement("h1", null, "-Keystone Hotel-")), _react.default.createElement("section", {
     id: "navLinks"
@@ -55067,7 +55069,14 @@ var Navbar = function Navbar() {
 
 var _default = Navbar;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../../../API/API.js":"API/API.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","./Navbar.css":"src/Components/Navbar/Navbar.css","../../Images/KeystoneLogo.jpg":"src/Images/KeystoneLogo.jpg"}],"src/Components/Footer/Footer.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../../../API/API.js":"API/API.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","./Navbar.css":"src/Components/Navbar/Navbar.css","../../Images/KeystoneLogo.jpg":"src/Images/KeystoneLogo.jpg"}],"src/Components/Footer/Footer.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Images/KeystoneLogoInverse.png":[function(require,module,exports) {
+module.exports = "/KeystoneLogoInverse.ee176c03.png";
+},{}],"src/Components/Footer/Footer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55077,15 +55086,30 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+require("./Footer.css");
+
+var _KeystoneLogoInverse = _interopRequireDefault(require("../../Images/KeystoneLogoInverse.png"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Footer = function Footer() {
-  return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Footer"));
+  return _react.default.createElement("div", null, _react.default.createElement("section", {
+    id: "footerContainer"
+  }, _react.default.createElement("img", {
+    id: "footerKeyStoneLogo",
+    src: _KeystoneLogoInverse.default
+  }), _react.default.createElement("section", {
+    id: "footerInfoContainer"
+  }, _react.default.createElement("section", {
+    id: "footerExploreContainer"
+  }, _react.default.createElement("h3", null, "EXPLORE"), _react.default.createElement("section", {
+    id: "footerExploreButtonss"
+  }, _react.default.createElement("button", null, "Rooms"), _react.default.createElement("button", null, "Dining"), _react.default.createElement("button", null, "Spa"), _react.default.createElement("button", null, "Area Attraction"))), _react.default.createElement("section", null, _react.default.createElement("p", null, "Address")), _react.default.createElement("section", null, _react.default.createElement("p", null, "NewsLetter")))));
 };
 
 var _default = Footer;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"src/app.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Footer.css":"src/Components/Footer/Footer.css","../../Images/KeystoneLogoInverse.png":"src/Images/KeystoneLogoInverse.png"}],"src/app.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55184,7 +55208,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64272" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50081" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

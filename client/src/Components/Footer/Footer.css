@@ -1,0 +1,30 @@
+#footerContainer {
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    background-color: black; 
+    color: white; 
+}
+
+#footerKeyStoneLogo {
+    height: 50%; 
+}
+
+#footerInfoContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+
+}
+
+#footerExploreContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+#footerExploreButtonss{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

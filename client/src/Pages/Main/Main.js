@@ -64,17 +64,20 @@ const Main = () => {
             <section id="mainSectionGeneralInfo">
                 <h1>CONTACT US</h1>
                 <section id="mainSectionGenralInfoContainer">
-                    <section id="mainSectionGenralInfoPhone">
+                    <section className="mainSectionGeneralInfoSubContainer">
                         <FontAwesomeIcon id="generalPhoneIcon" icon={faPhone} />
                         <p>Call Us</p>
+                        <p>760-429-4146</p>
                     </section>
-                    <section id="mainSectionGenralInfoEmail">
+                    <section className="mainSectionGeneralInfoSubContainer">
                         <FontAwesomeIcon id="generalEmailIcon" icon={faEnvelope} />
                         <p>Email Us</p>
+                        <p>BrandonMGH@Yahoo.com</p>
                         </section>
-                    <section id="mainSectionGenralInfoHotel">
+                    <section className="mainSectionGeneralInfoSubContainer">
                         <FontAwesomeIcon id="generalHotelIcon" icon={faHotel} />
                          <p>Visit Us</p>
+                         <p>5341 Huron Court, Oceanside, CA 92056</p>
                         </section>
                 </section>
             </section>
