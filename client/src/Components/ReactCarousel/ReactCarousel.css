@@ -11,3 +11,10 @@
 #carouselImgOne, #carouselImgTwo, #carouselImgThree, #carouselImgFour {
     width: 100%;
 }
+
+@media (max-width: 900px) {
+    #carouselTitleTextOne, #carouselTitleTextTwo, #carouselTitleTextThree, #carouselTitleTextFour {
+        font-size: 20px; 
+    }
+    
+}
