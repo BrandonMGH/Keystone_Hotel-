@@ -1,9 +1,13 @@
 import React, {useState} from "react"
 import './Rooms.css'
 
+import LakeViewRoom from "../../Components/RoomViewTypes/LakeViewRoom.js"
+
 import PadlockIcon from '../../Images/PadlockIcon.png'
+
+
 const Rooms = () => {
-const [viewType, setViewType] = useState("1")
+const [viewType, setViewType] = useState(<LakeViewRoom />)
     return (
         <>
             <section id="roomsSectionOne">
@@ -24,7 +28,7 @@ const [viewType, setViewType] = useState("1")
                 <button onClick={() => setViewType("1")}> 1</button>
                 <button onClick={() => setViewType("2")}>2</button>
                 <button onClick={() => setViewType("3")}>3</button>
-                <section>
+                <section id="roomSectionThree">
                     {viewType}
                 </section>
             </section>

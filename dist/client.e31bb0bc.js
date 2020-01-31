@@ -49755,7 +49755,238 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\..\\Images\\HotelInteriorThree.jpeg":[["HotelInteriorThree.411391bd.jpeg","src/Images/HotelInteriorThree.jpeg"],"src/Images/HotelInteriorThree.jpeg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Images/PadlockIcon.png":[function(require,module,exports) {
+},{"./..\\..\\Images\\HotelInteriorThree.jpeg":[["HotelInteriorThree.411391bd.jpeg","src/Images/HotelInteriorThree.jpeg"],"src/Images/HotelInteriorThree.jpeg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Images/LakeImageOne.jpg":[function(require,module,exports) {
+module.exports = "/LakeImageOne.957eb238.jpg";
+},{}],"src/Images/LakeViewRoomOne.jpg":[function(require,module,exports) {
+module.exports = "/LakeViewRoomOne.a13dfa06.jpg";
+},{}],"src/Images/LakeViewRoomTwo.jpg":[function(require,module,exports) {
+module.exports = "/LakeViewRoomTwo.bbf4f874.jpg";
+},{}],"src/Images/LakeViewRoomThree.jpg":[function(require,module,exports) {
+module.exports = "/LakeViewRoomThree.7af241dd.jpg";
+},{}],"src/Images/MountainOne.jpg":[function(require,module,exports) {
+module.exports = "/MountainOne.de0647c8.jpg";
+},{}],"src/Images/MountainViewRoomOne.jpg":[function(require,module,exports) {
+module.exports = "/MountainViewRoomOne.7f515070.jpg";
+},{}],"src/Images/MountainViewRoomTwo.jpg":[function(require,module,exports) {
+module.exports = "/MountainViewRoomTwo.57c1bfe1.jpg";
+},{}],"src/Images/MountainViewRoomThree.jpg":[function(require,module,exports) {
+module.exports = "/MountainViewRoomThree.3ba4067d.jpg";
+},{}],"src/Images/ForestImageTwo.jpg":[function(require,module,exports) {
+module.exports = "/ForestImageTwo.674148ab.jpg";
+},{}],"src/Images/ForestViewRoomOne.jpg":[function(require,module,exports) {
+module.exports = "/ForestViewRoomOne.f51fe176.jpg";
+},{}],"src/Images/ForestViewRoomTwo.jpg":[function(require,module,exports) {
+module.exports = "/ForestViewRoomTwo.011b9b3a.jpg";
+},{}],"src/Images/ForestViewRoomThree.jpg":[function(require,module,exports) {
+module.exports = "/ForestViewRoomThree.2b45bbb1.jpg";
+},{}],"src/Components/RoomViewTypes/RoomViewData/RoomViewData.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _LakeImageOne = _interopRequireDefault(require("../../../Images/LakeImageOne.jpg"));
+
+var _LakeViewRoomOne = _interopRequireDefault(require("../../../Images/LakeViewRoomOne.jpg"));
+
+var _LakeViewRoomTwo = _interopRequireDefault(require("../../../Images/LakeViewRoomTwo.jpg"));
+
+var _LakeViewRoomThree = _interopRequireDefault(require("../../../Images/LakeViewRoomThree.jpg"));
+
+var _MountainOne = _interopRequireDefault(require("../../../Images/MountainOne.jpg"));
+
+var _MountainViewRoomOne = _interopRequireDefault(require("../../../Images/MountainViewRoomOne.jpg"));
+
+var _MountainViewRoomTwo = _interopRequireDefault(require("../../../Images/MountainViewRoomTwo.jpg"));
+
+var _MountainViewRoomThree = _interopRequireDefault(require("../../../Images/MountainViewRoomThree.jpg"));
+
+var _ForestImageTwo = _interopRequireDefault(require("../../../Images/ForestImageTwo.jpg"));
+
+var _ForestViewRoomOne = _interopRequireDefault(require("../../../Images/ForestViewRoomOne.jpg"));
+
+var _ForestViewRoomTwo = _interopRequireDefault(require("../../../Images/ForestViewRoomTwo.jpg"));
+
+var _ForestViewRoomThree = _interopRequireDefault(require("../../../Images/ForestViewRoomThree.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var RoomViewData = {
+  LakeView: [{
+    id: 1,
+    RoomTitle: "Standard Room",
+    RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
+    RoomImage: _LakeViewRoomOne.default,
+    ViewImage: _LakeImageOne.default,
+    RoomInfoAndAmenities: {
+      Size: "500 Sq. Ft.",
+      BedType: "King or Double Queen",
+      Internet: "Complimentary Wi-Fi Internet",
+      Television: "48-inch HDTV with streaming capability",
+      Bathroom: "Soaking Tub and Separate Walk-in Shower",
+      CoffeeMaker: "Keurig Coffee Maker",
+      Fridge: "In-Room Refrigerator",
+      Robes: "Frette Robes"
+    }
+  }, {
+    id: 2,
+    RoomTitle: "Junior Suite",
+    RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
+    RoomImage: _LakeViewRoomTwo.default,
+    ViewImage: _LakeImageOne.default,
+    RoomInfoAndAmenities: {
+      Size: "750 Sq. Ft.",
+      BedType: "King or Double Queen",
+      Internet: "Complimentary Wi-Fi Internet",
+      Television: "48-inch HDTV with streaming capability",
+      Bathroom: "Soaking Tub and Separate Walk-in Shower",
+      CoffeeMaker: "Keurig Coffee Maker",
+      Fridge: "In-Room Refrigerator",
+      Robes: "Frette Robes"
+    }
+  }, {
+    id: 3,
+    RoomTitle: "Deluxe Suite",
+    RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
+    RoomImage: _LakeViewRoomThree.default,
+    ViewImage: _LakeImageOne.default,
+    RoomInfoAndAmenities: {
+      Size: "1000 Sq. Ft.",
+      BedType: "King or Double Queen",
+      Internet: "Complimentary Wi-Fi Internet",
+      Television: "48-inch HDTV with streaming capability",
+      Bathroom: "Soaking Tub and Separate Walk-in Shower",
+      CoffeeMaker: "Keurig Coffee Maker",
+      Fridge: "In-Room Refrigerator",
+      Robes: "Frette Robes"
+    }
+  }],
+  MountainView: [{
+    id: 1,
+    RoomTitle: "Standard Room",
+    RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
+    RoomImage: "",
+    ViewImage: "",
+    RoomInfoAndAmenities: {
+      Size: "500 Sq. Ft.",
+      BedType: "King or Double Queen",
+      Internet: "Complimentary Wi-Fi Internet",
+      Television: "48-inch HDTV with streaming capability",
+      Bathroom: "Soaking Tub and Separate Walk-in Shower",
+      CoffeeMaker: "Keurig Coffee Maker",
+      Fridge: "In-Room Refrigerator",
+      Robes: "Frette Robes"
+    }
+  }, {
+    id: 2,
+    RoomTitle: "Junior Suite",
+    RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
+    RoomImage: "",
+    ViewImage: "",
+    RoomInfoAndAmenities: {
+      Size: "750 Sq. Ft.",
+      BedType: "King or Double Queen",
+      Internet: "Complimentary Wi-Fi Internet",
+      Television: "48-inch HDTV with streaming capability",
+      Bathroom: "Soaking Tub and Separate Walk-in Shower",
+      CoffeeMaker: "Keurig Coffee Maker",
+      Fridge: "In-Room Refrigerator",
+      Robes: "Frette Robes"
+    }
+  }, {
+    id: 3,
+    RoomTitle: "Deluxe Suite",
+    RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
+    RoomImage: "",
+    ViewImage: "",
+    RoomInfoAndAmenities: {
+      Size: "1000 Sq. Ft.",
+      BedType: "King or Double Queen",
+      Internet: "Complimentary Wi-Fi Internet",
+      Television: "48-inch HDTV with streaming capability",
+      Bathroom: "Soaking Tub and Separate Walk-in Shower",
+      CoffeeMaker: "Keurig Coffee Maker",
+      Fridge: "In-Room Refrigerator",
+      Robes: "Frette Robes"
+    }
+  }],
+  ForestView: [{
+    id: 1,
+    RoomTitle: "Standard Room",
+    RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
+    RoomImage: "",
+    ViewImage: "",
+    RoomInfoAndAmenities: {
+      Size: "500 Sq. Ft.",
+      BedType: "King or Double Queen",
+      Internet: "Complimentary Wi-Fi Internet",
+      Television: "48-inch HDTV with streaming capability",
+      Bathroom: "Soaking Tub and Separate Walk-in Shower",
+      CoffeeMaker: "Keurig Coffee Maker",
+      Fridge: "In-Room Refrigerator",
+      Robes: "Frette Robes"
+    }
+  }, {
+    id: 2,
+    RoomTitle: "Junior Suite",
+    RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
+    RoomImage: "",
+    ViewImage: "",
+    RoomInfoAndAmenities: {
+      Size: "750 Sq. Ft.",
+      BedType: "King or Double Queen",
+      Internet: "Complimentary Wi-Fi Internet",
+      Television: "48-inch HDTV with streaming capability",
+      Bathroom: "Soaking Tub and Separate Walk-in Shower",
+      CoffeeMaker: "Keurig Coffee Maker",
+      Fridge: "In-Room Refrigerator",
+      Robes: "Frette Robes"
+    }
+  }, {
+    id: 3,
+    RoomTitle: "Deluxe Suite",
+    RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
+    RoomImage: "",
+    ViewImage: "",
+    RoomInfoAndAmenities: {
+      Size: "1000 Sq. Ft.",
+      BedType: "King or Double Queen",
+      Internet: "Complimentary Wi-Fi Internet",
+      Television: "48-inch HDTV with streaming capability",
+      Bathroom: "Soaking Tub and Separate Walk-in Shower",
+      CoffeeMaker: "Keurig Coffee Maker",
+      Fridge: "In-Room Refrigerator",
+      Robes: "Frette Robes"
+    }
+  }]
+};
+var _default = RoomViewData;
+exports.default = _default;
+},{"../../../Images/LakeImageOne.jpg":"src/Images/LakeImageOne.jpg","../../../Images/LakeViewRoomOne.jpg":"src/Images/LakeViewRoomOne.jpg","../../../Images/LakeViewRoomTwo.jpg":"src/Images/LakeViewRoomTwo.jpg","../../../Images/LakeViewRoomThree.jpg":"src/Images/LakeViewRoomThree.jpg","../../../Images/MountainOne.jpg":"src/Images/MountainOne.jpg","../../../Images/MountainViewRoomOne.jpg":"src/Images/MountainViewRoomOne.jpg","../../../Images/MountainViewRoomTwo.jpg":"src/Images/MountainViewRoomTwo.jpg","../../../Images/MountainViewRoomThree.jpg":"src/Images/MountainViewRoomThree.jpg","../../../Images/ForestImageTwo.jpg":"src/Images/ForestImageTwo.jpg","../../../Images/ForestViewRoomOne.jpg":"src/Images/ForestViewRoomOne.jpg","../../../Images/ForestViewRoomTwo.jpg":"src/Images/ForestViewRoomTwo.jpg","../../../Images/ForestViewRoomThree.jpg":"src/Images/ForestViewRoomThree.jpg"}],"src/Components/RoomViewTypes/LakeViewRoom.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _RoomViewData = _interopRequireDefault(require("./RoomViewData/RoomViewData.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var LakeViewRoom = function LakeViewRoom() {
+  return _react.default.createElement("div", null, _RoomViewData.default.LakeView.map(function (properties) {
+    return _react.default.createElement("h1", null, properties.RoomTitle);
+  }));
+};
+
+var _default = LakeViewRoom;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./RoomViewData/RoomViewData.js":"src/Components/RoomViewTypes/RoomViewData/RoomViewData.js"}],"src/Images/PadlockIcon.png":[function(require,module,exports) {
 module.exports = "/PadlockIcon.870ee684.png";
 },{}],"src/Pages/Rooms/Rooms.js":[function(require,module,exports) {
 "use strict";
@@ -49768,6 +49999,8 @@ exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
 
 require("./Rooms.css");
+
+var _LakeViewRoom = _interopRequireDefault(require("../../Components/RoomViewTypes/LakeViewRoom.js"));
 
 var _PadlockIcon = _interopRequireDefault(require("../../Images/PadlockIcon.png"));
 
@@ -49786,7 +50019,7 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var Rooms = function Rooms() {
-  var _useState = (0, _react.useState)("1"),
+  var _useState = (0, _react.useState)(_react.default.createElement(_LakeViewRoom.default, null)),
       _useState2 = _slicedToArray(_useState, 2),
       viewType = _useState2[0],
       setViewType = _useState2[1];
@@ -49816,12 +50049,14 @@ var Rooms = function Rooms() {
     onClick: function onClick() {
       return setViewType("3");
     }
-  }, "3"), _react.default.createElement("section", null, viewType)));
+  }, "3"), _react.default.createElement("section", {
+    id: "roomSectionThree"
+  }, viewType)));
 };
 
 var _default = Rooms;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Rooms.css":"src/Pages/Rooms/Rooms.css","../../Images/PadlockIcon.png":"src/Images/PadlockIcon.png"}],"src/Pages/Dining/Dining.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Rooms.css":"src/Pages/Rooms/Rooms.css","../../Components/RoomViewTypes/LakeViewRoom.js":"src/Components/RoomViewTypes/LakeViewRoom.js","../../Images/PadlockIcon.png":"src/Images/PadlockIcon.png"}],"src/Pages/Dining/Dining.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -73034,7 +73269,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57680" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58543" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
