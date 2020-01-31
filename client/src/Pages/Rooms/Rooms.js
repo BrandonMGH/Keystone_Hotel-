@@ -1,116 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components'
-
-import API from '../../../API/API.js'
+import React from "react"
 import './Rooms.css'
 
-let roomObject = {
-    id: 1, 
-    roomName: "Placeholder Name 1",
-    guestCount: 2,
-    bedCount: 1,
-    viewChoice: 1,
-    view: "Ocean Cliffside",
-    squareFootage: "1000 sq. ft.",
-    petNumber: 1,
-    pet: "Yes",
-    additionalAmmenities: [""],
-    price: 400
-
-}
-let roomObjectTwo = {
-    id: 2, 
-    roomName: "Placeholder Name 2",
-    guestCount: 3,
-    bedCount: 1,
-    viewChoice: 2, 
-    view: "Forest View",
-    squareFootage: "1000 sq. ft.",
-    petNumber: 1,
-    pet: "Yes",
-    additionalAmmenities: [""],
-    price: 800
-}
-
-let roomObjectThree = {
-    id: 3, 
-    roomName: "Placeholder Name 3",
-    guestCount: 4,
-    bedCount: 2,
-    viewChoice: 3, 
-    view: "Mountain View",
-    squareFootage: "1000 sq. ft.",
-    petNumber: 2,
-    pet: "No",
-    additionalAmmenities: [""],
-    price: 1250
-}
-
-
-const RoomShowState = styled.section`
-display: ${props => props.showState === true ? "Grid" : "None"};
-position: relative; 
-`
-const DefaultShowState = styled.section`
-z-index: -1;
-position: relative; 
-top: -25px; 
-text-align: center; 
-`
-
-
+import PadlockIcon from '../../Images/PadlockIcon.png'
 const Rooms = () => {
-    const [guestNumber, setGuestNumber] = useState("")
-    const [viewNumber, setViewNumber] = useState("")
-    const [petNumber, setPetNumber] = useState("")
-    const [priceNumber, setPriceNumber] = useState("")
-    const [roomInfo, setRoomInfo] = useState([roomObject, roomObjectTwo, roomObjectThree])
-    const [displayState, setDisplayState] = useState(false)
+    return (
+        <>
+            <section id="roomsSectionOne">
+                <h1>ROOMS</h1>
+            </section>
+            <section id="roomsSectionTwo">
+                <section id="roomSectionTwoQuote">
+                    <h1>“Home is not a place…it’s a feeling.” - anonymous</h1>
+                </section>
+                <section id="roomSectionTwoImg">
+                    <img id="roomSectionTwoImgOne" src={PadlockIcon} />
+                </section>
+                <section id="roomSectionTwoDescription">
+                    <p>Luke, what's wrong? Leia... do you remember your mother? Your real mother? Just a little bit. She died when I was very young. What do you remember? Just...images, really. Feelings. Tell me. She was very beautiful. Kind, but...sad. Why are you asking me all this? I have no memory of my mother. I never knew her. Luke, tell me. What's troubling you? Vader is here...now, on this moon. How do you know? I felt his presence. He's come for me. He can feel when I'm near. That's why I have to go. As long as I stay, I'm endangering the group and our mission here. I have to face him. Why? He's my father. Your father? There's more. It won't be easy for you to hear it, but you must.</p>
+                </section>
 
-
-    useEffect (() =>{
-        API.getRoomInfo()
-        .then((response)=>{
-            console.log(response)
-            setGuestNumber(parseInt(response.data.guestCount))
-            setViewNumber(parseInt(response.data.viewSelection))
-            setPetNumber(parseInt(response.data.petConfirmation))
-            setPriceNumber(parseInt(response.data.priceRange))            
-        })
-    })
-
- 
-    return(
-        <div>
-            <h1>Rooms</h1>
-            <div>
-            {roomInfo.map(objectKey => (
-                    <RoomShowState key={objectKey.id} showState={objectKey.guestCount < guestNumber || objectKey.viewChoice !== viewNumber || objectKey.petNumber !== petNumber  || objectKey.price > priceNumber? false : true}>
-                      <section id="roomContainer">
-                          <section id="roomImage">
-                             <p>Room Image</p>
-                          </section>
-                          <section id="roomTitle">
-                            <h1>Room Title</h1>
-                          </section>
-                          <section id="roomSummary">
-                            <p>Room Summary</p>
-                          </section>
-                          <section id="roomAmenities">
-                            <p>Room Amenities</p>
-                          </section>
-                          <section id="roomDescription">
-                            <p>Room Description</p>
-                          </section>
-                      </section>
-                    </RoomShowState>
-                    ))}
-                    <DefaultShowState>No Rooms our currently available that match your search criteria</DefaultShowState>
-                  </div>
-            <p>All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The </p>
-
-        </div>
+            </section>
+        </>
     )
 }
 
-export default Rooms; 
+export default Rooms 

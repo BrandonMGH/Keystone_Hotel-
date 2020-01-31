@@ -1,7 +1,7 @@
 /* MAIN TITLE SECTION */
 
 #mainTitleSection{
-   background-image: url('/HotelExteriorTwo.417ec953.jpg');
+   background-image: url('/HotelExteriorThree.864a7ac1.jpg');
    height: 750px; 
    background-size: cover;
 }
@@ -250,6 +250,50 @@ padding-top: 10%;
         font-size: 20px; 
     }
     
+}
+/* Room Section One */
+
+#roomsSectionOne{
+    background-image: url('/HotelInteriorThree.411391bd.jpeg');
+    height: 750px; 
+    background-size: cover;
+ }
+
+ #roomsSectionOne h1 {
+    position: relative;
+    top: 50%; 
+    color: white; 
+    text-align: center;
+ }
+
+/* Room Section Two */ 
+
+#roomSectionTwoQuote {
+    position: relative; 
+    left: 10%; 
+    top: 100px; 
+    width: 50%; 
+    font-size: 50px; 
+}
+
+#roomSectionTwoImg {
+    position: relative;
+    top: -10px; 
+    width: 50%; 
+    left: 55%; 
+}
+
+#roomSectionTwoImgOne {
+    width: 55%; 
+}
+
+#roomSectionTwoDescription {
+    position: relative; 
+    left: 20%;
+    bottom: 100px; 
+    width: 50%; 
+    background: rgba(255, 253, 208, 0.4);
+    font-size: 20px;  
 }
 #roomContainer {
     display: grid; 

@@ -71,7 +71,7 @@ const Navbar = () => {
         API.reservationInfo(resObject)
             .then((response) => {
                 console.log(response)
-                location.href = "/rooms";
+                location.href = "/reservations";
             })
             .catch((error) => {
                 console.log(error)
@@ -127,7 +127,7 @@ const Navbar = () => {
                     <p>|</p>
                     <p className="navLink">Dining</p>
                     <p>|</p>
-                    <p className="navLink">Spa</p>
+                    <p className="navLink">Spa & Wellness</p>
                     <p>|</p>
                     <p className="navLink">Area Attractions</p>
                     <p>|</p>

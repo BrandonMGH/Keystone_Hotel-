@@ -1,35 +1,44 @@
-#roomContainer {
-    display: grid; 
-    grid-template-columns: 1fr .75fr .75fr;
-    grid-template-rows: 1fr 1fr 2fr 3fr;
-    grid-template-areas: 
-    "blank blank blank"
-    "roomImage roomTitle roomTitle"
-    "roomImage roomSummary roomSummary"
-    "roomImage roomAmenities roomDescription";
+/* Room Section One */
+
+#roomsSectionOne{
+    background-image: url('../../Images/HotelInteriorThree.jpeg');
+    height: 750px; 
+    background-size: cover;
+ }
+
+ #roomsSectionOne h1 {
+    position: relative;
+    top: 50%; 
+    color: white; 
+    text-align: center;
+ }
+
+/* Room Section Two */ 
+
+#roomSectionTwoQuote {
+    position: relative; 
+    left: 10%; 
+    top: 100px; 
+    width: 50%; 
+    font-size: 50px; 
 }
 
-#roomImage {
-    grid-area: roomImage;
-    background-color: red; 
+#roomSectionTwoImg {
+    position: relative;
+    top: -10px; 
+    width: 50%; 
+    left: 55%; 
 }
 
-#roomTitle {
-    grid-area: roomTitle;
-    background-color: purple; 
+#roomSectionTwoImgOne {
+    width: 55%; 
 }
 
-#roomSummary {
-    grid-area: roomSummary; 
-    background-color: green; 
-}
-
-#roomAmenities {
-    grid-area: roomAmenities;
-    background-color: yellow; 
-}
-
-#roomDescription {
-    grid-area: roomDescription;
-    background-color: blue;
+#roomSectionTwoDescription {
+    position: relative; 
+    left: 20%;
+    bottom: 100px; 
+    width: 50%; 
+    background: rgba(255, 253, 208, 0.4);
+    font-size: 20px;  
 }

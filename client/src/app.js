@@ -7,6 +7,7 @@ import Rooms from './Pages/Rooms/Rooms.js'
 import Dining from './Pages/Dining/Dining.js'
 import Spa from './Pages/Spa/Spa.js'
 import AreaAttractions from './Pages/AreaAttractions/AreaAttractions.js'
+import Reservations from './Pages/Reservations/Reservations.js'
 
 //* COMPONENETS *//
 import Navbar from './Components/Navbar/Navbar.js'
@@ -18,10 +19,11 @@ const App = () => {
         <Navbar />
         <Router>
             <Route path="/" exact component={Main} />
-            <Route path="/Rooms" exact component={Rooms} />
-            <Route path="/Dining" exact component={Dining} />
-            <Route path="/Spa" exact component={Spa} />
-            <Route path="/AreaAttractions" exact component={AreaAttractions} />  
+            <Route path="/rooms" exact component={Rooms} />
+            <Route path="/dining" exact component={Dining} />
+            <Route path="/spa" exact component={Spa} />
+            <Route path="/areaAttractions" exact component={AreaAttractions} /> 
+            <Route path="/reservations" exact component={Reservations} /> 
         </Router>
         <Footer />
         </div>

@@ -13,7 +13,6 @@ import MainCarousel from '../../Components/ReactCarousel/MainCarousel.js'
 import girlMountain from '../../Images/girlMountain.jpeg'
 import HotelInteriorTwo from '../../Images/HotelInteriorTwo.jpeg'
 import HotelLobbyTwo from '../../Images/HotelLobbyTwo.jpg'
-import HotelExteriorOne from '../../Images/HotelExteriorOne.jpg'
 
 const Main = () => {
     return (
