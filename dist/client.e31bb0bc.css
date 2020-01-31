@@ -279,12 +279,12 @@ padding-top: 10%;
 #roomSectionTwoImg {
     position: relative;
     top: -10px; 
-    width: 50%; 
+    width: 25%; 
     left: 55%; 
 }
 
 #roomSectionTwoImgOne {
-    width: 55%; 
+    width: 100%; 
 }
 
 #roomSectionTwoDescription {
