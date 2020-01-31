@@ -49867,8 +49867,8 @@ var RoomViewData = {
     id: 1,
     RoomTitle: "Standard Room",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
-    RoomImage: "",
-    ViewImage: "",
+    RoomImage: _MountainViewRoomOne.default,
+    ViewImage: _MountainOne.default,
     RoomInfoAndAmenities: {
       Size: "500 Sq. Ft.",
       BedType: "King or Double Queen",
@@ -49883,8 +49883,8 @@ var RoomViewData = {
     id: 2,
     RoomTitle: "Junior Suite",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
-    RoomImage: "",
-    ViewImage: "",
+    RoomImage: _MountainViewRoomTwo.default,
+    ViewImage: _MountainOne.default,
     RoomInfoAndAmenities: {
       Size: "750 Sq. Ft.",
       BedType: "King or Double Queen",
@@ -49899,8 +49899,8 @@ var RoomViewData = {
     id: 3,
     RoomTitle: "Deluxe Suite",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
-    RoomImage: "",
-    ViewImage: "",
+    RoomImage: _MountainViewRoomThree.default,
+    ViewImage: _MountainOne.default,
     RoomInfoAndAmenities: {
       Size: "1000 Sq. Ft.",
       BedType: "King or Double Queen",
@@ -49916,8 +49916,8 @@ var RoomViewData = {
     id: 1,
     RoomTitle: "Standard Room",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
-    RoomImage: "",
-    ViewImage: "",
+    RoomImage: _ForestViewRoomOne.default,
+    ViewImage: _ForestImageTwo.default,
     RoomInfoAndAmenities: {
       Size: "500 Sq. Ft.",
       BedType: "King or Double Queen",
@@ -49932,8 +49932,8 @@ var RoomViewData = {
     id: 2,
     RoomTitle: "Junior Suite",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
-    RoomImage: "",
-    ViewImage: "",
+    RoomImage: _ForestViewRoomTwo.default,
+    ViewImage: _ForestImageTwo.default,
     RoomInfoAndAmenities: {
       Size: "750 Sq. Ft.",
       BedType: "King or Double Queen",
@@ -49948,8 +49948,8 @@ var RoomViewData = {
     id: 3,
     RoomTitle: "Deluxe Suite",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
-    RoomImage: "",
-    ViewImage: "",
+    RoomImage: _ForestViewRoomThree.default,
+    ViewImage: _ForestImageTwo.default,
     RoomInfoAndAmenities: {
       Size: "1000 Sq. Ft.",
       BedType: "King or Double Queen",
@@ -49964,7 +49964,12 @@ var RoomViewData = {
 };
 var _default = RoomViewData;
 exports.default = _default;
-},{"../../../Images/LakeImageOne.jpg":"src/Images/LakeImageOne.jpg","../../../Images/LakeViewRoomOne.jpg":"src/Images/LakeViewRoomOne.jpg","../../../Images/LakeViewRoomTwo.jpg":"src/Images/LakeViewRoomTwo.jpg","../../../Images/LakeViewRoomThree.jpg":"src/Images/LakeViewRoomThree.jpg","../../../Images/MountainOne.jpg":"src/Images/MountainOne.jpg","../../../Images/MountainViewRoomOne.jpg":"src/Images/MountainViewRoomOne.jpg","../../../Images/MountainViewRoomTwo.jpg":"src/Images/MountainViewRoomTwo.jpg","../../../Images/MountainViewRoomThree.jpg":"src/Images/MountainViewRoomThree.jpg","../../../Images/ForestImageTwo.jpg":"src/Images/ForestImageTwo.jpg","../../../Images/ForestViewRoomOne.jpg":"src/Images/ForestViewRoomOne.jpg","../../../Images/ForestViewRoomTwo.jpg":"src/Images/ForestViewRoomTwo.jpg","../../../Images/ForestViewRoomThree.jpg":"src/Images/ForestViewRoomThree.jpg"}],"src/Components/RoomViewTypes/LakeViewRoom.js":[function(require,module,exports) {
+},{"../../../Images/LakeImageOne.jpg":"src/Images/LakeImageOne.jpg","../../../Images/LakeViewRoomOne.jpg":"src/Images/LakeViewRoomOne.jpg","../../../Images/LakeViewRoomTwo.jpg":"src/Images/LakeViewRoomTwo.jpg","../../../Images/LakeViewRoomThree.jpg":"src/Images/LakeViewRoomThree.jpg","../../../Images/MountainOne.jpg":"src/Images/MountainOne.jpg","../../../Images/MountainViewRoomOne.jpg":"src/Images/MountainViewRoomOne.jpg","../../../Images/MountainViewRoomTwo.jpg":"src/Images/MountainViewRoomTwo.jpg","../../../Images/MountainViewRoomThree.jpg":"src/Images/MountainViewRoomThree.jpg","../../../Images/ForestImageTwo.jpg":"src/Images/ForestImageTwo.jpg","../../../Images/ForestViewRoomOne.jpg":"src/Images/ForestViewRoomOne.jpg","../../../Images/ForestViewRoomTwo.jpg":"src/Images/ForestViewRoomTwo.jpg","../../../Images/ForestViewRoomThree.jpg":"src/Images/ForestViewRoomThree.jpg"}],"src/Components/RoomViewTypes/RoomViews.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Components/RoomViewTypes/LakeViewRoom.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -49976,17 +49981,124 @@ var _react = _interopRequireDefault(require("react"));
 
 var _RoomViewData = _interopRequireDefault(require("./RoomViewData/RoomViewData.js"));
 
+require("./RoomViews.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var LakeViewRoom = function LakeViewRoom() {
-  return _react.default.createElement("div", null, _RoomViewData.default.LakeView.map(function (properties) {
-    return _react.default.createElement("h1", null, properties.RoomTitle);
+  return _react.default.createElement("section", null, _RoomViewData.default.LakeView.map(function (properties) {
+    return _react.default.createElement("section", {
+      className: "roomViewContainer",
+      key: properties.id
+    }, _react.default.createElement("img", {
+      className: "roomViewRoomImage",
+      src: properties.RoomImage
+    }), _react.default.createElement("section", {
+      className: "roomViewTextContainer"
+    }, _react.default.createElement("section", {
+      className: "roomViewTextTitleAndDescription"
+    }, _react.default.createElement("p", {
+      className: "roomViewTextTitle"
+    }, properties.RoomTitle), _react.default.createElement("p", null, properties.RoomDescription)), _react.default.createElement("section", {
+      className: "roomViewTextAmenities"
+    }, _react.default.createElement("h4", null, "Room Amenities"), _react.default.createElement("p", null, "________________"), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Size), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.BedType), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Internet), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Television), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Bathroom), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.CoffeeMaker), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Fridge), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Robes)), _react.default.createElement("section", {
+      className: "roomViewViewImageContainer"
+    }, _react.default.createElement("img", {
+      className: "roomViewViewImage",
+      src: properties.ViewImage
+    }))));
   }));
 };
 
 var _default = LakeViewRoom;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./RoomViewData/RoomViewData.js":"src/Components/RoomViewTypes/RoomViewData/RoomViewData.js"}],"src/Images/PadlockIcon.png":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./RoomViewData/RoomViewData.js":"src/Components/RoomViewTypes/RoomViewData/RoomViewData.js","./RoomViews.css":"src/Components/RoomViewTypes/RoomViews.css"}],"src/Components/RoomViewTypes/MountainViewRoom.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _RoomViewData = _interopRequireDefault(require("./RoomViewData/RoomViewData.js"));
+
+require("./RoomViews.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var MountainViewRoom = function MountainViewRoom() {
+  return _react.default.createElement("section", null, _RoomViewData.default.MountainView.map(function (properties) {
+    return _react.default.createElement("section", {
+      className: "roomViewContainer",
+      key: properties.id
+    }, _react.default.createElement("img", {
+      className: "roomViewRoomImage",
+      src: properties.RoomImage
+    }), _react.default.createElement("section", {
+      className: "roomViewTextContainer"
+    }, _react.default.createElement("section", {
+      className: "roomViewTextTitleAndDescription"
+    }, _react.default.createElement("p", {
+      className: "roomViewTextTitle"
+    }, properties.RoomTitle), _react.default.createElement("p", null, properties.RoomDescription)), _react.default.createElement("section", {
+      className: "roomViewTextAmenities"
+    }, _react.default.createElement("h4", null, "Room Amenities"), _react.default.createElement("p", null, "________________"), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Size), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.BedType), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Internet), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Television), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Bathroom), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.CoffeeMaker), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Fridge), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Robes)), _react.default.createElement("section", {
+      className: "roomViewViewImageContainer"
+    }, _react.default.createElement("img", {
+      className: "roomViewViewImage",
+      src: properties.ViewImage
+    }))));
+  }));
+};
+
+var _default = MountainViewRoom;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./RoomViewData/RoomViewData.js":"src/Components/RoomViewTypes/RoomViewData/RoomViewData.js","./RoomViews.css":"src/Components/RoomViewTypes/RoomViews.css"}],"src/Components/RoomViewTypes/ForestViewRoom.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _RoomViewData = _interopRequireDefault(require("./RoomViewData/RoomViewData.js"));
+
+require("./RoomViews.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ForestViewRoom = function ForestViewRoom() {
+  return _react.default.createElement("section", null, _RoomViewData.default.ForestView.map(function (properties) {
+    return _react.default.createElement("section", {
+      className: "roomViewContainer",
+      key: properties.id
+    }, _react.default.createElement("img", {
+      className: "roomViewRoomImage",
+      src: properties.RoomImage
+    }), _react.default.createElement("section", {
+      className: "roomViewTextContainer"
+    }, _react.default.createElement("section", {
+      className: "roomViewTextTitleAndDescription"
+    }, _react.default.createElement("p", {
+      className: "roomViewTextTitle"
+    }, properties.RoomTitle), _react.default.createElement("p", null, properties.RoomDescription)), _react.default.createElement("section", {
+      className: "roomViewTextAmenities"
+    }, _react.default.createElement("h4", null, "Room Amenities"), _react.default.createElement("p", null, "________________"), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Size), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.BedType), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Internet), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Television), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Bathroom), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.CoffeeMaker), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Fridge), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Robes)), _react.default.createElement("section", {
+      className: "roomViewViewImageContainer"
+    }, _react.default.createElement("img", {
+      className: "roomViewViewImage",
+      src: properties.ViewImage
+    }))));
+  }));
+};
+
+var _default = ForestViewRoom;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./RoomViewData/RoomViewData.js":"src/Components/RoomViewTypes/RoomViewData/RoomViewData.js","./RoomViews.css":"src/Components/RoomViewTypes/RoomViews.css"}],"src/Images/PadlockIcon.png":[function(require,module,exports) {
 module.exports = "/PadlockIcon.870ee684.png";
 },{}],"src/Pages/Rooms/Rooms.js":[function(require,module,exports) {
 "use strict";
@@ -50001,6 +50113,10 @@ var _react = _interopRequireWildcard(require("react"));
 require("./Rooms.css");
 
 var _LakeViewRoom = _interopRequireDefault(require("../../Components/RoomViewTypes/LakeViewRoom.js"));
+
+var _MountainViewRoom = _interopRequireDefault(require("../../Components/RoomViewTypes/MountainViewRoom.js"));
+
+var _ForestViewRoom = _interopRequireDefault(require("../../Components/RoomViewTypes/ForestViewRoom.js"));
 
 var _PadlockIcon = _interopRequireDefault(require("../../Images/PadlockIcon.png"));
 
@@ -50039,24 +50155,24 @@ var Rooms = function Rooms() {
     id: "roomSectionTwoDescription"
   }, _react.default.createElement("p", null, "Luke, what's wrong? Leia... do you remember your mother? Your real mother? Just a little bit. She died when I was very young. What do you remember? Just...images, really. Feelings. Tell me. She was very beautiful. Kind, but...sad. Why are you asking me all this? I have no memory of my mother. I never knew her. Luke, tell me. What's troubling you? Vader is here...now, on this moon. How do you know? I felt his presence. He's come for me. He can feel when I'm near. That's why I have to go. As long as I stay, I'm endangering the group and our mission here. I have to face him. Why? He's my father. Your father? There's more. It won't be easy for you to hear it, but you must."))), _react.default.createElement("section", null, _react.default.createElement("button", {
     onClick: function onClick() {
-      return setViewType("1");
+      return setViewType(_react.default.createElement(_LakeViewRoom.default, null));
     }
-  }, " 1"), _react.default.createElement("button", {
+  }, "LAKEVIEW"), _react.default.createElement("button", {
     onClick: function onClick() {
-      return setViewType("2");
+      return setViewType(_react.default.createElement(_MountainViewRoom.default, null));
     }
-  }, "2"), _react.default.createElement("button", {
+  }, "MOUNTAINVIEW"), _react.default.createElement("button", {
     onClick: function onClick() {
-      return setViewType("3");
+      return setViewType(_react.default.createElement(_ForestViewRoom.default, null));
     }
-  }, "3"), _react.default.createElement("section", {
+  }, "FORESTVIEW"), _react.default.createElement("section", {
     id: "roomSectionThree"
   }, viewType)));
 };
 
 var _default = Rooms;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Rooms.css":"src/Pages/Rooms/Rooms.css","../../Components/RoomViewTypes/LakeViewRoom.js":"src/Components/RoomViewTypes/LakeViewRoom.js","../../Images/PadlockIcon.png":"src/Images/PadlockIcon.png"}],"src/Pages/Dining/Dining.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Rooms.css":"src/Pages/Rooms/Rooms.css","../../Components/RoomViewTypes/LakeViewRoom.js":"src/Components/RoomViewTypes/LakeViewRoom.js","../../Components/RoomViewTypes/MountainViewRoom.js":"src/Components/RoomViewTypes/MountainViewRoom.js","../../Components/RoomViewTypes/ForestViewRoom.js":"src/Components/RoomViewTypes/ForestViewRoom.js","../../Images/PadlockIcon.png":"src/Images/PadlockIcon.png"}],"src/Pages/Dining/Dining.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -73269,7 +73385,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58543" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64334" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

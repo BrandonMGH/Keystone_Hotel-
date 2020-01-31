@@ -1,7 +1,10 @@
 import React, {useState} from "react"
 import './Rooms.css'
 
+//** COMPONENTS **//
 import LakeViewRoom from "../../Components/RoomViewTypes/LakeViewRoom.js"
+import MountainViewRoom from '../../Components/RoomViewTypes/MountainViewRoom.js'
+import ForestViewRoom from '../../Components/RoomViewTypes/ForestViewRoom.js'
 
 import PadlockIcon from '../../Images/PadlockIcon.png'
 
@@ -25,9 +28,9 @@ const [viewType, setViewType] = useState(<LakeViewRoom />)
                 </section>
             </section>
             <section>
-                <button onClick={() => setViewType("1")}> 1</button>
-                <button onClick={() => setViewType("2")}>2</button>
-                <button onClick={() => setViewType("3")}>3</button>
+                <button onClick={() => setViewType(<LakeViewRoom />)}>LAKEVIEW</button>
+                <button onClick={() => setViewType(<MountainViewRoom />)}>MOUNTAINVIEW</button>
+                <button onClick={() => setViewType(<ForestViewRoom />)}>FORESTVIEW</button>
                 <section id="roomSectionThree">
                     {viewType}
                 </section>

@@ -295,6 +295,55 @@ padding-top: 10%;
     background: rgba(255, 253, 208, 0.4);
     font-size: 20px;  
 }
+.roomViewContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1%; 
+    margin-top: 1%; 
+    padding-top: 2%;
+    padding-bottom: 2%; 
+    justify-items: center;
+    align-items: center;
+    background: rgba(150, 75, 0, 0.1);
+}
+
+.roomViewRoomImage, .roomViewViewImage {
+    width: 90%; 
+    height: 70%; 
+}
+
+.roomViewTextContainer{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+    "TitleAndDesc TitleAndDesc"
+    "TextAmenities ViewImage"; 
+    justify-items: center;
+    align-items: center;
+    text-align: center; 
+}
+
+.roomViewTextTitleAndDescription {
+    grid-area: TitleAndDesc;
+}
+
+
+.roomViewTextTitle {
+    font-size: 50px; 
+}
+
+.roomViewTextAmenities{
+    grid-area: TextAmenities;
+}
+
+.roomViewViewImageContainer {
+    grid-area: ViewImage;
+}
+
+.roomViewViewImage{
+
+}
 #roomContainer {
     display: grid; 
     grid-template-columns: 1fr .75fr .75fr;
