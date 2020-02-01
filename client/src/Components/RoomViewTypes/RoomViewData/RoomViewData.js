@@ -15,6 +15,7 @@ const RoomViewData = {
     LakeView: [
         {
             id: 1,
+            reservationId: 1,
             RoomTitle:"Standard Room",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: LakeViewRoomOne,
@@ -41,6 +42,7 @@ const RoomViewData = {
         },
         {
             id: 2,
+            reservationId: 2,
             RoomTitle:"Junior Suite",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: LakeViewRoomTwo,
@@ -67,6 +69,7 @@ const RoomViewData = {
         },
         {
             id: 3,
+            reservationId: 3,
             RoomTitle:"Deluxe Suite",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: LakeViewRoomThree,
@@ -95,6 +98,7 @@ const RoomViewData = {
     MountainView: [
         {
             id: 1,
+            reservationId: 4,
             RoomTitle:"Standard Room",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: MountainViewRoomOne,
@@ -121,6 +125,7 @@ const RoomViewData = {
         },
         {
             id: 2,
+            reservationId: 5,
             RoomTitle:"Junior Suite",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: MountainViewRoomTwo,
@@ -147,6 +152,7 @@ const RoomViewData = {
         },
         {
             id: 3,
+            reservationId: 6,
             RoomTitle:"Deluxe Suite",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: MountainViewRoomThree,
@@ -175,6 +181,7 @@ const RoomViewData = {
     ForestView: [
         {
             id: 1,
+            reservationId: 7,
             RoomTitle:"Standard Room",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: ForestViewRoomOne,
@@ -201,6 +208,7 @@ const RoomViewData = {
         },
         {
             id: 2,
+            reservationId: 8,
             RoomTitle:"Junior Suite",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: ForestViewRoomTwo,
@@ -227,6 +235,7 @@ const RoomViewData = {
         },
         {
             id: 3,
+            reservationId: 9,
             RoomTitle:"Deluxe Suite",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: ForestViewRoomThree,

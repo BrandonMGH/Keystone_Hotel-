@@ -344,7 +344,7 @@ padding-top: 10%;
 .roomViewViewImage{
 
 }
-#roomContainer {
+.roomContainer {
     display: grid; 
     grid-template-columns: 1fr .75fr .75fr;
     grid-template-rows: 1fr 1fr 2fr 3fr;
@@ -353,29 +353,39 @@ padding-top: 10%;
     "roomImage roomTitle roomTitle"
     "roomImage roomSummary roomSummary"
     "roomImage roomAmenities roomDescription";
+ 
 }
 
-#roomImage {
+.roomImageContainer {
     grid-area: roomImage;
     background-color: red; 
+    display: grid; 
+    justify-items: center;
+    align-items: center;
+
 }
 
-#roomTitle {
+.roomImage {
+    width: 80%;
+    height: 80%; 
+}
+
+.roomTitle {
     grid-area: roomTitle;
     background-color: purple; 
 }
 
-#roomSummary {
+.roomSummary {
     grid-area: roomSummary; 
     background-color: green; 
 }
 
-#roomAmenities {
+.roomAmenities {
     grid-area: roomAmenities;
     background-color: yellow; 
 }
 
-#roomDescription {
+.roomDescription {
     grid-area: roomDescription;
     background-color: blue;
 }

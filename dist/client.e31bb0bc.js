@@ -49816,6 +49816,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var RoomViewData = {
   LakeView: [{
     id: 1,
+    reservationId: 1,
     RoomTitle: "Standard Room",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
     RoomImage: _LakeViewRoomOne.default,
@@ -49841,6 +49842,7 @@ var RoomViewData = {
     }
   }, {
     id: 2,
+    reservationId: 2,
     RoomTitle: "Junior Suite",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
     RoomImage: _LakeViewRoomTwo.default,
@@ -49866,6 +49868,7 @@ var RoomViewData = {
     }
   }, {
     id: 3,
+    reservationId: 3,
     RoomTitle: "Deluxe Suite",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
     RoomImage: _LakeViewRoomThree.default,
@@ -49892,6 +49895,7 @@ var RoomViewData = {
   }],
   MountainView: [{
     id: 1,
+    reservationId: 4,
     RoomTitle: "Standard Room",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
     RoomImage: _MountainViewRoomOne.default,
@@ -49917,6 +49921,7 @@ var RoomViewData = {
     }
   }, {
     id: 2,
+    reservationId: 5,
     RoomTitle: "Junior Suite",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
     RoomImage: _MountainViewRoomTwo.default,
@@ -49942,6 +49947,7 @@ var RoomViewData = {
     }
   }, {
     id: 3,
+    reservationId: 6,
     RoomTitle: "Deluxe Suite",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
     RoomImage: _MountainViewRoomThree.default,
@@ -49968,6 +49974,7 @@ var RoomViewData = {
   }],
   ForestView: [{
     id: 1,
+    reservationId: 7,
     RoomTitle: "Standard Room",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
     RoomImage: _ForestViewRoomOne.default,
@@ -49993,6 +50000,7 @@ var RoomViewData = {
     }
   }, {
     id: 2,
+    reservationId: 8,
     RoomTitle: "Junior Suite",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
     RoomImage: _ForestViewRoomTwo.default,
@@ -50018,6 +50026,7 @@ var RoomViewData = {
     }
   }, {
     id: 3,
+    reservationId: 9,
     RoomTitle: "Deluxe Suite",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
     RoomImage: _ForestViewRoomThree.default,
@@ -55177,7 +55186,7 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _API = _interopRequireDefault(require("../../../API/API.js"));
 
@@ -55199,8 +55208,38 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function _templateObject2() {
+function _templateObject5() {
   var data = _taggedTemplateLiteral(["\nz-index: -1;\nposition: relative; \ntop: -25px; \ntext-align: center; \n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\ndisplay: ", ";\nposition: relative; \n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\nposition: relative; \nbackground-color: red; \nheight: 50%; \ntop: 25%\nanimation: 1s ", "\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\nfrom {top: -300px; opacity:0} \nto {top:25%; opacity:1}\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -55210,7 +55249,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\ndisplay: ", ";\nposition: relative; \n"]);
+  var data = _taggedTemplateLiteral(["\ndisplay: ", ";\nposition: fixed; \nz-index: 1;\njustify-content: center; \nbackground-color: rgba(0,0,0,0.4);\nwidth: 100%;\nheight: 100%; \ntop: 0%; \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -55221,11 +55260,19 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var RoomShowState = _styledComponents.default.section(_templateObject(), function (props) {
+var ModalContainer = _styledComponents.default.div(_templateObject(), function (props) {
+  return props.showState;
+});
+
+var panDown = (0, _styledComponents.keyframes)(_templateObject2());
+
+var ModalContent = _styledComponents.default.div(_templateObject3(), panDown);
+
+var RoomShowState = _styledComponents.default.section(_templateObject4(), function (props) {
   return props.showState === true ? "Grid" : "None";
 });
 
-var DefaultShowState = _styledComponents.default.section(_templateObject2());
+var DefaultShowState = _styledComponents.default.section(_templateObject5());
 
 var Reservations = function Reservations() {
   var _useState = (0, _react.useState)(""),
@@ -55250,8 +55297,13 @@ var Reservations = function Reservations() {
 
   var _useState9 = (0, _react.useState)(false),
       _useState10 = _slicedToArray(_useState9, 2),
-      displayState = _useState10[0],
-      setDisplayState = _useState10[1];
+      modalState = _useState10[0],
+      setModalState = _useState10[1];
+
+  var _useState11 = (0, _react.useState)(_RoomViewData.default.LakeView[0]),
+      _useState12 = _slicedToArray(_useState11, 2),
+      modalRoom = _useState12[0],
+      setModalRoom = _useState12[1];
 
   (0, _react.useEffect)(function () {
     _API.default.getRoomInfo().then(function (response) {
@@ -55262,24 +55314,60 @@ var Reservations = function Reservations() {
       setPriceNumber(parseInt(response.data.priceRange));
     });
   });
-  return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Reservations"), _react.default.createElement("div", null, _RoomViewData.default.LakeView.map(function (objectKey) {
+
+  var modalStateChange = function modalStateChange() {
+    if (modalState === true) {
+      setModalState(false);
+    } else {
+      setModalState(true);
+    }
+  };
+
+  var roomSelection = function roomSelection() {
+    var roomId = event.target.value;
+    console.log(roomId);
+
+    if (roomId === 1) {
+      setModalRoom(_RoomViewData.default.LakeView[0]);
+    } else if (roomId === 2) {
+      setModalRoom(_RoomViewData.default.LakeView[1]);
+    } else if (roomId === 3) setModalRoom(_RoomViewData.default.LakeView[2]);
+
+    if (modalState === true) {
+      setModalState(false);
+    } else {
+      setModalState(true);
+    }
+  };
+
+  return _react.default.createElement("div", null, _react.default.createElement(ModalContainer, {
+    showState: modalState === true ? "grid" : "None"
+  }, _react.default.createElement(ModalContent, null, _react.default.createElement("span", {
+    onClick: modalStateChange
+  }, "\xD7"), _react.default.createElement("p", null, modalRoom.RoomTitle), _react.default.createElement("button", null, "CLICK ME"))), _react.default.createElement("h1", null, "Reservations"), _react.default.createElement("div", null, _RoomViewData.default.LakeView.map(function (objectKey) {
     return _react.default.createElement(RoomShowState, {
       key: objectKey.id,
       showState: objectKey.RoomInfo.guestCount < guestNumber || objectKey.RoomInfo.viewChoice !== viewNumber || objectKey.RoomInfo.petNumber !== petNumber || objectKey.RoomInfo.price > priceNumber ? false : true
     }, _react.default.createElement("section", {
-      id: "roomContainer"
+      className: "roomContainer"
     }, _react.default.createElement("section", {
-      id: "roomImage"
-    }, _react.default.createElement("p", null, "Room Image")), _react.default.createElement("section", {
-      id: "roomTitle"
+      className: "roomImageContainer"
+    }, _react.default.createElement("img", {
+      className: "roomImage",
+      src: objectKey.RoomImage
+    }), _react.default.createElement("button", {
+      value: objectKey.reservationId,
+      onClick: roomSelection
+    }, "RESERVE ROOM")), _react.default.createElement("section", {
+      className: "roomTitle"
     }, _react.default.createElement("h1", null, "Room Title")), _react.default.createElement("section", {
-      id: "roomSummary"
+      className: "roomSummary"
     }, _react.default.createElement("p", null, "Room Summary")), _react.default.createElement("section", {
-      id: "roomAmenities"
+      className: "roomAmenities"
     }, _react.default.createElement("p", null, "Room Amenities")), _react.default.createElement("section", {
-      id: "roomDescription"
+      className: "roomDescription"
     }, _react.default.createElement("p", null, "Room Description"))));
-  }), _react.default.createElement(DefaultShowState, null, "No Rooms our currently available that match your search criteria")), _react.default.createElement("p", null, "All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The "));
+  }), _react.default.createElement(DefaultShowState, null, "No Rooms our currently available that match your search criteria")));
 };
 
 var _default = Reservations;
@@ -55399,10 +55487,6 @@ var Navbar = function Navbar() {
       petConfirmation = _useState14[0],
       setPetConfirmation = _useState14[1];
 
-  var test = function test() {
-    console.log(checkIn, checkOut);
-  };
-
   var reservationInfoSubmit = function reservationInfoSubmit() {
     if (checkIn === "" || checkOut === "") {
       alert("Please select a Check-In and a Check-Out Date");
@@ -55490,9 +55574,9 @@ var Navbar = function Navbar() {
     value: "1"
   }, "Lake View"), _react.default.createElement("option", {
     value: "2"
-  }, "Forest View"), _react.default.createElement("option", {
-    value: "3"
   }, "Mountain View"), _react.default.createElement("option", {
+    value: "3"
+  }, "Forest View"), _react.default.createElement("option", {
     value: "3"
   }, "No Preference")), _react.default.createElement("p", null, "Bringing a Pet?"), _react.default.createElement("select", {
     name: "petSelection",
@@ -55506,9 +55590,7 @@ var Navbar = function Navbar() {
     value: "2"
   }, "No"))), _react.default.createElement("button", {
     onClick: reservationInfoSubmit
-  }, " SELECT ROOM "), _react.default.createElement("button", {
-    onClick: test
-  }, "test"))), _react.default.createElement("section", {
+  }, " SELECT ROOM "))), _react.default.createElement("section", {
     id: "mainNav"
   }, _react.default.createElement("section", {
     id: "navLogo"
@@ -73434,7 +73516,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52392" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59054" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
