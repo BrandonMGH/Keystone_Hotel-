@@ -15,6 +15,7 @@ const transport = {
 const transporter = nodemailer.createTransport(transport)
 
 let reservationObject = {}
+let reservationConfirmationObect = {}
 let newsletterObject = {}
 
 app.use(cors())
@@ -41,6 +42,38 @@ app.get('/api/newsletter', (req,res) =>{
     res.send(newsletterObject)
 })
 
+app.get('/api/reservations/confirmation', (req,res) =>{
+  res.send(reservationConfirmationObect)
+})
+
+// ** POST ROUTES ** // 
+
+app.post('/api/newsletter', (req, res) => {
+  newsletterObject = req.body.newsletterObject
+  res.send(newsletterObject)
+  let firstName = newsletterObject.firstName
+  let lastName = newsletterObject.lastName
+  let email = newsletterObject.email
+  const mail = {
+      from: process.env.EMAIL,
+      to: email,  //Change to email address that you want to receive messages on
+      subject: 'New Message from Contact Form',
+      text: `Dear ${firstName} ${lastName}.  Thank you for signing up for our Keystone Hotel Newsletter!  Unfortunately, this is a fictious newsletter service, so we won't actually be sending you monthly newsletters, but thank you for signing up all the same!`
+    }
+  transporter.sendMail(mail, (err, data) =>{
+      if(err){
+          console.log(err)
+      }else{
+          res.send(newsletterObject)
+      }
+  })
+
+})
+
+app.post('/api/reservations/confirmation', (req, res) =>{
+  reservationConfirmationObect = req.body.resConfirmObject
+  res.send(reservationConfirmationObect)
+})
 
 
 // ** PUT ROUTES ** // 
@@ -50,27 +83,6 @@ app.put('/api/reservations', (req,res) =>{
     res.send(reservationObject)
 })
 
-app.post('/api/newsletter', (req, res) => {
-    newsletterObject = req.body.newsletterObject
-    res.send(newsletterObject)
-    let firstName = newsletterObject.firstName
-    let lastName = newsletterObject.lastName
-    let email = newsletterObject.email
-    const mail = {
-        from: process.env.EMAIL,
-        to: email,  //Change to email address that you want to receive messages on
-        subject: 'New Message from Contact Form',
-        text: `Dear ${firstName} ${lastName}.  Thank you for signing up for our Keystone Hotel Newsletter!  Unfortunately, this is a fictious newsletter service, so we won't actually be sending you monthly newsletters, but thank you for signing up all the same!`
-      }
-    transporter.sendMail(mail, (err, data) =>{
-        if(err){
-            console.log(err)
-        }else{
-            res.send(newsletterObject)
-        }
-    })
-
-})
 
 app.listen(PORT, () => {
     console.log(`Server is listening on Port: ${PORT}`)

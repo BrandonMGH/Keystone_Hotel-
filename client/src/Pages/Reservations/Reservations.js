@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 import API from '../../../API/API.js'
 import './Reservations.css'
@@ -7,6 +7,31 @@ import './Reservations.css'
 //** COMPONENTS **//
 
 import RoomViewData from '../../Components/RoomViewTypes/RoomViewData/RoomViewData.js'
+
+
+const ModalContainer = styled.div`
+display: ${props => props.showState};
+position: fixed; 
+z-index: 1;
+justify-content: center; 
+background-color: rgba(0,0,0,0.4);
+width: 100%;
+height: 100%; 
+top: 0%; 
+`
+
+const panDown = keyframes`
+from {top: -300px; opacity:0} 
+to {top:25%; opacity:1}
+`
+
+const ModalContent = styled.div`
+position: relative; 
+background-color: red; 
+height: 50%; 
+top: 25%
+animation: 1s ${panDown}
+`
 
 
 const RoomShowState = styled.section`
@@ -22,56 +47,99 @@ text-align: center;
 
 
 const Reservations = () => {
-    const [guestNumber, setGuestNumber] = useState("")
-    const [viewNumber, setViewNumber] = useState("")
-    const [petNumber, setPetNumber] = useState("")
-    const [priceNumber, setPriceNumber] = useState("")
-    const [displayState, setDisplayState] = useState(false)
+  const [guestNumber, setGuestNumber] = useState("")
+  const [viewNumber, setViewNumber] = useState("")
+  const [petNumber, setPetNumber] = useState("")
+  const [priceNumber, setPriceNumber] = useState("")
+  const [modalState, setModalState] = useState(false)
+  const [modalRoom, setModalRoom] = useState(RoomViewData.LakeView[0])
 
+  useEffect(() => {
+    API.getRoomInfo()
+      .then((response) => {
+        console.log(response)
+        setGuestNumber(parseInt(response.data.guestCount))
+        setViewNumber(parseInt(response.data.viewSelection))
+        setPetNumber(parseInt(response.data.petConfirmation))
+        setPriceNumber(parseInt(response.data.priceRange))
+      })
+  })
 
-    useEffect (() =>{
-        API.getRoomInfo()
-        .then((response)=>{
+  const axiosCall = () => {
+    API.reservationConfirmation(modalRoom)
+        .then((response) => {
             console.log(response)
-            setGuestNumber(parseInt(response.data.guestCount))
-            setViewNumber(parseInt(response.data.viewSelection))
-            setPetNumber(parseInt(response.data.petConfirmation))
-            setPriceNumber(parseInt(response.data.priceRange))            
         })
-    })
+        .catch((error) => {
+            console.log(error)
+        })
+}
 
- 
-    return(
-        <div>
-            <h1>Reservations</h1>
-            <div>
-            {RoomViewData.LakeView.map(objectKey => (
-                    <RoomShowState key={objectKey.id} showState={objectKey.RoomInfo.guestCount < guestNumber || objectKey.RoomInfo.viewChoice !== viewNumber || objectKey.RoomInfo.petNumber !== petNumber  || objectKey.RoomInfo.price > priceNumber? false : true}>
-                      <section id="roomContainer">
-                          <section id="roomImage">
-                             <p>Room Image</p>
-                          </section>
-                          <section id="roomTitle">
-                            <h1>Room Title</h1>
-                          </section>
-                          <section id="roomSummary">
-                            <p>Room Summary</p>
-                          </section>
-                          <section id="roomAmenities">
-                            <p>Room Amenities</p>
-                          </section>
-                          <section id="roomDescription">
-                            <p>Room Description</p>
-                          </section>
-                      </section>
-                    </RoomShowState>
-                    ))}
-                    <DefaultShowState>No Rooms our currently available that match your search criteria</DefaultShowState>
-                  </div>
-            <p>All Rooms come with call service to the kitchen inside our in house luxury Restaurant, The </p>
+  let modalStateChange = () => {
+    if (modalState === true) {
+      setModalState(false)
+    } else {
+      setModalState(true)
+    }
+  }
 
-        </div>
-    )
+  let roomSelection = () => {
+    let roomId = parseInt(event.target.value)
+    console.log(roomId)
+    if (roomId === 1) {
+      setModalRoom(RoomViewData.LakeView[0])
+    } else if (roomId === 2) {
+      setModalRoom(RoomViewData.LakeView[1])
+    } else if (roomId === 3)
+      setModalRoom(RoomViewData.LakeView[2])
+
+    if (modalState === true) {
+      setModalState(false)
+    } else {
+      setModalState(true)
+    }
+  }
+  return (
+    <div>
+      <ModalContainer showState={modalState === true ? "grid" : "None"}>
+        <ModalContent>
+          <span onClick={modalStateChange}>&times;</span>
+          <h1>{modalRoom.RoomTitle}</h1>
+          <img style={{width: "30%", height: "45%" }} src={modalRoom.RoomImage} />
+          <p>View Type: {modalRoom.RoomInfo.view}</p>
+          <p>Nightly Rate: {modalRoom.RoomInfo.price}</p>
+          <button onClick={axiosCall}>CLICK ME</button>
+        </ModalContent>
+      </ModalContainer>
+      <h1>Reservations</h1>
+      <div>
+        {RoomViewData.LakeView.map(objectKey => (
+          <RoomShowState key={objectKey.id} showState={objectKey.RoomInfo.guestCount < guestNumber || objectKey.RoomInfo.viewChoice !== viewNumber || objectKey.RoomInfo.petNumber !== petNumber || objectKey.RoomInfo.price > priceNumber ? false : true}>
+            <section className="roomContainer">
+              <section className="roomImageContainer">
+                <img className="roomImage" src={objectKey.RoomImage} />
+                <button value={objectKey.reservationId} onClick={roomSelection}>RESERVE ROOM</button>
+              </section>
+              <section className="roomTitle">
+                <h1>Room Title</h1>
+              </section>
+              <section className="roomSummary">
+                <p>Room Summary</p>
+              </section>
+              <section className="roomAmenities">
+                <p>Room Amenities</p>
+              </section>
+              <section className="roomDescription">
+                <p>Room Description</p>
+              </section>
+  
+            </section>
+          </RoomShowState>
+        ))}
+        <DefaultShowState>No Rooms our currently available that match your search criteria</DefaultShowState>
+      </div>
+    </div>
+  )
 }
 
 export default Reservations; 

@@ -39,10 +39,6 @@ const Navbar = () => {
     const [viewSelection, setViewSelection] = useState("3")
     const [petConfirmation, setPetConfirmation] = useState("2")
 
-    const test = () => {
-        console.log(checkIn, checkOut)
-    }
-
 
 
     const reservationInfoSubmit = () => {
@@ -106,8 +102,8 @@ const Navbar = () => {
                         <p>Select a View</p>
                         <select name="roomView" value={viewSelection} onChange={event => setViewSelection(event.target.value)}>
                             <option value="1">Lake View</option>
-                            <option value="2">Forest View</option>
-                            <option value="3">Mountain View</option>
+                            <option value="2">Mountain View</option>
+                            <option value="3">Forest View</option>
                             <option value="3">No Preference</option>
                         </select>
                         <p>Bringing a Pet?</p>
@@ -117,7 +113,6 @@ const Navbar = () => {
                         </select>
                     </div>
                     <button onClick={reservationInfoSubmit} > SELECT ROOM </button>
-                    <button onClick={test}>test</button>
                 </ModalContent>
             </ModalContainer>
             <section id="mainNav">
