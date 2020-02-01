@@ -4,47 +4,9 @@ import styled from 'styled-components'
 import API from '../../../API/API.js'
 import './Reservations.css'
 
-let roomObject = {
-    id: 1, 
-    roomName: "Placeholder Name 1",
-    guestCount: 2,
-    bedCount: 1,
-    viewChoice: 1,
-    view: "Ocean Cliffside",
-    squareFootage: "1000 sq. ft.",
-    petNumber: 1,
-    pet: "Yes",
-    additionalAmmenities: [""],
-    price: 400
+//** COMPONENTS **//
 
-}
-let roomObjectTwo = {
-    id: 2, 
-    roomName: "Placeholder Name 2",
-    guestCount: 3,
-    bedCount: 1,
-    viewChoice: 2, 
-    view: "Forest View",
-    squareFootage: "1000 sq. ft.",
-    petNumber: 1,
-    pet: "Yes",
-    additionalAmmenities: [""],
-    price: 800
-}
-
-let roomObjectThree = {
-    id: 3, 
-    roomName: "Placeholder Name 3",
-    guestCount: 4,
-    bedCount: 2,
-    viewChoice: 3, 
-    view: "Mountain View",
-    squareFootage: "1000 sq. ft.",
-    petNumber: 2,
-    pet: "No",
-    additionalAmmenities: [""],
-    price: 1250
-}
+import RoomViewData from '../../Components/RoomViewTypes/RoomViewData/RoomViewData.js'
 
 
 const RoomShowState = styled.section`
@@ -64,7 +26,6 @@ const Reservations = () => {
     const [viewNumber, setViewNumber] = useState("")
     const [petNumber, setPetNumber] = useState("")
     const [priceNumber, setPriceNumber] = useState("")
-    const [roomInfo, setRoomInfo] = useState([roomObject, roomObjectTwo, roomObjectThree])
     const [displayState, setDisplayState] = useState(false)
 
 
@@ -84,8 +45,8 @@ const Reservations = () => {
         <div>
             <h1>Reservations</h1>
             <div>
-            {roomInfo.map(objectKey => (
-                    <RoomShowState key={objectKey.id} showState={objectKey.guestCount < guestNumber || objectKey.viewChoice !== viewNumber || objectKey.petNumber !== petNumber  || objectKey.price > priceNumber? false : true}>
+            {RoomViewData.LakeView.map(objectKey => (
+                    <RoomShowState key={objectKey.id} showState={objectKey.RoomInfo.guestCount < guestNumber || objectKey.RoomInfo.viewChoice !== viewNumber || objectKey.RoomInfo.petNumber !== petNumber  || objectKey.RoomInfo.price > priceNumber? false : true}>
                       <section id="roomContainer">
                           <section id="roomImage">
                              <p>Room Image</p>

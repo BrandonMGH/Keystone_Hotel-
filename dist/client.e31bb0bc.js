@@ -49829,6 +49829,15 @@ var RoomViewData = {
       CoffeeMaker: "Keurig Coffee Maker",
       Fridge: "In-Room Refrigerator",
       Robes: "Frette Robes"
+    },
+    RoomInfo: {
+      guestCount: 2,
+      bedcount: 2,
+      viewChoice: 1,
+      view: "Lake View",
+      petNumber: 2,
+      pet: "No",
+      price: 400
     }
   }, {
     id: 2,
@@ -49845,6 +49854,15 @@ var RoomViewData = {
       CoffeeMaker: "Keurig Coffee Maker",
       Fridge: "In-Room Refrigerator",
       Robes: "Frette Robes"
+    },
+    RoomInfo: {
+      guestCount: 4,
+      bedcount: 3,
+      viewChoice: 1,
+      view: "Lake View",
+      petNumber: 1,
+      pet: "Yes",
+      price: 800
     }
   }, {
     id: 3,
@@ -49861,6 +49879,15 @@ var RoomViewData = {
       CoffeeMaker: "Keurig Coffee Maker",
       Fridge: "In-Room Refrigerator",
       Robes: "Frette Robes"
+    },
+    RoomInfo: {
+      guestCount: 6,
+      bedcount: 4,
+      viewChoice: 1,
+      view: "Lake View",
+      petNumber: 1,
+      pet: "Yes",
+      price: 1200
     }
   }],
   MountainView: [{
@@ -49878,6 +49905,15 @@ var RoomViewData = {
       CoffeeMaker: "Keurig Coffee Maker",
       Fridge: "In-Room Refrigerator",
       Robes: "Frette Robes"
+    },
+    RoomInfo: {
+      guestCount: 2,
+      bedcount: 2,
+      viewChoice: 2,
+      view: "Mountain View",
+      petNumber: 2,
+      pet: "No",
+      price: 400
     }
   }, {
     id: 2,
@@ -49894,6 +49930,15 @@ var RoomViewData = {
       CoffeeMaker: "Keurig Coffee Maker",
       Fridge: "In-Room Refrigerator",
       Robes: "Frette Robes"
+    },
+    RoomInfo: {
+      guestCount: 4,
+      bedcount: 3,
+      viewChoice: 2,
+      view: "Mountain View",
+      petNumber: 1,
+      pet: "Yes",
+      price: 800
     }
   }, {
     id: 3,
@@ -49910,6 +49955,15 @@ var RoomViewData = {
       CoffeeMaker: "Keurig Coffee Maker",
       Fridge: "In-Room Refrigerator",
       Robes: "Frette Robes"
+    },
+    RoomInfo: {
+      guestCount: 6,
+      bedcount: 4,
+      viewChoice: 2,
+      view: "Mountain View",
+      petNumber: 1,
+      pet: "Yes",
+      price: 1200
     }
   }],
   ForestView: [{
@@ -49927,6 +49981,15 @@ var RoomViewData = {
       CoffeeMaker: "Keurig Coffee Maker",
       Fridge: "In-Room Refrigerator",
       Robes: "Frette Robes"
+    },
+    RoomInfo: {
+      guestCount: 2,
+      bedcount: 2,
+      viewChoice: 3,
+      view: "Forest View",
+      petNumber: 2,
+      pet: "No",
+      price: 400
     }
   }, {
     id: 2,
@@ -49943,6 +50006,15 @@ var RoomViewData = {
       CoffeeMaker: "Keurig Coffee Maker",
       Fridge: "In-Room Refrigerator",
       Robes: "Frette Robes"
+    },
+    RoomInfo: {
+      guestCount: 4,
+      bedcount: 3,
+      viewChoice: 3,
+      view: "Forest View",
+      petNumber: 1,
+      pet: "Yes",
+      price: 800
     }
   }, {
     id: 3,
@@ -49959,6 +50031,15 @@ var RoomViewData = {
       CoffeeMaker: "Keurig Coffee Maker",
       Fridge: "In-Room Refrigerator",
       Robes: "Frette Robes"
+    },
+    RoomInfo: {
+      guestCount: 6,
+      bedcount: 4,
+      viewChoice: 3,
+      view: "Forest View",
+      petNumber: 1,
+      pet: "Yes",
+      price: 1200
     }
   }]
 };
@@ -55102,6 +55183,8 @@ var _API = _interopRequireDefault(require("../../../API/API.js"));
 
 require("./Reservations.css");
 
+var _RoomViewData = _interopRequireDefault(require("../../Components/RoomViewTypes/RoomViewData/RoomViewData.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -55138,46 +55221,6 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var roomObject = {
-  id: 1,
-  roomName: "Placeholder Name 1",
-  guestCount: 2,
-  bedCount: 1,
-  viewChoice: 1,
-  view: "Ocean Cliffside",
-  squareFootage: "1000 sq. ft.",
-  petNumber: 1,
-  pet: "Yes",
-  additionalAmmenities: [""],
-  price: 400
-};
-var roomObjectTwo = {
-  id: 2,
-  roomName: "Placeholder Name 2",
-  guestCount: 3,
-  bedCount: 1,
-  viewChoice: 2,
-  view: "Forest View",
-  squareFootage: "1000 sq. ft.",
-  petNumber: 1,
-  pet: "Yes",
-  additionalAmmenities: [""],
-  price: 800
-};
-var roomObjectThree = {
-  id: 3,
-  roomName: "Placeholder Name 3",
-  guestCount: 4,
-  bedCount: 2,
-  viewChoice: 3,
-  view: "Mountain View",
-  squareFootage: "1000 sq. ft.",
-  petNumber: 2,
-  pet: "No",
-  additionalAmmenities: [""],
-  price: 1250
-};
-
 var RoomShowState = _styledComponents.default.section(_templateObject(), function (props) {
   return props.showState === true ? "Grid" : "None";
 });
@@ -55205,15 +55248,10 @@ var Reservations = function Reservations() {
       priceNumber = _useState8[0],
       setPriceNumber = _useState8[1];
 
-  var _useState9 = (0, _react.useState)([roomObject, roomObjectTwo, roomObjectThree]),
+  var _useState9 = (0, _react.useState)(false),
       _useState10 = _slicedToArray(_useState9, 2),
-      roomInfo = _useState10[0],
-      setRoomInfo = _useState10[1];
-
-  var _useState11 = (0, _react.useState)(false),
-      _useState12 = _slicedToArray(_useState11, 2),
-      displayState = _useState12[0],
-      setDisplayState = _useState12[1];
+      displayState = _useState10[0],
+      setDisplayState = _useState10[1];
 
   (0, _react.useEffect)(function () {
     _API.default.getRoomInfo().then(function (response) {
@@ -55224,10 +55262,10 @@ var Reservations = function Reservations() {
       setPriceNumber(parseInt(response.data.priceRange));
     });
   });
-  return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Reservations"), _react.default.createElement("div", null, roomInfo.map(function (objectKey) {
+  return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Reservations"), _react.default.createElement("div", null, _RoomViewData.default.LakeView.map(function (objectKey) {
     return _react.default.createElement(RoomShowState, {
       key: objectKey.id,
-      showState: objectKey.guestCount < guestNumber || objectKey.viewChoice !== viewNumber || objectKey.petNumber !== petNumber || objectKey.price > priceNumber ? false : true
+      showState: objectKey.RoomInfo.guestCount < guestNumber || objectKey.RoomInfo.viewChoice !== viewNumber || objectKey.RoomInfo.petNumber !== petNumber || objectKey.RoomInfo.price > priceNumber ? false : true
     }, _react.default.createElement("section", {
       id: "roomContainer"
     }, _react.default.createElement("section", {
@@ -55246,7 +55284,7 @@ var Reservations = function Reservations() {
 
 var _default = Reservations;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../API/API.js":"API/API.js","./Reservations.css":"src/Pages/Reservations/Reservations.css"}],"src/Components/Navbar/Navbar.css":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../API/API.js":"API/API.js","./Reservations.css":"src/Pages/Reservations/Reservations.css","../../Components/RoomViewTypes/RoomViewData/RoomViewData.js":"src/Components/RoomViewTypes/RoomViewData/RoomViewData.js"}],"src/Components/Navbar/Navbar.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -55361,19 +55399,30 @@ var Navbar = function Navbar() {
       petConfirmation = _useState14[0],
       setPetConfirmation = _useState14[1];
 
+  var test = function test() {
+    console.log(checkIn, checkOut);
+  };
+
   var reservationInfoSubmit = function reservationInfoSubmit() {
     if (checkIn === "" || checkOut === "") {
       alert("Please select a Check-In and a Check-Out Date");
     } else {
-      var resObject = {
-        checkIn: checkIn,
-        checkOut: checkOut,
-        guestCount: guestCount,
-        viewSelection: viewSelection,
-        petConfirmation: petConfirmation,
-        priceRange: priceRange
-      };
-      return axiosCall(resObject);
+      var updatedCheckIn = parseInt(checkIn.replace(/-/g, ''));
+      var updatedCheckOut = parseInt(checkOut.replace(/-/g, ''));
+
+      if (updatedCheckIn >= updatedCheckOut) {
+        alert("Please select a proper Check-Out Date");
+      } else {
+        var resObject = {
+          checkIn: checkIn,
+          checkOut: checkOut,
+          guestCount: guestCount,
+          viewSelection: viewSelection,
+          petConfirmation: petConfirmation,
+          priceRange: priceRange
+        };
+        return axiosCall(resObject);
+      }
     }
   };
 
@@ -55426,14 +55475,12 @@ var Navbar = function Navbar() {
       return setGuestCount(event.target.value);
     }
   }, _react.default.createElement("option", {
-    value: "1"
-  }, "1"), _react.default.createElement("option", {
     value: "2"
   }, "2"), _react.default.createElement("option", {
-    value: "3"
-  }, "3"), _react.default.createElement("option", {
     value: "4"
-  }, "4 +")), _react.default.createElement("p", null, "Select a View"), _react.default.createElement("select", {
+  }, "4"), _react.default.createElement("option", {
+    value: "6"
+  }, "6")), _react.default.createElement("p", null, "Select a View"), _react.default.createElement("select", {
     name: "roomView",
     value: viewSelection,
     onChange: function onChange(event) {
@@ -55459,7 +55506,9 @@ var Navbar = function Navbar() {
     value: "2"
   }, "No"))), _react.default.createElement("button", {
     onClick: reservationInfoSubmit
-  }, " SELECT ROOM "))), _react.default.createElement("section", {
+  }, " SELECT ROOM "), _react.default.createElement("button", {
+    onClick: test
+  }, "test"))), _react.default.createElement("section", {
     id: "mainNav"
   }, _react.default.createElement("section", {
     id: "navLogo"
@@ -73385,7 +73434,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64334" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52392" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
