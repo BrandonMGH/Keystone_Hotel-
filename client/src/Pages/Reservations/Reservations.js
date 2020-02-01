@@ -54,7 +54,6 @@ const Reservations = () => {
   const [modalState, setModalState] = useState(false)
   const [modalRoom, setModalRoom] = useState(RoomViewData.LakeView[0])
 
-
   useEffect(() => {
     API.getRoomInfo()
       .then((response) => {
@@ -66,6 +65,16 @@ const Reservations = () => {
       })
   })
 
+  const axiosCall = () => {
+    API.reservationConfirmation(modalRoom)
+        .then((response) => {
+            console.log(response)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+}
+
   let modalStateChange = () => {
     if (modalState === true) {
       setModalState(false)
@@ -75,7 +84,7 @@ const Reservations = () => {
   }
 
   let roomSelection = () => {
-    let roomId = event.target.value
+    let roomId = parseInt(event.target.value)
     console.log(roomId)
     if (roomId === 1) {
       setModalRoom(RoomViewData.LakeView[0])
@@ -95,8 +104,11 @@ const Reservations = () => {
       <ModalContainer showState={modalState === true ? "grid" : "None"}>
         <ModalContent>
           <span onClick={modalStateChange}>&times;</span>
-          <p>{modalRoom.RoomTitle}</p>
-          <button>CLICK ME</button>
+          <h1>{modalRoom.RoomTitle}</h1>
+          <img style={{width: "30%", height: "45%" }} src={modalRoom.RoomImage} />
+          <p>View Type: {modalRoom.RoomInfo.view}</p>
+          <p>Nightly Rate: {modalRoom.RoomInfo.price}</p>
+          <button onClick={axiosCall}>CLICK ME</button>
         </ModalContent>
       </ModalContainer>
       <h1>Reservations</h1>
@@ -120,6 +132,7 @@ const Reservations = () => {
               <section className="roomDescription">
                 <p>Room Description</p>
               </section>
+  
             </section>
           </RoomShowState>
         ))}

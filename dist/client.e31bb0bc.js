@@ -55158,15 +55158,20 @@ var _default = {
   getRoomInfo: function getRoomInfo() {
     return _axios.default.get("http://localhost:3000/api/reservations");
   },
+  upNewsletterInfo: function upNewsletterInfo(inputValue) {
+    return _axios.default.post("http://localhost:3000/api/newsletter", {
+      newsletterObject: inputValue
+    });
+  },
+  reservationConfirmation: function reservationConfirmation(inputValue) {
+    return _axios.default.post("http://localhost:3000/api/reservations/confirmation", {
+      resConfirmObject: inputValue
+    });
+  },
   reservationInfo: function reservationInfo(inputValue) {
     return _axios.default.put("http://localhost:3000/api/reservations", {
       //** Change this route back to a relative path when pushing project to heroku.  Only using absolute path during Dev process**//
       resObject: inputValue
-    });
-  },
-  upNewsletterInfo: function upNewsletterInfo(inputValue) {
-    return _axios.default.post("http://localhost:3000/api/newsletter", {
-      newsletterObject: inputValue
     });
   }
 };
@@ -55315,6 +55320,14 @@ var Reservations = function Reservations() {
     });
   });
 
+  var axiosCall = function axiosCall() {
+    _API.default.reservationConfirmation(modalRoom).then(function (response) {
+      console.log(response);
+    }).catch(function (error) {
+      console.log(error);
+    });
+  };
+
   var modalStateChange = function modalStateChange() {
     if (modalState === true) {
       setModalState(false);
@@ -55324,7 +55337,7 @@ var Reservations = function Reservations() {
   };
 
   var roomSelection = function roomSelection() {
-    var roomId = event.target.value;
+    var roomId = parseInt(event.target.value);
     console.log(roomId);
 
     if (roomId === 1) {
@@ -55344,7 +55357,15 @@ var Reservations = function Reservations() {
     showState: modalState === true ? "grid" : "None"
   }, _react.default.createElement(ModalContent, null, _react.default.createElement("span", {
     onClick: modalStateChange
-  }, "\xD7"), _react.default.createElement("p", null, modalRoom.RoomTitle), _react.default.createElement("button", null, "CLICK ME"))), _react.default.createElement("h1", null, "Reservations"), _react.default.createElement("div", null, _RoomViewData.default.LakeView.map(function (objectKey) {
+  }, "\xD7"), _react.default.createElement("h1", null, modalRoom.RoomTitle), _react.default.createElement("img", {
+    style: {
+      width: "30%",
+      height: "45%"
+    },
+    src: modalRoom.RoomImage
+  }), _react.default.createElement("p", null, "View Type: ", modalRoom.RoomInfo.view), _react.default.createElement("p", null, "Nightly Rate: ", modalRoom.RoomInfo.price), _react.default.createElement("button", {
+    onClick: axiosCall
+  }, "CLICK ME"))), _react.default.createElement("h1", null, "Reservations"), _react.default.createElement("div", null, _RoomViewData.default.LakeView.map(function (objectKey) {
     return _react.default.createElement(RoomShowState, {
       key: objectKey.id,
       showState: objectKey.RoomInfo.guestCount < guestNumber || objectKey.RoomInfo.viewChoice !== viewNumber || objectKey.RoomInfo.petNumber !== petNumber || objectKey.RoomInfo.price > priceNumber ? false : true
@@ -73516,7 +73537,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59054" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49253" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
