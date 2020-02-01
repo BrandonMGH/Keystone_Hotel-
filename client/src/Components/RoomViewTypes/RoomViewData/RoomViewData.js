@@ -28,6 +28,15 @@ const RoomViewData = {
                 CoffeeMaker: "Keurig Coffee Maker",
                 Fridge: "In-Room Refrigerator",
                 Robes: "Frette Robes"
+            },
+            RoomInfo: {
+                guestCount: 2,
+                bedcount: 2,
+                viewChoice: 1,
+                view: "Lake View",
+                petNumber: 2,
+                pet: "No",
+                price: 400
             }
         },
         {
@@ -45,6 +54,15 @@ const RoomViewData = {
                 CoffeeMaker: "Keurig Coffee Maker",
                 Fridge: "In-Room Refrigerator",
                 Robes: "Frette Robes"
+            },
+            RoomInfo: {
+                guestCount: 4,
+                bedcount: 3,
+                viewChoice: 1,
+                view: "Lake View",
+                petNumber: 1,
+                pet: "Yes",
+                price: 800
             }
         },
         {
@@ -62,6 +80,15 @@ const RoomViewData = {
                 CoffeeMaker: "Keurig Coffee Maker",
                 Fridge: "In-Room Refrigerator",
                 Robes: "Frette Robes"
+            },
+            RoomInfo: {
+                guestCount: 6,
+                bedcount: 4,
+                viewChoice: 1,
+                view: "Lake View",
+                petNumber: 1,
+                pet: "Yes",
+                price: 1200
             }
         },
     ],
@@ -81,6 +108,15 @@ const RoomViewData = {
                 CoffeeMaker: "Keurig Coffee Maker",
                 Fridge: "In-Room Refrigerator",
                 Robes: "Frette Robes"
+            },
+            RoomInfo: {
+                guestCount: 2,
+                bedcount: 2,
+                viewChoice: 2,
+                view: "Mountain View",
+                petNumber: 2,
+                pet: "No",
+                price: 400
             }
         },
         {
@@ -98,6 +134,15 @@ const RoomViewData = {
                 CoffeeMaker: "Keurig Coffee Maker",
                 Fridge: "In-Room Refrigerator",
                 Robes: "Frette Robes"
+            },
+            RoomInfo: {
+                guestCount: 4,
+                bedcount: 3,
+                viewChoice: 2,
+                view: "Mountain View",
+                petNumber: 1,
+                pet: "Yes",
+                price: 800
             }
         },
         {
@@ -115,6 +160,15 @@ const RoomViewData = {
                 CoffeeMaker: "Keurig Coffee Maker",
                 Fridge: "In-Room Refrigerator",
                 Robes: "Frette Robes"
+            },
+            RoomInfo: {
+                guestCount: 6,
+                bedcount: 4,
+                viewChoice: 2,
+                view: "Mountain View",
+                petNumber: 1,
+                pet: "Yes",
+                price: 1200
             }
         },
     ],
@@ -134,6 +188,15 @@ const RoomViewData = {
                 CoffeeMaker: "Keurig Coffee Maker",
                 Fridge: "In-Room Refrigerator",
                 Robes: "Frette Robes"
+            },
+            RoomInfo: {
+                guestCount: 2,
+                bedcount: 2,
+                viewChoice: 3,
+                view: "Forest View",
+                petNumber: 2,
+                pet: "No",
+                price: 400
             }
         },
         {
@@ -151,6 +214,15 @@ const RoomViewData = {
                 CoffeeMaker: "Keurig Coffee Maker",
                 Fridge: "In-Room Refrigerator",
                 Robes: "Frette Robes"
+            },
+            RoomInfo: {
+                guestCount: 4,
+                bedcount: 3,
+                viewChoice: 3,
+                view: "Forest View",
+                petNumber: 1,
+                pet: "Yes",
+                price: 800
             }
         },
         {
@@ -168,6 +240,15 @@ const RoomViewData = {
                 CoffeeMaker: "Keurig Coffee Maker",
                 Fridge: "In-Room Refrigerator",
                 Robes: "Frette Robes"
+            },
+            RoomInfo: {
+                guestCount: 6,
+                bedcount: 4,
+                viewChoice: 3,
+                view: "Forest View",
+                petNumber: 1,
+                pet: "Yes",
+                price: 1200
             }
         },
     ],

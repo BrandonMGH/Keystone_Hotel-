@@ -39,6 +39,9 @@ const Navbar = () => {
     const [viewSelection, setViewSelection] = useState("3")
     const [petConfirmation, setPetConfirmation] = useState("2")
 
+    const test = () => {
+        console.log(checkIn, checkOut)
+    }
 
 
 
@@ -46,18 +49,23 @@ const Navbar = () => {
         if (checkIn === "" || checkOut === "") {
             alert("Please select a Check-In and a Check-Out Date")
         } else {
-            let resObject = {
-                checkIn: checkIn,
-                checkOut: checkOut,
-                guestCount: guestCount,
-                viewSelection: viewSelection,
-                petConfirmation: petConfirmation,
-                priceRange: priceRange,
+            let updatedCheckIn = parseInt(checkIn.replace(/-/g, ''))
+            let updatedCheckOut = parseInt(checkOut.replace(/-/g, ''))
+            if(updatedCheckIn >= updatedCheckOut){
+                alert("Please select a proper Check-Out Date")
+            } else {
+                let resObject = {
+                            checkIn: checkIn,
+                            checkOut: checkOut,
+                            guestCount: guestCount,
+                            viewSelection: viewSelection,
+                            petConfirmation: petConfirmation,
+                            priceRange: priceRange,
+                        }
+                        return axiosCall(resObject)
             }
-            return axiosCall(resObject)
         }
-
-    }
+    };
 
     const modalStateChange = () => {
         if (modalState === true) {
@@ -91,10 +99,9 @@ const Navbar = () => {
                     <div>
                         <p>Number of Guests</p>
                         <select name="guestCount" value={guestCount} onChange={event => setGuestCount(event.target.value)}>
-                            <option value="1" >1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4 +</option>
+                            <option value="2" >2</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
                         </select>
                         <p>Select a View</p>
                         <select name="roomView" value={viewSelection} onChange={event => setViewSelection(event.target.value)}>
@@ -110,6 +117,7 @@ const Navbar = () => {
                         </select>
                     </div>
                     <button onClick={reservationInfoSubmit} > SELECT ROOM </button>
+                    <button onClick={test}>test</button>
                 </ModalContent>
             </ModalContainer>
             <section id="mainNav">
