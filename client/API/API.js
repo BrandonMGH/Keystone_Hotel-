@@ -9,11 +9,10 @@ export default {
             newsletterObject: inputValue
         })
     },
-    reservationConfirmation: (inputValue, firstName, lastName) => {
+    reservationConfirmation: (roomInfoObject, reservationInfoObject) => {
         return axios.post("http://localhost:3000/api/reservations/confirmation", {
-            resConfirmObject: inputValue,
-            firstName: firstName, 
-            lastName: lastName
+            roomConfirmObject: roomInfoObject,
+            resConfirmObject: reservationInfoObject, 
         })
     },
     reservationInfo: (inputValue) => {

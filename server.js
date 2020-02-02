@@ -15,7 +15,7 @@ const transport = {
 const transporter = nodemailer.createTransport(transport)
 
 let reservationObject = {}
-let reservationConfirmationObect = {}
+let roomConfirmationObject = {}
 let newsletterObject = {}
 
 app.use(cors())
@@ -43,38 +43,53 @@ app.get('/api/newsletter', (req,res) =>{
 })
 
 app.get('/api/reservations/confirmation', (req,res) =>{
-  res.send(reservationConfirmationObect)
+  res.send(roomConfirmationObject)
 })
 
 // ** POST ROUTES ** // 
 
 app.post('/api/newsletter', (req, res) => {
   newsletterObject = req.body.newsletterObject
-  res.send(newsletterObject)
   let firstName = newsletterObject.firstName
   let lastName = newsletterObject.lastName
   let email = newsletterObject.email
-  const mail = {
+  let newsletterEmail = {
       from: process.env.EMAIL,
       to: email,  //Change to email address that you want to receive messages on
-      subject: 'New Message from Contact Form',
+      subject: 'Keystone Newsletter',
       text: `Dear ${firstName} ${lastName}.  Thank you for signing up for our Keystone Hotel Newsletter!  Unfortunately, this is a fictious newsletter service, so we won't actually be sending you monthly newsletters, but thank you for signing up all the same!`
     }
-  transporter.sendMail(mail, (err, data) =>{
+  transporter.sendMail(newsletterEmail, (err, data) =>{
       if(err){
           console.log(err)
       }else{
-          res.send(newsletterObject)
+          console.log(data)
       }
   })
 
 })
 
 app.post('/api/reservations/confirmation', (req, res) =>{
-  reservationConfirmationObect = req.body.resConfirmObject
-  let firstName = req.body.firstName
-  let lastName = req.body.lastName
-  console.log(firstName, lastName)
+  roomConfirmationObject = req.body.roomConfirmObject
+  let reservationConfirmObject = req.body.resConfirmObject
+  let firstName = reservationConfirmObject.modalFirstName
+  let lastName = reservationConfirmObject.modalLastName
+  let email = reservationConfirmObject.modalEmail
+  let checkInDate = reservationConfirmObject.modalCheckin
+  let checkOutDate = reservationConfirmObject.modalCheckOut
+  let reservationInfo = {
+    from: process.env.EMAIL,
+    to: email,  //Change to email address that you want to receive messages on
+    subject: 'Keystone Reservation',
+    text: `Dear ${firstName} ${lastName}.  Thank you for booking your stay with us! You're all set!  You are due to check-in on ${checkInDate} and check-out on ${checkOutDate}.  Should you need to make a change to your reservation, please call us at 555-123-4567 or email us at keystonehotelcompany@gmail.com`
+  }
+transporter.sendMail(reservationInfo, (err, data) =>{
+    if(err){
+        console.log(err)
+    }else{
+        console.log(data)
+    }
+})
 })
 
 
