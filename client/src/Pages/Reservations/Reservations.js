@@ -7,6 +7,7 @@ import './Reservations.css'
 //** COMPONENTS **//
 
 import RoomViewData from '../../Components/RoomViewTypes/RoomViewData/RoomViewData.js'
+import { set } from 'mongoose';
 
 
 const ModalContainer = styled.div`
@@ -53,7 +54,9 @@ const Reservations = () => {
   const [priceNumber, setPriceNumber] = useState("")
   const [modalState, setModalState] = useState(false)
   const [modalRoom, setModalRoom] = useState(RoomViewData.LakeView[0])
-
+  const [modalFirstName, setModalFirstName] = useState("")
+  const [modalLastName, setModalLastName] = useState("")
+  
   useEffect(() => {
     API.getRoomInfo()
       .then((response) => {
@@ -63,17 +66,23 @@ const Reservations = () => {
         setPetNumber(parseInt(response.data.petConfirmation))
         setPriceNumber(parseInt(response.data.priceRange))
       })
-  })
+  });
 
   const axiosCall = () => {
-    API.reservationConfirmation(modalRoom)
-        .then((response) => {
-            console.log(response)
-        })
-        .catch((error) => {
-            console.log(error)
-        })
-}
+    if(modalFirstName === "" || modalLastName === ""){
+      alert("First and Last name fields cannot be empty")
+    } else {
+      alert("Your Room has been booked!")
+        modalStateChange(); 
+      API.reservationConfirmation(modalRoom, modalFirstName, modalLastName)
+      .then((response) => {
+          console.log(response)
+      })
+      .catch((error) => {
+          console.log(error)
+      })
+    }
+};
 
   let modalStateChange = () => {
     if (modalState === true) {
@@ -81,7 +90,7 @@ const Reservations = () => {
     } else {
       setModalState(true)
     }
-  }
+  };
 
   let roomSelection = () => {
     let roomId = parseInt(event.target.value)
@@ -98,7 +107,7 @@ const Reservations = () => {
     } else {
       setModalState(true)
     }
-  }
+  };
   return (
     <div>
       <ModalContainer showState={modalState === true ? "grid" : "None"}>
@@ -108,6 +117,8 @@ const Reservations = () => {
           <img style={{width: "30%", height: "45%" }} src={modalRoom.RoomImage} />
           <p>View Type: {modalRoom.RoomInfo.view}</p>
           <p>Nightly Rate: {modalRoom.RoomInfo.price}</p>
+          <input value={modalFirstName} onChange={()=> setModalFirstName(event.target.value)} />
+          <input value={modalLastName} onChange={()=> setModalLastName(event.target.value)} />
           <button onClick={axiosCall}>CLICK ME</button>
         </ModalContent>
       </ModalContainer>
