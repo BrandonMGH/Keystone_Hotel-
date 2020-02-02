@@ -7,7 +7,7 @@ import './Reservations.css'
 //** COMPONENTS **//
 
 import RoomViewData from '../../Components/RoomViewTypes/RoomViewData/RoomViewData.js'
-import { set } from 'mongoose';
+
 
 
 const ModalContainer = styled.div`
@@ -52,10 +52,13 @@ const Reservations = () => {
   const [viewNumber, setViewNumber] = useState("")
   const [petNumber, setPetNumber] = useState("")
   const [priceNumber, setPriceNumber] = useState("")
+  const [checkInDate, setCheckInDate] = useState("")
+  const [checkOutDate, setCheckOutDate] = useState("")
   const [modalState, setModalState] = useState(false)
   const [modalRoom, setModalRoom] = useState(RoomViewData.LakeView[0])
   const [modalFirstName, setModalFirstName] = useState("")
   const [modalLastName, setModalLastName] = useState("")
+  const [modalEmail, setModalEmail] = useState("")
   
   useEffect(() => {
     API.getRoomInfo()
@@ -65,16 +68,25 @@ const Reservations = () => {
         setViewNumber(parseInt(response.data.viewSelection))
         setPetNumber(parseInt(response.data.petConfirmation))
         setPriceNumber(parseInt(response.data.priceRange))
+        setCheckInDate(response.data.checkIn)
+        setCheckOutDate(response.data.checkOut)
       })
   });
 
   const axiosCall = () => {
+    let modalReservationInfo ={
+      modalFirstName: modalFirstName,
+      modalLastName: modalLastName,
+      modalEmail: modalEmail,
+      modalCheckin: checkInDate,
+      modalCheckOut: checkOutDate,
+    }
     if(modalFirstName === "" || modalLastName === ""){
       alert("First and Last name fields cannot be empty")
     } else {
       alert("Your Room has been booked!")
-        modalStateChange(); 
-      API.reservationConfirmation(modalRoom, modalFirstName, modalLastName)
+      modalStateChange(); 
+      API.reservationConfirmation(modalRoom, modalReservationInfo) 
       .then((response) => {
           console.log(response)
       })
@@ -119,6 +131,7 @@ const Reservations = () => {
           <p>Nightly Rate: {modalRoom.RoomInfo.price}</p>
           <input value={modalFirstName} onChange={()=> setModalFirstName(event.target.value)} />
           <input value={modalLastName} onChange={()=> setModalLastName(event.target.value)} />
+          <input value={modalEmail} onChange={()=> setModalEmail(event.target.value)} />
           <button onClick={axiosCall}>CLICK ME</button>
         </ModalContent>
       </ModalContainer>
