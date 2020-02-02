@@ -6,11 +6,19 @@
    background-size: cover;
 }
 
-.sectionTextFormatting {
+
+
+#MainTitleSectionText {
     position: relative;
-    top: 50%; 
+    top: 40%; 
+    left: 25%; 
+    width: 50%; 
+    padding: 1%; 
+    border-radius: 10px;
     color: white; 
-    text-align: center;
+    text-align: center; 
+    font-size: 35px; 
+    background-color:rgba(0,0,0,.6)
 }
 
 /* MAIN SECTION DIVIDE ONE */ 
@@ -49,6 +57,20 @@ height: 750px
     background-image: url('/rockyMountainOne.1ee55fba.jpeg');
     background-size: cover;
 }
+
+#mainSectionDivideTwoText {
+    position: relative;
+    top: 40%; 
+    left: 25%; 
+    width: 50%; 
+    padding: 1%; 
+    border-radius: 10px;
+    color: white; 
+    text-align: center; 
+    font-size: 20px; 
+    background-color:rgba(0,0,0,.6)
+}
+
 
 /* MAIN SECTION ROOM DESCRIPTION */ 
 
@@ -154,7 +176,12 @@ padding-top: 10%;
 
 
 @media (max-width: 900px){
-    /**Main Section Divide One **/
+    /**MAIN TITLE SECTION **/
+
+    #MainTitleSectionText {
+   font-size: 25px; 
+    }
+    /**MAIN SECTION DIVIDE ONE **/
     #mainSectionDivideOne {
         height: 100%
         }
@@ -173,7 +200,7 @@ padding-top: 10%;
         height: 100%;
         width: 100%; 
     }
-    /** Main Section Room Description **/
+    /**MAIN SECTION ROOM DESCRIPTION**/
     #mainSectionRoomDescription{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -251,7 +278,7 @@ padding-top: 10%;
     }
     
 }
-/* Room Section One */
+/* ROOM SECTION ONE */
 
 #roomsSectionOne{
     background-image: url('/HotelInteriorThree.411391bd.jpeg');
@@ -259,14 +286,20 @@ padding-top: 10%;
     background-size: cover;
  }
 
- #roomsSectionOne h1 {
+ #roomSectionOneTest {
     position: relative;
-    top: 50%; 
+    top: 40%; 
+    left: 25%;
+    padding: 1%;
+    width: 50%; 
+    border-radius: 10px;
+    background-color: rgba(0,0,0, .6);
     color: white; 
     text-align: center;
+    font-size: 35px; 
  }
 
-/* Room Section Two */ 
+/* ROOM SECTION TWO */ 
 
 #roomSectionTwoQuote {
     position: relative; 
@@ -295,6 +328,17 @@ padding-top: 10%;
     background: rgba(255, 253, 208, 0.4);
     font-size: 20px;  
 }
+
+#roomSectionThree {
+    background: rgba(150, 75, 0, 0.1);
+}
+
+@media (max-width: 900px){
+    /* ROOM SECTION ONE */ 
+    #roomSectionOneTest {
+        font-size: 25px; 
+     }
+}
 .roomViewContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -304,7 +348,7 @@ padding-top: 10%;
     padding-bottom: 2%; 
     justify-items: center;
     align-items: center;
-    background: rgba(150, 75, 0, 0.1);
+
 }
 
 .roomViewRoomImage, .roomViewViewImage {
@@ -344,21 +388,41 @@ padding-top: 10%;
 .roomViewViewImage{
 
 }
+#reservationSectionOne{
+    background-image: url('/MountainViewRoomThree.3ba4067d.jpg');
+    height: 750px; 
+    background-size: cover;
+}
+
+
+#reservationSectionText {
+    position: relative; 
+    top: 40%;
+    left: 25%;
+    width: 50%;
+    padding: 1%; 
+    background-color: rgba(0,0,0, .6);
+    text-align: center;
+    font-size: 35px;
+    color: white;    
+}
+
+
 .roomContainer {
     display: grid; 
     grid-template-columns: 1fr .75fr .75fr;
-    grid-template-rows: 1fr 1fr 2fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr 3fr;
     grid-template-areas: 
     "blank blank blank"
     "roomImage roomTitle roomTitle"
     "roomImage roomSummary roomSummary"
     "roomImage roomAmenities roomDescription";
+    background-color: white; 
  
 }
 
 .roomImageContainer {
     grid-area: roomImage;
-    background-color: red; 
     display: grid; 
     justify-items: center;
     align-items: center;
@@ -367,27 +431,71 @@ padding-top: 10%;
 
 .roomImage {
     width: 80%;
-    height: 80%; 
+    height: 60%; 
 }
 
-.roomTitle {
+.roomButton{
+    width: 80%; 
+    background-color: white; 
+    color: black; 
+    padding: 3%; 
+    border: solid black 2px; 
+}
+
+.roomButton:hover {
+    background-color: black;
+    color: white; 
+    border: solid white 2px; 
+    cursor: pointer;
+}
+
+.roomTitleContainer {
     grid-area: roomTitle;
-    background-color: purple; 
+    text-align: center;
+    background-color: rgba(125,125,125, .1); 
+    margin: 1%; 
 }
 
-.roomSummary {
+.roomTitle{
+    font-size: 25px; 
+}
+
+.roomSummaryContainer {
     grid-area: roomSummary; 
-    background-color: green; 
+    background-color: rgba(125,125,125, .1); 
+    margin: 1%; 
 }
 
-.roomAmenities {
+.roomSummary{
+    padding-left: 2%;
+    padding-right: 2%;  
+    text-align: center; 
+}
+
+.roomAmenitiesContainer {
     grid-area: roomAmenities;
-    background-color: yellow; 
+    background-color: rgba(125,125,125, .1); 
+    margin: 1%; 
 }
 
-.roomDescription {
+.roomAmenities{
+    padding:5%; 
+}
+
+.roomDescriptionContainer {
     grid-area: roomDescription;
-    background-color: blue;
+    background-color: rgba(125,125,125, .1); 
+    margin: 1%; 
+}
+
+.roomDescription{
+    padding:5%; 
+}
+
+@media (max-width: 900px){
+    #reservationSectionText {
+      font-size: 25px;    
+    }
 }
 #mainNav {
     display: grid; 
@@ -456,7 +564,7 @@ border: 2px solid black;
     color: white; 
 }
 
-#test {
+#footerLogoContainer {
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;

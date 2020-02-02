@@ -49690,7 +49690,7 @@ var Main = function Main() {
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("section", {
     id: "mainTitleSection"
   }, _react.default.createElement("section", {
-    className: "sectionTextFormatting"
+    id: "MainTitleSectionText"
   }, _react.default.createElement("h1", null, "-KEYSTONE HOTEL-"))), _react.default.createElement("section", {
     id: "mainSectionDivideOne"
   }, _react.default.createElement("section", {
@@ -49703,7 +49703,7 @@ var Main = function Main() {
   }))), _react.default.createElement("section", {
     id: "mainSectionDivideTwo"
   }, _react.default.createElement("section", {
-    className: "sectionTextFormatting"
+    id: "mainSectionDivideTwoText"
   }, _react.default.createElement("h1", null, "\u201CA mind that is stretched by a new experience can never go back to its old dimensions.\u201D - Oliver Wendell Holmes"))), _react.default.createElement("section", {
     id: "mainSectionRoomDescription"
   }, _react.default.createElement("section", {
@@ -50232,7 +50232,9 @@ var Rooms = function Rooms() {
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("section", {
     id: "roomsSectionOne"
-  }, _react.default.createElement("h1", null, "ROOMS")), _react.default.createElement("section", {
+  }, _react.default.createElement("section", {
+    id: "roomSectionOneTest"
+  }, _react.default.createElement("h1", null, "ROOMS"))), _react.default.createElement("section", {
     id: "roomsSectionTwo"
   }, _react.default.createElement("section", {
     id: "roomSectionTwoQuote"
@@ -55182,7 +55184,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Pages/Reservations/Reservations.js":[function(require,module,exports) {
+},{"./..\\..\\Images\\MountainViewRoomThree.jpg":[["MountainViewRoomThree.3ba4067d.jpg","src/Images/MountainViewRoomThree.jpg"],"src/Images/MountainViewRoomThree.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Pages/Reservations/Reservations.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55235,7 +55237,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\nposition: relative; \nbackground-color: red; \nheight: 50%; \ntop: 25%\nanimation: 1s ", "\n"]);
+  var data = _taggedTemplateLiteral(["\nposition: relative; \nbackground-color: white; \nheight: 50%; \nwidth: 50%; \ntop: 25%\nanimation: 1s ", "\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -55255,7 +55257,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\ndisplay: ", ";\nposition: fixed; \nz-index: 1;\njustify-content: center; \nbackground-color: rgba(0,0,0,0.4);\nwidth: 100%;\nheight: 100%; \ntop: 0%; \n"]);
+  var data = _taggedTemplateLiteral(["\ndisplay: ", ";\nposition: fixed; \nz-index: 1;\njustify-items: center; \nbackground-color: rgba(0,0,0,0.4);\nwidth: 100%;\nheight: 100%; \ntop: 0%; \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -55389,14 +55391,10 @@ var Reservations = function Reservations() {
       setModalRoom(_RoomViewData.default.LakeView[1]);
     } else if (roomId === 3) setModalRoom(_RoomViewData.default.LakeView[2]);
 
-    if (modalState === true) {
-      setModalState(false);
-    } else {
-      setModalState(true);
-    }
+    modalStateChange();
   };
 
-  return _react.default.createElement("div", null, _react.default.createElement(ModalContainer, {
+  return _react.default.createElement("section", null, _react.default.createElement(ModalContainer, {
     showState: modalState === true ? "grid" : "None"
   }, _react.default.createElement(ModalContent, null, _react.default.createElement("span", {
     onClick: modalStateChange
@@ -55423,29 +55421,42 @@ var Reservations = function Reservations() {
     }
   }), _react.default.createElement("button", {
     onClick: axiosCall
-  }, "CLICK ME"))), _react.default.createElement("h1", null, "Reservations"), _react.default.createElement("div", null, _RoomViewData.default.LakeView.map(function (objectKey) {
+  }, "CLICK ME"))), _react.default.createElement("section", {
+    id: "reservationSectionOne"
+  }, _react.default.createElement("section", {
+    id: "reservationSectionText"
+  }, _react.default.createElement("h1", null, "RESERVATIONS"))), _react.default.createElement("section", null, _RoomViewData.default.LakeView.map(function (properties) {
     return _react.default.createElement(RoomShowState, {
-      key: objectKey.id,
-      showState: objectKey.RoomInfo.guestCount < guestNumber || objectKey.RoomInfo.viewChoice !== viewNumber || objectKey.RoomInfo.petNumber !== petNumber || objectKey.RoomInfo.price > priceNumber ? false : true
+      key: properties.id,
+      showState: properties.RoomInfo.guestCount < guestNumber || properties.RoomInfo.viewChoice !== viewNumber || properties.RoomInfo.petNumber !== petNumber || properties.RoomInfo.price > priceNumber ? false : true
     }, _react.default.createElement("section", {
       className: "roomContainer"
     }, _react.default.createElement("section", {
       className: "roomImageContainer"
     }, _react.default.createElement("img", {
       className: "roomImage",
-      src: objectKey.RoomImage
+      src: properties.RoomImage
     }), _react.default.createElement("button", {
-      value: objectKey.reservationId,
+      className: "roomButton",
+      value: properties.reservationId,
       onClick: roomSelection
     }, "RESERVE ROOM")), _react.default.createElement("section", {
+      className: "roomTitleContainer"
+    }, _react.default.createElement("p", {
       className: "roomTitle"
-    }, _react.default.createElement("h1", null, "Room Title")), _react.default.createElement("section", {
+    }, properties.RoomTitle), _react.default.createElement("p", null, properties.RoomInfo.view)), _react.default.createElement("section", {
+      className: "roomSummaryContainer"
+    }, _react.default.createElement("p", {
       className: "roomSummary"
-    }, _react.default.createElement("p", null, "Room Summary")), _react.default.createElement("section", {
+    }, properties.RoomDescription)), _react.default.createElement("section", {
+      className: "roomAmenitiesContainer"
+    }, _react.default.createElement("section", {
       className: "roomAmenities"
-    }, _react.default.createElement("p", null, "Room Amenities")), _react.default.createElement("section", {
+    }, _react.default.createElement("h3", null, "Room Amenities"), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.BedType), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Internet), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Television), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Bathroom), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.CoffeeMaker), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Fridge), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Robes))), _react.default.createElement("section", {
+      className: "roomDescriptionContainer"
+    }, _react.default.createElement("section", {
       className: "roomDescription"
-    }, _react.default.createElement("p", null, "Room Description"))));
+    }, _react.default.createElement("h3", null, "Room Description"), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Size), _react.default.createElement("p", null, properties.RoomInfo.bedcount), _react.default.createElement("p", null, properties.RoomInfo.view), _react.default.createElement("p", null, properties.RoomInfo.pet), _react.default.createElement("p", null, properties.RoomInfo.price)))));
   }), _react.default.createElement(DefaultShowState, null, "No Rooms our currently available that match your search criteria")));
 };
 
@@ -73451,7 +73462,7 @@ var Footer = function Footer() {
   return _react.default.createElement("div", null, _react.default.createElement("section", {
     id: "footerContainer"
   }, _react.default.createElement("section", {
-    id: "test"
+    id: "footerLogoContainer"
   }, _react.default.createElement("p", {
     className: "footerKeyStoneLogo"
   }, "____"), _react.default.createElement("img", {
@@ -73595,7 +73606,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55994" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56645" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

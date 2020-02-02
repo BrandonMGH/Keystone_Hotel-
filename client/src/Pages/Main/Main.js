@@ -18,7 +18,7 @@ const Main = () => {
     return (
         <>
             <section id="mainTitleSection">
-                <section className="sectionTextFormatting">
+                <section id="MainTitleSectionText">
                     <h1>-KEYSTONE HOTEL-</h1>
                 </section>
             </section>
@@ -32,7 +32,7 @@ const Main = () => {
                 </section>
             </section>
             <section id="mainSectionDivideTwo">
-                <section className="sectionTextFormatting">
+                <section id="mainSectionDivideTwoText">
                     <h1>“A mind that is stretched by a new experience can never go back to its old dimensions.” - Oliver Wendell Holmes</h1>
                 </section>
             </section>

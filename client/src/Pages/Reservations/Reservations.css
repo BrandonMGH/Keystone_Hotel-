@@ -1,18 +1,38 @@
+#reservationSectionOne{
+    background-image: url('../../Images/MountainViewRoomThree.jpg');
+    height: 750px; 
+    background-size: cover;
+}
+
+
+#reservationSectionText {
+    position: relative; 
+    top: 40%;
+    left: 25%;
+    width: 50%;
+    padding: 1%; 
+    background-color: rgba(0,0,0, .6);
+    text-align: center;
+    font-size: 35px;
+    color: white;    
+}
+
+
 .roomContainer {
     display: grid; 
     grid-template-columns: 1fr .75fr .75fr;
-    grid-template-rows: 1fr 1fr 2fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr 3fr;
     grid-template-areas: 
     "blank blank blank"
     "roomImage roomTitle roomTitle"
     "roomImage roomSummary roomSummary"
     "roomImage roomAmenities roomDescription";
+    background-color: white; 
  
 }
 
 .roomImageContainer {
     grid-area: roomImage;
-    background-color: red; 
     display: grid; 
     justify-items: center;
     align-items: center;
@@ -21,25 +41,69 @@
 
 .roomImage {
     width: 80%;
-    height: 80%; 
+    height: 60%; 
 }
 
-.roomTitle {
+.roomButton{
+    width: 80%; 
+    background-color: white; 
+    color: black; 
+    padding: 3%; 
+    border: solid black 2px; 
+}
+
+.roomButton:hover {
+    background-color: black;
+    color: white; 
+    border: solid white 2px; 
+    cursor: pointer;
+}
+
+.roomTitleContainer {
     grid-area: roomTitle;
-    background-color: purple; 
+    text-align: center;
+    background-color: rgba(125,125,125, .1); 
+    margin: 1%; 
 }
 
-.roomSummary {
+.roomTitle{
+    font-size: 25px; 
+}
+
+.roomSummaryContainer {
     grid-area: roomSummary; 
-    background-color: green; 
+    background-color: rgba(125,125,125, .1); 
+    margin: 1%; 
 }
 
-.roomAmenities {
+.roomSummary{
+    padding-left: 2%;
+    padding-right: 2%;  
+    text-align: center; 
+}
+
+.roomAmenitiesContainer {
     grid-area: roomAmenities;
-    background-color: yellow; 
+    background-color: rgba(125,125,125, .1); 
+    margin: 1%; 
 }
 
-.roomDescription {
+.roomAmenities{
+    padding:5%; 
+}
+
+.roomDescriptionContainer {
     grid-area: roomDescription;
-    background-color: blue;
+    background-color: rgba(125,125,125, .1); 
+    margin: 1%; 
+}
+
+.roomDescription{
+    padding:5%; 
+}
+
+@media (max-width: 900px){
+    #reservationSectionText {
+      font-size: 25px;    
+    }
 }
