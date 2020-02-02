@@ -81,7 +81,7 @@ app.post('/api/reservations/confirmation', (req, res) =>{
     from: process.env.EMAIL,
     to: email,  //Change to email address that you want to receive messages on
     subject: 'Keystone Reservation',
-    text: `Dear ${firstName} ${lastName}.  Thank you for booking your stay with us! You're all set!  You are due to check-in on ${checkInDate} and check-out on ${checkOutDate}.  Should you need to make a change to your reservation, please call us at 555-123-4567 or email us at keystonehotelcompany@gmail.com`
+    text: `Dear ${firstName} ${lastName}.  Thank you for booking your stay with us! You're all set!  You are due to check-in on ${checkInDate} and check-out on ${checkOutDate}.  Should you need to make a change to your reservation, please call us at 555-123-4567 or email us at keystonehotelcompany@gmail.com.  Thank you once again for booking your reservation with the Keystone Hotel and we look forward to your stay with us`
   }
 transporter.sendMail(reservationInfo, (err, data) =>{
     if(err){

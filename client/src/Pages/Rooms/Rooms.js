@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import './Rooms.css'
 
 //** COMPONENTS **//
@@ -10,11 +10,13 @@ import PadlockIcon from '../../Images/PadlockIcon.png'
 
 
 const Rooms = () => {
-const [viewType, setViewType] = useState(<LakeViewRoom />)
+    const [viewType, setViewType] = useState(<LakeViewRoom />)
     return (
         <>
             <section id="roomsSectionOne">
-                <h1>ROOMS</h1>
+                <section id="roomSectionOneTest">
+                    <h1>ROOMS</h1>
+                </section>
             </section>
             <section id="roomsSectionTwo">
                 <section id="roomSectionTwoQuote">

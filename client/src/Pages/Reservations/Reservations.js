@@ -14,7 +14,7 @@ const ModalContainer = styled.div`
 display: ${props => props.showState};
 position: fixed; 
 z-index: 1;
-justify-content: center; 
+justify-items: center; 
 background-color: rgba(0,0,0,0.4);
 width: 100%;
 height: 100%; 
@@ -28,8 +28,9 @@ to {top:25%; opacity:1}
 
 const ModalContent = styled.div`
 position: relative; 
-background-color: red; 
+background-color: white; 
 height: 50%; 
+width: 50%; 
 top: 25%
 animation: 1s ${panDown}
 `
@@ -59,7 +60,7 @@ const Reservations = () => {
   const [modalFirstName, setModalFirstName] = useState("")
   const [modalLastName, setModalLastName] = useState("")
   const [modalEmail, setModalEmail] = useState("")
-  
+
   useEffect(() => {
     API.getRoomInfo()
       .then((response) => {
@@ -74,27 +75,27 @@ const Reservations = () => {
   });
 
   const axiosCall = () => {
-    let modalReservationInfo ={
+    let modalReservationInfo = {
       modalFirstName: modalFirstName,
       modalLastName: modalLastName,
       modalEmail: modalEmail,
       modalCheckin: checkInDate,
       modalCheckOut: checkOutDate,
     }
-    if(modalFirstName === "" || modalLastName === ""){
+    if (modalFirstName === "" || modalLastName === "") {
       alert("First and Last name fields cannot be empty")
     } else {
       alert("Your Room has been booked!")
-      modalStateChange(); 
-      API.reservationConfirmation(modalRoom, modalReservationInfo) 
-      .then((response) => {
+      modalStateChange();
+      API.reservationConfirmation(modalRoom, modalReservationInfo)
+        .then((response) => {
           console.log(response)
-      })
-      .catch((error) => {
+        })
+        .catch((error) => {
           console.log(error)
-      })
+        })
     }
-};
+  };
 
   let modalStateChange = () => {
     if (modalState === true) {
@@ -114,55 +115,73 @@ const Reservations = () => {
     } else if (roomId === 3)
       setModalRoom(RoomViewData.LakeView[2])
 
-    if (modalState === true) {
-      setModalState(false)
-    } else {
-      setModalState(true)
-    }
+    modalStateChange();
   };
   return (
-    <div>
+    <section>
       <ModalContainer showState={modalState === true ? "grid" : "None"}>
         <ModalContent>
           <span onClick={modalStateChange}>&times;</span>
           <h1>{modalRoom.RoomTitle}</h1>
-          <img style={{width: "30%", height: "45%" }} src={modalRoom.RoomImage} />
+          <img style={{ width: "30%", height: "45%" }} src={modalRoom.RoomImage} />
           <p>View Type: {modalRoom.RoomInfo.view}</p>
           <p>Nightly Rate: {modalRoom.RoomInfo.price}</p>
-          <input value={modalFirstName} onChange={()=> setModalFirstName(event.target.value)} />
-          <input value={modalLastName} onChange={()=> setModalLastName(event.target.value)} />
-          <input value={modalEmail} onChange={()=> setModalEmail(event.target.value)} />
+          <input value={modalFirstName} onChange={() => setModalFirstName(event.target.value)} />
+          <input value={modalLastName} onChange={() => setModalLastName(event.target.value)} />
+          <input value={modalEmail} onChange={() => setModalEmail(event.target.value)} />
           <button onClick={axiosCall}>CLICK ME</button>
         </ModalContent>
       </ModalContainer>
-      <h1>Reservations</h1>
-      <div>
-        {RoomViewData.LakeView.map(objectKey => (
-          <RoomShowState key={objectKey.id} showState={objectKey.RoomInfo.guestCount < guestNumber || objectKey.RoomInfo.viewChoice !== viewNumber || objectKey.RoomInfo.petNumber !== petNumber || objectKey.RoomInfo.price > priceNumber ? false : true}>
+      <section id="reservationSectionOne">
+        <section id="reservationSectionText">
+          <h1>
+            RESERVATIONS
+          </h1>
+        </section>
+      </section>
+      <section>
+        {RoomViewData.LakeView.map(properties => (
+          <RoomShowState key={properties.id} showState={properties.RoomInfo.guestCount < guestNumber || properties.RoomInfo.viewChoice !== viewNumber || properties.RoomInfo.petNumber !== petNumber || properties.RoomInfo.price > priceNumber ? false : true}>
             <section className="roomContainer">
               <section className="roomImageContainer">
-                <img className="roomImage" src={objectKey.RoomImage} />
-                <button value={objectKey.reservationId} onClick={roomSelection}>RESERVE ROOM</button>
+                <img className="roomImage" src={properties.RoomImage} />
+                <button className="roomButton" value={properties.reservationId} onClick={roomSelection}>RESERVE ROOM</button>
               </section>
-              <section className="roomTitle">
-                <h1>Room Title</h1>
+              <section className="roomTitleContainer">
+                <p className="roomTitle">{properties.RoomTitle}</p>
+                <p>{properties.RoomInfo.view}</p>
               </section>
-              <section className="roomSummary">
-                <p>Room Summary</p>
+              <section className="roomSummaryContainer">
+                <p className="roomSummary">{properties.RoomDescription}</p>
               </section>
+              <section className="roomAmenitiesContainer">
               <section className="roomAmenities">
-                <p>Room Amenities</p>
+                <h3>Room Amenities</h3>
+                <p>{properties.RoomInfoAndAmenities.BedType}</p>
+                <p>{properties.RoomInfoAndAmenities.Internet}</p>
+                <p>{properties.RoomInfoAndAmenities.Television}</p>
+                <p>{properties.RoomInfoAndAmenities.Bathroom}</p>
+                <p>{properties.RoomInfoAndAmenities.CoffeeMaker}</p>
+                <p>{properties.RoomInfoAndAmenities.Fridge}</p>
+                <p>{properties.RoomInfoAndAmenities.Robes}</p>
+                </section>
               </section>
-              <section className="roomDescription">
-                <p>Room Description</p>
+              <section className="roomDescriptionContainer">
+                <section className="roomDescription">
+                <h3>Room Description</h3>
+                <p>{properties.RoomInfoAndAmenities.Size}</p>
+                <p>{properties.RoomInfo.bedcount}</p>
+                <p>{properties.RoomInfo.view}</p>
+                <p>{properties.RoomInfo.pet}</p>
+                <p>{properties.RoomInfo.price}</p>
+                </section>
               </section>
-  
             </section>
           </RoomShowState>
         ))}
         <DefaultShowState>No Rooms our currently available that match your search criteria</DefaultShowState>
-      </div>
-    </div>
+      </section>
+    </section>
   )
 }
 
