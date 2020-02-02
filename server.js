@@ -72,7 +72,9 @@ app.post('/api/newsletter', (req, res) => {
 
 app.post('/api/reservations/confirmation', (req, res) =>{
   reservationConfirmationObect = req.body.resConfirmObject
-  res.send(reservationConfirmationObect)
+  let firstName = req.body.firstName
+  let lastName = req.body.lastName
+  console.log(firstName, lastName)
 })
 
 
