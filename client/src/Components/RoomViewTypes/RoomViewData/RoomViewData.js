@@ -16,7 +16,7 @@ const RoomViewData = {
         {
             id: 1,
             reservationId: 1,
-            RoomTitle:"Standard Room",
+            RoomTitle:"STANDARD ROOM",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: LakeViewRoomOne,
             ViewImage: LakeImageOne,
@@ -43,7 +43,7 @@ const RoomViewData = {
         {
             id: 2,
             reservationId: 2,
-            RoomTitle:"Junior Suite",
+            RoomTitle:"JUNIOR SUITE",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: LakeViewRoomTwo,
             ViewImage: LakeImageOne,
@@ -70,7 +70,7 @@ const RoomViewData = {
         {
             id: 3,
             reservationId: 3,
-            RoomTitle:"Deluxe Suite",
+            RoomTitle:"DELUXE SUITE",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: LakeViewRoomThree,
             ViewImage: LakeImageOne,

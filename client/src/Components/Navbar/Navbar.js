@@ -120,7 +120,7 @@ const Navbar = () => {
                    <a href="/"><img id="KeystoneLogo" src={KeystoneLogo} /></a> 
                 </section>
                 <section id="navTitle">
-                    <h1>-Keystone Hotel-</h1>
+                    <h1>-KEYSTONE HOTEL-</h1>
                 </section>
                 <section id="navLinks">
                     <p>|</p>    

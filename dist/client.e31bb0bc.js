@@ -49817,7 +49817,7 @@ var RoomViewData = {
   LakeView: [{
     id: 1,
     reservationId: 1,
-    RoomTitle: "Standard Room",
+    RoomTitle: "STANDARD ROOM",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
     RoomImage: _LakeViewRoomOne.default,
     ViewImage: _LakeImageOne.default,
@@ -49843,7 +49843,7 @@ var RoomViewData = {
   }, {
     id: 2,
     reservationId: 2,
-    RoomTitle: "Junior Suite",
+    RoomTitle: "JUNIOR SUITE",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
     RoomImage: _LakeViewRoomTwo.default,
     ViewImage: _LakeImageOne.default,
@@ -49869,7 +49869,7 @@ var RoomViewData = {
   }, {
     id: 3,
     reservationId: 3,
-    RoomTitle: "Deluxe Suite",
+    RoomTitle: "DELUXE SUITE",
     RoomDescription: "Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
     RoomImage: _LakeViewRoomThree.default,
     ViewImage: _LakeImageOne.default,
@@ -55237,7 +55237,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\nposition: relative; \nbackground-color: white; \nheight: 50%; \nwidth: 50%; \ntop: 25%\nanimation: 1s ", "\n"]);
+  var data = _taggedTemplateLiteral(["\ndisplay: grid;\njustify-items: center; \nbackground-color: white; \nborder: solid 2px black;\nwidth: 50%; \nanimation: 1s ", "\n@media (max-width: 900px){\n  width: 90%; \n}\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -55362,7 +55362,7 @@ var Reservations = function Reservations() {
     if (modalFirstName === "" || modalLastName === "") {
       alert("First and Last name fields cannot be empty");
     } else {
-      alert("Your Room has been booked!");
+      alert("Your Room has been booked!  Check the email that you provided for your reservation details!");
       modalStateChange();
 
       _API.default.reservationConfirmation(modalRoom, modalReservationInfo).then(function (response) {
@@ -55396,32 +55396,68 @@ var Reservations = function Reservations() {
 
   return _react.default.createElement("section", null, _react.default.createElement(ModalContainer, {
     showState: modalState === true ? "grid" : "None"
-  }, _react.default.createElement(ModalContent, null, _react.default.createElement("span", {
-    onClick: modalStateChange
-  }, "\xD7"), _react.default.createElement("h1", null, modalRoom.RoomTitle), _react.default.createElement("img", {
+  }, _react.default.createElement(ModalContent, null, _react.default.createElement("section", {
     style: {
-      width: "30%",
-      height: "45%"
+      position: "relative",
+      right: "48%",
+      top: "1%"
+    }
+  }, _react.default.createElement("span", {
+    onClick: modalStateChange
+  }, "\xD7")), _react.default.createElement("h1", {
+    className: "modalContentTitleText"
+  }, modalRoom.RoomTitle), _react.default.createElement("img", {
+    style: {
+      width: "50%",
+      height: "35%"
     },
     src: modalRoom.RoomImage
-  }), _react.default.createElement("p", null, "View Type: ", modalRoom.RoomInfo.view), _react.default.createElement("p", null, "Nightly Rate: ", modalRoom.RoomInfo.price), _react.default.createElement("input", {
+  }), _react.default.createElement("hr", {
+    className: "modalContentLine"
+  }), _react.default.createElement("h3", {
+    className: "modalContentTitleText"
+  }, "ROOM INFO"), _react.default.createElement("p", {
+    className: "modalContentText"
+  }, "View Type: ", modalRoom.RoomInfo.view), _react.default.createElement("p", {
+    className: "modalContentText"
+  }, "Nightly Rate: ", modalRoom.RoomInfo.price), _react.default.createElement("p", {
+    className: "modalContentText"
+  }, "Maximum Occupancy: ", modalRoom.RoomInfo.guestCount), _react.default.createElement("p", {
+    className: "modalContentText"
+  }, "Check-In Date: ", checkInDate), _react.default.createElement("p", {
+    className: "modalContentText"
+  }, "Check-Out Date: ", checkOutDate), _react.default.createElement("hr", {
+    className: "modalContentLine"
+  }), _react.default.createElement("h3", {
+    className: "modalContentTitleText"
+  }, "ENTER RESERVATION INFO"), _react.default.createElement("input", {
+    className: "modalContentInput",
+    placeholder: "First Name",
     value: modalFirstName,
     onChange: function onChange() {
       return setModalFirstName(event.target.value);
     }
   }), _react.default.createElement("input", {
+    className: "modalContentInput",
+    placeholder: "Last Name",
     value: modalLastName,
     onChange: function onChange() {
       return setModalLastName(event.target.value);
     }
   }), _react.default.createElement("input", {
+    className: "modalContentInput",
+    placeholder: "Email",
     value: modalEmail,
     onChange: function onChange() {
       return setModalEmail(event.target.value);
     }
+  }), _react.default.createElement("hr", {
+    className: "modalContentLine"
   }), _react.default.createElement("button", {
+    className: "modalContentInput",
+    id: "modalContentButton",
     onClick: axiosCall
-  }, "CLICK ME"))), _react.default.createElement("section", {
+  }, "RESERVE ROOM"))), _react.default.createElement("section", {
     id: "reservationSectionOne"
   }, _react.default.createElement("section", {
     id: "reservationSectionText"
@@ -55691,7 +55727,7 @@ var Navbar = function Navbar() {
     src: _KeystoneLogo.default
   }))), _react.default.createElement("section", {
     id: "navTitle"
-  }, _react.default.createElement("h1", null, "-Keystone Hotel-")), _react.default.createElement("section", {
+  }, _react.default.createElement("h1", null, "-KEYSTONE HOTEL-")), _react.default.createElement("section", {
     id: "navLinks"
   }, _react.default.createElement("p", null, "|"), _react.default.createElement("p", {
     className: "navLink"
@@ -73606,7 +73642,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56645" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60527" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

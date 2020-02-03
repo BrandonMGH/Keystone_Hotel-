@@ -27,13 +27,17 @@ to {top:25%; opacity:1}
 `
 
 const ModalContent = styled.div`
-position: relative; 
+display: grid;
+justify-items: center; 
 background-color: white; 
-height: 50%; 
+border: solid 2px black;
 width: 50%; 
-top: 25%
 animation: 1s ${panDown}
+@media (max-width: 900px){
+  width: 90%; 
+}
 `
+
 
 
 const RoomShowState = styled.section`
@@ -85,7 +89,7 @@ const Reservations = () => {
     if (modalFirstName === "" || modalLastName === "") {
       alert("First and Last name fields cannot be empty")
     } else {
-      alert("Your Room has been booked!")
+      alert("Your Room has been booked!  Check the email that you provided for your reservation details!")
       modalStateChange();
       API.reservationConfirmation(modalRoom, modalReservationInfo)
         .then((response) => {
@@ -121,15 +125,25 @@ const Reservations = () => {
     <section>
       <ModalContainer showState={modalState === true ? "grid" : "None"}>
         <ModalContent>
-          <span onClick={modalStateChange}>&times;</span>
-          <h1>{modalRoom.RoomTitle}</h1>
-          <img style={{ width: "30%", height: "45%" }} src={modalRoom.RoomImage} />
-          <p>View Type: {modalRoom.RoomInfo.view}</p>
-          <p>Nightly Rate: {modalRoom.RoomInfo.price}</p>
-          <input value={modalFirstName} onChange={() => setModalFirstName(event.target.value)} />
-          <input value={modalLastName} onChange={() => setModalLastName(event.target.value)} />
-          <input value={modalEmail} onChange={() => setModalEmail(event.target.value)} />
-          <button onClick={axiosCall}>CLICK ME</button>
+          <section style={{ position: "relative", right: "48%", top: "1%" }}>
+            <span onClick={modalStateChange}>&times;</span>
+          </section>
+          <h1 className="modalContentTitleText">{modalRoom.RoomTitle}</h1>
+          <img style={{ width: "50%", height: "35%" }} src={modalRoom.RoomImage} />
+          <hr className="modalContentLine" />
+          <h3 className="modalContentTitleText">ROOM INFO</h3>
+          <p className="modalContentText">View Type: {modalRoom.RoomInfo.view}</p>
+          <p className="modalContentText">Nightly Rate: {modalRoom.RoomInfo.price}</p>
+          <p className="modalContentText">Maximum Occupancy: {modalRoom.RoomInfo.guestCount}</p>
+          <p className="modalContentText">Check-In Date: {checkInDate}</p>
+          <p className="modalContentText">Check-Out Date: {checkOutDate}</p>
+          <hr className="modalContentLine" />
+          <h3 className="modalContentTitleText">ENTER RESERVATION INFO</h3>
+          <input className="modalContentInput" placeholder="First Name" value={modalFirstName} onChange={() => setModalFirstName(event.target.value)} />
+          <input className="modalContentInput" placeholder="Last Name" value={modalLastName} onChange={() => setModalLastName(event.target.value)} />
+          <input className="modalContentInput" placeholder="Email" value={modalEmail} onChange={() => setModalEmail(event.target.value)} />
+          <hr className="modalContentLine" />
+          <button className="modalContentInput" id="modalContentButton" onClick={axiosCall}>RESERVE ROOM</button>
         </ModalContent>
       </ModalContainer>
       <section id="reservationSectionOne">
@@ -155,25 +169,25 @@ const Reservations = () => {
                 <p className="roomSummary">{properties.RoomDescription}</p>
               </section>
               <section className="roomAmenitiesContainer">
-              <section className="roomAmenities">
-                <h3>Room Amenities</h3>
-                <p>{properties.RoomInfoAndAmenities.BedType}</p>
-                <p>{properties.RoomInfoAndAmenities.Internet}</p>
-                <p>{properties.RoomInfoAndAmenities.Television}</p>
-                <p>{properties.RoomInfoAndAmenities.Bathroom}</p>
-                <p>{properties.RoomInfoAndAmenities.CoffeeMaker}</p>
-                <p>{properties.RoomInfoAndAmenities.Fridge}</p>
-                <p>{properties.RoomInfoAndAmenities.Robes}</p>
+                <section className="roomAmenities">
+                  <h3>Room Amenities</h3>
+                  <p>{properties.RoomInfoAndAmenities.BedType}</p>
+                  <p>{properties.RoomInfoAndAmenities.Internet}</p>
+                  <p>{properties.RoomInfoAndAmenities.Television}</p>
+                  <p>{properties.RoomInfoAndAmenities.Bathroom}</p>
+                  <p>{properties.RoomInfoAndAmenities.CoffeeMaker}</p>
+                  <p>{properties.RoomInfoAndAmenities.Fridge}</p>
+                  <p>{properties.RoomInfoAndAmenities.Robes}</p>
                 </section>
               </section>
               <section className="roomDescriptionContainer">
                 <section className="roomDescription">
-                <h3>Room Description</h3>
-                <p>{properties.RoomInfoAndAmenities.Size}</p>
-                <p>{properties.RoomInfo.bedcount}</p>
-                <p>{properties.RoomInfo.view}</p>
-                <p>{properties.RoomInfo.pet}</p>
-                <p>{properties.RoomInfo.price}</p>
+                  <h3>Room Description</h3>
+                  <p>{properties.RoomInfoAndAmenities.Size}</p>
+                  <p>{properties.RoomInfo.bedcount}</p>
+                  <p>{properties.RoomInfo.view}</p>
+                  <p>{properties.RoomInfo.pet}</p>
+                  <p>{properties.RoomInfo.price}</p>
                 </section>
               </section>
             </section>
