@@ -51,6 +51,8 @@
     color: white;    
 }
 
+/* ROOM SECTION */ 
+
 
 .roomContainer {
     display: grid; 
@@ -74,8 +76,8 @@
 }
 
 .roomImage {
-    width: 80%;
-    height: 60%; 
+    width: 90%;
+    height: 50%; 
 }
 
 .roomButton{
@@ -137,7 +139,21 @@
 }
 
 @media (max-width: 900px){
+    /* RESERVATION SECTION */
     #reservationSectionText {
       font-size: 25px;    
     }
+    /*ROOM SECTION*/
+    .roomContainer {
+        display: block; 
+        background-color: white; 
+        text-align: center; 
+     
+    }
+    .roomImage {
+        width: 85%;
+        height: 300px; 
+        margin: 2%; 
+    }
+    
 }
