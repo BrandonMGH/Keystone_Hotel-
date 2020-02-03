@@ -1,3 +1,37 @@
+/* MODAL CONTAINER */
+
+.modalContentTitleText {
+    margin-top: 1%;
+    margin-bottom: 1%; 
+}
+
+.modalContentText {
+    margin-top: 0%;
+    margin-bottom: 0%; 
+}
+
+.modalContentInput {
+    margin-top: .25%;
+    margin-bottom: .25%; 
+}
+
+.modalContentLine {
+    width: 50%;
+    background-color: rgba(0,0,0, .6);
+    height: 1;
+    margin-top: 2.5%; 
+    margin-bottom: 2.5%
+}
+
+#modalContentButton {
+    padding: 1%;
+    border: black solid 2px;
+    background-color: white;
+    color: black 
+}
+
+/*RESERVATION SECTION */
+
 #reservationSectionOne{
     background-image: url('../../Images/MountainViewRoomThree.jpg');
     height: 750px; 
