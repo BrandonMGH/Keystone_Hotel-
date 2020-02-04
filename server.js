@@ -2,9 +2,10 @@ require('dotenv').config()
 
 const express = require("express")
 const app = express(); 
+const path = require('path');
 const cors = require("cors")
 const nodemailer = require("nodemailer");
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 const transport = {
     host: 'smtp.gmail.com',
     auth: {
@@ -34,6 +35,7 @@ transporter.verify(function(error, success) {
 
 // **  GET ROUTES ** // 
 
+
 app.get('/api/reservations', (req,res)=>{
     res.send(reservationObject)
 })
@@ -45,6 +47,14 @@ app.get('/api/newsletter', (req,res) =>{
 app.get('/api/reservations/confirmation', (req,res) =>{
   res.send(roomConfirmationObject)
 })
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static( 'client/dist' ));
+
+  app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html')); // relative path
+  });
+}
 
 // ** POST ROUTES ** // 
 

@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import './Footer.css'
 
 import KeystoneLogoInverse from '../../Images/KeystoneLogoInverse.png'
-import { set } from 'mongoose'
 import API from '../../../API/API'
 
 const Footer = () => {
