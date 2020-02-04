@@ -55389,7 +55389,21 @@ var Reservations = function Reservations() {
       setModalRoom(_RoomViewData.default.LakeView[0]);
     } else if (roomId === 2) {
       setModalRoom(_RoomViewData.default.LakeView[1]);
-    } else if (roomId === 3) setModalRoom(_RoomViewData.default.LakeView[2]);
+    } else if (roomId === 3) {
+      setModalRoom(_RoomViewData.default.LakeView[2]);
+    } else if (roomId === 4) {
+      setModalRoom(_RoomViewData.default.MountainView[0]);
+    } else if (roomId === 5) {
+      setModalRoom(_RoomViewData.default.MountainView[1]);
+    } else if (roomId === 6) {
+      setModalRoom(_RoomViewData.default.MountainView[2]);
+    } else if (roomId === 7) {
+      setModalRoom(_RoomViewData.default.ForestView[0]);
+    } else if (roomId === 8) {
+      setModalRoom(_RoomViewData.default.ForestView[1]);
+    } else if (roomId === 9) {
+      setModalRoom(_RoomViewData.default.ForestView[2]);
+    }
 
     modalStateChange();
   };
@@ -55403,6 +55417,7 @@ var Reservations = function Reservations() {
       top: "1%"
     }
   }, _react.default.createElement("span", {
+    className: "modalContentClose",
     onClick: modalStateChange
   }, "\xD7")), _react.default.createElement("h1", {
     className: "modalContentTitleText"
@@ -55468,6 +55483,10 @@ var Reservations = function Reservations() {
     }, _react.default.createElement("section", {
       className: "roomContainer"
     }, _react.default.createElement("section", {
+      className: "roomTitleContainer"
+    }, _react.default.createElement("p", {
+      className: "roomTitle"
+    }, properties.RoomTitle), _react.default.createElement("p", null, properties.RoomInfo.view)), _react.default.createElement("section", {
       className: "roomImageContainer"
     }, _react.default.createElement("img", {
       className: "roomImage",
@@ -55477,10 +55496,70 @@ var Reservations = function Reservations() {
       value: properties.reservationId,
       onClick: roomSelection
     }, "RESERVE ROOM")), _react.default.createElement("section", {
+      className: "roomSummaryContainer"
+    }, _react.default.createElement("p", {
+      className: "roomSummary"
+    }, properties.RoomDescription)), _react.default.createElement("section", {
+      className: "roomAmenitiesContainer"
+    }, _react.default.createElement("section", {
+      className: "roomAmenities"
+    }, _react.default.createElement("h3", null, "Room Amenities"), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.BedType), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Internet), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Television), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Bathroom), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.CoffeeMaker), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Fridge), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Robes))), _react.default.createElement("section", {
+      className: "roomDescriptionContainer"
+    }, _react.default.createElement("section", {
+      className: "roomDescription"
+    }, _react.default.createElement("h3", null, "Room Description"), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Size), _react.default.createElement("p", null, properties.RoomInfo.bedcount), _react.default.createElement("p", null, properties.RoomInfo.view), _react.default.createElement("p", null, properties.RoomInfo.pet), _react.default.createElement("p", null, properties.RoomInfo.price)))));
+  }), _RoomViewData.default.MountainView.map(function (properties) {
+    return _react.default.createElement(RoomShowState, {
+      key: properties.id,
+      showState: properties.RoomInfo.guestCount < guestNumber || properties.RoomInfo.viewChoice !== viewNumber || properties.RoomInfo.petNumber !== petNumber || properties.RoomInfo.price > priceNumber ? false : true
+    }, _react.default.createElement("section", {
+      className: "roomContainer"
+    }, _react.default.createElement("section", {
       className: "roomTitleContainer"
     }, _react.default.createElement("p", {
       className: "roomTitle"
     }, properties.RoomTitle), _react.default.createElement("p", null, properties.RoomInfo.view)), _react.default.createElement("section", {
+      className: "roomImageContainer"
+    }, _react.default.createElement("img", {
+      className: "roomImage",
+      src: properties.RoomImage
+    }), _react.default.createElement("button", {
+      className: "roomButton",
+      value: properties.reservationId,
+      onClick: roomSelection
+    }, "RESERVE ROOM")), _react.default.createElement("section", {
+      className: "roomSummaryContainer"
+    }, _react.default.createElement("p", {
+      className: "roomSummary"
+    }, properties.RoomDescription)), _react.default.createElement("section", {
+      className: "roomAmenitiesContainer"
+    }, _react.default.createElement("section", {
+      className: "roomAmenities"
+    }, _react.default.createElement("h3", null, "Room Amenities"), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.BedType), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Internet), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Television), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Bathroom), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.CoffeeMaker), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Fridge), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Robes))), _react.default.createElement("section", {
+      className: "roomDescriptionContainer"
+    }, _react.default.createElement("section", {
+      className: "roomDescription"
+    }, _react.default.createElement("h3", null, "Room Description"), _react.default.createElement("p", null, properties.RoomInfoAndAmenities.Size), _react.default.createElement("p", null, properties.RoomInfo.bedcount), _react.default.createElement("p", null, properties.RoomInfo.view), _react.default.createElement("p", null, properties.RoomInfo.pet), _react.default.createElement("p", null, properties.RoomInfo.price)))));
+  }), _RoomViewData.default.ForestView.map(function (properties) {
+    return _react.default.createElement(RoomShowState, {
+      key: properties.id,
+      showState: properties.RoomInfo.guestCount < guestNumber || properties.RoomInfo.viewChoice !== viewNumber || properties.RoomInfo.petNumber !== petNumber || properties.RoomInfo.price > priceNumber ? false : true
+    }, _react.default.createElement("section", {
+      className: "roomContainer"
+    }, _react.default.createElement("section", {
+      className: "roomTitleContainer"
+    }, _react.default.createElement("p", {
+      className: "roomTitle"
+    }, properties.RoomTitle), _react.default.createElement("p", null, properties.RoomInfo.view)), _react.default.createElement("section", {
+      className: "roomImageContainer"
+    }, _react.default.createElement("img", {
+      className: "roomImage",
+      src: properties.RoomImage
+    }), _react.default.createElement("button", {
+      className: "roomButton",
+      value: properties.reservationId,
+      onClick: roomSelection
+    }, "RESERVE ROOM")), _react.default.createElement("section", {
       className: "roomSummaryContainer"
     }, _react.default.createElement("p", {
       className: "roomSummary"
@@ -73642,7 +73721,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51099" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52143" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
