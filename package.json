@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build client/Index.html",
-    "start": "concurrently \"node server.js\" \"parcel client/Index.html\""
+    "build": "parcel build client/index.html",
+    "start": "concurrently \"node server.js\" \"parcel client/index.html\""
   },
   "repository": {
     "type": "git",
