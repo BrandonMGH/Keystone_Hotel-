@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "concurrently \"node server.js\" \"parcel client/Index.html\"",
+    "build": "parcel build client/Index.html",
     "start": "concurrently \"node server.js\" \"parcel client/Index.html\""
   },
   "repository": {
