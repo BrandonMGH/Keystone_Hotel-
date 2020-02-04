@@ -116,9 +116,21 @@ const Reservations = () => {
       setModalRoom(RoomViewData.LakeView[0])
     } else if (roomId === 2) {
       setModalRoom(RoomViewData.LakeView[1])
-    } else if (roomId === 3)
+    } else if (roomId === 3) {
       setModalRoom(RoomViewData.LakeView[2])
-
+    } else if (roomId === 4) {
+      setModalRoom(RoomViewData.MountainView[0])
+    } else if(roomId === 5){
+      setModalRoom(RoomViewData.MountainView[1])
+    } else if(roomId === 6){
+      setModalRoom(RoomViewData.MountainView[2])
+    } else if(roomId === 7){
+      setModalRoom(RoomViewData.ForestView[0])
+    } else if(roomId === 8){
+      setModalRoom(RoomViewData.ForestView[1])
+    } else if(roomId === 9){
+      setModalRoom(RoomViewData.ForestView[2])
+    }
     modalStateChange();
   };
   return (
@@ -126,7 +138,7 @@ const Reservations = () => {
       <ModalContainer showState={modalState === true ? "grid" : "None"}>
         <ModalContent>
           <section style={{ position: "relative", right: "48%", top: "1%" }}>
-            <span onClick={modalStateChange}>&times;</span>
+            <span className="modalContentClose" onClick={modalStateChange}>&times;</span>
           </section>
           <h1 className="modalContentTitleText">{modalRoom.RoomTitle}</h1>
           <img style={{ width: "50%", height: "35%" }} src={modalRoom.RoomImage} />
@@ -157,13 +169,91 @@ const Reservations = () => {
         {RoomViewData.LakeView.map(properties => (
           <RoomShowState key={properties.id} showState={properties.RoomInfo.guestCount < guestNumber || properties.RoomInfo.viewChoice !== viewNumber || properties.RoomInfo.petNumber !== petNumber || properties.RoomInfo.price > priceNumber ? false : true}>
             <section className="roomContainer">
+            <section className="roomTitleContainer">
+                <p className="roomTitle">{properties.RoomTitle}</p>
+                <p>{properties.RoomInfo.view}</p>
+              </section>
               <section className="roomImageContainer">
                 <img className="roomImage" src={properties.RoomImage} />
                 <button className="roomButton" value={properties.reservationId} onClick={roomSelection}>RESERVE ROOM</button>
               </section>
-              <section className="roomTitleContainer">
+              <section className="roomSummaryContainer">
+                <p className="roomSummary">{properties.RoomDescription}</p>
+              </section>
+              <section className="roomAmenitiesContainer">
+                <section className="roomAmenities">
+                  <h3>Room Amenities</h3>
+                  <p>{properties.RoomInfoAndAmenities.BedType}</p>
+                  <p>{properties.RoomInfoAndAmenities.Internet}</p>
+                  <p>{properties.RoomInfoAndAmenities.Television}</p>
+                  <p>{properties.RoomInfoAndAmenities.Bathroom}</p>
+                  <p>{properties.RoomInfoAndAmenities.CoffeeMaker}</p>
+                  <p>{properties.RoomInfoAndAmenities.Fridge}</p>
+                  <p>{properties.RoomInfoAndAmenities.Robes}</p>
+                </section>
+              </section>
+              <section className="roomDescriptionContainer">
+                <section className="roomDescription">
+                  <h3>Room Description</h3>
+                  <p>{properties.RoomInfoAndAmenities.Size}</p>
+                  <p>{properties.RoomInfo.bedcount}</p>
+                  <p>{properties.RoomInfo.view}</p>
+                  <p>{properties.RoomInfo.pet}</p>
+                  <p>{properties.RoomInfo.price}</p>
+                </section>
+              </section>
+            </section>
+          </RoomShowState>
+        ))}
+        {RoomViewData.MountainView.map(properties => (
+          <RoomShowState key={properties.id} showState={properties.RoomInfo.guestCount < guestNumber || properties.RoomInfo.viewChoice !== viewNumber || properties.RoomInfo.petNumber !== petNumber || properties.RoomInfo.price > priceNumber ? false : true}>
+            <section className="roomContainer">
+            <section className="roomTitleContainer">
                 <p className="roomTitle">{properties.RoomTitle}</p>
                 <p>{properties.RoomInfo.view}</p>
+              </section>
+              <section className="roomImageContainer">
+                <img className="roomImage" src={properties.RoomImage} />
+                <button className="roomButton" value={properties.reservationId} onClick={roomSelection}>RESERVE ROOM</button>
+              </section>
+              <section className="roomSummaryContainer">
+                <p className="roomSummary">{properties.RoomDescription}</p>
+              </section>
+              <section className="roomAmenitiesContainer">
+                <section className="roomAmenities">
+                  <h3>Room Amenities</h3>
+                  <p>{properties.RoomInfoAndAmenities.BedType}</p>
+                  <p>{properties.RoomInfoAndAmenities.Internet}</p>
+                  <p>{properties.RoomInfoAndAmenities.Television}</p>
+                  <p>{properties.RoomInfoAndAmenities.Bathroom}</p>
+                  <p>{properties.RoomInfoAndAmenities.CoffeeMaker}</p>
+                  <p>{properties.RoomInfoAndAmenities.Fridge}</p>
+                  <p>{properties.RoomInfoAndAmenities.Robes}</p>
+                </section>
+              </section>
+              <section className="roomDescriptionContainer">
+                <section className="roomDescription">
+                  <h3>Room Description</h3>
+                  <p>{properties.RoomInfoAndAmenities.Size}</p>
+                  <p>{properties.RoomInfo.bedcount}</p>
+                  <p>{properties.RoomInfo.view}</p>
+                  <p>{properties.RoomInfo.pet}</p>
+                  <p>{properties.RoomInfo.price}</p>
+                </section>
+              </section>
+            </section>
+          </RoomShowState>
+        ))}
+        {RoomViewData.ForestView.map(properties => (
+          <RoomShowState key={properties.id} showState={properties.RoomInfo.guestCount < guestNumber || properties.RoomInfo.viewChoice !== viewNumber || properties.RoomInfo.petNumber !== petNumber || properties.RoomInfo.price > priceNumber ? false : true}>
+            <section className="roomContainer">
+            <section className="roomTitleContainer">
+                <p className="roomTitle">{properties.RoomTitle}</p>
+                <p>{properties.RoomInfo.view}</p>
+              </section>
+              <section className="roomImageContainer">
+                <img className="roomImage" src={properties.RoomImage} />
+                <button className="roomButton" value={properties.reservationId} onClick={roomSelection}>RESERVE ROOM</button>
               </section>
               <section className="roomSummaryContainer">
                 <p className="roomSummary">{properties.RoomDescription}</p>
