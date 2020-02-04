@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './Footer.css'
 
 import KeystoneLogoInverse from '../../Images/KeystoneLogoInverse.png'
-import API from '../../../API/API'
+import API from '../../API/API'
 
 const Footer = () => {
     const [firstName, setFirstName] = useState("")

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import API from '../../../API/API.js';
+import { Redirect } from 'react-router-dom'
+
+import API from '../../API/API.js';
 import styled, { keyframes } from 'styled-components'
 import './Navbar.css'
 import KeystoneLogo from '../../Images/KeystoneLogo.jpg'
@@ -75,11 +77,12 @@ const Navbar = () => {
         API.reservationInfo(resObject)
             .then((response) => {
                 console.log(response)
-                location.href = "/reservations";
             })
             .catch((error) => {
                 console.log(error)
             })
+            window.location.replace("/reservations")
+      
     }
 
 

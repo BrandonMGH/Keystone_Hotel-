@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components'
 
-import API from '../../../API/API.js'
+import API from '../../API/API.js'
 import './Reservations.css'
 
 //** COMPONENTS **//
@@ -109,7 +109,7 @@ const Reservations = () => {
     }
   };
 
-  let roomSelection = () => {
+  let roomSelection = (event) => {
     let roomId = parseInt(event.target.value)
     console.log(roomId)
     if (roomId === 1) {
@@ -151,9 +151,9 @@ const Reservations = () => {
           <p className="modalContentText">Check-Out Date: {checkOutDate}</p>
           <hr className="modalContentLine" />
           <h3 className="modalContentTitleText">ENTER RESERVATION INFO</h3>
-          <input className="modalContentInput" placeholder="First Name" value={modalFirstName} onChange={() => setModalFirstName(event.target.value)} />
-          <input className="modalContentInput" placeholder="Last Name" value={modalLastName} onChange={() => setModalLastName(event.target.value)} />
-          <input className="modalContentInput" placeholder="Email" value={modalEmail} onChange={() => setModalEmail(event.target.value)} />
+          <input className="modalContentInput" placeholder="First Name" value={modalFirstName} onChange={(event) => setModalFirstName(event.target.value)} />
+          <input className="modalContentInput" placeholder="Last Name" value={modalLastName} onChange={(event) => setModalLastName(event.target.value)} />
+          <input className="modalContentInput" placeholder="Email" value={modalEmail} onChange={(event) => setModalEmail(event.target.value)} />
           <hr className="modalContentLine" />
           <button className="modalContentInput" id="modalContentButton" onClick={axiosCall}>RESERVE ROOM</button>
         </ModalContent>
