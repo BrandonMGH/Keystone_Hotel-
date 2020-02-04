@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=production && node server.js",
+    "start": "NODE_ENV=production && npm run prodStart",
+    "prodStart": "node server.js",
+    "devStart": "concurrently \"node server.js\" \"cd client && npm run start\"",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
