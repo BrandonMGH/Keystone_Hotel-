@@ -11,9 +11,9 @@ import RoomViewData from '../../Components/RoomViewTypes/RoomViewData/RoomViewDa
 
 
 const ModalContainer = styled.div`
+z-index: 1000; 
 display: ${props => props.showState};
 position: fixed; 
-z-index: 1;
 justify-items: center; 
 background-color: rgba(0,0,0,0.4);
 width: 100%;
@@ -27,6 +27,7 @@ to {top:25%; opacity:1}
 `
 
 const ModalContent = styled.div`
+z-index: 50;
 display: grid;
 justify-items: center; 
 background-color: white; 
@@ -43,13 +44,16 @@ animation: 1s ${panDown}
 const RoomShowState = styled.section`
 display: ${props => props.showState === true ? "Grid" : "None"};
 position: relative; 
+z-index: 10; 
 `
 const DefaultShowState = styled.section`
-z-index: -1;
-position: relative; 
-top: -25px; 
 text-align: center; 
+color: red;
+font-size: 25px; 
+position: relative; 
+z-index: 1;
 `
+
 
 
 const Reservations = () => {
@@ -68,7 +72,7 @@ const Reservations = () => {
   useEffect(() => {
     API.getRoomInfo()
       .then((response) => {
-        console.log(response)
+        console.log(response, document.height)
         setGuestNumber(parseInt(response.data.guestCount))
         setViewNumber(parseInt(response.data.viewSelection))
         setPetNumber(parseInt(response.data.petConfirmation))
@@ -77,6 +81,8 @@ const Reservations = () => {
         setCheckOutDate(response.data.checkOut)
       })
   });
+
+
 
   const axiosCall = () => {
     let modalReservationInfo = {
@@ -167,7 +173,7 @@ const Reservations = () => {
       </section>
       <section>
         {RoomViewData.LakeView.map(properties => (
-          <RoomShowState key={properties.id} showState={properties.RoomInfo.guestCount < guestNumber || properties.RoomInfo.viewChoice !== viewNumber || properties.RoomInfo.petNumber !== petNumber || properties.RoomInfo.price > priceNumber ? false : true}>
+          <RoomShowState key={properties.id} showState={properties.RoomInfo.guestCount < guestNumber || properties.RoomInfo.viewChoice !== viewNumber || properties.RoomInfo.petNumber !== petNumber || properties.RoomInfo.price > priceNumber ? false: true}>
             <section className="roomContainer">
             <section className="roomTitleContainer">
                 <p className="roomTitle">{properties.RoomTitle}</p>
@@ -245,7 +251,7 @@ const Reservations = () => {
           </RoomShowState>
         ))}
         {RoomViewData.ForestView.map(properties => (
-          <RoomShowState key={properties.id} showState={properties.RoomInfo.guestCount < guestNumber || properties.RoomInfo.viewChoice !== viewNumber || properties.RoomInfo.petNumber !== petNumber || properties.RoomInfo.price > priceNumber ? false : true}>
+          <RoomShowState key={properties.id} showState={properties.RoomInfo.guestCount < guestNumber || properties.RoomInfo.viewChoice !== viewNumber || properties.RoomInfo.petNumber !== petNumber || properties.RoomInfo.price > priceNumber ? false : true }>
             <section className="roomContainer">
             <section className="roomTitleContainer">
                 <p className="roomTitle">{properties.RoomTitle}</p>
@@ -283,8 +289,8 @@ const Reservations = () => {
             </section>
           </RoomShowState>
         ))}
-        <DefaultShowState>No Rooms our currently available that match your search criteria</DefaultShowState>
       </section>
+
     </section>
   )
 }

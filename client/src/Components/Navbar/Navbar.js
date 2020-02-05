@@ -10,7 +10,7 @@ import KeystoneLogo from '../../Images/KeystoneLogo.jpg'
 const ModalContainer = styled.div`
 display: ${props => props.showState};
 position: fixed; 
-z-index: 1;
+z-index: 25;
 justify-content: center; 
 background-color: rgba(0,0,0,0.4);
 width: 100%;
