@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components'
-
-import API from '../../API/API.js'
 import './Reservations.css'
+import API from '../../API/API.js'
+
 
 //** COMPONENTS **//
 

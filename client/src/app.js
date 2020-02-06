@@ -24,6 +24,7 @@ const App = () => {
             <Route path="/spa" exact component={Spa} />
             <Route path="/areaAttractions" exact component={AreaAttractions} /> 
             <Route path="/reservations" exact component={Reservations} /> 
+           
         </Router>
         <Footer />
         </div>

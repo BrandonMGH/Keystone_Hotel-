@@ -1,12 +1,13 @@
-/* ROOM SECTION ONE */
 
-#roomsSectionOne{
-    background-image: url('../../Images/HotelInteriorThree.jpeg');
+/* DINING SECTION ONE */
+
+#diningSectionOne{
+    background-image: url('../../Images/DiningRoomOne.jpg');
     height: 750px; 
     background-size: cover;
  }
 
- #roomSectionOneText {
+ #diningSectionOneText {
     position: relative;
     top: 40%; 
     left: 25%;
@@ -19,68 +20,63 @@
     font-size: 35px; 
  }
 
-/* ROOM SECTION TWO */ 
+ /* DINING SECTION TWO */
 
-#roomSectionTwoQuote {
+ #diningSectionTwoQuote {
     position: relative; 
-    left: 10%; 
-    top: 100px; 
-    width: 50%; 
+    left: 40%; 
+    top: 150px; 
+    width: 40%; 
     font-size: 50px; 
 }
 
-#roomSectionTwoImg {
+#diningSectionTwoImg {
     position: relative;
-    top: -10px; 
-    width: 25%; 
-    left: 55%; 
+    bottom: 100px; ; 
+    width: 40%; 
+    left: 0; 
 }
 
-#roomSectionTwoImgOne {
+#diningSectionTwoImgOne {
     width: 100%; 
 }
 
-#roomSectionTwoDescription {
+#diningSectionTwoDescription {
     position: relative; 
     left: 20%;
-    bottom: 100px; 
+    bottom: 150px; 
     width: 50%; 
-    background: rgba(255, 253, 208, 0.4);
+    background: rgba(154, 61, 136, 0.4);
     font-size: 20px;  
-    padding: 2%;
+    padding: 2%; 
     border-radius: 10px;
 }
 
-#roomSectionThree {
-    background: rgba(150, 75, 0, 0.1);
-}
-
 @media (max-width: 900px){
-    /* ROOM SECTION ONE */ 
-    #roomSectionOneTest {
-        font-size: 25px; 
-     }
-    /* ROOM SECTION TWO */
-    #roomsSectionTwo{
+ /* DINING SECTION TWO */
+    #diningSectionTwo{
         display: grid;
         justify-items: center;
     }
-     #roomSectionTwoQuote{
+    #diningSectionTwoQuote{
         left: 0%; 
         top: 0; 
         width: 100%; 
         font-size: 25px; 
     }
-    #roomSectionTwoImg{
+    #diningSectionTwoImg{
         left: 0; 
         bottom: 0; 
         width: 100%; 
-     }  
-     #roomSectionTwoDescription {
+    }
+
+    #diningSectionTwoDescription {
         position: static; 
         text-align: center;
         width: 90%; 
+        background: rgba(154, 61, 136, 0.4);
         font-size: 20px;  
         margin: 3%; 
+        border-radius: 10px;
     };
 }
