@@ -14,7 +14,7 @@ const Rooms = () => {
     return (
         <>
             <section id="roomsSectionOne">
-                <section id="roomSectionOneTest">
+                <section id="roomSectionOneText">
                     <h1>ROOMS</h1>
                 </section>
             </section>
