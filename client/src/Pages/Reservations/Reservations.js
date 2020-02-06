@@ -45,14 +45,18 @@ animation: 1s ${panDown};
 const RoomShowState = styled.section`
 display: ${props => props.showState === true ? "Grid" : "None"};
 position: relative; 
-z-index: 10; 
-margin-bottom: 5%; 
+z-index: 0; 
+margin-bottom: -2%; 
+@media(min-height: 200px){
+  z-index: 10; 
+}
 `
 const DefaultShowState = styled.section`
 text-align: center; 
-color: red;
 font-size: 25px; 
 position: relative; 
+padding-top: 2%; 
+top: -25px; 
 z-index: 1;
 `
 
@@ -74,7 +78,7 @@ const Reservations = () => {
   useEffect(() => {
     API.getRoomInfo()
       .then((response) => {
-        console.log(response, document.height)
+        console.log(response)
         setGuestNumber(parseInt(response.data.guestCount))
         setViewNumber(parseInt(response.data.viewSelection))
         setPetNumber(parseInt(response.data.petConfirmation))
@@ -292,7 +296,7 @@ const Reservations = () => {
           </RoomShowState>
         ))}
       </section>
-
+        <DefaultShowState>-THERE ARE CURRENTLY NO ROOMS AVAILABLE THAT MATCH YOUR SEARCH CRITERIA-</DefaultShowState>
     </section>
   )
 }
