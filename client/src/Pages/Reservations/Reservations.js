@@ -29,13 +29,14 @@ to {top:25%; opacity:1}
 const ModalContent = styled.div`
 z-index: 50;
 display: grid;
+text-align: center; 
 justify-items: center; 
 background-color: white; 
 border: solid 2px black;
 width: 50%; 
-animation: 1s ${panDown}
+animation: 1s ${panDown};
 @media (max-width: 900px){
-  width: 90%; 
+  width: 80%; 
 }
 `
 
@@ -45,6 +46,7 @@ const RoomShowState = styled.section`
 display: ${props => props.showState === true ? "Grid" : "None"};
 position: relative; 
 z-index: 10; 
+margin-bottom: 5%; 
 `
 const DefaultShowState = styled.section`
 text-align: center; 
@@ -92,8 +94,8 @@ const Reservations = () => {
       modalCheckin: checkInDate,
       modalCheckOut: checkOutDate,
     }
-    if (modalFirstName === "" || modalLastName === "") {
-      alert("First and Last name fields cannot be empty")
+    if (modalFirstName === "" || modalLastName === "" || modalEmail === "") {
+      alert("First Name, Last Name and/or Email fields cannot be empty")
     } else {
       alert("Your Room has been booked!  Check the email that you provided for your reservation details!")
       modalStateChange();
@@ -147,7 +149,7 @@ const Reservations = () => {
             <span className="modalContentClose" onClick={modalStateChange}>&times;</span>
           </section>
           <h1 className="modalContentTitleText">{modalRoom.RoomTitle}</h1>
-          <img style={{ width: "50%", height: "35%" }} src={modalRoom.RoomImage} />
+          <img className="modalImage" src={modalRoom.RoomImage} />
           <hr className="modalContentLine" />
           <h3 className="modalContentTitleText">ROOM INFO</h3>
           <p className="modalContentText">View Type: {modalRoom.RoomInfo.view}</p>
