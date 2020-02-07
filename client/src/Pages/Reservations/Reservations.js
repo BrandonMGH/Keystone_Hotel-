@@ -119,7 +119,7 @@ const Reservations = () => {
     }
   };
 
-  let modalStateChange = () => {
+  const modalStateChange = () => {
     if (modalState === true) {
       setModalState(false)
     } else {
@@ -127,7 +127,7 @@ const Reservations = () => {
     }
   };
 
-  let roomSelection = (event) => {
+  const roomSelection = (event) => {
     let roomId = parseInt(event.target.value)
     console.log(roomId)
     if (roomId === 1) {
@@ -152,7 +152,7 @@ const Reservations = () => {
     modalStateChange();
   };
   return (
-    <section>
+    <>
       <ModalContainer showState={modalState === true ? "grid" : "None"}>
         <ModalContent>
           <section style={{ position: "relative", right: "48%", top: "1%" }}>
@@ -303,7 +303,7 @@ const Reservations = () => {
         ))}
       </section>
         <DefaultShowState>-THERE ARE CURRENTLY NO ROOMS AVAILABLE THAT MATCH YOUR SEARCH CRITERIA-</DefaultShowState>
-    </section>
+    </>
   )
 }
 
