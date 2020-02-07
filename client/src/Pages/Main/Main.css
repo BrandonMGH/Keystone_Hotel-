@@ -176,82 +176,74 @@ padding-top: 10%;
 
 
 @media (max-width: 900px){
-    /**MAIN TITLE SECTION **/
+  /**MAIN TITLE SECTION **/
 
-    #MainTitleSectionText {
-   font-size: 25px; 
-    };
-    /**MAIN SECTION DIVIDE ONE **/
-    #mainSectionDivideOne {
-        height: 100%
-        };
-    #mainSectionDivideOne {
-        display: grid; 
-        justify-content: center;
-    };
-    #mainSubSectionDivideOne, #mainSubSectionDivideTwo{
-        position: static; 
-    };
-    #mainSubSectionDivideOne{
-        width: 100%; 
-    };
-   
-    #imgSubSectionDivideTwo{
-        height: 100%;
-        width: 100%; 
-    };
-    /**MAIN SECTION ROOM DESCRIPTION**/
-    #mainSectionRoomDescription{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-    };
-
-
-    #mainSectionRoomPicOne{
-        position: static;  
-        padding-top: 3%; 
-        order: 1; 
-    };
-    #mainSectionRoomPicTwo{
-        order: 3;
-    };
-
-    #mainSectionSummary {
-        order: 4;
-        padding-top: 0%; 
-    };
+  #MainTitleSectionText {
+    font-size: 25px; 
+     }
+     /**MAIN SECTION DIVIDE ONE **/
+     #mainSectionDivideOne {
+         height: 100%
+         }
+     #mainSectionDivideOne {
+         display: grid; 
+         justify-content: center;
+     }
+     #mainSubSectionDivideOne, #mainSubSectionDivideTwo{
+         position: static; 
+     }
+     #mainSubSectionDivideOne{
+         width: 100%; 
+     }
     
-    #mainSectionRoomPicTwoImage {
-       position: static; 
-    };
-
-    #mainSectionRoomQuote{
-        order: 2;
-    };
-
-    #mainSectionRoomQuoteText{
-        position: relative;
-        top: 10%;
-        width: 100%;  
-        font-size: 30px;
-        text-align:center; 
-      };
-    /* MAIN CAROUSEL */ 
-
-    #mainSectionCarousel {
-     margin-top: 15%
-    };
-
-    /* MAIN SECTION GENERAL INFO */
-
-    #mainSectionGeneralInfo {
-        display: grid; 
-        grid-template-columns: 1fr
-
-    };
-   
-    .mainSectionGeneralInfoSubContainer{
-        margin-left: 5%;
-        margin-right: 5%; 
-    };
+     #imgSubSectionDivideTwo{
+         height: 100%;
+         width: 100%; 
+     }
+     /**MAIN SECTION ROOM DESCRIPTION**/
+     #mainSectionRoomDescription{
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr 1fr 1fr 1fr;
+     }
+     #mainSectionRoomPicOne{
+         position: static;  
+         padding-top: 3%; 
+         order: 1; 
+     }
+     #mainSectionRoomPicTwo{
+         order: 3;
+     }
+     #mainSectionSummary {
+         order: 4;
+         padding-top: 0%; 
+     } 
+     #mainSectionRoomPicTwoImage {
+        position: static; 
+     }
+     #mainSectionRoomQuote{
+         order: 2;
+     }
+     #mainSectionRoomQuoteText{
+         position: relative;
+         top: 10%;
+         width: 100%;  
+         font-size: 30px;
+         text-align:center; 
+    }
+     /* MAIN CAROUSEL */ 
+     #mainSectionCarousel {
+      margin-top: 15%
+     }
+ 
+     /* MAIN SECTION GENERAL INFO */
+ 
+     #mainSectionGeneralInfo {
+         display: grid; 
+         grid-template-columns: 1fr
+ 
+     }
+     .mainSectionGeneralInfoSubContainer{
+         margin-left: 5%;
+         margin-right: 5%; 
+     };
 }

@@ -46,18 +46,24 @@ const RoomShowState = styled.section`
 display: ${props => props.showState === true ? "Grid" : "None"};
 position: relative; 
 z-index: 0; 
-margin-bottom: -2%; 
+margin-bottom: -3%; 
 @media(min-height: 200px){
   z-index: 10; 
+};
+@media(max-width: 900px){
+  margin-bottom: -10%; 
 }
 `
 const DefaultShowState = styled.section`
 text-align: center; 
-font-size: 25px; 
+font-size: 20px; 
 position: relative; 
-padding-top: 2%; 
+padding-top: 3%; 
 top: -25px; 
 z-index: 1;
+@media(max-width: 900px){
+  padding-top: 6%; 
+}
 `
 
 

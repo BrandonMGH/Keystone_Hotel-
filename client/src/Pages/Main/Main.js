@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Main.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faHotel } from '@fortawesome/free-solid-svg-icons'
@@ -18,7 +18,7 @@ const Main = () => {
     return (
         <>
             <section id="mainTitleSection">
-                <section id="MainTitleSectionText">
+                <section id="mainTitleSectionText">
                     <h1>-KEYSTONE HOTEL-</h1>
                 </section>
             </section>
@@ -28,7 +28,7 @@ const Main = () => {
                     <p>Good. Use your aggressive feelings, boy! Let the hate flow through you. Obi-Wan has taught you well. I will not fight you, father. You are unwise to lower your defenses. Your thoughts betray you, father. I feel the good in you...the conflict. There is no conflict. You couldn't bring yourself to kill me before, and I don't believe you'll destroy me now. You underestimate the power of the dark side. If you will not fight, then you will meet your destiny. Good. Good.</p>
                 </section>
                 <section id="mainSubSectionDivideTwo">
-                    <img id="imgSubSectionDivideTwo" src={girlMountain} />
+                    <img alt="" id="imgSubSectionDivideTwo" src={girlMountain} />
                 </section>
             </section>
             <section id="mainSectionDivideTwo">
