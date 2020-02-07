@@ -4,7 +4,6 @@ import './Dining.css'
 import GrapeIcon from '../../Images/GrapeIcon.png'
 
 /* COMPONENTS */ 
-import Restaurants from '../../Components/RestaurantTypes/Restaurants.js'
 import Restaurant from '../../Components/RestaurantTypes/Restaurants.js'
 
 const Dining = () => {

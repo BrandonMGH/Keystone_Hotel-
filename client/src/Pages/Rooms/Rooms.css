@@ -45,15 +45,15 @@
     left: 20%;
     bottom: 100px; 
     width: 50%; 
-    background: rgba(255, 253, 208, 0.4);
+    background: rgba(255, 248, 112, 0.3);
     font-size: 20px;  
     padding: 2%;
     border-radius: 10px;
 }
 
-#roomSectionThree {
+/* #roomSectionThree {
     background: rgba(150, 75, 0, 0.1);
-}
+} */
 
 @media (max-width: 900px){
     /* ROOM SECTION ONE */ 
