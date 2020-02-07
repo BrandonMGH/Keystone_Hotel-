@@ -155,9 +155,7 @@ const Reservations = () => {
     <>
       <ModalContainer showState={modalState === true ? "grid" : "None"}>
         <ModalContent>
-          <section style={{ position: "relative", right: "48%", top: "1%" }}>
             <span className="modalContentClose" onClick={modalStateChange}>&times;</span>
-          </section>
           <h1 className="modalContentTitleText">{modalRoom.RoomTitle}</h1>
           <img className="modalImage" src={modalRoom.RoomImage} />
           <hr className="modalContentLine" />

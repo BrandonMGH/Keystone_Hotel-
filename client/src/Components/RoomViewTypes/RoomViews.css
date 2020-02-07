@@ -10,6 +10,11 @@
 
 }
 
+.roomViewRoomImage{
+    background: rgba(255, 253, 208, 0.4);
+    padding: 2%; 
+}
+
 .roomViewRoomImage, .roomViewViewImage {
     width: 90%; 
     height: 70%; 
@@ -25,10 +30,12 @@
     justify-items: center;
     align-items: center;
     text-align: center; 
+    
 }
 
 .roomViewTextTitleAndDescription {
     grid-area: TitleAndDesc;
+    background: rgba(255, 253, 208, 0.4);
 }
 
 
@@ -38,12 +45,16 @@
 
 .roomViewTextAmenities{
     grid-area: TextAmenities;
+    background: rgba(255, 253, 208, 0.4);
+    padding: 5%; 
 }
 
 .roomViewViewImageContainer {
     grid-area: ViewImage;
+    background: rgba(255, 253, 208, 0.4);
+    padding: 5%; 
 }
 
 .roomViewViewImage{
-
+    height: 90%; 
 }

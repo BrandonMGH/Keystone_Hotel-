@@ -3,6 +3,10 @@
 .modalContentClose{
     font-size: 30px;
     font-weight: bold;
+    position: relative; 
+    right: 45%;
+    top: 10%; 
+    
 }
 .modalContentClose:hover {
     color: blue; 
