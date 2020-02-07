@@ -8,7 +8,7 @@
 
 
 
-#MainTitleSectionText {
+#mainTitleSectionText {
     position: relative;
     top: 40%; 
     left: 25%; 
@@ -178,7 +178,7 @@ padding-top: 10%;
 @media (max-width: 900px){
   /**MAIN TITLE SECTION **/
 
-  #MainTitleSectionText {
+  #mainTitleSectionText {
     font-size: 25px; 
      }
      /**MAIN SECTION DIVIDE ONE **/
