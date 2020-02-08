@@ -1,0 +1,101 @@
+#hotelSectionOne{
+    background-image: url('../../Images/HotelInteriorOne.jpg');
+    height: 750px;
+    background-size: cover; 
+}
+
+#hotelSectionOneTitle {
+    position: relative;
+    top: 40%; 
+    left: 25%;
+    padding: 1%;
+    width: 50%; 
+    border-radius: 10px;
+    background-color: rgba(0,0,0, .6);
+    color: white; 
+    text-align: center;
+    font-size: 35px; 
+ }
+
+ #hotelSectionTwo{
+     display: grid; 
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 1fr 4fr;
+     grid-template-areas: 
+     "hotelTitle hotelImage"
+     "hotelDesc hotelImage";
+ }
+
+ #hotelSectionTwoTitle {
+     grid-area: hotelTitle;
+     font-size: 35px; 
+     text-align:center; 
+     background-color: rgba(71, 212, 255, 0.274);
+     margin: 2%; 
+ }
+
+ #hotelSectionTwoText {
+     grid-area: hotelDesc;
+     background-color: rgba(71, 212, 255, 0.274);
+     margin: 2%; 
+     padding: 5%; 
+     font-size: 20px; 
+ }
+
+
+ #hotelSectionTwoImageContainer {
+     grid-area: hotelImage;
+     display: grid; 
+     align-items: center; 
+     justify-items: center; ;
+     margin: 3%; 
+ }
+
+ #hotelSectionTwoImage{
+     width: 90%; 
+     height: 60%; 
+ }
+
+ #hotelSectionThree{
+     display: grid; 
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 1fr 4fr;
+     grid-template-areas: 
+     "historyImage historyTitle"
+     "historyImage historyDesc";
+ }
+
+ #hotelSectionThreeTitle {
+    grid-area: historyTitle;
+    font-size: 35px; 
+    text-align:center; 
+    background-color: rgba(71, 212, 255, 0.274);
+    margin: 2%; 
+}
+
+#hotelSectionThreeText {
+    grid-area: historyDesc;
+    background-color: rgba(71, 212, 255, 0.274);
+    margin: 2%; 
+    padding: 5%; 
+    font-size: 20px; 
+}
+
+
+#hotelSectionThreeImageContainer {
+    grid-area: historyImage;
+    display: grid; 
+    align-items: center; 
+    justify-items: center; ;
+    margin: 3%; 
+}
+
+#hotelSectionThreeImage{
+    width: 90%; 
+    height: 60%; 
+}
+
+#hotelSectionFour {
+    background-color: rgb(255, 215, 36);
+    height: 750px; 
+}

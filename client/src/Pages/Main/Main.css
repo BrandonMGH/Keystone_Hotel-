@@ -129,6 +129,7 @@ height: 750px
 
 #mainSectionGeneralInfo { 
     text-align: center;
+    height: 750px; 
 }
 
 #mainSectionGeneralInfo > h1 {

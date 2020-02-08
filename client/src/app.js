@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 //* PAGES  *//
 import Main from './Pages/Main/Main.js'
+import TheHotel from './Pages/TheHotel/TheHotel.js'
 import Rooms from './Pages/Rooms/Rooms.js'
 import Dining from './Pages/Dining/Dining.js'
 import Spa from './Pages/Spa/Spa.js'
@@ -19,6 +20,7 @@ const App = () => {
         <Navbar />
         <Router>
             <Route path="/" exact component={Main} />
+            <Route path="/hotel" exact component={TheHotel} />
             <Route path="/rooms" exact component={Rooms} />
             <Route path="/dining" exact component={Dining} />
             <Route path="/spa" exact component={Spa} />
