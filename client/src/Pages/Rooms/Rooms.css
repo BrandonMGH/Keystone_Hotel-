@@ -51,9 +51,65 @@
     border-radius: 10px;
 }
 
-/* #roomSectionThree {
-    background: rgba(150, 75, 0, 0.1);
-} */
+#roomSectionThree{
+    display: grid; 
+    justify-items: center;
+}
+
+#roomSectionThreeButtons {
+   height: 50px;
+   width: 80%;  
+}
+
+#roomSectionThreeButtonOne {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 3%;
+    background-color: white;
+    width: 33%; 
+    height: 100%;  
+}
+
+#roomSectionThreeButtonTwo{
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 3%;
+    background-color: white;
+    width: 33%; 
+    height: 100%;
+}
+
+#roomSectionThreeButtonThree{
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 3%;
+    background-color: white;
+    width: 33%; 
+    height: 100%;
+}
+
+#roomSectionThreeButtonOne:hover {
+    background-color: black;  
+    color: white; 
+    cursor: pointer
+}
+
+#roomSectionThreeButtonTwo:hover {
+    background-color: black;  
+    color: white; 
+    cursor: pointer
+}
+
+#roomSectionThreeButtonThree:hover {
+    background-color: black;  
+    color: white; 
+    cursor: pointer
+}
+
+
+
+
 
 @media (max-width: 900px){
     /* ROOM SECTION ONE */ 

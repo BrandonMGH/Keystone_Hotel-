@@ -58,3 +58,21 @@
 .roomViewViewImage{
     height: 90%; 
 }
+
+@media (max-width: 900px){
+    .roomViewContainer {
+        display: static;
+        grid-template-columns: 1fr;
+        margin-bottom: 1%; 
+        margin-top: 1%; 
+        padding-top: 2%;
+        padding-bottom: 2%; 
+        justify-items: center;
+        align-items: center;
+    
+    }
+    .roomViewRoomImage{
+     height: 325px; 
+    }
+    
+}

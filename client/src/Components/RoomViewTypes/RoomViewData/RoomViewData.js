@@ -99,7 +99,7 @@ const RoomViewData = {
         {
             id: 1,
             reservationId: 4,
-            RoomTitle:"Standard Room",
+            RoomTitle:"STANDARD ROOM",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: MountainViewRoomOne,
             ViewImage: MountainOne,
@@ -126,7 +126,7 @@ const RoomViewData = {
         {
             id: 2,
             reservationId: 5,
-            RoomTitle:"Junior Suite",
+            RoomTitle:"JUNIOR SUITE",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: MountainViewRoomTwo,
             ViewImage: MountainOne,
@@ -153,7 +153,7 @@ const RoomViewData = {
         {
             id: 3,
             reservationId: 6,
-            RoomTitle:"Deluxe Suite",
+            RoomTitle:"DELUXE SUITE",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: MountainViewRoomThree,
             ViewImage: MountainOne,
@@ -182,7 +182,7 @@ const RoomViewData = {
         {
             id: 1,
             reservationId: 7,
-            RoomTitle:"Standard Room",
+            RoomTitle:"STANDARD ROOM",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: ForestViewRoomOne,
             ViewImage: ForestImageTwo,
@@ -209,7 +209,7 @@ const RoomViewData = {
         {
             id: 2,
             reservationId: 8,
-            RoomTitle:"Junior Suite",
+            RoomTitle:"JUNIOR SUITE",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: ForestViewRoomTwo,
             ViewImage: ForestImageTwo,
@@ -236,7 +236,7 @@ const RoomViewData = {
         {
             id: 3,
             reservationId: 9,
-            RoomTitle:"Deluxe Suite",
+            RoomTitle:"DELUXE SUITE",
             RoomDescription:"Of course I'm worried. And you should be, too. Lando Calrissian and poor Chewbacca never returned from this awful place. Artoo whistles timidly. Don't be so sure. If I told you half the things I've heard about this Jabba the Hutt, you'd probably short-circuit. Artoo, are you sure this is the right place? I better knock, I suppose. There doesn't seem to be anyone there. Let's go back and tell Master Luke.",
             RoomImage: ForestViewRoomThree,
             ViewImage: ForestImageTwo,
