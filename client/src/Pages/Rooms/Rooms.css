@@ -64,6 +64,8 @@
 #roomSectionThreeButtonOne {
     border-right: 2px solid black;
     border-bottom: 2px solid black;
+    border-top: 2px solid white; 
+    border-left: 2px solid white; 
     padding: 3%;
     background-color: white;
     width: 33%; 
@@ -71,6 +73,7 @@
 }
 
 #roomSectionThreeButtonTwo{
+    border-top: 2px solid white; 
     border-left: 2px solid black;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
@@ -81,6 +84,8 @@
 }
 
 #roomSectionThreeButtonThree{
+    border-right: 2px solid white;
+    border-top: 2px solid white; 
     border-left: 2px solid black;
     border-bottom: 2px solid black;
     padding: 3%;

@@ -61,23 +61,25 @@ const Main = () => {
                 <MainCarousel />
             </section>
             <section id="mainSectionGeneralInfo">
-                <h1>CONTACT US</h1>
-                <section id="mainSectionGenralInfoContainer">
-                    <section className="mainSectionGeneralInfoSubContainer">
-                        <FontAwesomeIcon id="generalPhoneIcon" icon={faPhone} />
-                        <p>Call Us</p>
-                        <p>760-429-4146</p>
+                <section style={{position: "relative", top:"25%"}}>
+                    <h1>CONTACT US</h1>
+                    <section id="mainSectionGenralInfoContainer">
+                        <section className="mainSectionGeneralInfoSubContainer">
+                            <FontAwesomeIcon id="generalPhoneIcon" icon={faPhone} />
+                            <p>Call Us</p>
+                            <p>760-429-4146</p>
+                        </section>
+                        <section className="mainSectionGeneralInfoSubContainer">
+                            <FontAwesomeIcon id="generalEmailIcon" icon={faEnvelope} />
+                            <p>Email Us</p>
+                            <p>BrandonMGH@Yahoo.com</p>
+                        </section>
+                        <section className="mainSectionGeneralInfoSubContainer">
+                            <FontAwesomeIcon id="generalHotelIcon" icon={faHotel} />
+                            <p>Visit Us</p>
+                            <p>5341 Huron Court, Oceanside, CA 92056</p>
+                        </section>
                     </section>
-                    <section className="mainSectionGeneralInfoSubContainer">
-                        <FontAwesomeIcon id="generalEmailIcon" icon={faEnvelope} />
-                        <p>Email Us</p>
-                        <p>BrandonMGH@Yahoo.com</p>
-                        </section>
-                    <section className="mainSectionGeneralInfoSubContainer">
-                        <FontAwesomeIcon id="generalHotelIcon" icon={faHotel} />
-                         <p>Visit Us</p>
-                         <p>5341 Huron Court, Oceanside, CA 92056</p>
-                        </section>
                 </section>
             </section>
 
