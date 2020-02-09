@@ -30,13 +30,13 @@
      grid-area: hotelTitle;
      font-size: 35px; 
      text-align:center; 
-     background-color: rgba(71, 212, 255, 0.274);
+     background: rgba(0, 0, 0, 0.1);
      margin: 2%; 
  }
 
  #hotelSectionTwoText {
      grid-area: hotelDesc;
-     background-color: rgba(71, 212, 255, 0.274);
+     background: rgba(0, 0, 0, 0.1);
      margin: 2%; 
      padding: 5%; 
      font-size: 20px; 
@@ -69,13 +69,13 @@
     grid-area: historyTitle;
     font-size: 35px; 
     text-align:center; 
-    background-color: rgba(71, 212, 255, 0.274);
+    background: rgba(0, 0, 0, 0.1);
     margin: 2%; 
 }
 
 #hotelSectionThreeText {
     grid-area: historyDesc;
-    background-color: rgba(71, 212, 255, 0.274);
+    background: rgba(0, 0, 0, 0.1);
     margin: 2%; 
     padding: 5%; 
     font-size: 20px; 
