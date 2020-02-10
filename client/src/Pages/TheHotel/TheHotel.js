@@ -1,5 +1,7 @@
 import React from 'react'
 import './TheHotel.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBed, faUtensils, faSpa, faMountain } from '@fortawesome/free-solid-svg-icons'
 
 import HotelExteriorTwo from '../../Images/HotelExteriorTwo.jpg'
 import AreaPicture from '../../Images/AreaPicture.jpg'
@@ -46,14 +48,39 @@ const TheHotel = () => {
             </section>
             <section id="hotelSectionFour">
                 <section id="hotelSectionFourBackgroundLayer">
-                    <section id="hotelSectionFourTitle">
-                        <h1>HOTEL AMENITIES AT A GLANCE</h1>
-                    </section>
                     <section id="hotelSectionFourAmenititesContainer">
-                        <section style={{margin: "5%"}}>1</section>
-                        <section style={{margin: "5%"}}>2</section>
-                        <section style={{margin: "5%"}}>3</section>
-                        <section style={{margin: "5%"}}>4</section>
+                        <section id="hotelSectionFourTitle">
+                            <h1>HOTEL AMENITIES AT A GLANCE</h1>
+                        </section>
+                        <section id="hotelSectionFourAmenityOne" class="hotelSectionFourAmenitites">
+                            <FontAwesomeIcon icon={faBed} />
+                            <ul>
+                                <li>Hello</li>
+                                <li>There</li>
+                            </ul>
+                        </section>
+                        <section id="hotelSectionFourAmenityTwo" class="hotelSectionFourAmenitites">
+                            <FontAwesomeIcon icon={faUtensils} />
+                            <ul>
+                                <li>Hello</li>
+                                <li>There</li>
+                            </ul>
+                        </section>
+
+                        <section id="hotelSectionFourAmenityThree" class="hotelSectionFourAmenitites">
+                            <FontAwesomeIcon icon={faSpa} />
+                            <ul>
+                                <li>Hello</li>
+                                <li>There</li>
+                            </ul>
+                        </section>
+                        <section id="hotelSectionFourAmenityFour" class="hotelSectionFourAmenitites">
+                            <FontAwesomeIcon style={{width: "50%"}} icon={faMountain} />
+                            <ul>
+                                <li>Hello</li>
+                                <li>There</li>
+                            </ul>
+                        </section>
                     </section>
                 </section>
             </section>
