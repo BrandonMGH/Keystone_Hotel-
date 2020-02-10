@@ -1,3 +1,5 @@
+/* HOTEL SECTION ONE */ 
+
 #hotelSectionOne{
     background-image: url('../../Images/HotelInteriorOne.jpg');
     height: 750px;
@@ -16,6 +18,8 @@
     text-align: center;
     font-size: 35px; 
  }
+
+ /* HOTEL SECTION TWO */ 
 
  #hotelSectionTwo{
      display: grid; 
@@ -56,6 +60,8 @@
      height: 60%; 
  }
 
+ /* HOTEL SECTION THREE */ 
+
  #hotelSectionThree{
      display: grid; 
      grid-template-columns: 1fr 1fr;
@@ -95,6 +101,8 @@
     height: 60%; 
 }
 
+ /* HOTEL SECTION FOUR */ 
+
 #hotelSectionFour {
     background-image: url('../../Images/HotelExteriorFour.jpg');
     height: 750px; 
@@ -112,8 +120,37 @@
     justify-items: center;
     align-content: center;
     position: relative; 
-    top: 50%;  
+    top: 10%;  
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr; 
+    grid-template-rows:1fr 1fr 1fr; 
+    grid-template-areas:
+    "sectFourTitle sectFourTitle"
+    "sectFourAmenOne sectFourAmenTwo"
+    "sectFourAmenThree sectFourAmenFour";
     color: white; 
+}
+
+.hotelSectionFourAmenitites{
+    margin: 1%;
+    display: grid; 
+    justify-items: center; 
+}
+
+#hotelSectionFourTitle{
+    grid-area: sectFourTitle;
+    font-size: 34px; 
+}
+
+#hotelSectionFourAmenityOne{
+    grid-area: sectFourAmenOne; 
+}
+
+#hotelSectionFourAmenityTwo{
+    grid-area: sectFourAmenTwo;
+}
+#hotelSectionFourAmenityThree{
+    grid-area: sectFourAmenThree;
+}
+#hotelSectionFourAmenityFour{
+    grid-area: sectFourAmenFour;
 }
