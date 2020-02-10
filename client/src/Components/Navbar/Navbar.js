@@ -139,6 +139,7 @@ const Navbar = () => {
                     <p>|</p>
                 </section>
                 <section id="navReservations">
+                    <button id="navHamburgerMenu">NavMenu</button>
                     <button id="navResButton" onClick={modalStateChange}> Reserve a Room</button>
                 </section>
             </section>
