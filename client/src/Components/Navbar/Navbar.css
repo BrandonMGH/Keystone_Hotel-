@@ -1,3 +1,80 @@
+/* RES MODAL CONTAINER */
+
+#resModalTitleText{
+    background-color: rgba(0, 0, 0, .3);
+    color: white; 
+    padding-top: 1%;
+    padding-bottom: 1%;  
+}
+
+
+#resModalClose{
+    grid-area: modalClose; 
+    font-size: 30px; 
+    font-style: bold;
+    color: white; 
+    position: relative; 
+    bottom: 17px;
+    right: 47%; 
+  }
+
+#resModalClose:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+#resModalTitle{
+    grid-area: resModalTitle;
+    background-image: url('../../Images/HotelExteriorOne.jpg');
+    background-size: cover; 
+    padding-top: 3%;
+    padding-bottom: 3%; 
+    width: 100%; 
+}
+
+#resModalCheckIn{
+    grid-area: resModalCheckIn;
+}
+
+#resModalCheckOut{
+    grid-area: resModalCheckOut;
+}
+
+#resModalPrice{
+    grid-area: resModalPrice; 
+}
+
+#resModalGuestCount{
+    grid-area: resModalGuests
+}
+
+#resModalView{
+    grid-area: resModalView;
+}
+
+#resModalPet{
+    grid-area: resModalPets;
+
+}
+
+#resModalSubmitButton{
+    grid-area: resModalButton; 
+}
+/* NAVIGATION MODAL CONTAINER */
+#modalNavLinks {
+    position: relative; 
+    top: 25%; 
+    display: grid;
+    justify-items: center;
+    align-content: space-between;
+}
+
+.navLink {
+    text-decoration: none;
+}
+
+/* MAIN NAV SEC */
+
 #mainNav {
     display: grid; 
     grid-template-columns: 1fr 2fr 1fr;
@@ -45,13 +122,24 @@
 
 #navHamburgerMenu{
     display: none; 
+    background-color: white;
+    color: black; 
+    padding: 3%; 
+    border: 2px solid black;
+}
+
+#navHamburgerMenu:hover {
+    background-color: black;
+    color: white; 
+    border: 2px solid white; 
+    cursor: pointer;
 }
 
 #navResButton{
-background-color: white;
-color: black; 
-padding: 3%; 
-border: 2px solid black;
+    background-color: white;
+    color: black; 
+    padding: 3%; 
+    border: 2px solid black;
 }
 
 #navResButton:hover {
@@ -62,7 +150,12 @@ border: 2px solid black;
 }
 
 @media (max-width: 900px){
-    /*MAIN NAV*/
+    /* RES MODAL CONTAINER */
+    #resModalTitle{
+        padding-top: 4%;
+        padding-bottom: 4%; 
+    }
+    /* MAIN NAV SEC */
     #mainNav {
         grid-template-areas: 
         "navLogo navTitle navReservations"

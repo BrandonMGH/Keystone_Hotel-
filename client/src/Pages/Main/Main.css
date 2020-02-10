@@ -201,6 +201,12 @@ padding-top: 10%;
          height: 100%;
          width: 100%; 
      }
+
+     /*MAIN SECTION DIVIE */
+
+     #mainSectionDivideTwo{
+         margin-top: 3%; 
+     }
      /**MAIN SECTION ROOM DESCRIPTION**/
      #mainSectionRoomDescription{
          grid-template-columns: 1fr;

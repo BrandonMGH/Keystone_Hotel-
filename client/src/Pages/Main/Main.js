@@ -19,7 +19,7 @@ const Main = () => {
         <>
             <section id="mainTitleSection">
                 <section id="mainTitleSectionText">
-                    <h1>-KEYSTONE HOTEL-</h1>
+                    <h1>KEYSTONE HOTEL</h1>
                 </section>
             </section>
             <section id="mainSectionDivideOne">

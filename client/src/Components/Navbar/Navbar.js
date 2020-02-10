@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom'
 
 import API from '../../API/API.js';
 import styled, { keyframes } from 'styled-components'
@@ -11,7 +10,7 @@ const ModalContainer = styled.div`
 display: ${props => props.showState};
 position: fixed; 
 z-index: 25;
-justify-content: center; 
+justify-items: center; 
 background-color: rgba(0,0,0,0.4);
 width: 100%;
 height: 100%; 
@@ -19,21 +18,70 @@ height: 100%;
 
 const panDown = keyframes`
 from {top: -300px; opacity:0} 
-to {top:25%; opacity:1}
+to {top:2.5%; opacity:1}
+`
+const navPanDown = keyframes`
+from {top: -300px; opacity:0} 
+to {top:10%; opacity:1}
 `
 
 const ModalContent = styled.div`
 position: relative; 
-background-color: red; 
-height: 50%; 
-top: 25%
-animation: 1s ${panDown}
+display: grid; 
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr; 
+grid-template-areas: 
+"resModalTitle resModalTitle resModalTitle"
+"resModalCheckIn resModalCheckOut resModalPrice"
+"resModalGuests resModalGuests resModalGuests"
+"resModalView resModalView resModalView"
+"resModalPets resModalPets resModalPets"
+"resModalButton resModalButton resModalButton";
+text-align: center; 
+justify-items: center; 
+align-items: center; 
+background-color: white; 
+border: 2px black solid; 
+height: 75%;
+width: 50%; 
+top: 2.5%;
+animation: 1s ${panDown};
+@media (max-width: 900px){
+    width: 80%; 
+    height: 90%; 
+    grid-template-rows:1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-areas: 
+    "resModalTitle resModalTitle resModalTitle"
+    "resModalCheckIn resModalCheckIn resModalCheckIn"
+    "resModalCheckOut resModalCheckOut resModalCheckOut"
+    "resModalPrice resModalPrice resModalPrice"
+    "resModalGuests resModalGuests resModalGuests"
+    "resModalView resModalView resModalView"
+    "resModalPets resModalPets resModalPets"
+    "resModalButton resModalButton resModalButton";
+}
 `
 
-
-
+const NavigationModalContainer = styled.div`
+display: ${props => props.navShowState};
+position: fixed; 
+justify-items: center; 
+z-index: 100;
+height: 100%;
+width: 100%;
+background-color: rgba(0,0,0,0.4);
+`
+const NavigationModalContent = styled.div`
+position: relative; 
+height: 80%;
+width: 50%; 
+top: 10%; 
+background-color: white; 
+animation: 1s ${navPanDown}
+`
 const Navbar = () => {
     const [modalState, setModalState] = useState(false)
+    const [navModalState, setNavModalState] = useState(false)
     const [checkIn, setCheckIn] = useState("")
     const [checkOut, setCheckOut] = useState("")
     const [priceRange, setPriceRange] = useState("400")
@@ -49,27 +97,35 @@ const Navbar = () => {
         } else {
             let updatedCheckIn = parseInt(checkIn.replace(/-/g, ''))
             let updatedCheckOut = parseInt(checkOut.replace(/-/g, ''))
-            if(updatedCheckIn >= updatedCheckOut){
+            if (updatedCheckIn >= updatedCheckOut) {
                 alert("Please select a proper Check-Out Date")
             } else {
                 let resObject = {
-                            checkIn: checkIn,
-                            checkOut: checkOut,
-                            guestCount: guestCount,
-                            viewSelection: viewSelection,
-                            petConfirmation: petConfirmation,
-                            priceRange: priceRange,
-                        }
-                        return axiosCall(resObject)
+                    checkIn: checkIn,
+                    checkOut: checkOut,
+                    guestCount: guestCount,
+                    viewSelection: viewSelection,
+                    petConfirmation: petConfirmation,
+                    priceRange: priceRange,
+                }
+                return axiosCall(resObject)
             }
         }
     };
 
-    const modalStateChange = () => {
+    const ResModalStateChange = () => {
         if (modalState === true) {
             setModalState(false)
         } else {
             setModalState(true)
+        }
+    }
+
+    const navModalStateChange = () => {
+        if (navModalState === true) {
+            setNavModalState(false)
+        } else {
+            setNavModalState(true)
         }
     }
 
@@ -81,8 +137,8 @@ const Navbar = () => {
             .catch((error) => {
                 console.log(error)
             })
-            window.location.replace("/reservations")
-      
+        window.location.replace("/reservations")
+
     }
 
 
@@ -90,18 +146,30 @@ const Navbar = () => {
         <div>
             <ModalContainer showState={modalState === true ? "grid" : "None"}>
                 <ModalContent>
-                    <span onClick={modalStateChange}>&times;</span>
-                    <h1>Make a Reservation</h1>
-                    Check In: <input type="date" name="checkIn" onChange={event => setCheckIn(event.target.value)} />
-                    Check Out: <input type="date" name="checkOut" onChange={event => setCheckOut(event.target.value)} />
-                    Price Range: ${priceRange}<input type="range" name="priceRange" min="250" max="1500" value={priceRange} onChange={event => setPriceRange(event.target.value)} />
-                    <div>
+                    <section id="resModalTitle">
+                        <span id="resModalClose" onClick={ResModalStateChange}>&times;</span>
+                        <section id="resModalTitleText">
+                            <p>MAKE A RESERVATION</p>
+                        </section>                    </section>
+                    <section id="resModalCheckIn">
+                        <p>Check In:</p> <input type="date" name="checkIn" onChange={event => setCheckIn(event.target.value)} />
+                    </section>
+                    <secction id="resModalCheckOut">
+                        <p>Check Out:</p> <input type="date" name="checkOut" onChange={event => setCheckOut(event.target.value)} />
+                    </secction>
+                    <section id="resModalPrice">
+                        <p>Price Range: ${priceRange} </p>
+                        <input style={{ width: "100%" }} type="range" name="priceRange" min="250" max="1500" value={priceRange} onChange={event => setPriceRange(event.target.value)} />
+                    </section>
+                    <section id="resModalGuestCount">
                         <p>Number of Guests</p>
                         <select name="guestCount" value={guestCount} onChange={event => setGuestCount(event.target.value)}>
                             <option value="2" >2</option>
                             <option value="4">4</option>
                             <option value="6">6</option>
                         </select>
+                    </section>
+                    <section id="resModalView">
                         <p>Select a View</p>
                         <select name="roomView" value={viewSelection} onChange={event => setViewSelection(event.target.value)}>
                             <option value="1">Lake View</option>
@@ -109,38 +177,54 @@ const Navbar = () => {
                             <option value="3">Forest View</option>
                             <option value="3">No Preference</option>
                         </select>
+                    </section>
+                    <section id="resModalPet">
                         <p>Bringing a Pet?</p>
                         <select name="petSelection" value={petConfirmation} onChange={event => setPetConfirmation(event.target.value)}>
                             <option value="1">Yes</option>
                             <option value="2">No</option>
                         </select>
-                    </div>
-                    <button onClick={reservationInfoSubmit} > SELECT ROOM </button>
+                    </section>
+                    <section id="resModalSubmitButton">
+                        <button onClick={reservationInfoSubmit} > SELECT ROOM </button>
+                    </section>
                 </ModalContent>
             </ModalContainer>
+            <NavigationModalContainer navShowState={navModalState === true ? "grid" : "none"}>
+                <NavigationModalContent>
+                    <span onClick={navModalStateChange}>&times;</span>
+                    <section id="modalNavLinks">
+                        <p><a className="navLink" href="/hotel">The Hotel</a></p>
+                        <p><a className="navLink" href="/rooms">Rooms</a></p>
+                        <p><a className="navLink" href="/dining">Dining</a></p>
+                        <p><a className="navLink" href="/spa">Spa & Wellness</a></p>
+                        <p><a className="navLink" href="/areaAttractions">Area Attractions</a></p>
+                    </section>
+                </NavigationModalContent>
+            </NavigationModalContainer>
             <section id="mainNav">
                 <section id="navLogo">
-                   <a href="/"><img id="KeystoneLogo" src={KeystoneLogo} /></a> 
+                    <a href="/"><img id="KeystoneLogo" src={KeystoneLogo} /></a>
                 </section>
                 <section id="navTitle">
-                    <h1>-KEYSTONE HOTEL-</h1>
+                    <h1>KEYSTONE HOTEL</h1>
                 </section>
                 <section id="navLinks">
-                    <p>|</p>    
-                    <p className="navLink">The Hotel</p>
                     <p>|</p>
-                    <p className="navLink">Rooms</p>
+                    <p><a className="navLink" href="/hotel">The Hotel</a></p>
                     <p>|</p>
-                    <p className="navLink">Dining</p>
+                    <p><a className="navLink" href="/rooms">Rooms</a></p>
                     <p>|</p>
-                    <p className="navLink">Spa & Wellness</p>
+                    <p><a className="navLink" href="/dining">Dining</a></p>
                     <p>|</p>
-                    <p className="navLink">Area Attractions</p>
+                    <p><a className="navLink" href="/spa">Spa & Wellness</a></p>
+                    <p>|</p>
+                    <p><a className="navLink" href="/areaAttractions">Area Attractions</a></p>
                     <p>|</p>
                 </section>
                 <section id="navReservations">
-                    <button id="navHamburgerMenu">NavMenu</button>
-                    <button id="navResButton" onClick={modalStateChange}> Reserve a Room</button>
+                    <button id="navHamburgerMenu" onClick={navModalStateChange}>Navigation</button>
+                    <button id="navResButton" onClick={ResModalStateChange}> Make a Reservation</button>
                 </section>
             </section>
         </div>
