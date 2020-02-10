@@ -120,9 +120,8 @@
     justify-items: center;
     align-content: center;
     position: relative; 
-    top: 10%;  
     grid-template-columns: 1fr 1fr;
-    grid-template-rows:1fr 1fr 1fr; 
+    grid-template-rows:1fr 2fr 2fr; 
     grid-template-areas:
     "sectFourTitle sectFourTitle"
     "sectFourAmenOne sectFourAmenTwo"
@@ -131,14 +130,13 @@
 }
 
 .hotelSectionFourAmenitites{
-    margin: 1%;
     display: grid; 
     justify-items: center; 
 }
 
 #hotelSectionFourTitle{
     grid-area: sectFourTitle;
-    font-size: 34px; 
+    font-size: 35px; 
 }
 
 #hotelSectionFourAmenityOne{
@@ -153,4 +151,9 @@
 }
 #hotelSectionFourAmenityFour{
     grid-area: sectFourAmenFour;
+}
+
+.hotelSectionFontAwesomeIcon {
+  border-bottom: solid 2px white; 
+  padding-bottom: 25%; 
 }

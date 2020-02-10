@@ -50,36 +50,39 @@ const TheHotel = () => {
                 <section id="hotelSectionFourBackgroundLayer">
                     <section id="hotelSectionFourAmenititesContainer">
                         <section id="hotelSectionFourTitle">
-                            <h1>HOTEL AMENITIES AT A GLANCE</h1>
+                            <p>HOTEL AMENITIES AT A GLANCE</p>
                         </section>
                         <section id="hotelSectionFourAmenityOne" class="hotelSectionFourAmenitites">
-                            <FontAwesomeIcon icon={faBed} />
-                            <ul>
-                                <li>Hello</li>
-                                <li>There</li>
-                            </ul>
+                            <section className="hotelSectionFontAwesomeIcon">
+                                <FontAwesomeIcon icon={faBed} size='5x' />
+                            </section>
+                            <p>Hello</p>
+                            <p>There</p>
+                            <p>everyone</p>
                         </section>
                         <section id="hotelSectionFourAmenityTwo" class="hotelSectionFourAmenitites">
-                            <FontAwesomeIcon icon={faUtensils} />
-                            <ul>
-                                <li>Hello</li>
-                                <li>There</li>
-                            </ul>
+                            <section className="hotelSectionFontAwesomeIcon">
+                                <FontAwesomeIcon icon={faUtensils} size='5x' />
+                            </section>
+                            <p>Hello</p>
+                            <p>There</p>
+                            <p>everyone</p>
                         </section>
-
                         <section id="hotelSectionFourAmenityThree" class="hotelSectionFourAmenitites">
-                            <FontAwesomeIcon icon={faSpa} />
-                            <ul>
-                                <li>Hello</li>
-                                <li>There</li>
-                            </ul>
+                            <section className="hotelSectionFontAwesomeIcon">
+                                <FontAwesomeIcon icon={faSpa} size='5x' />
+                            </section>
+                            <p>Hello</p>
+                            <p>There</p>
+                            <p>everyone</p>
                         </section>
                         <section id="hotelSectionFourAmenityFour" class="hotelSectionFourAmenitites">
-                            <FontAwesomeIcon style={{width: "50%"}} icon={faMountain} />
-                            <ul>
-                                <li>Hello</li>
-                                <li>There</li>
-                            </ul>
+                            <section className="hotelSectionFontAwesomeIcon">
+                                <FontAwesomeIcon icon={faMountain} size='5x' />
+                            </section>
+                            <p>Hello</p>
+                            <p>There</p>
+                            <p>everyone</p>
                         </section>
                     </section>
                 </section>

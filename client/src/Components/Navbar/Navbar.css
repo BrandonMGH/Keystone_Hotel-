@@ -37,10 +37,14 @@
 
 #navReservations {
     grid-area: navReservations;
-    display: flex; 
+    display: grid; 
     justify-content: center;
     align-items: center;
 
+}
+
+#navHamburgerMenu{
+    display: none; 
 }
 
 #navResButton{
@@ -55,4 +59,19 @@ border: 2px solid black;
     color: white; 
     border: 2px solid white; 
     cursor: pointer;
+}
+
+@media (max-width: 900px){
+    /*MAIN NAV*/
+    #mainNav {
+        grid-template-areas: 
+        "navLogo navTitle navReservations"
+        "navLogo navTitle navReservations";
+    }
+    #navLinks{
+        display: none; 
+    }
+    #navHamburgerMenu{
+        display: block; 
+    }
 }
