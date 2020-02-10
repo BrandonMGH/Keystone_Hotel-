@@ -45,7 +45,17 @@ const TheHotel = () => {
                 </section>
             </section>
             <section id="hotelSectionFour">
-
+                <section id="hotelSectionFourBackgroundLayer">
+                    <section id="hotelSectionFourTitle">
+                        <h1>HOTEL AMENITIES AT A GLANCE</h1>
+                    </section>
+                    <section id="hotelSectionFourAmenititesContainer">
+                        <section style={{margin: "5%"}}>1</section>
+                        <section style={{margin: "5%"}}>2</section>
+                        <section style={{margin: "5%"}}>3</section>
+                        <section style={{margin: "5%"}}>4</section>
+                    </section>
+                </section>
             </section>
         </section>
     )
