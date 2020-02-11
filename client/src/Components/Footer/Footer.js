@@ -36,12 +36,10 @@ const Footer = () => {
             </section>
             <section id="footerExploreContainer">
                 <h3>EXPLORE</h3>
-                <section id="footerExploreButtons">
-                <button className="footerExploreButton">Rooms</button>
-                <button className="footerExploreButton">Dining</button>
-                <button className="footerExploreButton">Spa</button>
-                <button className="footerExploreButton">Area Attraction</button>
-                </section>
+                <p>Rooms</p>
+                <p>Dining</p>
+                <p>Spa</p>
+                <p>Area Attraction</p>
             </section>
             <section id="footerAddressContainer">
                 <h3>KEYSTONE HOTEL</h3>
@@ -50,11 +48,11 @@ const Footer = () => {
                 <p>BrandonMGH@Yahoo.com</p>
             </section>
             <section id="footerNewsletterContainer">
-                <h2>Sign Up for our Newsletter!</h2>
-                <input placeholder="FirstName" value={firstName} onChange={event => setFirstName(event.target.value)}></input>
-                <input placeholder="LastName" value={lastName} onChange={event => setLastName(event.target.value)} ></input>
-                <input placeholder="Email" value={email} onChange={event => setEmail(event.target.value)}></input>
-                <button onClick={newsLetterSignUp}>-></button>
+                <h3>NEWSLETTER SIGN UP</h3>
+                <input placeholder="FirstName" className="footerNewsLetterInput" value={firstName} onChange={event => setFirstName(event.target.value)}></input>
+                <input placeholder="LastName" className="footerNewsLetterInput" value={lastName} onChange={event => setLastName(event.target.value)} ></input>
+                <input placeholder="Email" className="footerNewsLetterInput" value={email} onChange={event => setEmail(event.target.value)}></input>
+                <button id="footerNewsLetterButton"style={{width: "40%",  margin:"2%"}} onClick={newsLetterSignUp}>-></button>
             </section>
         </section>
     )

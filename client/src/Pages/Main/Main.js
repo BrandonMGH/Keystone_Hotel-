@@ -27,6 +27,7 @@ const Main = () => {
                     <h1>Expand your comfort zone</h1>
                     <p>Good. Use your aggressive feelings, boy! Let the hate flow through you. Obi-Wan has taught you well. I will not fight you, father. You are unwise to lower your defenses. Your thoughts betray you, father. I feel the good in you...the conflict. There is no conflict. You couldn't bring yourself to kill me before, and I don't believe you'll destroy me now. You underestimate the power of the dark side. If you will not fight, then you will meet your destiny. Good. Good.</p>
                 </section>
+              
                 <section id="mainSubSectionDivideTwo">
                     <img alt="" id="imgSubSectionDivideTwo" src={girlMountain} />
                 </section>
@@ -49,7 +50,9 @@ const Main = () => {
                     </div>
                 </section>
                 <section id="mainSectionSummary">
-                    Good. Use your aggressive feelings, boy! Let the hate flow through you. Obi-Wan has taught you well. I will not fight you, father. You are unwise to lower your defenses. Your thoughts betray you, father. I feel the good in you...the conflict. There is no conflict. You couldn't bring yourself to kill me before, and I don't believe you'll destroy me now. You underestimate the power of the dark side. If you will not fight, then you will meet your destiny. Good. Good
+                    <p style={{position:"relative", top:"5%", margin:"2%"}}>Good. Use your aggressive feelings, boy! Let the hate flow through you. Obi-Wan has taught you well. I will not fight you, father. You are unwise to lower your defenses. Your thoughts betray you, father. I feel the good in you...the conflict. There is no conflict. You couldn't bring yourself to kill me before, and I don't believe you'll destroy me now. You underestimate the power of the dark side. If you will not fight, then you will meet your destiny. Good. Good</p>
+                </section>
+                <section id="mainSectionSummaryBackground">
                 </section>
                 <section id="mainSectionRoomPicTwo" >
                     <div id="mainSectionRoomPicTwoImage">

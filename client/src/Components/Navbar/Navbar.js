@@ -14,6 +14,7 @@ justify-items: center;
 background-color: rgba(0,0,0,0.4);
 width: 100%;
 height: 100%; 
+margin-top: -2%; 
 `
 
 const panDown = keyframes`
@@ -42,13 +43,13 @@ justify-items: center;
 align-items: center; 
 background-color: white; 
 border: 2px black solid; 
-height: 75%;
+height: 70%;
 width: 50%; 
 top: 2.5%;
 animation: 1s ${panDown};
 @media (max-width: 900px){
     width: 80%; 
-    height: 90%; 
+    height: 85%; 
     grid-template-rows:1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
     grid-template-areas: 
     "resModalTitle resModalTitle resModalTitle"
@@ -60,6 +61,15 @@ animation: 1s ${panDown};
     "resModalPets resModalPets resModalPets"
     "resModalButton resModalButton resModalButton";
 }
+@media (max-height: 500px){
+    height: 375px; 
+    grid-template-rows:1.5fr 1fr 1fr 1fr; 
+    grid-template-areas: 
+    "resModalTitle resModalTitle resModalTitle"
+    "resModalCheckIn resModalCheckOut resModalPrice"
+    "resModalGuests resModalView resModalPets"
+    "resModalButton resModalButton resModalButton";
+    }
 `
 
 const NavigationModalContainer = styled.div`
@@ -69,16 +79,20 @@ justify-items: center;
 z-index: 100;
 height: 100%;
 width: 100%;
+margin-top: -2%;
 background-color: rgba(0,0,0,0.4);
+@media (min-width: 900px){
+    display: none; 
+}
 `
 const NavigationModalContent = styled.div`
 position: relative; 
-height: 550px;
+height: 80%;
 width: 40%; 
 top: 10%; 
 background-color: white; 
 border: solid 2px black; 
-animation: 1s ${navPanDown}
+animation: 1s ${navPanDown};
 `
 const Navbar = () => {
     const [modalState, setModalState] = useState(false)
@@ -195,11 +209,11 @@ const Navbar = () => {
                 <NavigationModalContent>
                     <span id="navModalClose" onClick={navModalStateChange}>&times;</span>
                     <section id="modalNavLinks">
-                        <p><a className="navLink" href="/hotel">The Hotel</a></p>
-                        <p><a className="navLink" href="/rooms">Rooms</a></p>
-                        <p><a className="navLink" href="/dining">Dining</a></p>
-                        <p><a className="navLink" href="/spa">Spa & Wellness</a></p>
-                        <p><a className="navLink" href="/areaAttractions">Area Attractions</a></p>
+                        <p><a className="navLink" href="/hotel">THE HOTEL</a></p>
+                        <p><a className="navLink" href="/rooms">ROOMS</a></p>
+                        <p><a className="navLink" href="/dining">DINING</a></p>
+                        <p><a className="navLink" href="/spa">SPA & WELLNESS</a></p>
+                        <p><a className="navLink" href="/areaAttractions">AREA ATTRACTIONS</a></p>
                     </section>
                 </NavigationModalContent>
             </NavigationModalContainer>
@@ -212,15 +226,15 @@ const Navbar = () => {
                 </section>
                 <section id="navLinks">
                     <p>|</p>
-                    <p><a className="navLink" href="/hotel">The Hotel</a></p>
+                    <p><a className="navLink" href="/hotel">THE HOTEL</a></p>
                     <p>|</p>
-                    <p><a className="navLink" href="/rooms">Rooms</a></p>
+                    <p><a className="navLink" href="/rooms">ROOMS</a></p>
                     <p>|</p>
-                    <p><a className="navLink" href="/dining">Dining</a></p>
+                    <p><a className="navLink" href="/dining">DINING</a></p>
                     <p>|</p>
-                    <p><a className="navLink" href="/spa">Spa & Wellness</a></p>
+                    <p><a className="navLink" href="/spa">SPA & WELLNESS</a></p>
                     <p>|</p>
-                    <p><a className="navLink" href="/areaAttractions">Area Attractions</a></p>
+                    <p><a className="navLink" href="/areaAttractions">AREA ATTRACTIONS</a></p>
                     <p>|</p>
                 </section>
                 <section id="navReservations">

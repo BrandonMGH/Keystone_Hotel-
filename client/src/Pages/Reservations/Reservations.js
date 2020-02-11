@@ -56,7 +56,7 @@ margin-bottom: -3%;
 `
 const DefaultShowState = styled.section`
 text-align: center; 
-font-size: 20px; 
+font-size: 18px; 
 position: relative; 
 padding-top: 3%; 
 top: -25px; 

@@ -74,7 +74,7 @@
 
 #modalNavLinks {
     position: relative; 
-    top: 25%; 
+    top: 20%; 
     display: grid;
     justify-items: center;
 }
@@ -82,6 +82,7 @@
 .navLink {
     text-decoration: none;
     color: black; 
+    font-size: 12px; 
 }
 
 .navLink:hover{
@@ -98,6 +99,8 @@
     grid-template-areas: 
     "navLogo navTitle navReservations"
     "navLogo navLinks navReservations";
+    margin-top: 2%; 
+    margin-bottom: 2%; 
 }
 
 #navLogo {
@@ -170,6 +173,7 @@
         padding-top: 4%;
         padding-bottom: 4%; 
     }
+
     /* MAIN NAV SEC */
     #mainNav {
         grid-template-areas: 
@@ -181,5 +185,11 @@
     }
     #navHamburgerMenu{
         display: block; 
+    }
+}
+
+@media (max-height: 500px){
+    #modalNavLinks{
+        top: 0%;
     }
 }
