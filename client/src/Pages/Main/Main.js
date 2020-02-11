@@ -65,7 +65,7 @@ const Main = () => {
             </section>
             <section id="mainSectionGeneralInfo">
                 <section style={{position: "relative", top:"25%"}}>
-                    <h1>CONTACT US</h1>
+                    <h1 id="mainSectionGeneralInfoTitle">CONTACT US</h1>
                     <section id="mainSectionGenralInfoContainer">
                         <section className="mainSectionGeneralInfoSubContainer">
                             <FontAwesomeIcon id="generalPhoneIcon" icon={faPhone} />
@@ -75,12 +75,12 @@ const Main = () => {
                         <section className="mainSectionGeneralInfoSubContainer">
                             <FontAwesomeIcon id="generalEmailIcon" icon={faEnvelope} />
                             <p>Email Us</p>
-                            <p>BrandonMGH@Yahoo.com</p>
+                            <p>keystonehotelcompany@gmail.com</p>
                         </section>
                         <section className="mainSectionGeneralInfoSubContainer">
                             <FontAwesomeIcon id="generalHotelIcon" icon={faHotel} />
                             <p>Visit Us</p>
-                            <p>5341 Huron Court, Oceanside, CA 92056</p>
+                            <p>5162 Haley Road, Vail, CO 81657</p>
                         </section>
                     </section>
                 </section>
