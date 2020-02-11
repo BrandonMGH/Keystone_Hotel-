@@ -73,10 +73,11 @@ background-color: rgba(0,0,0,0.4);
 `
 const NavigationModalContent = styled.div`
 position: relative; 
-height: 80%;
-width: 50%; 
+height: 550px;
+width: 40%; 
 top: 10%; 
 background-color: white; 
+border: solid 2px black; 
 animation: 1s ${navPanDown}
 `
 const Navbar = () => {
@@ -154,9 +155,9 @@ const Navbar = () => {
                     <section id="resModalCheckIn">
                         <p>Check In:</p> <input type="date" name="checkIn" onChange={event => setCheckIn(event.target.value)} />
                     </section>
-                    <secction id="resModalCheckOut">
+                    <section id="resModalCheckOut">
                         <p>Check Out:</p> <input type="date" name="checkOut" onChange={event => setCheckOut(event.target.value)} />
-                    </secction>
+                    </section>
                     <section id="resModalPrice">
                         <p>Price Range: ${priceRange} </p>
                         <input style={{ width: "100%" }} type="range" name="priceRange" min="250" max="1500" value={priceRange} onChange={event => setPriceRange(event.target.value)} />
@@ -192,7 +193,7 @@ const Navbar = () => {
             </ModalContainer>
             <NavigationModalContainer navShowState={navModalState === true ? "grid" : "none"}>
                 <NavigationModalContent>
-                    <span onClick={navModalStateChange}>&times;</span>
+                    <span id="navModalClose" onClick={navModalStateChange}>&times;</span>
                     <section id="modalNavLinks">
                         <p><a className="navLink" href="/hotel">The Hotel</a></p>
                         <p><a className="navLink" href="/rooms">Rooms</a></p>
