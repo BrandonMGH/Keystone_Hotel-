@@ -1,3 +1,4 @@
+
 /* MAIN TITLE SECTION */
 
 #mainTitleSection{
@@ -24,7 +25,9 @@
 /* MAIN SECTION DIVIDE ONE */ 
 
 #mainSectionDivideOne {
-height: 750px
+height: 750px;
+margin-bottom: 10%; 
+margin-top: -5%
 }
 
 
@@ -34,8 +37,12 @@ height: 750px
     width: 30%; 
     top: 40%; 
     left: 10%; 
-    z-index: 5
+    z-index: 5;
+    padding: 2%; 
+    border-top: 5px double rgba(34, 0, 128, 1);
+    border-left: 5px double rgba(34, 0, 128, 1); 
 }
+
 
 #mainSubSectionDivideTwo {
    position:relative;
@@ -80,6 +87,8 @@ height: 750px
     grid-template-rows: 1fr 1fr; 
     justify-content: center;
     grid-gap: 5%;
+    margin-bottom: -20%; 
+    margin-top: 5%; 
   
 }
 
@@ -88,29 +97,55 @@ height: 750px
     top: 10%;
     left: 15%; 
     order: 1; 
+    z-index: 10; 
 }
 
 #mainSectionRoomQuote{
     order: 2
 }
 
-#mainSectionRoomQuoteText{
-  width:95%; 
-  padding-top: 15%;  
+#mainSectionRoomQuoteText{   
+  position:relative; 
+  top: 15%; 
+  width: 85%; 
+  left: 6%; 
+  padding-left: 5%; 
   font-size: 30px;
   text-align:center; 
+  border: double 5px rgba(34, 0, 128, 1);
+
+
 }
 
 #mainSectionSummary {
-    width: 80%; 
+    height: 95%;
+    width: 70%; 
+    background-color: rgba(255,255, 255, .9); 
+    border-top: 5px double rgb(34, 0, 128);
+    border-right: 5px double rgba(34, 0, 128, 1);
     text-align: center; 
-    padding-left: 12%;
-    padding-top: 12%; 
-    order: 3
+    position: relative;
+    left: 18%; 
+    padding-top: 5%; 
+    padding: 3%; 
+    order: 3;
+    z-index: 10
+
 }
 
 #mainSectionRoomPicTwo{
     order: 4
+}
+
+#mainSectionSummaryBackground{
+   height: 520px;
+   width: 80%;
+   background-color: rgba(34, 0, 128, .5);; 
+   position: relative;
+   bottom: 520px;
+   left: 11%;
+   order: 5;
+   z-index: 5
 }
 
 #mainSectionRoomPicTwoImage{
@@ -132,8 +167,10 @@ height: 750px
     height: 750px; 
 }
 
-#mainSectionGeneralInfo > h1 {
- margin-top: 5%; 
+
+#mainSectionGeneralInfoTitle{
+    font-size: 32px;
+    text-decoration: underline rgba(34, 0, 128, 1);
 }
 
 #mainSectionGenralInfoContainer{
@@ -189,12 +226,17 @@ padding-top: 10%;
      #mainSectionDivideOne {
          display: grid; 
          justify-content: center;
+         margin-bottom: 0%; 
+         margin-top: 0%
+        
      }
      #mainSubSectionDivideOne, #mainSubSectionDivideTwo{
          position: static; 
      }
      #mainSubSectionDivideOne{
-         width: 100%; 
+         width: 90%; 
+         border: 5px double green;
+         margin: 2%; 
      }
     
      #imgSubSectionDivideTwo{
@@ -211,6 +253,7 @@ padding-top: 10%;
      #mainSectionRoomDescription{
          grid-template-columns: 1fr;
          grid-template-rows: 1fr 1fr 1fr 1fr;
+         margin-bottom: 0%; 
      }
      #mainSectionRoomPicOne{
          position: static;  
@@ -223,7 +266,19 @@ padding-top: 10%;
      #mainSectionSummary {
          order: 4;
          padding-top: 0%; 
+         background-color: rgba(0,0,0,0); 
+         width: 100%;
+         padding-top: 0%; 
+         padding: 0%; 
+         position: relative;
+         left: 0%;
+         bottom: 20%;
+         border-top: none;
+         border-right: none;
      } 
+     #mainSectionSummaryBackground{
+        display: none; 
+     }
      #mainSectionRoomPicTwoImage {
         position: static; 
      }
@@ -232,10 +287,12 @@ padding-top: 10%;
      }
      #mainSectionRoomQuoteText{
          position: relative;
+         left: 0%;
          top: 10%;
-         width: 100%;  
+         width: 99%;  
          font-size: 30px;
          text-align:center; 
+         padding-left: 0%; 
     }
      /* MAIN CAROUSEL */ 
      #mainSectionCarousel {
@@ -243,6 +300,7 @@ padding-top: 10%;
      }
  
      /* MAIN SECTION GENERAL INFO */
+
  
      #mainSectionGeneralInfo {
          display: grid; 

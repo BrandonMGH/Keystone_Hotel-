@@ -15,7 +15,6 @@
     display: flex; 
     justify-items: center; 
     margin-top: 5%;
-    margin-bottom: 5%; 
 }
 
 #footerKeyStoneLogo{
@@ -26,26 +25,49 @@
 #footerExploreContainer{
     grid-area: footerButtons;
     text-align: center; 
+    margin: 1%; 
 }
 
-#footerExploreButtons{
-    display: grid; 
-}
 
-.footerExploreButton{
-margin-top: 2%;
-margin-bottom: 2%; 
-background-color: black;
-border: solid 2px white; 
-color: white; 
-}
 
 #footerAddressContainer{
     grid-area: footerAddress;
     text-align: center;
+    margin: 2%; 
 }
 
 #footerNewsletterContainer{
     grid-area:footerNewsLetter; 
     text-align: center;
+    justify-items: center;
+    margin: 2%; 
+}
+
+.footerNewsLetterInput{
+    width: 66%; 
+    margin: 2%; 
+    padding: 1%; 
+    background-color: rgba(155, 155, 155, .5);
+    border: white solid 5px; 
+    color: white; 
+}
+
+.footerNewsLetterInput::placeholder{
+    color: white
+}
+
+#footerNewsLetterButton{
+    width: 40%;
+    margin: 2%;
+    padding: 2%; 
+    border: solid 2px white;
+    background-color: black;
+    color: white; 
+}
+
+#footerNewsLetterButton:hover{
+    background-color: white;
+    border: solid 2px black;
+    color: black;
+    cursor: pointer;
 }
