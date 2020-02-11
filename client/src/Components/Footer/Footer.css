@@ -1,37 +1,51 @@
 #footerContainer {
     display: grid; 
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "footerKey footerKey footerKey"
+    "footerButtons footerAddress footerNewsLetter";
     justify-items: center;
     background-color: black; 
     color: white; 
 }
 
-#footerLogoContainer {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    margin-top: 2.5%; 
+#footerLogoContainer{
+    grid-area: footerKey;
+    display: flex; 
+    justify-items: center; 
+    margin-top: 5%;
+    margin-bottom: 5%; 
 }
 
-.footerKeyStoneLogo {
-    height: 50%; 
-}
-
-#footerInfoContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-
+#footerKeyStoneLogo{
+    width: 45px; 
+    height: 75px; 
 }
 
 #footerExploreContainer{
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
+    grid-area: footerButtons;
+    text-align: center; 
 }
 
-#footerExploreButtonss{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+#footerExploreButtons{
+    display: grid; 
+}
+
+.footerExploreButton{
+margin-top: 2%;
+margin-bottom: 2%; 
+background-color: black;
+border: solid 2px white; 
+color: white; 
+}
+
+#footerAddressContainer{
+    grid-area: footerAddress;
+    text-align: center;
+}
+
+#footerNewsletterContainer{
+    grid-area:footerNewsLetter; 
+    text-align: center;
 }

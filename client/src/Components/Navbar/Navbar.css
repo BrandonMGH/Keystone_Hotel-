@@ -61,16 +61,31 @@
     grid-area: resModalButton; 
 }
 /* NAVIGATION MODAL CONTAINER */
+#navModalClose{
+    font-size: 36px;
+    color: black;
+    padding-left: 2%; 
+}
+
+#navModalClose:hover{
+    color: blue;
+    cursor: pointer;
+}
+
 #modalNavLinks {
     position: relative; 
     top: 25%; 
     display: grid;
     justify-items: center;
-    align-content: space-between;
 }
 
 .navLink {
     text-decoration: none;
+    color: black; 
+}
+
+.navLink:hover{
+    color: blue;
 }
 
 /* MAIN NAV SEC */
