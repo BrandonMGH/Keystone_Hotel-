@@ -34,6 +34,7 @@
 
 .modalContentLine {
     width: 50%;
+    height: 2px;
     background-color: rgba(0,0,0, .6);
     height: 1;
     margin-top: 2.5%; 
@@ -191,5 +192,11 @@
 @media (max-height: 500px){
     .modalContentTitleText, .modalContentTitleText, .modalContentText, .modalContentTitleText {
         font-size: 12px; 
+    }
+}
+
+@media (max-height: 650px){
+    .modalImage{
+        display: none;
     }
 }

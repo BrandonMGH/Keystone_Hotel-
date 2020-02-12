@@ -8,7 +8,7 @@ const SpaTypes = () => {
     return (
         <>
             {SpaTypesData.spa.map(properties => (
-                <section className="spaTypeGrid">
+                <section key={properties.id} className="spaTypeGrid">
                     <section className="spaTypesGridImageContainer">
                         <img className="spaTypesGridImage" src={properties.image} />
                     </section>
@@ -19,7 +19,7 @@ const SpaTypes = () => {
                 </section>
             ))}
             {SpaTypesData.fitnessCenter.map(properties => (
-                <section className="spaTypeGrid">
+                <section key={properties.id} className="spaTypeGrid">
                     <section className="spaTypesGridImageContainer">
                         <img className="spaTypesGridImage" src={properties.image} />
                     </section>
@@ -30,7 +30,7 @@ const SpaTypes = () => {
                 </section>
             ))}
             {SpaTypesData.suana.map(properties => (
-                <section className="spaTypeGrid">
+                <section key={properties.id} className="spaTypeGrid">
                     <section className="spaTypesGridImageContainer">
                         <img className="spaTypesGridImage" src={properties.image} />
                     </section>
@@ -41,7 +41,7 @@ const SpaTypes = () => {
                 </section>
             ))}
             {SpaTypesData.yoga.map(properties => (
-                <section className="spaTypeGrid">
+                <section key={properties.id} className="spaTypeGrid">
                     <section className="spaTypesGridImageContainer">
                         <img className="spaTypesGridImage" src={properties.image} />
                     </section>

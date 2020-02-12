@@ -34,13 +34,16 @@ justify-items: center;
 background-color: white; 
 border: solid 2px black;
 width: 50%; 
-height: 90%; 
+height: 95%; 
 animation: 1s ${panDown};
 @media (max-width: 900px){
   width: 80%; 
 }
+@media(max-height: 650px){
+  height: 100%;
+}
 @media (max-height: 500px){
-  height: 350px; 
+  height: 100%;
 }
 `
 

@@ -6,7 +6,7 @@ import './ReactCarousel.css'
 import ForestViewRoomTwo from '../../Images/ForestViewRoomTwo.jpg'
 import HotelRestaurantOne from '../../Images/HotelRestaurantOne.jpeg'
 import facialheader2 from '../../Images/facialheader2.jpg'
-import AreaAttractionOne from '../../Images/AreaAttractionOne.jpg'
+import AreaAttractionTwo from '../../Images/AreaAttractionTwo.webp'
 
 const MainCarousel = () => {
     return (
@@ -41,7 +41,7 @@ const MainCarousel = () => {
                     <p>If you would like to find out more information about the rooms, please click the link below</p>
                     <a>Read More</a>
                 </section>
-                <img id="carouselImgFour" src={AreaAttractionOne} />
+                <img id="carouselImgFour" src={AreaAttractionTwo} />
             </div>
         </Carousel>
     )

@@ -119,20 +119,18 @@
     display: grid;
     justify-items: center;
     align-content: center;
-    position: relative; 
     grid-template-columns: 1fr 1fr;
     grid-template-rows:1fr 2fr 2fr; 
     grid-template-areas:
     "sectFourTitle sectFourTitle"
     "sectFourAmenOne sectFourAmenTwo"
     "sectFourAmenThree sectFourAmenFour";
+    position: relative;
+    top: 100px;
     color: white; 
 }
 
-.hotelSectionFourAmenitites{
-    display: grid; 
-    justify-items: center; 
-}
+
 
 #hotelSectionFourTitle{
     grid-area: sectFourTitle;
@@ -154,6 +152,19 @@
 }
 
 .hotelSectionFontAwesomeIcon {
-  border-bottom: solid 2px white; 
   padding-bottom: 25%; 
+  display: grid; 
+  justify-items: center;
+}
+
+.hotelSectionFontAwesomeIconTitle{
+   border-bottom: 2px solid white; 
+}
+
+@media (max-width: 900px){
+     /* HOTEL SECTION FOUR */ 
+    #hotelSectionFourTitle{
+        font-size: 20px; 
+        text-align: center; 
+    }
 }
