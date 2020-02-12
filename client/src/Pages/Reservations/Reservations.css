@@ -19,8 +19,7 @@
 }
 
 .modalImage{
-    width: 50%;
-    height: 35%; 
+    width: 35%;
 }
 
 .modalContentText {
@@ -187,4 +186,10 @@
     }
     
     
+}
+
+@media (max-height: 500px){
+    .modalContentTitleText, .modalContentTitleText, .modalContentText, .modalContentTitleText {
+        font-size: 12px; 
+    }
 }

@@ -1,0 +1,18 @@
+#spaSectionOne{
+    height: 750px; 
+    background-image: url('../../Images/SpaReception.jpg');
+    background-size: cover; 
+}
+
+#spaSectionOneTitle{
+    position:relative;
+    top: 40%;
+    left: 25%;
+    width: 50%; 
+    padding: 1%; 
+    font-size: 35px;
+    text-align: center; 
+    color: white; 
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+}
