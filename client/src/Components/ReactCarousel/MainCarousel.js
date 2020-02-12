@@ -3,9 +3,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import './ReactCarousel.css'
 
-import HotelInteriorFour from '../../Images/HotelInteriorFour.jpg'
+import ForestViewRoomTwo from '../../Images/ForestViewRoomTwo.jpg'
 import HotelRestaurantOne from '../../Images/HotelRestaurantOne.jpeg'
-import HotelSpaOne from '../../Images/HotelSpaOne.jpeg'
+import facialheader2 from '../../Images/facialheader2.jpg'
 import AreaAttractionOne from '../../Images/AreaAttractionOne.jpg'
 
 const MainCarousel = () => {
@@ -17,7 +17,7 @@ const MainCarousel = () => {
                     <p>If you would like to find out more information about the rooms, please click the link below</p>
                     <a>Read More</a>
                 </section>
-                <img id="carouselImgOne" src={HotelInteriorFour} />
+                <img id="carouselImgOne" src={ForestViewRoomTwo} />
             </div>
             <div>
                 <section className="legend" id="carouselTextTwo">
@@ -33,7 +33,7 @@ const MainCarousel = () => {
                     <p>If you would like to find out more information about the rooms, please click the link below</p>
                     <a>Read More</a>
                 </section>
-                <img id="carouselImgThree" src={HotelSpaOne} />
+                <img id="carouselImgThree" src={facialheader2} />
             </div>
             <div>
                 <section className="legend" id="carouselTextFour">

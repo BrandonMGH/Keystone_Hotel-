@@ -4,8 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpa, faDumbbell, faPray, faHotTub } from '@fortawesome/free-solid-svg-icons'
 
 import SpaRocks from '../../Images/SpaRocks.png'
-import facialheader2 from '../../Images/facialheader2.jpg'
 import spaFacial from '../../Images/spaFacial.webp'
+
+/* COMPONENTS */
+import SpaTypes from '../../Components/SpaTypes/SpaTypes.js'
 
 const Spa = () => {
     return (
@@ -54,9 +56,12 @@ const Spa = () => {
                         </section>
                     </section>
                 </section>
-                <section id="spaSectionThreeImage">
-                    <img style={{width: "90%", height: "90%"}}src={spaFacial} />
+                <section id="spaSectionThreeImageContainer">
+                    <img id="spaSectionThreeImage" src={spaFacial} />
                 </section>
+            </section>
+            <section id="spaSectionFour">
+                <SpaTypes />
             </section>
         </section>
     )
