@@ -6,21 +6,21 @@ import axios from 'axios';
 
 export default {
     getRoomInfo: () => {
-        return axios.get("http://localhost:3001/api/reservations")
+        return axios.get("https://keystone-hotel.herokuapp.com//api/reservations")
     },
     upNewsletterInfo: (inputValue) => {
-        return axios.post("http://localhost:3001/api/newsletter", {
+        return axios.post("https://keystone-hotel.herokuapp.com/api/newsletter", {
             newsletterObject: inputValue
         })
     },
     reservationConfirmation: (roomInfoObject, reservationInfoObject) => {
-        return axios.post("http://localhost:3001/api/reservations/confirmation", {
+        return axios.post("https://keystone-hotel.herokuapp.com/api/reservations/confirmation", {
             roomConfirmObject: roomInfoObject,
             resConfirmObject: reservationInfoObject, 
         })
     },
     reservationInfo: (inputValue) => {
-        return axios.put("http://localhost:3001/api/reservations", {   
+        return axios.put("https://keystone-hotel.herokuapp.com/api/reservations", {   
             resObject: inputValue,
         })
     },
