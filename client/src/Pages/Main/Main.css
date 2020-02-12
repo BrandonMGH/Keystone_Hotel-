@@ -235,7 +235,7 @@ padding-top: 10%;
      }
      #mainSubSectionDivideOne{
          width: 90%; 
-         border: 5px double green;
+         border: 5px double rgba(34, 0, 128, 1);
          margin: 2%; 
      }
     

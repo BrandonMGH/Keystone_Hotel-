@@ -34,9 +34,13 @@ justify-items: center;
 background-color: white; 
 border: solid 2px black;
 width: 50%; 
+height: 90%; 
 animation: 1s ${panDown};
 @media (max-width: 900px){
   width: 80%; 
+}
+@media (max-height: 500px){
+  height: 350px; 
 }
 `
 
@@ -63,6 +67,7 @@ top: -25px;
 z-index: 1;
 @media(max-width: 900px){
   padding-top: 6%; 
+  font-size: 12px; 
 }
 `
 

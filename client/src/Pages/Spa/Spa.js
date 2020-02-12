@@ -1,10 +1,15 @@
 import React from 'react'
+import './Spa.css'
 
 const Spa = () => {
     return (
-        <div>
-            Spa
-        </div>
+        <section>
+            <section id="spaSectionOne">
+                <section id="spaSectionOneTitle">
+                    <h1>SPA & WELLNESS</h1>
+                </section>
+            </section>
+        </section>
     )
 }
 

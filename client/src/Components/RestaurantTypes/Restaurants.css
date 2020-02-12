@@ -72,26 +72,29 @@
 
 #restaurantTitleContainer{
     grid-area:resTitleArea;
-    background-color: red; 
+    border: double 5px rgba(124, 30, 101, 0.5);
     margin: 2%; 
     padding: 2%; 
     text-align: center; 
     font-size: 30px; 
-    background: rgba(154, 61, 136, 0.1);
+
 }
 
 #restaurantDescriptionOne{
     grid-area: resDescOne;
+    border: double 5px rgba(124, 30, 101, 0.5);
+  
     margin: 2%; 
     padding: 5%;
-    background: rgba(154, 61, 136, 0.1);
+
 }
 
 #restaurantDescriptionTwo{
     grid-area: resDescTwo;
+    border: double 5px rgba(124, 30, 101, 0.5);
     margin: 2%; 
     padding: 5%;
-    background: rgba(154, 61, 136, 0.1);
+
 }
 
 #restaurantMenuModal{
