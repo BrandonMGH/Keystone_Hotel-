@@ -65,7 +65,8 @@
     grid-template-areas: 
     "spaText spaImage"
     "spaText spaImage";
-    
+    padding-bottom: 5%; 
+    background-color: rgba(0, 34, 145, 0.1);    
 }
 
 #spaSectionThreeText {
@@ -81,11 +82,16 @@
 }
 
 
-#spaSectionThreeImage{
+#spaSectionThreeImageContainer{
     grid-area: spaImage;
     display: grid;
     justify-items: center;
     align-content: center; 
+}
+
+#spaSectionThreeImage {
+    width: 90%;
+    height: 90%;
 }
 
 @media (max-width: 900px){
@@ -118,4 +124,26 @@
            margin: 3%; 
            border-radius: 10px;
        }
+       /* SPA SECTION THREE */
+       #spaSectionThree {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr ;
+        grid-template-areas: 
+        "spaImage spaImage"
+        "spaText spaText";
+        padding-bottom: 250px; 
+        padding-top: 25px; 
+       }
+       #spaSectionThreeTitle{
+        font-size: 28px; 
+      
+       }
+       #spaSectionThreeImage {
+        width: 90%;
+        height: 250px; 
+       }
+       #spaSectionFour{
+           margin-top: 5%; 
+       }
+     
    }

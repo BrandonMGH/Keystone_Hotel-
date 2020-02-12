@@ -1,0 +1,37 @@
+.spaTypeGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "spaTypeImage spaTypeInfo"
+    "spaTypeImage spaTypeInfo";
+    margin-top: 1%;
+    margin-bottom: 1%; 
+}
+
+.spaTypesGridImageContainer{
+    grid-area: spaTypeImage;
+    display: grid; 
+    justify-items: center;
+ 
+}
+
+.spaTypesGridImage {
+    width: 90%;  
+}
+
+.spaTypesGridTitle{
+    font-size: 32px;
+    border: double black 5px;
+    text-align: center; 
+}
+
+@media (max-width: 900px){
+    .spaTypeGrid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "spaTypeImage"
+        "spaTypeInfo";
+    }
+}
