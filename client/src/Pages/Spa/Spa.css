@@ -1,3 +1,5 @@
+/*SPA SECTION ONE */
+
 #spaSectionOne{
     height: 750px; 
     background-image: url('../../Images/SpaReception.jpg');
@@ -16,3 +18,71 @@
     background: rgba(0,0,0,.5);
     border-radius: 10px;
 }
+
+/*SPA SECTION TWO*/
+
+#spaSectionTwo{
+    height: 750px; 
+}
+
+#spaSectionTwoTitleContainer {
+    position: relative;
+    top: 50px;
+    left: 5%;
+    font-size: 34px; 
+    width: 50%; 
+}
+
+#spaSectionTwoImageContainer{
+    position:relative;
+    left: 40%; 
+    bottom: 200px; 
+    width: 60%; 
+
+}
+
+#spaSectionTwoImage{
+    width: 100%; 
+}
+
+#spaSectionTwoDescriptionContainer{
+    width: 50%;
+    position: relative;
+    bottom: 400px;
+    left: 5%; 
+    padding: 3%; 
+    border-radius: 10px;
+    background-color: rgba(0, 34, 145, 0.5)
+}
+
+@media (max-width: 900px){
+    /*SPA SECTION TWO*/
+       #spaSectionTwo{
+           display: grid;
+           justify-items: center;
+           
+       }
+       #spaSectionTwoTitleContainer{
+           left: 0%; 
+           top: 0px; 
+           width: 100%; 
+           font-size: 25px; 
+       }
+       #spaSectionTwoImageContainer{
+           left: 0px; 
+           bottom: 0px; 
+           width: 50%; 
+       }
+   
+       #spaSectionTwoDescriptionContainer {
+           position: static; 
+           text-align: center;
+           width: 90%; 
+           left: 0%;
+           bottom: 0px;
+           background-color: rgba(0, 34, 145, 0.5);
+           font-size: 20px;  
+           margin: 3%; 
+           border-radius: 10px;
+       }
+   }
