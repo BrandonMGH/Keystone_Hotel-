@@ -52,37 +52,30 @@ const TheHotel = () => {
                         <section id="hotelSectionFourTitle">
                             <p>HOTEL AMENITIES AT A GLANCE</p>
                         </section>
-                        <section id="hotelSectionFourAmenityOne" class="hotelSectionFourAmenitites">
+                        <section id="hotelSectionFourAmenityOne" className="hotelSectionFourAmenitites">
                             <section className="hotelSectionFontAwesomeIcon">
+                                <h3 className="hotelSectionFontAwesomeIconTitle">ROOMS</h3>
                                 <FontAwesomeIcon icon={faBed} size='5x' />
                             </section>
-                            <p>Hello</p>
-                            <p>There</p>
-                            <p>everyone</p>
                         </section>
-                        <section id="hotelSectionFourAmenityTwo" class="hotelSectionFourAmenitites">
+                        <section id="hotelSectionFourAmenityTwo" className="hotelSectionFourAmenitites">
                             <section className="hotelSectionFontAwesomeIcon">
+                                <h3 className="hotelSectionFontAwesomeIconTitle">DINING</h3>
                                 <FontAwesomeIcon icon={faUtensils} size='5x' />
                             </section>
-                            <p>Hello</p>
-                            <p>There</p>
-                            <p>everyone</p>
+
                         </section>
-                        <section id="hotelSectionFourAmenityThree" class="hotelSectionFourAmenitites">
+                        <section id="hotelSectionFourAmenityThree" className="hotelSectionFourAmenitites">
                             <section className="hotelSectionFontAwesomeIcon">
+                                <h3 className="hotelSectionFontAwesomeIconTitle">SPA</h3>
                                 <FontAwesomeIcon icon={faSpa} size='5x' />
                             </section>
-                            <p>Hello</p>
-                            <p>There</p>
-                            <p>everyone</p>
                         </section>
-                        <section id="hotelSectionFourAmenityFour" class="hotelSectionFourAmenitites">
+                        <section id="hotelSectionFourAmenityFour" className="hotelSectionFourAmenitites">
                             <section className="hotelSectionFontAwesomeIcon">
+                                <h3 className="hotelSectionFontAwesomeIconTitle">AREA ATTRACTIONS</h3>
                                 <FontAwesomeIcon icon={faMountain} size='5x' />
                             </section>
-                            <p>Hello</p>
-                            <p>There</p>
-                            <p>everyone</p>
                         </section>
                     </section>
                 </section>

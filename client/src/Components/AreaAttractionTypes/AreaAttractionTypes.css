@@ -1,0 +1,32 @@
+.areaAttractionGrid {
+    display: grid; 
+    grid-template-rows: .5fr 2fr 1fr;
+    justify-items: center;
+    align-content: center;
+}
+
+.areaAttractionTitle{
+    font-size: 35px;
+    text-decoration: underline double;
+}
+
+.areaAttractionTypesGridImageContainer{
+    width:90%; 
+}
+
+.areaAttractionTypesGridImage{
+    width: 100%; 
+}
+
+.areaAttractionDescription{
+    width: 90%; 
+    font-size: 20px; 
+}
+
+@media (max-width: 900px){
+    .areaAttractionGrid {
+        grid-template-rows: .5fr 2fr 2fr;
+    
+    }
+    
+}

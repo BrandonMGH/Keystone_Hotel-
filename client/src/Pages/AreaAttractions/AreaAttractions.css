@@ -1,0 +1,124 @@
+/* AREA ATTRACTION SECTION ONE */
+
+#areaAttractionsSectionOne{
+    height: 750px;
+    background-image: url('../../Images/AreaAttractionThree.webp');
+    background-size: cover; 
+}
+
+#areaAttractionsSectionOneTitle{
+    position: relative;
+    top: 40%; 
+    left: 25%;
+    padding: 1%;
+    width: 50%; 
+    border-radius: 10px;
+    background-color: rgba(0,0,0, .6);
+    color: white; 
+    text-align: center;
+    font-size: 35px; 
+}
+
+/* AREA ATTRACTION SECTION TWO */
+
+#areaAttractionsSectionTwo{
+    height: 750px;
+}
+
+#areaAttractionsSectionTwoQuote{
+    position: relative;
+    top: 25px;
+    left: 35%;
+    font-size: 35px;
+    width: 66%; 
+    z-index: 10;
+}
+
+#areaAttractionsSectionTwoImageContainer{
+    position: relative;
+    left: 3%; 
+    width: 60%; 
+    bottom: 250px; 
+}
+
+#areaAttractionsSectionTwoImage{
+    width: 100%; 
+}
+
+#areaAttractionsSectionTwoDescription{
+    position: relative;
+    width: 50%;
+    bottom: 550px;
+    background: rgba(4, 80, 1, 0.5);
+    padding: 1%;
+    border-radius: 10px;
+    left: 40%;
+    font-size: 20px;  
+
+}
+
+#areaAttractionsSectionThree{
+    height: 750px;
+    background-image: url('../../Images/ForestImageFour.jpg');
+    background-size: cover;
+}
+
+#areaAttractionsSectionThreeBackground{
+    display: grid; 
+    color: white; 
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0,0,0,.5)
+}
+
+.areaAttractionsSectionThreeIcons{
+    display: grid;
+    justify-items: center;
+    width: 75%;
+}
+
+#lakeIcon:hover{
+    color: blue;
+}
+
+#mountainIcon:hover {
+    color: red; 
+}
+
+#forestIcon:hover{
+    color: green; 
+}
+
+@media (max-width: 900px){
+    #areaAttractionsSectionTwo{
+        display: grid;
+        justify-items: center;
+        
+    }
+    #areaAttractionsSectionTwoQuote{
+        left: 0%; 
+        top: 0px; 
+        width: 100%; 
+        font-size: 25px; 
+    }
+    #areaAttractionsSectionTwoImageContainer{
+        left: 0px; 
+        bottom: 0px; 
+        width: 50%; 
+    }
+
+    #areaAttractionsSectionTwoDescription {
+        position: static; 
+        text-align: center;
+        width: 90%; 
+        left: 0%;
+        bottom: 0px;
+        font-size: 20px;  
+        margin: 3%; 
+        border-radius: 10px;
+    }
+}
+

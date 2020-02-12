@@ -52,7 +52,8 @@
     left: 5%; 
     padding: 3%; 
     border-radius: 10px;
-    background-color: rgba(0, 34, 145, 0.5)
+    background-color: rgba(0, 34, 145, 0.5);
+    font-size: 20px; 
 }
 
 /* SPA SECTION THREE */
