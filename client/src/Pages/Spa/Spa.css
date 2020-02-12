@@ -55,6 +55,39 @@
     background-color: rgba(0, 34, 145, 0.5)
 }
 
+/* SPA SECTION THREE */
+
+#spaSectionThree {
+    height: 750px; 
+    display:grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr ;
+    grid-template-areas: 
+    "spaText spaImage"
+    "spaText spaImage";
+    
+}
+
+#spaSectionThreeText {
+    grid-area: spaText;
+    text-align: center; 
+}
+
+#spaSectionThreeTitle{
+    font-size: 36px; 
+    border-bottom: double 5px black;
+    margin-left: 5%;
+    margin-right: 5%; 
+}
+
+
+#spaSectionThreeImage{
+    grid-area: spaImage;
+    display: grid;
+    justify-items: center;
+    align-content: center; 
+}
+
 @media (max-width: 900px){
     /*SPA SECTION TWO*/
        #spaSectionTwo{
