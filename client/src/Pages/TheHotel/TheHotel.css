@@ -34,13 +34,12 @@
      grid-area: hotelTitle;
      font-size: 35px; 
      text-align:center; 
-     background: rgba(0, 0, 0, 0.1);
+     border: black double 5px; 
      margin: 2%; 
  }
 
  #hotelSectionTwoText {
      grid-area: hotelDesc;
-     background: rgba(0, 0, 0, 0.1);
      margin: 2%; 
      padding: 5%; 
      font-size: 20px; 
@@ -57,7 +56,7 @@
 
  #hotelSectionTwoImage{
      width: 90%; 
-     height: 60%; 
+     height: 50%; 
  }
 
  /* HOTEL SECTION THREE */ 
@@ -75,13 +74,12 @@
     grid-area: historyTitle;
     font-size: 35px; 
     text-align:center; 
-    background: rgba(0, 0, 0, 0.1);
+    border: black double 5px; 
     margin: 2%; 
 }
 
 #hotelSectionThreeText {
     grid-area: historyDesc;
-    background: rgba(0, 0, 0, 0.1);
     margin: 2%; 
     padding: 5%; 
     font-size: 20px; 
@@ -98,7 +96,7 @@
 
 #hotelSectionThreeImage{
     width: 90%; 
-    height: 60%; 
+    height: 50%; 
 }
 
  /* HOTEL SECTION FOUR */ 
@@ -163,6 +161,23 @@
 
 @media (max-width: 900px){
      /* HOTEL SECTION FOUR */ 
+     #hotelSectionTwo{
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 2fr 3fr;
+        grid-template-areas: 
+        "hotelTitle"
+        "hotelImage"
+        "hotelDesc"
+    }
+
+    #hotelSectionThree{
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 2fr 3fr;
+        grid-template-areas: 
+        "historyTitle"
+        "historyImage"
+        "historyDesc";
+    }
     #hotelSectionFourTitle{
         font-size: 20px; 
         text-align: center; 

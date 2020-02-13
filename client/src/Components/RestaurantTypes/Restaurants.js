@@ -129,10 +129,10 @@ const Restaurant = () => {
                             <h1>{properties.restaurantTitle}</h1>
                         </section>
                         <section id="restaurantDescriptionOne">
-                            <p>Leave that to me! Damn fool. I knew that you were going to say that! Who's the more foolish...the fool or the fool who follows him?</p>
+                            <p>{properties.restaurantDescriptionOne}</p>
                         </section>
                         <section id="restaurantDescriptionTwo">
-                            <p>Leave that to me! Damn fool. I knew that you were going to say that! Who's the more foolish...the fool or the fool who follows him?</p>
+                            <p>{properties.restaurantDescriptionTwo}</p>
                             <button id="restaurantMenuModal" value={properties.restaurantId} onClick={restaurantMenuSelect}>View the Menu</button>
                         </section>
                     </section>

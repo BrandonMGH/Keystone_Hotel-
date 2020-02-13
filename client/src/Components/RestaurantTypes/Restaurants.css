@@ -72,7 +72,7 @@
 
 #restaurantTitleContainer{
     grid-area:resTitleArea;
-    border: double 5px rgba(124, 30, 101, 0.5);
+    border: black double 5px;
     margin: 2%; 
     padding: 2%; 
     text-align: center; 
@@ -82,7 +82,7 @@
 
 #restaurantDescriptionOne{
     grid-area: resDescOne;
-    border: double 5px rgba(124, 30, 101, 0.5);
+    border: black double 5px;
   
     margin: 2%; 
     padding: 5%;
@@ -91,7 +91,7 @@
 
 #restaurantDescriptionTwo{
     grid-area: resDescTwo;
-    border: double 5px rgba(124, 30, 101, 0.5);
+    border: black double 5px;
     margin: 2%; 
     padding: 5%;
 
