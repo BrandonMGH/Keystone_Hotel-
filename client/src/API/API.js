@@ -6,7 +6,7 @@ import axios from 'axios';
 
 export default {
     getRoomInfo: () => {
-        return axios.get("https://keystone-hotel.herokuapp.com//api/reservations")
+        return axios.get("https://keystone-hotel.herokuapp.com/api/reservations")
     },
     upNewsletterInfo: (inputValue) => {
         return axios.post("https://keystone-hotel.herokuapp.com/api/newsletter", {
