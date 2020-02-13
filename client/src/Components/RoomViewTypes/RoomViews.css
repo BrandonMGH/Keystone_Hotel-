@@ -1,6 +1,11 @@
 .roomViewContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: .5fr 2fr 2fr;
+    grid-template-areas:
+    "roomTitle roomTitle"
+    "roomPic roomPic"
+    "roomDesc roomAmen";
     margin-bottom: 1%; 
     margin-top: 1%; 
     padding-top: 2%;
@@ -10,67 +15,38 @@
 
 }
 
-.roomViewRoomImage{
+
+.roomViewTextTitle{
+    grid-area: roomTitle;
+    font-size: 35px;
+    border: double 5px black; 
     padding: 2%; 
+    width: 50%; 
+    text-align: center;
+    margin: 2%;
 }
 
-.roomViewRoomImage, .roomViewViewImage {
-    width: 90%; 
-    height: 40%; 
-}
-
-.roomViewTextContainer{
-    display: grid; 
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 2fr;
-    grid-template-areas: 
-    "TitleAndDesc TitleAndDesc"
-    "TextAmenities ViewImage"; 
+.roomViewImageContainer{
+    grid-area: roomPic;
+    display: grid;
     justify-items: center;
-    align-items: center;
-    text-align: center; 
-    
 }
 
-.roomViewTextTitleAndDescription {
-    grid-area: TitleAndDesc;
+.roomViewImage {
+    width: 80%; 
 }
 
-
-.roomViewTextTitle {
-    font-size: 50px; 
-    border: black double 5px;
+.roomViewDescription{
+    grid-area: roomDesc;
+    margin: 2%; 
+    padding: 2%;
+    width: 90%; 
 }
 
 .roomViewTextAmenities{
-    grid-area: TextAmenities;
-    padding: 5%; 
-    border: black double 5px;
-}
-
-.roomViewViewImageContainer {
-    grid-area: ViewImage;
-    padding: 5%; 
-}
-
-.roomViewViewImage{
-    height: 90%; 
-}
-
-@media (max-width: 900px){
-    .roomViewContainer {
-        display: static;
-        grid-template-columns: 1fr;
-        margin-bottom: 1%; 
-        margin-top: 1%; 
-        padding-top: 2%;
-        padding-bottom: 2%; 
-        justify-items: center;
-        align-items: center;
-    
-    }
-    .roomViewRoomImage{
-     height: 325px; 
-    }
-    
+    grid-area: roomAmen;
+    margin: 2%; 
+    padding: 2%;
+    width: 75%;
+    text-align: center;
 }
