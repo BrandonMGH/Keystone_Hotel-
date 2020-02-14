@@ -26,7 +26,7 @@ const Rooms = () => {
                     <img id="roomSectionTwoImgOne" src={PadlockIcon} />
                 </section>
                 <section id="roomSectionTwoDescription">
-                    <p>There are three room types (Standard, Junior Suite, and Deluxe Suite) and each room comes with a specific view type (Lake View, Mountain View, Forest View).</p>
+                    <p>The Keystone Hotel hosts a wide variety of high end, luxury rooms that cater to the individual needs of guests.  There are three room types (Standard, Junior Suite, and Deluxe Suite) and each room comes with a specific view type (Lake View, Mountain View, Forest View).  Each room type has a different theme depending on which room type is selected. Each room also comes with the its own set of standard amenitites, but additional amenitites may be available depending on room type selected.</p>
                 </section>
             </section>
             <section id="roomSectionThree">
