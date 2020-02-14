@@ -3,11 +3,21 @@
 
 #carouselTextOne, #carouselTextTwo, #carouselTextThree, #carouselTextFour {
     color: white; 
-    background: rgba(0, 0, 0, 0.4);
+    background: #00000066;
 }
 
 #carouselTitleTextOne, #carouselTitleTextTwo, #carouselTitleTextThree, #carouselTitleTextFour {
     font-size: 50px; 
+}
+
+.carouselTitleLink{
+    text-decoration: none;
+    color: white; 
+    font-size: 24px;;
+}
+
+.carouselTitleLink:hover{
+    color: blue; 
 }
 
 #carouselImgOne, #carouselImgTwo, #carouselImgThree, #carouselImgFour {

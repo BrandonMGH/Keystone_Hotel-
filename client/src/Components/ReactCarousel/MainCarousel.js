@@ -14,32 +14,28 @@ const MainCarousel = () => {
             <div>
                 <section className="legend" id="carouselTextOne">
                     <h1 id="carouselTitleTextOne">ROOMS</h1>
-                    <p>If you would like to find out more information about the rooms, please click the link below</p>
-                    <a>Read More</a>
+                    <a className="carouselTitleLink" href="/rooms">Discover More</a>
                 </section>
                 <img id="carouselImgOne" src={ForestViewRoomTwo} />
             </div>
             <div>
                 <section className="legend" id="carouselTextTwo">
                     <h1 id="carouselTitleTextTwo">DINING</h1>
-                    <p>If you would like to find out more information about the rooms, please click the link below</p>
-                    <a>Read More</a>
+                    <a className="carouselTitleLink" href="/dining">Discover More</a>
                 </section>
                 <img id="carouselImgTwo" src={HotelRestaurantOne} />
             </div>
             <div>
                 <section className="legend" id="carouselTextThree">
                     <h1 id="carouselTitleTextThree">SPA</h1>
-                    <p>If you would like to find out more information about the rooms, please click the link below</p>
-                    <a>Read More</a>
+                    <a className="carouselTitleLink" href="/spa">Discover More</a>
                 </section>
                 <img id="carouselImgThree" src={facialheader2} />
             </div>
             <div>
                 <section className="legend" id="carouselTextFour">
                     <h1 id="carouselTitleTextFour">AREA ATTRACTION</h1>
-                    <p>If you would like to find out more information about the rooms, please click the link below</p>
-                    <a>Read More</a>
+                    <a className="carouselTitleLink" href="/areaAttractions">Discover More</a>
                 </section>
                 <img id="carouselImgFour" src={AreaAttractionTwo} />
             </div>

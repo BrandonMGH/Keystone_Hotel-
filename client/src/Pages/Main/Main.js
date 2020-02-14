@@ -11,7 +11,7 @@ import MainCarousel from '../../Components/ReactCarousel/MainCarousel.js'
 
 //** IMAGES **//
 import girlMountain from '../../Images/girlMountain.jpeg'
-import HotelInteriorTwo from '../../Images/HotelInteriorTwo.jpeg'
+import LakeViewRoomTwo from '../../Images/LakeViewRoomTwo.jpg'
 import HotelLobbyTwo from '../../Images/HotelLobbyTwo.jpg'
 
 const Main = () => {
@@ -56,7 +56,7 @@ const Main = () => {
                 </section>
                 <section id="mainSectionRoomPicTwo" >
                     <div id="mainSectionRoomPicTwoImage">
-                        <img className="mainSectionImgClass" src={HotelInteriorTwo} />
+                        <img className="mainSectionImgClass" src={LakeViewRoomTwo} />
                     </div>
                 </section>
             </section>
