@@ -25,7 +25,7 @@ const Main = () => {
             <section id="mainSectionDivideOne">
                 <section id="mainSubSectionDivideOne">
                     <h1>Expand your comfort zone</h1>
-                    <p>Good. Use your aggressive feelings, boy! Let the hate flow through you. Obi-Wan has taught you well. I will not fight you, father. You are unwise to lower your defenses. Your thoughts betray you, father. I feel the good in you...the conflict. There is no conflict. You couldn't bring yourself to kill me before, and I don't believe you'll destroy me now. You underestimate the power of the dark side. If you will not fight, then you will meet your destiny. Good. Good.</p>
+                    <p>The Keystone Hotel is the ultimate in mountain luxury.  Tucked away in the secluded Veiled Valley and surrounded on all sides by forest, mountains and lakes, The KeyStone Hotel is the ultimate getaway destination for those looking to escacpe the rigors of reality. </p>
                 </section>
               
                 <section id="mainSubSectionDivideTwo">
@@ -50,7 +50,7 @@ const Main = () => {
                     </div>
                 </section>
                 <section id="mainSectionSummary">
-                    <p style={{position:"relative", top:"5%", margin:"2%"}}>Good. Use your aggressive feelings, boy! Let the hate flow through you. Obi-Wan has taught you well. I will not fight you, father. You are unwise to lower your defenses. Your thoughts betray you, father. I feel the good in you...the conflict. There is no conflict. You couldn't bring yourself to kill me before, and I don't believe you'll destroy me now. You underestimate the power of the dark side. If you will not fight, then you will meet your destiny. Good. Good</p>
+                    <p id="mainSectionSummaryParagraph">The Keystone Hotel is a square foot luxury hotel 25 acre hotel compromised of luxury rooms and suites, 2 in-house restaurants, a bar, a spa and fitness center.  The hotel is encompassed on all sides by The Burly Mountains to the north, Lake Pristine to The west and The Shrouded Forest to the southeast.  5 miles southwest of the hotel is the mountain town of Vail, where visitors can partake in an array of activities ranging from mall shopping to ice skating. </p>
                 </section>
                 <section id="mainSectionSummaryBackground">
                 </section>

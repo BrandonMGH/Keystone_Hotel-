@@ -133,6 +133,13 @@ margin-top: -5%
 
 }
 
+#mainSectionSummaryParagraph{
+    position: relative;
+    top: 5%;
+    margin: 2%;
+    line-height: 2.5em;
+}
+
 #mainSectionRoomPicTwo{
     order: 4
 }
@@ -276,6 +283,10 @@ padding-top: 10%;
          border-top: none;
          border-right: none;
      } 
+
+     #mainSectionSummaryParagraph{
+        line-height: 1em;
+    }
      #mainSectionSummaryBackground{
         display: none; 
      }
