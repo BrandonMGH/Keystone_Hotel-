@@ -36,13 +36,12 @@ This website is hosted dynamically through Express on Heroku in production, but 
 
 ### PROJECT LINK 
 
-https://free-wifi-near-you.herokuapp.com/
+https://keystone-hotel.herokuapp.com/
 
 ### STRETCH GOALS
 
-- Need to improve the design of the app overall so that it is more mobile friendly.
-- Need to apply additional styling to the map route inside of the map route modal.
-- Need to make it so that after a marker is clicked, the generated route to that marker from the users current location is not displayed until they click on the generate route button inside of the modal. 
-- Need to add more central county markers 
-
+- Attach a database for the handling of inventory 
+- Change the way the room buttons in the room component look 
+- Make the attraction icons clickable so that they scroll down to the various attractions
+- replace all the Star Wars Lorem Ipsum with proper description text
 #### Author: Brandon Harris
