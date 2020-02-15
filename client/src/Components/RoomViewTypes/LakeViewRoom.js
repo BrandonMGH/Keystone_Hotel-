@@ -4,7 +4,7 @@ import "./RoomViews.css"
 
 const LakeViewRoom = () => {
     return (
-        <section>
+        <section style={{display: "grid", justifyItems: "center"}}>
             {RoomViewData.LakeView.map(properties => (
                  <section className="roomViewContainer" key={properties.id}>
                  <section className="roomViewTextTitle">

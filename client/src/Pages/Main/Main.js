@@ -40,7 +40,7 @@ const Main = () => {
             <section id="mainSectionRoomDescription">
                 <section id="mainSectionRoomPicOne">
                     <div >
-                        <img className="mainSectionImgClass" src={HotelLobbyTwo} />
+                        <img alt="HotelLobbyTwo" className="mainSectionImgClass" src={HotelLobbyTwo} />
                     </div>
 
                 </section>
@@ -56,7 +56,7 @@ const Main = () => {
                 </section>
                 <section id="mainSectionRoomPicTwo" >
                     <div id="mainSectionRoomPicTwoImage">
-                        <img className="mainSectionImgClass" src={LakeViewRoomTwo} />
+                        <img alt="LakeViewRoomTwo" className="mainSectionImgClass" src={LakeViewRoomTwo} />
                     </div>
                 </section>
             </section>

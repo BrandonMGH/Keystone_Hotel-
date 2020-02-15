@@ -1,6 +1,6 @@
 .roomViewContainer {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: .5fr 2fr 2fr;
     grid-template-areas:
     "roomTitle roomTitle"
@@ -12,6 +12,7 @@
     padding-bottom: 2%; 
     justify-items: center;
     align-items: center;
+    width: 80%; 
 
 }
 
@@ -49,4 +50,13 @@
     padding: 2%;
     width: 75%;
     text-align: center;
+}
+
+@media (max-width: 900px){
+    .roomViewContainer {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: .5fr 1fr 2fr;
+        width: 100%; 
+       
+    }
 }
