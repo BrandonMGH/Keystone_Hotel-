@@ -31,7 +31,7 @@ const Footer = () => {
         <section id="footerContainer">
             <section id="footerLogoContainer">
                 <p className="footerKeyStoneLogo">____</p>
-                <img id="footerKeyStoneLogo" src={KeystoneLogoInverse} />
+                <img alt="KeystoneLogoInverse" id="footerKeyStoneLogo" src={KeystoneLogoInverse} />
                 <p className="footerKeyStoneLogo">____</p>
             </section>
             <section id="footerExploreContainer">

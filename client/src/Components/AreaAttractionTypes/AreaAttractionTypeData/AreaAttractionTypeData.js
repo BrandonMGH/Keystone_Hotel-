@@ -2,11 +2,6 @@ import LakeImageTwo from '../../../Images/LakeImageTwo.jpg'
 import MountainTwo from '../../../Images/MountainTwo.webp'
 import ForestImageTwo from '../../../Images/ForestImageTwo.jpg'
 
-let test = [
-    {
-
-    }
-]
 
 const AreaAttractionTypeData = {
     lakePristine: [
