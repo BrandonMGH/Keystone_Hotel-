@@ -95,14 +95,14 @@ border: solid 2px black;
 animation: 1s ${navPanDown};
 `
 const Navbar = () => {
-    const [modalState, setModalState] = useState(false)
-    const [navModalState, setNavModalState] = useState(false)
-    const [checkIn, setCheckIn] = useState("")
-    const [checkOut, setCheckOut] = useState("")
-    const [priceRange, setPriceRange] = useState("400")
-    const [guestCount, setGuestCount] = useState("1")
-    const [viewSelection, setViewSelection] = useState("3")
-    const [petConfirmation, setPetConfirmation] = useState("2")
+    const [modalState, setModalState] = useState(false);
+    const [navModalState, setNavModalState] = useState(false);
+    const [checkIn, setCheckIn] = useState("");
+    const [checkOut, setCheckOut] = useState("");
+    const [priceRange, setPriceRange] = useState("400");
+    const [guestCount, setGuestCount] = useState("1");
+    const [viewSelection, setViewSelection] = useState("3");
+    const [petConfirmation, setPetConfirmation] = useState("2");
 
 
 
